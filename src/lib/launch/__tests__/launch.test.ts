@@ -127,3 +127,11 @@ describe("actions", () => {
     }
   });
 });
+
+describe("venue names", () => {
+  it("tries the name before a comma or 'in', and without a leading 'The'", async () => {
+    const { venueQueries } = await import("../venue");
+    expect(venueQueries("The Tabernacle, Atlanta")).toEqual(["The Tabernacle, Atlanta", "The Tabernacle", "Tabernacle"]);
+    expect(venueQueries("Nitehawk Cinema in Williamsburg")).toEqual(["Nitehawk Cinema in Williamsburg", "Nitehawk Cinema"]);
+  });
+});

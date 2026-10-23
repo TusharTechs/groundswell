@@ -47,6 +47,18 @@ The whole time, the city on screen changes: districts, then where the taste live
 Real runs of the full team, recorded with every event so they replay exactly:
 
 <!-- SHOWCASES -->
+| Launch | City | Plan's reach | Same budget, no taste data | Rounds | Qloo requests |
+|---|---|---|---|---|---|
+| **A first headline show**: 1,200 tickets at Thalia Hall in Pilsen, six weeks out. | Chicago | **20.8%** (3.3×) | 6.3% | 2 | 19 |
+| **A clean comedy night**: A family-friendly stand-up night at the Tabernacle. | Atlanta | **11.1%** (2.6×) | 4.2% | 2 | 19 |
+| **A football fan zone**: Chelsea F.C. match nights and a kit drop, eight weeks out. | London | **26.0%** (3.2×) | 8.1% | 2 | 18 |
+| **A Dodgers pop-up in Tokyo**: An Ohtani-season pop-up store and viewing party. | Tokyo | **20.2%** (3.3×) | 6.1% | 2 | 18 |
+| **Indie film previews**: An A24 coming-of-age film's preview week in Williamsburg. | New York | **17.6%** (4.2×) | 4.2% | 2 | 19 |
+| **A startup's first store**: A sustainable sneaker brand's pop-up in Roma Norte. | Mexico City | **23.6%** (3.5×) | 6.7% | 2 | 17 |
+| **An album release party**: A rap album release show at the Wiltern in Koreatown. | Los Angeles | **17.6%** (4.4×) | 4.0% | 2 | 19 |
+
+Reach is the share of the city's natural audience (people whose taste fits the launch, weighted by distance to the venue) reached by launch day in the simulation.
+<!-- /SHOWCASES -->
 
 ## Evidence
 
@@ -185,7 +197,7 @@ Live rehearsals are rate-limited per IP (4 per half hour) to protect the shared 
 
 Streamable HTTP at `<origin>/api/mcp`. For example, in Claude Code: `claude mcp add --transport http groundswell <origin>/api/mcp`.
 
-Tools: `list_cities`, `taste_twins`, `map_launch_audience`, `scout_launch_partners`, `rehearse_launch`, `get_recorded_rehearsal`.
+Tools: `list_cities`, `taste_twins`, `map_launch_audience`, `scout_launch_partners`, `rehearse_launch`, `get_recorded_rehearsal`. Try `npm run mcp:smoke` against a running server.
 
 ## Run it locally
 
@@ -208,6 +220,7 @@ The built atlases, recorded rehearsals and benchmark results are in `data/`, so 
 | `npm run benchmark` | The cold-start test | ~350 Qloo requests and ~85 Claude calls the first time; cached after |
 | `npm run calibrate` | Calibration summary (`-- --sweep` for the sweep) | ~45 Qloo requests the first time |
 | `npm run launch -- --city chicago "brief…"` | One rehearsal in the terminal | ~20 Qloo, ~25 Claude |
+| `npm run mcp:smoke -- http://localhost:3000` | Call the MCP server like an agent would | none |
 | `npm test`, `npm run lint`, `npm run typecheck` | Checks | none |
 
 Scripts cache raw Qloo responses under `.cache/` (git-ignored), so reruns cost no quota.

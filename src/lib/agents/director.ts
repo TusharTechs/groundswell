@@ -120,7 +120,7 @@ export async function runDirector(s: RunState, emit: Emit) {
       let venue: FitMap["venue"];
       if (spec.venue) {
         const r = await resolveVenue(spec.venue, s.atlas);
-        receipts("cartographer", [r.evidence]);
+        if (r.evidence) receipts("cartographer", [r.evidence]);
         if (r.venue) venue = { name: r.venue.name, lon: r.venue.lon, lat: r.venue.lat, address: r.venue.address };
       }
       const fit = await mapFit(s.atlas, signalsOf(s.taste, spec.age), venue ? travelWeights(s.atlas, venue) : undefined, venue);

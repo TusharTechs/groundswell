@@ -39,6 +39,7 @@ export function WarRoom({ source }: { source: Source }) {
   const [frame, setFrame] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [whatIf, setWhatIf] = useState<WhatIfResult | null>(null);
+  const [elapsed, setElapsed] = useState(0);
 
   useEffect(() => {
     let alive = true;
@@ -98,6 +99,14 @@ export function WarRoom({ source }: { source: Source }) {
     }, 240);
     return () => clearInterval(id);
   }, [playing, frames]);
+
+  // A live run shows how long the team has been at it.
+  useEffect(() => {
+    if (source.kind !== "live" || view.done || view.error) return;
+    const t0 = Date.now();
+    const id = setInterval(() => setElapsed(Math.round((Date.now() - t0) / 1000)), 1000);
+    return () => clearInterval(id);
+  }, [source.kind, view.done, view.error]);
 
   const mode: MapMode = sim ? "sim" : view.fit ? "fit" : "districts";
   const fit = useMemo(() => (view.fit ? Array.from(view.fit.fit, (b) => b / 255) : null), [view.fit]);
@@ -207,7 +216,10 @@ export function WarRoom({ source }: { source: Source }) {
           <div className="glass flex flex-col rounded-2xl border border-line p-4 lg:min-h-0 lg:flex-1">
             <div className="mb-3 flex items-center justify-between gap-2">
               <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">The team at work</h2>
-              <span className="font-mono text-[11px] text-cool">{view.qloo.length} Qloo requests</span>
+              <span className="font-mono text-[11px] text-cool">
+                {source.kind === "live" && !view.done ? `${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, "0")} · ` : ""}
+                {view.qloo.length} Qloo requests
+              </span>
             </div>
             <div className="flex max-h-[60vh] min-h-0 flex-1 flex-col lg:max-h-none">
               <Feed items={view.feed} live={live} />
@@ -216,6 +228,11 @@ export function WarRoom({ source }: { source: Source }) {
               <button type="button" onClick={() => setShowPlan(true)} className="mt-3 rounded-full bg-gradient-to-r from-glow to-hot px-4 py-2 text-[13px] font-semibold text-ink">
                 Open the plan
               </button>
+            )}
+            {source.kind === "replay" && replay.finished && (
+              <Link href="/" className="mt-2 text-center text-[13px] text-cool underline-offset-2 hover:underline">
+                This was a recorded rehearsal. Rehearse your own launch →
+              </Link>
             )}
             {view.error && (
               <div className="mt-3 rounded-xl border border-bad/40 bg-bad/10 p-3 text-[13px]">
