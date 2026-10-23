@@ -1,0 +1,22 @@
+{
+  "name": "@groundswell/sim",
+  "version": "0.1.0",
+  "description": "Spatial word-of-mouth simulation on a city grid: a stochastic Bass diffusion over neighbourhood cells, with seeded actions, Monte Carlo bands and attribution.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "diffusion",
+    "bass-model",
+    "simulation",
+    "word-of-mouth",
+    "geospatial"
+  ]
+}

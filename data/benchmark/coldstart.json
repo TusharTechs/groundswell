@@ -1,0 +1,5366 @@
+{
+ "runAt": "2026-10-23T05:21:25.996Z",
+ "targets": [
+  "Dua Lipa",
+  "Rosalía",
+  "Arctic Monkeys",
+  "Doja Cat",
+  "Zach Bryan",
+  "Tame Impala",
+  "J Balvin",
+  "BLACKPINK",
+  "Vans",
+  "Sephora",
+  "Ralph Lauren",
+  "The Bear"
+ ],
+ "cities": [
+  "chicago",
+  "new-york",
+  "los-angeles",
+  "atlanta",
+  "london",
+  "mexico-city",
+  "tokyo"
+ ],
+ "n": 77,
+ "summary": {
+  "index": {
+   "groundswell": {
+    "overlap": {
+     "mean": 0.4482940530241095,
+     "lo": 0.39959141801942527,
+     "hi": 0.4975689040203955
+    },
+    "capture": {
+     "mean": 0.6253067602225287,
+     "lo": 0.5773914650143424,
+     "hi": 0.6728530946240762
+    },
+    "spearman": {
+     "mean": 0.6193181932063324,
+     "lo": 0.5614043664749365,
+     "hi": 0.673759913779159
+    }
+   },
+   "compsRaw": {
+    "overlap": {
+     "mean": 0.2797693862264247,
+     "lo": 0.21814763803827225,
+     "hi": 0.34528481713024667
+    },
+    "capture": {
+     "mean": 0.43303314590702335,
+     "lo": 0.38590671692053186,
+     "hi": 0.4858407138070194
+    },
+    "spearman": {
+     "mean": 0.5764169999725274,
+     "lo": 0.5211808743824494,
+     "hi": 0.6310453860804477
+    }
+   },
+   "people": {
+    "overlap": {
+     "mean": 0.21962455520661284,
+     "lo": 0.15393300854536254,
+     "hi": 0.2893229740967429
+    },
+    "capture": {
+     "mean": 0.3262825250287931,
+     "lo": 0.2842766023792344,
+     "hi": 0.3744726864422381
+    },
+    "spearman": {
+     "mean": 0.5068202610123181,
+     "lo": 0.4500555123789723,
+     "hi": 0.5649276836531345
+    }
+   },
+   "claude": {
+    "overlap": {
+     "mean": 0.23692621709657996,
+     "lo": 0.18479607547269492,
+     "hi": 0.29344022410716863
+    },
+    "capture": {
+     "mean": 0.3815020723935719,
+     "lo": 0.34417478057676587,
+     "hi": 0.4220434791578917
+    },
+    "spearman": {
+     "mean": 0.1778575485081372,
+     "lo": 0.14390199921305508,
+     "hi": 0.21206148341774625
+    }
+   },
+   "control": {
+    "overlap": {
+     "mean": 0.004932508840176125,
+     "lo": 0.00328633482917529,
+     "hi": 0.006611623771788087
+    },
+    "capture": {
+     "mean": 0.036950528297390914,
+     "lo": 0.026719352594795718,
+     "hi": 0.04767124221932776
+    },
+    "spearman": {
+     "mean": -0.4995217710549412,
+     "lo": -0.5588391587632094,
+     "hi": -0.4426721133886147
+    }
+   }
+  },
+  "volume": {
+   "groundswell": {
+    "overlap": {
+     "mean": 0.21424199458305043,
+     "lo": 0.15262296855120405,
+     "hi": 0.2787241963866008
+    },
+    "capture": {
+     "mean": 0.584357296176032,
+     "lo": 0.5373196380693205,
+     "hi": 0.6330778986149671
+    },
+    "spearman": {
+     "mean": 0.46514597082285125,
+     "lo": 0.37644655564465807,
+     "hi": 0.5483127533774093
+    }
+   },
+   "compsRaw": {
+    "overlap": {
+     "mean": 0.7624060357551586,
+     "lo": 0.7116273926787126,
+     "hi": 0.811143513239596
+    },
+    "capture": {
+     "mean": 0.9317263600066131,
+     "lo": 0.9085892669173725,
+     "hi": 0.9538818684205624
+    },
+    "spearman": {
+     "mean": 0.8586770286482031,
+     "lo": 0.8248847249659058,
+     "hi": 0.8902835950095381
+    }
+   },
+   "people": {
+    "overlap": {
+     "mean": 0.8252885052794096,
+     "lo": 0.8089715256080008,
+     "hi": 0.8408885337382267
+    },
+    "capture": {
+     "mean": 0.976706094884451,
+     "lo": 0.9683389604836342,
+     "hi": 0.983740654246893
+    },
+    "spearman": {
+     "mean": 0.9068950725961454,
+     "lo": 0.8856134776748095,
+     "hi": 0.9257438994143687
+    }
+   },
+   "claude": {
+    "overlap": {
+     "mean": 0.6253733600616962,
+     "lo": 0.5990970143230331,
+     "hi": 0.6512219273983808
+    },
+    "capture": {
+     "mean": 0.8624258720139066,
+     "lo": 0.8436072306708902,
+     "hi": 0.880394970116619
+    },
+    "spearman": {
+     "mean": 0.29953613412693225,
+     "lo": 0.2801105921194714,
+     "hi": 0.31847715271518595
+    }
+   },
+   "control": {
+    "overlap": {
+     "mean": 0.00012368583797155226,
+     "lo": 0,
+     "hi": 0.0003710575139146568
+    },
+    "capture": {
+     "mean": 0.016370742606538816,
+     "lo": 0.011859540568207948,
+     "hi": 0.020935291242356525
+    },
+    "spearman": {
+     "mean": -0.9112968952911856,
+     "lo": -0.9307606849573319,
+     "hi": -0.8890894475516157
+    }
+   }
+  }
+ },
+ "byCity": {
+  "chicago": {
+   "index": {
+    "groundswell": 0.506547619047619,
+    "compsRaw": 0.32857142857142857,
+    "people": 0.2761904761904762,
+    "claude": 0.29702380952380947,
+    "control": 0.005357142857142856
+   },
+   "volume": {
+    "groundswell": 0.22440476190476188,
+    "compsRaw": 0.6952380952380951,
+    "people": 0.8345238095238093,
+    "claude": 0.6214285714285714,
+    "control": 0
+   }
+  },
+  "new-york": {
+   "index": {
+    "groundswell": 0.4373767258382643,
+    "compsRaw": 0.3071992110453649,
+    "people": 0.23471400394477315,
+    "claude": 0.2781065088757397,
+    "control": 0.004930966469428008
+   },
+   "volume": {
+    "groundswell": 0.21153846153846154,
+    "compsRaw": 0.7480276134122287,
+    "people": 0.7776134122287967,
+    "claude": 0.6143984220907299,
+    "control": 0
+   }
+  },
+  "los-angeles": {
+   "index": {
+    "groundswell": 0.3953081232492997,
+    "compsRaw": 0.2706582633053221,
+    "people": 0.19887955182072828,
+    "claude": 0.25105042016806717,
+    "control": 0.0031512605042016803
+   },
+   "volume": {
+    "groundswell": 0.1561624649859944,
+    "compsRaw": 0.6915266106442578,
+    "people": 0.7682072829131652,
+    "claude": 0.67296918767507,
+    "control": 0
+   }
+  },
+  "atlanta": {
+   "index": {
+    "groundswell": 0.4792586054721976,
+    "compsRaw": 0.35657546337157986,
+    "people": 0.31862312444836716,
+    "claude": 0.26919682259488087,
+    "control": 0
+   },
+   "volume": {
+    "groundswell": 0.23565754633715796,
+    "compsRaw": 0.7678729037952338,
+    "people": 0.8623124448367168,
+    "claude": 0.5984112974404237,
+    "control": 0
+   }
+  },
+  "london": {
+   "index": {
+    "groundswell": 0.3994594594594595,
+    "compsRaw": 0.18972972972972973,
+    "people": 0.10648648648648648,
+    "claude": 0.16594594594594597,
+    "control": 0.0032432432432432435
+   },
+   "volume": {
+    "groundswell": 0.17243243243243245,
+    "compsRaw": 0.8140540540540542,
+    "people": 0.8118918918918918,
+    "claude": 0.5443243243243243,
+    "control": 0
+   }
+  },
+  "mexico-city": {
+   "index": {
+    "groundswell": 0.35523809523809524,
+    "compsRaw": 0.07809523809523809,
+    "people": 0.011428571428571429,
+    "claude": 0.05714285714285715,
+    "control": 0.016190476190476193
+   },
+   "volume": {
+    "groundswell": 0.09619047619047619,
+    "compsRaw": 0.7161904761904763,
+    "people": 0.8419047619047619,
+    "claude": 0.660952380952381,
+    "control": 0.0009523809523809525
+   }
+  },
+  "tokyo": {
+   "index": {
+    "groundswell": 0.5629032258064516,
+    "compsRaw": 0.4064516129032258,
+    "people": 0.3709677419354839,
+    "claude": 0.31370967741935485,
+    "control": 0.0024193548387096775
+   },
+   "volume": {
+    "groundswell": 0.41129032258064513,
+    "compsRaw": 0.9338709677419356,
+    "people": 0.895967741935484,
+    "claude": 0.6612903225806452,
+    "control": 0
+   }
+  }
+ },
+ "versusClaude": {
+  "wins": 65,
+  "ties": 0,
+  "losses": 12
+ },
+ "rows": [
+  {
+   "city": "chicago",
+   "target": "Dua Lipa",
+   "comps": [
+    "Sabrina Carpenter",
+    "Harry Styles",
+    "Ava Max"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.24285714285714285,
+      "capture": 0.48272926943916605,
+      "spearman": 0.5169572490404338
+     },
+     "compsRaw": {
+      "overlap": 0.05714285714285714,
+      "capture": 0.344100010218021,
+      "spearman": 0.6344530158001588
+     },
+     "people": {
+      "overlap": 0.007142857142857143,
+      "capture": 0.32964418608621504,
+      "spearman": 0.5444269164011407
+     },
+     "claude": {
+      "overlap": 0.014285714285714285,
+      "capture": 0.33741736261994576,
+      "spearman": 0.2025541239426103
+     },
+     "control": {
+      "overlap": 0.007142857142857143,
+      "capture": 0.007438224200416199,
+      "spearman": -0.6087659774811433
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.014285714285714285,
+      "capture": 0.6190588737591677,
+      "spearman": 0.4787793668905682
+     },
+     "compsRaw": {
+      "overlap": 0.34285714285714286,
+      "capture": 0.8751086442719685,
+      "spearman": 0.9087765618173936
+     },
+     "people": {
+      "overlap": 0.8785714285714286,
+      "capture": 0.9934737195224225,
+      "spearman": 0.9253170979609939
+     },
+     "claude": {
+      "overlap": 0.8,
+      "capture": 0.96786416797548,
+      "spearman": 0.4079993444031209
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0023558652658544382,
+      "spearman": -0.9585161967353629
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Rosalía",
+   "comps": [
+    "Bad Bunny",
+    "Tokischa",
+    "Karol G"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6571428571428571,
+      "capture": 0.8262897337788299,
+      "spearman": 0.745068153535325
+     },
+     "compsRaw": {
+      "overlap": 0.18571428571428572,
+      "capture": 0.38904950397473087,
+      "spearman": 0.7611605193452625
+     },
+     "people": {
+      "overlap": 0.014285714285714285,
+      "capture": 0.23470693077850252,
+      "spearman": 0.5329674567357425
+     },
+     "claude": {
+      "overlap": 0.29285714285714287,
+      "capture": 0.4663262233614731,
+      "spearman": 0.2509660647032267
+     },
+     "control": {
+      "overlap": 0.007142857142857143,
+      "capture": 0.021031323761083347,
+      "spearman": -0.5776480875931832
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.04285714285714286,
+      "capture": 0.5497817628668177,
+      "spearman": 0.557697408582656
+     },
+     "compsRaw": {
+      "overlap": 0.6714285714285714,
+      "capture": 0.9552136124934063,
+      "spearman": 0.9458473790199211
+     },
+     "people": {
+      "overlap": 0.8642857142857143,
+      "capture": 0.9879530044870464,
+      "spearman": 0.904088960015737
+     },
+     "claude": {
+      "overlap": 0.3142857142857143,
+      "capture": 0.6660245679210518,
+      "spearman": 0.16606779743055508
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.006505071815687078,
+      "spearman": -0.9322064390587363
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Arctic Monkeys",
+   "comps": [
+    "Kasabian",
+    "The Strokes",
+    "The Last Shadow Puppets"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.4,
+      "capture": 0.8537739259182144,
+      "spearman": 0.8760986709264782
+     },
+     "compsRaw": {
+      "overlap": 0.4928571428571429,
+      "capture": 0.8943861749472972,
+      "spearman": 0.8990267053473004
+     },
+     "people": {
+      "overlap": 0.8428571428571429,
+      "capture": 0.9011048793112919,
+      "spearman": 0.766030040973708
+     },
+     "claude": {
+      "overlap": 0.6714285714285714,
+      "capture": 0.8428126093456755,
+      "spearman": 0.41178549979030205
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7639449923381569
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.35714285714285715,
+      "capture": 0.694513487349886,
+      "spearman": 0.8792174901120846
+     },
+     "compsRaw": {
+      "overlap": 0.4928571428571429,
+      "capture": 0.789574666631782,
+      "spearman": 0.9039228922958009
+     },
+     "people": {
+      "overlap": 0.9214285714285714,
+      "capture": 0.9875461133931608,
+      "spearman": 0.7707385573565328
+     },
+     "claude": {
+      "overlap": 0.6857142857142857,
+      "capture": 0.8265351508333116,
+      "spearman": 0.4076092515585955
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7695565727419801
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Doja Cat",
+   "comps": [
+    "Megan Thee Stallion",
+    "Saweetie",
+    "Lizzo"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.10714285714285714,
+      "capture": 0.29489884337590133,
+      "spearman": 0.05077294977704923
+     },
+     "compsRaw": {
+      "overlap": 0.05714285714285714,
+      "capture": 0.2916824864828499,
+      "spearman": 0.16359266932640357
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.22841851939506455,
+      "spearman": 0.243493748447213
+     },
+     "claude": {
+      "overlap": 0.05714285714285714,
+      "capture": 0.32878457255520904,
+      "spearman": 0.09068942152594216
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.08570995175109758,
+      "spearman": -0.2228098741959547
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.20552682245460369,
+      "spearman": -0.2637211065645471
+     },
+     "compsRaw": {
+      "overlap": 0.75,
+      "capture": 0.9481973649439384,
+      "spearman": 0.6473803909279707
+     },
+     "people": {
+      "overlap": 0.8285714285714286,
+      "capture": 0.9890596096492881,
+      "spearman": 0.9357896345690161
+     },
+     "claude": {
+      "overlap": 0.4928571428571429,
+      "capture": 0.7879195137604286,
+      "spearman": 0.23949349187675883
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.041579523575823917,
+      "spearman": -0.9452520557252637
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Zach Bryan",
+   "comps": [
+    "Tyler Childers",
+    "Chris Stapleton",
+    "Luke Combs"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.32857142857142857,
+      "capture": 0.4395792134378544,
+      "spearman": 0.5415974282365577
+     },
+     "compsRaw": {
+      "overlap": 0.8357142857142857,
+      "capture": 0.8784198096430451,
+      "spearman": 0.6597619339629286
+     },
+     "people": {
+      "overlap": 0.7928571428571428,
+      "capture": 0.8784198096430451,
+      "spearman": 0.6227458548113286
+     },
+     "claude": {
+      "overlap": 0.6714285714285714,
+      "capture": 0.8784198096430451,
+      "spearman": 0.35605147083073696
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6186697627718449
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.3142857142857143,
+      "capture": 0.3391520939269917,
+      "spearman": 0.5411351991646046
+     },
+     "compsRaw": {
+      "overlap": 0.8785714285714286,
+      "capture": 0.9540700318326512,
+      "spearman": 0.660835613380895
+     },
+     "people": {
+      "overlap": 0.8428571428571429,
+      "capture": 0.9310223655380544,
+      "spearman": 0.6244178836237778
+     },
+     "claude": {
+      "overlap": 0.6928571428571428,
+      "capture": 0.7808507999503908,
+      "spearman": 0.35664603206785694
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6204889743304692
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Tame Impala",
+   "comps": [
+    "Unknown Mortal Orchestra",
+    "Mac DeMarco",
+    "Melody's Echo Chamber"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.45,
+      "capture": 0.5765019860019451,
+      "spearman": 0.933478094506257
+     },
+     "compsRaw": {
+      "overlap": 0.5,
+      "capture": 0.5532437542933553,
+      "spearman": 0.9444159068618788
+     },
+     "people": {
+      "overlap": 0.35714285714285715,
+      "capture": 0.3454003433631887,
+      "spearman": 0.7948215285701191
+     },
+     "claude": {
+      "overlap": 0.42857142857142855,
+      "capture": 0.4806892717446646,
+      "spearman": 0.36080677987187193
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8006391025787344
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.24285714285714285,
+      "capture": 0.6194619067525893,
+      "spearman": 0.8914118354813853
+     },
+     "compsRaw": {
+      "overlap": 0.8071428571428572,
+      "capture": 0.9362443899322455,
+      "spearman": 0.9713120170852426
+     },
+     "people": {
+      "overlap": 0.85,
+      "capture": 0.9825052649845011,
+      "spearman": 0.8882804306811504
+     },
+     "claude": {
+      "overlap": 0.5857142857142857,
+      "capture": 0.848597187275696,
+      "spearman": 0.34746420528887856
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.896234530869902
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "J Balvin",
+   "comps": [
+    "Maluma",
+    "Karol G",
+    "Ozuna"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.8,
+      "capture": 0.9475546981627886,
+      "spearman": 0.8950262370875597
+     },
+     "compsRaw": {
+      "overlap": 0.12142857142857143,
+      "capture": 0.32136626342960767,
+      "spearman": 0.6658361724110592
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.12472113727150913,
+      "spearman": 0.3428825680460931
+     },
+     "claude": {
+      "overlap": 0.3,
+      "capture": 0.4856957741728905,
+      "spearman": 0.2743012841580737
+     },
+     "control": {
+      "overlap": 0.014285714285714285,
+      "capture": 0.050834884425187375,
+      "spearman": -0.3966671243790486
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.17142857142857143,
+      "capture": 0.7042735302613369,
+      "spearman": 0.765705312890879
+     },
+     "compsRaw": {
+      "overlap": 0.9357142857142857,
+      "capture": 0.9977499733949555,
+      "spearman": 0.9792802003212102
+     },
+     "people": {
+      "overlap": 0.6857142857142857,
+      "capture": 0.9651017832981124,
+      "spearman": 0.872389341860811
+     },
+     "claude": {
+      "overlap": 0.35,
+      "capture": 0.7260212536296875,
+      "spearman": 0.1956663176940848
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.021930157957948813,
+      "spearman": -0.9058330510014163
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "BLACKPINK",
+   "comps": [
+    "Itzy",
+    "TWICE",
+    "Aespa"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.8214285714285714,
+      "capture": 0.8847390976006407,
+      "spearman": 0.709173312826125
+     },
+     "compsRaw": {
+      "overlap": 0.8071428571428572,
+      "capture": 0.8527530343453431,
+      "spearman": 0.7091811496188158
+     },
+     "people": {
+      "overlap": 0.7,
+      "capture": 0.4074629674458833,
+      "spearman": 0.8061862864176266
+     },
+     "claude": {
+      "overlap": 0.5214285714285715,
+      "capture": 0.45847881154318665,
+      "spearman": 0.3632772959327698
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8129649366023657
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.8428571428571429,
+      "capture": 0.9689918646917732,
+      "spearman": 0.7222918973503767
+     },
+     "compsRaw": {
+      "overlap": 0.8714285714285714,
+      "capture": 0.979789487566249,
+      "spearman": 0.7234797073939176
+     },
+     "people": {
+      "overlap": 0.8428571428571429,
+      "capture": 0.9759402586484013,
+      "spearman": 0.8289393278500028
+     },
+     "claude": {
+      "overlap": 0.5142857142857142,
+      "capture": 0.7341971431632913,
+      "spearman": 0.3513647282111906
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8355229063543329
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Vans",
+   "comps": [
+    "Converse",
+    "Levi Strauss & Co.",
+    "Puma"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5142857142857142,
+      "capture": 0.749564342329434,
+      "spearman": 0.7315418176575601
+     },
+     "compsRaw": {
+      "overlap": 0.03571428571428571,
+      "capture": 0.2864726657570119,
+      "spearman": 0.5655784843149074
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.2582239624755264,
+      "spearman": 0.5005656229203723
+     },
+     "claude": {
+      "overlap": 0.02142857142857143,
+      "capture": 0.2755351738343653,
+      "spearman": 0.08336087209602304
+     },
+     "control": {
+      "overlap": 0.007142857142857143,
+      "capture": 0.023116073824549013,
+      "spearman": -0.4533176386497135
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.04285714285714286,
+      "capture": 0.5655440924722385,
+      "spearman": 0.6139451175560313
+     },
+     "compsRaw": {
+      "overlap": 0.8571428571428571,
+      "capture": 0.9891226953900223,
+      "spearman": 0.9591037918570878
+     },
+     "people": {
+      "overlap": 0.8285714285714286,
+      "capture": 0.9871987153266975,
+      "spearman": 0.9646491130622389
+     },
+     "claude": {
+      "overlap": 0.6928571428571428,
+      "capture": 0.9556727112969434,
+      "spearman": 0.39169400854043385
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0107712584647548,
+      "spearman": -0.9644066930854743
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Sephora",
+   "comps": [
+    "MAC Cosmetics",
+    "NARS Cosmetics",
+    "NYX Professional Makeup"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6714285714285714,
+      "capture": 0.8432445240914549,
+      "spearman": 0.7719915020143179
+     },
+     "compsRaw": {
+      "overlap": 0.007142857142857143,
+      "capture": 0.2942067998580281,
+      "spearman": 0.4128322541475471
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.27608331107035666,
+      "spearman": 0.2941485898351964
+     },
+     "claude": {
+      "overlap": 0,
+      "capture": 0.2811158823744005,
+      "spearman": -0.06363754040220256
+     },
+     "control": {
+      "overlap": 0.02857142857142857,
+      "capture": 0.13318616185080534,
+      "spearman": -0.2305311098609347
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.4784857853857175,
+      "spearman": 0.3224577470620052
+     },
+     "compsRaw": {
+      "overlap": 0.95,
+      "capture": 0.9980242817283764,
+      "spearman": 0.9733734595825615
+     },
+     "people": {
+      "overlap": 0.9142857142857143,
+      "capture": 0.9964482316567378,
+      "spearman": 0.9673394890084441
+     },
+     "claude": {
+      "overlap": 0.8285714285714286,
+      "capture": 0.9801221627328254,
+      "spearman": 0.40373288411427616
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.05289947967724907,
+      "spearman": -0.9605520966771508
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "Ralph Lauren",
+   "comps": [
+    "Armani Exchange",
+    "Louis Vuitton",
+    "Versace"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.4785714285714286,
+      "capture": 0.6761295972761855,
+      "spearman": 0.14925125810542061
+     },
+     "compsRaw": {
+      "overlap": 0.22857142857142856,
+      "capture": 0.37579368578075156,
+      "spearman": 0.5202027948521954
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.22449982304679278,
+      "spearman": 0.5559157549910881
+     },
+     "claude": {
+      "overlap": 0,
+      "capture": 0.2255469190406501,
+      "spearman": 0.14382829669165287
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0323400176087701,
+      "spearman": -0.4498668365570592
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.4255121609692246,
+      "spearman": -0.2644473868216865
+     },
+     "compsRaw": {
+      "overlap": 0.11428571428571428,
+      "capture": 0.6445009284344465,
+      "spearman": 0.5511351550403495
+     },
+     "people": {
+      "overlap": 0.8857142857142857,
+      "capture": 0.9942086998873698,
+      "spearman": 0.9586250426880087
+     },
+     "claude": {
+      "overlap": 0.8642857142857143,
+      "capture": 0.9900459651152164,
+      "spearman": 0.3877774722569568
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.015106085050683381,
+      "spearman": -0.9210622992704119
+     }
+    }
+   }
+  },
+  {
+   "city": "chicago",
+   "target": "The Bear",
+   "comps": [
+    "Succession",
+    "Beef",
+    "The White Lotus"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6071428571428571,
+      "capture": 0.378887865530739,
+      "spearman": 0.7544669672764498
+     },
+     "compsRaw": {
+      "overlap": 0.6142857142857143,
+      "capture": 0.35700331213801145,
+      "spearman": 0.7545544075421965
+     },
+     "people": {
+      "overlap": 0.6,
+      "capture": 0.30458492003046456,
+      "spearman": 0.6552072980573541
+     },
+     "claude": {
+      "overlap": 0.5857142857142857,
+      "capture": 0.33943755645689777,
+      "spearman": 0.5336552314802341
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6452440262145871
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.6642857142857143,
+      "capture": 0.8065439394086894,
+      "spearman": 0.7708817817980769
+     },
+     "compsRaw": {
+      "overlap": 0.6714285714285714,
+      "capture": 0.8106424197583747,
+      "spearman": 0.7713008446048132
+     },
+     "people": {
+      "overlap": 0.6714285714285714,
+      "capture": 0.8051907594357535,
+      "spearman": 0.6588214421936778
+     },
+     "claude": {
+      "overlap": 0.6357142857142857,
+      "capture": 0.7481040877717317,
+      "spearman": 0.5416810278535673
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6493908004980429
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Dua Lipa",
+   "comps": [
+    "Sabrina Carpenter",
+    "Harry Styles",
+    "Ava Max"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.23668639053254437,
+      "capture": 0.4987547504377307,
+      "spearman": 0.3109215750122291
+     },
+     "compsRaw": {
+      "overlap": 0.07100591715976332,
+      "capture": 0.3908034198696384,
+      "spearman": 0.4634520228941179
+     },
+     "people": {
+      "overlap": 0.029585798816568046,
+      "capture": 0.3759202531105778,
+      "spearman": 0.3745162338795184
+     },
+     "claude": {
+      "overlap": 0.09467455621301775,
+      "capture": 0.4384831441008009,
+      "spearman": 0.21127799466343675
+     },
+     "control": {
+      "overlap": 0.005917159763313609,
+      "capture": 0.04119411572642314,
+      "spearman": -0.4286008975263312
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.5727503889142267,
+      "spearman": 0.2494906407074318
+     },
+     "compsRaw": {
+      "overlap": 0.7514792899408284,
+      "capture": 0.9349373051524109,
+      "spearman": 0.8789774007731873
+     },
+     "people": {
+      "overlap": 0.8520710059171598,
+      "capture": 0.9918031250585717,
+      "spearman": 0.945477717655206
+     },
+     "claude": {
+      "overlap": 0.727810650887574,
+      "capture": 0.9569101779946394,
+      "spearman": 0.3553702910697349
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.022016606168898105,
+      "spearman": -0.9725816886518845
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Rosalía",
+   "comps": [
+    "Bad Bunny",
+    "Tokischa",
+    "Karol G"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3431952662721893,
+      "capture": 0.6590034935754072,
+      "spearman": 0.30954331701494986
+     },
+     "compsRaw": {
+      "overlap": 0.23076923076923078,
+      "capture": 0.4829872926859545,
+      "spearman": 0.4216990366751104
+     },
+     "people": {
+      "overlap": 0.029585798816568046,
+      "capture": 0.28134759794523373,
+      "spearman": 0.26210043797376287
+     },
+     "claude": {
+      "overlap": 0.17159763313609466,
+      "capture": 0.4151487774456503,
+      "spearman": 0.209104599134434
+     },
+     "control": {
+      "overlap": 0.005917159763313609,
+      "capture": 0.09630337160568507,
+      "spearman": -0.24609228439948894
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.532249407065285,
+      "spearman": -0.05811862336288129
+     },
+     "compsRaw": {
+      "overlap": 0.20118343195266272,
+      "capture": 0.7871676444888286,
+      "spearman": 0.7557582154664959
+     },
+     "people": {
+      "overlap": 0.7869822485207101,
+      "capture": 0.986949194857072,
+      "spearman": 0.9405416230579347
+     },
+     "claude": {
+      "overlap": 0.5325443786982249,
+      "capture": 0.8803208088877799,
+      "spearman": 0.241081361272128
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.042447884159281024,
+      "spearman": -0.9485877233780016
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Arctic Monkeys",
+   "comps": [
+    "Kasabian",
+    "The Strokes",
+    "The Last Shadow Puppets"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.4378698224852071,
+      "capture": 0.6539417843838319,
+      "spearman": 0.8328803811275002
+     },
+     "compsRaw": {
+      "overlap": 0.7041420118343196,
+      "capture": 0.7542503507745842,
+      "spearman": 0.8890347895078986
+     },
+     "people": {
+      "overlap": 0.7159763313609467,
+      "capture": 0.7080201331646924,
+      "spearman": 0.8665178552566767
+     },
+     "claude": {
+      "overlap": 0.6568047337278107,
+      "capture": 0.6981552281979537,
+      "spearman": 0.3526515019853164
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8650641798607177
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.39644970414201186,
+      "capture": 0.6817694334476415,
+      "spearman": 0.8397724023337272
+     },
+     "compsRaw": {
+      "overlap": 0.834319526627219,
+      "capture": 0.9416566261072198,
+      "spearman": 0.908435375048728
+     },
+     "people": {
+      "overlap": 0.9053254437869822,
+      "capture": 0.9928502389873817,
+      "spearman": 0.8882445718890316
+     },
+     "claude": {
+      "overlap": 0.650887573964497,
+      "capture": 0.8670343056125626,
+      "spearman": 0.3315070544961953
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8926303645398322
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Doja Cat",
+   "comps": [
+    "Megan Thee Stallion",
+    "Saweetie",
+    "Lizzo"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.1952662721893491,
+      "capture": 0.3590864950571178,
+      "spearman": 0.36482470638028647
+     },
+     "compsRaw": {
+      "overlap": 0.08284023668639054,
+      "capture": 0.3235821939643424,
+      "spearman": 0.41725023377274645
+     },
+     "people": {
+      "overlap": 0.07692307692307693,
+      "capture": 0.3153481708210547,
+      "spearman": 0.3759012201216582
+     },
+     "claude": {
+      "overlap": 0.20118343195266272,
+      "capture": 0.43763060968429957,
+      "spearman": 0.22565793103273263
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.05751526613520332,
+      "spearman": -0.30900949726362553
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.005917159763313609,
+      "capture": 0.334987577562206,
+      "spearman": 0.07796136913339502
+     },
+     "compsRaw": {
+      "overlap": 0.7810650887573964,
+      "capture": 0.9815661011024135,
+      "spearman": 0.8966385157839125
+     },
+     "people": {
+      "overlap": 0.8520710059171598,
+      "capture": 0.9912293843714501,
+      "spearman": 0.9655938784104158
+     },
+     "claude": {
+      "overlap": 0.5088757396449705,
+      "capture": 0.8572231169706735,
+      "spearman": 0.22517168115959152
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.03215476235064986,
+      "spearman": -0.9611971331035775
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Zach Bryan",
+   "comps": [
+    "Tyler Childers",
+    "Chris Stapleton",
+    "Luke Combs"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.23668639053254437,
+      "capture": 0.2634522625326104,
+      "spearman": 0.5895555241785025
+     },
+     "compsRaw": {
+      "overlap": 0.8284023668639053,
+      "capture": 1,
+      "spearman": 0.7270921067889405
+     },
+     "people": {
+      "overlap": 0.8047337278106509,
+      "capture": 0.7692986242750697,
+      "spearman": 0.7077464502841398
+     },
+     "claude": {
+      "overlap": 0.6094674556213018,
+      "capture": 0.7672340984591127,
+      "spearman": 0.34125177988159866
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6962397813553697
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.17159763313609466,
+      "capture": 0.291658788561748,
+      "spearman": 0.5869581529073308
+     },
+     "compsRaw": {
+      "overlap": 0.8994082840236687,
+      "capture": 0.9775833251401038,
+      "spearman": 0.7293221903212221
+     },
+     "people": {
+      "overlap": 0.8461538461538461,
+      "capture": 0.9625103045612333,
+      "spearman": 0.7107334835571805
+     },
+     "claude": {
+      "overlap": 0.6094674556213018,
+      "capture": 0.735575505018038,
+      "spearman": 0.34207973686619475
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7007598351816414
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Tame Impala",
+   "comps": [
+    "Unknown Mortal Orchestra",
+    "Mac DeMarco",
+    "Melody's Echo Chamber"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5976331360946746,
+      "capture": 0.7250830116560588,
+      "spearman": 0.8695731155043337
+     },
+     "compsRaw": {
+      "overlap": 0.378698224852071,
+      "capture": 0.4732362232906548,
+      "spearman": 0.880881487534171
+     },
+     "people": {
+      "overlap": 0.20710059171597633,
+      "capture": 0.2835472231337189,
+      "spearman": 0.7408479348297262
+     },
+     "claude": {
+      "overlap": 0.35502958579881655,
+      "capture": 0.4707972034391916,
+      "spearman": 0.3313825771650263
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7286094372728676
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.22485207100591717,
+      "capture": 0.6433011925907131,
+      "spearman": 0.763962738318237
+     },
+     "compsRaw": {
+      "overlap": 0.9053254437869822,
+      "capture": 0.9940370464349152,
+      "spearman": 0.9607451387662365
+     },
+     "people": {
+      "overlap": 0.7869822485207101,
+      "capture": 0.9832276072062928,
+      "spearman": 0.9400672134202521
+     },
+     "claude": {
+      "overlap": 0.6804733727810651,
+      "capture": 0.924162649073839,
+      "spearman": 0.3181685524581182
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9416790338441688
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "J Balvin",
+   "comps": [
+    "Maluma",
+    "Karol G",
+    "Ozuna"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.757396449704142,
+      "capture": 0.9518056364642125,
+      "spearman": 0.90819506443841
+     },
+     "compsRaw": {
+      "overlap": 0.14792899408284024,
+      "capture": 0.3679976773619229,
+      "spearman": 0.45839466712200067
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.11928222650917812,
+      "spearman": 0.06326886850007771
+     },
+     "claude": {
+      "overlap": 0.11834319526627218,
+      "capture": 0.30281017366690266,
+      "spearman": 0.14185828083290022
+     },
+     "control": {
+      "overlap": 0.029585798816568046,
+      "capture": 0.12420314648171918,
+      "spearman": -0.08698494199863177
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.14201183431952663,
+      "capture": 0.7362237134233045,
+      "spearman": 0.4671225771943845
+     },
+     "compsRaw": {
+      "overlap": 0.8698224852071006,
+      "capture": 0.9952104173422807,
+      "spearman": 0.9865135205879245
+     },
+     "people": {
+      "overlap": 0.6331360946745562,
+      "capture": 0.9514680569760773,
+      "spearman": 0.890524053217714
+     },
+     "claude": {
+      "overlap": 0.5207100591715976,
+      "capture": 0.8703569735824579,
+      "spearman": 0.2406789125722017
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.06385486566717394,
+      "spearman": -0.9138093963839107
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "BLACKPINK",
+   "comps": [
+    "Itzy",
+    "TWICE",
+    "Aespa"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5443786982248521,
+      "capture": 0.6783263084651779,
+      "spearman": 0.789422115113008
+     },
+     "compsRaw": {
+      "overlap": 0.39644970414201186,
+      "capture": 0.43167055857719955,
+      "spearman": 0.7796817021318754
+     },
+     "people": {
+      "overlap": 0.2781065088757396,
+      "capture": 0.3110680835406792,
+      "spearman": 0.7958780097581518
+     },
+     "claude": {
+      "overlap": 0.33727810650887574,
+      "capture": 0.4722469134902966,
+      "spearman": 0.2648799102656985
+     },
+     "control": {
+      "overlap": 0.005917159763313609,
+      "capture": 0.00967664962969169,
+      "spearman": -0.8122351634098354
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.7337278106508875,
+      "capture": 0.9484967286820707,
+      "spearman": 0.8384080280914493
+     },
+     "compsRaw": {
+      "overlap": 0.8757396449704142,
+      "capture": 0.991909643832462,
+      "spearman": 0.8490228482630618
+     },
+     "people": {
+      "overlap": 0.8047337278106509,
+      "capture": 0.9828343747401808,
+      "spearman": 0.9199442854377814
+     },
+     "claude": {
+      "overlap": 0.5562130177514792,
+      "capture": 0.7916781253397621,
+      "spearman": 0.24335218102458078
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0015796980026733338,
+      "spearman": -0.9369162090762971
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Vans",
+   "comps": [
+    "Converse",
+    "Levi Strauss & Co.",
+    "Puma"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5621301775147929,
+      "capture": 0.7922411936625128,
+      "spearman": 0.7651013784711321
+     },
+     "compsRaw": {
+      "overlap": 0.04142011834319527,
+      "capture": 0.29227195816028295,
+      "spearman": 0.43644367989981997
+     },
+     "people": {
+      "overlap": 0.01775147928994083,
+      "capture": 0.23844280367123,
+      "spearman": 0.34307377808765976
+     },
+     "claude": {
+      "overlap": 0.08875739644970414,
+      "capture": 0.3065507870584011,
+      "spearman": 0.11881409945966093
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.05623955288929907,
+      "spearman": -0.2800464370267
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.0650887573964497,
+      "capture": 0.6871606694874004,
+      "spearman": 0.6032656299938682
+     },
+     "compsRaw": {
+      "overlap": 0.8224852071005917,
+      "capture": 0.991281936071692,
+      "spearman": 0.9786422947854375
+     },
+     "people": {
+      "overlap": 0.7041420118343196,
+      "capture": 0.9728098750639664,
+      "spearman": 0.9635136152991919
+     },
+     "claude": {
+      "overlap": 0.591715976331361,
+      "capture": 0.9170192583717127,
+      "spearman": 0.28495793770992456
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.03399233659090628,
+      "spearman": -0.9595360124388048
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Sephora",
+   "comps": [
+    "MAC Cosmetics",
+    "NARS Cosmetics",
+    "NYX Professional Makeup"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.591715976331361,
+      "capture": 0.851927326974963,
+      "spearman": 0.7392961528584384
+     },
+     "compsRaw": {
+      "overlap": 0.047337278106508875,
+      "capture": 0.26264838072690344,
+      "spearman": 0.29919653544858754
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.15556764118991867,
+      "spearman": 0.132831821150222
+     },
+     "claude": {
+      "overlap": 0.011834319526627219,
+      "capture": 0.1603351210842112,
+      "spearman": -0.09649180738472923
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.08725669368195346,
+      "spearman": -0.10779350697269872
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.11834319526627218,
+      "capture": 0.6997855522030768,
+      "spearman": 0.4878405143766272
+     },
+     "compsRaw": {
+      "overlap": 0.8047337278106509,
+      "capture": 0.9861481684662002,
+      "spearman": 0.974316687791987
+     },
+     "people": {
+      "overlap": 0.650887573964497,
+      "capture": 0.9559758621549508,
+      "spearman": 0.9337391287934776
+     },
+     "claude": {
+      "overlap": 0.5266272189349113,
+      "capture": 0.877783457596688,
+      "spearman": 0.26971937578165495
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.04970326409495546,
+      "spearman": -0.9360938874462553
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "Ralph Lauren",
+   "comps": [
+    "Armani Exchange",
+    "Louis Vuitton",
+    "Versace"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.09467455621301775,
+      "capture": 0.2734276822130503,
+      "spearman": 0.11208495440039586
+     },
+     "compsRaw": {
+      "overlap": 0.0650887573964497,
+      "capture": 0.26226427160458743,
+      "spearman": 0.26895251851947477
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.26632461644967503,
+      "spearman": 0.3732688592769603
+     },
+     "claude": {
+      "overlap": 0.023668639053254437,
+      "capture": 0.27724643653985526,
+      "spearman": 0.0666741697325477
+     },
+     "control": {
+      "overlap": 0.011834319526627219,
+      "capture": 0.08019434840601015,
+      "spearman": -0.29674593640876445
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.26537414796134945,
+      "spearman": -0.28597170342498895
+     },
+     "compsRaw": {
+      "overlap": 0.5029585798816568,
+      "capture": 0.6794462060872389,
+      "spearman": 0.4972246216890266
+     },
+     "people": {
+      "overlap": 0.7751479289940828,
+      "capture": 0.9822476342663107,
+      "spearman": 0.9689643741155596
+     },
+     "claude": {
+      "overlap": 0.7514792899408284,
+      "capture": 0.9495455793862828,
+      "spearman": 0.3106291513883401
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.03996154902499315,
+      "spearman": -0.9551261442420784
+     }
+    }
+   }
+  },
+  {
+   "city": "new-york",
+   "target": "The Bear",
+   "comps": [
+    "Succession",
+    "Beef",
+    "The White Lotus"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.650887573964497,
+      "capture": 0.8370373546380059,
+      "spearman": 0.8792683720846888
+     },
+     "compsRaw": {
+      "overlap": 0.6923076923076923,
+      "capture": 0.8039893857756052,
+      "spearman": 0.8837643908780379
+     },
+     "people": {
+      "overlap": 0.6568047337278107,
+      "capture": 0.42902809339374065,
+      "spearman": 0.6792051717881737
+     },
+     "claude": {
+      "overlap": 0.6686390532544378,
+      "capture": 0.5840300704597746,
+      "spearman": 0.48241780131139106
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.65552788394231
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.6804733727810651,
+      "capture": 0.8298514246309117,
+      "spearman": 0.885659336573624
+     },
+     "compsRaw": {
+      "overlap": 0.727810650887574,
+      "capture": 0.877331285459047,
+      "spearman": 0.8914402600444614
+     },
+     "people": {
+      "overlap": 0.7337278106508875,
+      "capture": 0.8829968968435565,
+      "spearman": 0.6832178790360941
+     },
+     "claude": {
+      "overlap": 0.7159763313609467,
+      "capture": 0.8474516503150173,
+      "spearman": 0.4871348150143616
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6613932526469429
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Dua Lipa",
+   "comps": [
+    "Sabrina Carpenter",
+    "Harry Styles",
+    "Ava Max"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.24789915966386555,
+      "capture": 0.47638364960702045,
+      "spearman": 0.4653066300737741
+     },
+     "compsRaw": {
+      "overlap": 0.058823529411764705,
+      "capture": 0.3469153419502177,
+      "spearman": 0.5151383129872794
+     },
+     "people": {
+      "overlap": 0.012605042016806723,
+      "capture": 0.31201552687870193,
+      "spearman": 0.43011546514344035
+     },
+     "claude": {
+      "overlap": 0.06302521008403361,
+      "capture": 0.36152160768510894,
+      "spearman": 0.1711560264547438
+     },
+     "control": {
+      "overlap": 0.004201680672268907,
+      "capture": 0.029650739339416213,
+      "spearman": -0.45360454344994083
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.004201680672268907,
+      "capture": 0.6076975376944722,
+      "spearman": 0.4266809921159253
+     },
+     "compsRaw": {
+      "overlap": 0.7394957983193278,
+      "capture": 0.9437593597383499,
+      "spearman": 0.919945116369657
+     },
+     "people": {
+      "overlap": 0.8151260504201681,
+      "capture": 0.9857709758124374,
+      "spearman": 0.9494020623814865
+     },
+     "claude": {
+      "overlap": 0.7521008403361344,
+      "capture": 0.9610057191611907,
+      "spearman": 0.284646753408087
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.01666866637337637,
+      "spearman": -0.9641577415050369
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Rosalía",
+   "comps": [
+    "Bad Bunny",
+    "Tokischa",
+    "Karol G"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.29411764705882354,
+      "capture": 0.5816662578094419,
+      "spearman": 0.37269881626462426
+     },
+     "compsRaw": {
+      "overlap": 0.12605042016806722,
+      "capture": 0.42268531255106023,
+      "spearman": 0.47535839263085816
+     },
+     "people": {
+      "overlap": 0.012605042016806723,
+      "capture": 0.2934223276257119,
+      "spearman": 0.38698499059705077
+     },
+     "claude": {
+      "overlap": 0.1722689075630252,
+      "capture": 0.4352380950141726,
+      "spearman": 0.2296573434254198
+     },
+     "control": {
+      "overlap": 0.004201680672268907,
+      "capture": 0.030855336510157882,
+      "spearman": -0.3778582766022639
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.012605042016806723,
+      "capture": 0.5241972380279757,
+      "spearman": 0.23829329234867752
+     },
+     "compsRaw": {
+      "overlap": 0.40336134453781514,
+      "capture": 0.8791181944574005,
+      "spearman": 0.8577021032393453
+     },
+     "people": {
+      "overlap": 0.8235294117647058,
+      "capture": 0.9860479991471561,
+      "spearman": 0.9487262961083927
+     },
+     "claude": {
+      "overlap": 0.5966386554621849,
+      "capture": 0.8709806377676813,
+      "spearman": 0.14365518563964322
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.019215649694175357,
+      "spearman": -0.9533444462935049
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Arctic Monkeys",
+   "comps": [
+    "Kasabian",
+    "The Strokes",
+    "The Last Shadow Puppets"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.04201680672268908,
+      "capture": 0.05723644789942216,
+      "spearman": 0.6544923403435495
+     },
+     "compsRaw": {
+      "overlap": 0.44537815126050423,
+      "capture": 0.44595711203342736,
+      "spearman": 0.809430743572597
+     },
+     "people": {
+      "overlap": 0.680672268907563,
+      "capture": 0.5787979568537868,
+      "spearman": 0.8651381174265019
+     },
+     "claude": {
+      "overlap": 0.6638655462184874,
+      "capture": 0.6194717218733358,
+      "spearman": 0.2855325163995077
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8611169825842592
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.004201680672268907,
+      "capture": 0.33520796169373746,
+      "spearman": 0.6462832250649047
+     },
+     "compsRaw": {
+      "overlap": 0.44537815126050423,
+      "capture": 0.7279692047695044,
+      "spearman": 0.820908828815784
+     },
+     "people": {
+      "overlap": 0.865546218487395,
+      "capture": 0.9882499295840763,
+      "spearman": 0.8948692969585075
+     },
+     "claude": {
+      "overlap": 0.7773109243697479,
+      "capture": 0.9195897098863955,
+      "spearman": 0.2711056927930318
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8950288071322072
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Doja Cat",
+   "comps": [
+    "Megan Thee Stallion",
+    "Saweetie",
+    "Lizzo"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.25630252100840334,
+      "capture": 0.5013165874761695,
+      "spearman": 0.3528947250360609
+     },
+     "compsRaw": {
+      "overlap": 0.046218487394957986,
+      "capture": 0.31984637779877834,
+      "spearman": 0.4070346266882594
+     },
+     "people": {
+      "overlap": 0.012605042016806723,
+      "capture": 0.2893990286260806,
+      "spearman": 0.32244814718506853
+     },
+     "claude": {
+      "overlap": 0.06302521008403361,
+      "capture": 0.32872931812055384,
+      "spearman": 0.1275865237821163
+     },
+     "control": {
+      "overlap": 0.008403361344537815,
+      "capture": 0.08947203007174372,
+      "spearman": -0.3094388467453874
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.008403361344537815,
+      "capture": 0.40642687764554697,
+      "spearman": 0.12117485474049727
+     },
+     "compsRaw": {
+      "overlap": 0.7983193277310925,
+      "capture": 0.9834230880039011,
+      "spearman": 0.910149935941103
+     },
+     "people": {
+      "overlap": 0.8235294117647058,
+      "capture": 0.9882498947321776,
+      "spearman": 0.9540871723498954
+     },
+     "claude": {
+      "overlap": 0.6974789915966386,
+      "capture": 0.880823526804513,
+      "spearman": 0.15468365411000445
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.04525408328346965,
+      "spearman": -0.9602225540192465
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Zach Bryan",
+   "comps": [
+    "Tyler Childers",
+    "Chris Stapleton",
+    "Luke Combs"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.13445378151260504,
+      "capture": 0.37584161520127246,
+      "spearman": 0.5239080917202492
+     },
+     "compsRaw": {
+      "overlap": 0.8445378151260504,
+      "capture": 0.9999999999999998,
+      "spearman": 0.7374154157192492
+     },
+     "people": {
+      "overlap": 0.7983193277310925,
+      "capture": 0.7641047378277922,
+      "spearman": 0.7297505123510536
+     },
+     "claude": {
+      "overlap": 0.6008403361344538,
+      "capture": 0.7081385879487326,
+      "spearman": 0.089262954773838
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7269366781915921
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.12184873949579832,
+      "capture": 0.18890183282641113,
+      "spearman": 0.5216290588730814
+     },
+     "compsRaw": {
+      "overlap": 0.8697478991596639,
+      "capture": 0.9707549009788775,
+      "spearman": 0.7402243574135644
+     },
+     "people": {
+      "overlap": 0.8319327731092437,
+      "capture": 0.9589893888997237,
+      "spearman": 0.7337008024609682
+     },
+     "claude": {
+      "overlap": 0.6092436974789915,
+      "capture": 0.7095468274760551,
+      "spearman": 0.08847464301287658
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7316777564216342
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Tame Impala",
+   "comps": [
+    "Unknown Mortal Orchestra",
+    "Mac DeMarco",
+    "Melody's Echo Chamber"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.31512605042016806,
+      "capture": 0.5128083442548186,
+      "spearman": 0.7495970129584214
+     },
+     "compsRaw": {
+      "overlap": 0.2605042016806723,
+      "capture": 0.4450295552925517,
+      "spearman": 0.7770821478529358
+     },
+     "people": {
+      "overlap": 0.06302521008403361,
+      "capture": 0.21895493185958115,
+      "spearman": 0.5601213691161212
+     },
+     "claude": {
+      "overlap": 0.2773109243697479,
+      "capture": 0.44243748666490745,
+      "spearman": 0.2846526692686181
+     },
+     "control": {
+      "overlap": 0.004201680672268907,
+      "capture": 0.010943368959059636,
+      "spearman": -0.5492592291866373
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.02100840336134454,
+      "capture": 0.425117071094083,
+      "spearman": 0.5277153130865266
+     },
+     "compsRaw": {
+      "overlap": 0.7983193277310925,
+      "capture": 0.9298290425937134,
+      "spearman": 0.8636713930330099
+     },
+     "people": {
+      "overlap": 0.7184873949579832,
+      "capture": 0.9686495933319895,
+      "spearman": 0.9258838255942841
+     },
+     "claude": {
+      "overlap": 0.7058823529411765,
+      "capture": 0.9329882816876169,
+      "spearman": 0.25683153241982387
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.004252649503708189,
+      "spearman": -0.9259275803294318
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "J Balvin",
+   "comps": [
+    "Maluma",
+    "Karol G",
+    "Ozuna"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.8361344537815126,
+      "capture": 0.9605913443330903,
+      "spearman": 0.9002119362838418
+     },
+     "compsRaw": {
+      "overlap": 0.15126050420168066,
+      "capture": 0.372072408162306,
+      "spearman": 0.5883359697654607
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.1793278203981258,
+      "spearman": 0.25802713171778885
+     },
+     "claude": {
+      "overlap": 0.23529411764705882,
+      "capture": 0.41922795592233975,
+      "spearman": 0.2537804232759245
+     },
+     "control": {
+      "overlap": 0.008403361344537815,
+      "capture": 0.05519485121442143,
+      "spearman": -0.26083292895744703
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.12184873949579832,
+      "capture": 0.7073483590913531,
+      "spearman": 0.5936031386299181
+     },
+     "compsRaw": {
+      "overlap": 0.8949579831932774,
+      "capture": 0.995938784387179,
+      "spearman": 0.9856464130316721
+     },
+     "people": {
+      "overlap": 0.7394957983193278,
+      "capture": 0.9760144162058046,
+      "spearman": 0.9143984846915431
+     },
+     "claude": {
+      "overlap": 0.6050420168067226,
+      "capture": 0.8712572458300418,
+      "spearman": 0.14660076743236594
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.03524602533488387,
+      "spearman": -0.9218415708654026
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "BLACKPINK",
+   "comps": [
+    "Itzy",
+    "TWICE",
+    "Aespa"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5630252100840336,
+      "capture": 0.6566363638474613,
+      "spearman": 0.7316329230444867
+     },
+     "compsRaw": {
+      "overlap": 0.4579831932773109,
+      "capture": 0.4826218084930872,
+      "spearman": 0.7253263541282107
+     },
+     "people": {
+      "overlap": 0.2857142857142857,
+      "capture": 0.23023118385338132,
+      "spearman": 0.810338213772694
+     },
+     "claude": {
+      "overlap": 0.31092436974789917,
+      "capture": 0.27204937676650404,
+      "spearman": 0.2109325339715354
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8221005248411063
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.819327731092437,
+      "capture": 0.9709377080274666,
+      "spearman": 0.7995223217553163
+     },
+     "compsRaw": {
+      "overlap": 0.8865546218487395,
+      "capture": 0.9915010806029491,
+      "spearman": 0.804771466816456
+     },
+     "people": {
+      "overlap": 0.7436974789915967,
+      "capture": 0.9692370122468338,
+      "spearman": 0.9192331041702181
+     },
+     "claude": {
+      "overlap": 0.6848739495798319,
+      "capture": 0.8780742469975651,
+      "spearman": 0.20900853880561968
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9306471229099158
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Vans",
+   "comps": [
+    "Converse",
+    "Levi Strauss & Co.",
+    "Puma"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5378151260504201,
+      "capture": 0.7795377006944778,
+      "spearman": 0.616904539159251
+     },
+     "compsRaw": {
+      "overlap": 0.046218487394957986,
+      "capture": 0.30771607602726936,
+      "spearman": 0.36836649516608305
+     },
+     "people": {
+      "overlap": 0.008403361344537815,
+      "capture": 0.24010461904243574,
+      "spearman": 0.2863905782308594
+     },
+     "claude": {
+      "overlap": 0.01680672268907563,
+      "capture": 0.2400919075582198,
+      "spearman": 0.007921777651881517
+     },
+     "control": {
+      "overlap": 0.008403361344537815,
+      "capture": 0.08029036557287975,
+      "spearman": -0.26494548076790486
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.12184873949579832,
+      "capture": 0.692340065475585,
+      "spearman": 0.6603438096022594
+     },
+     "compsRaw": {
+      "overlap": 0.8445378151260504,
+      "capture": 0.9913216056137119,
+      "spearman": 0.9715246704971291
+     },
+     "people": {
+      "overlap": 0.7436974789915967,
+      "capture": 0.9751077600528059,
+      "spearman": 0.9583433675665838
+     },
+     "claude": {
+      "overlap": 0.6470588235294118,
+      "capture": 0.9305949949719362,
+      "spearman": 0.224258155928127
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.046537280769759,
+      "spearman": -0.9601743894190591
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Sephora",
+   "comps": [
+    "MAC Cosmetics",
+    "NARS Cosmetics",
+    "NYX Professional Makeup"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.7016806722689075,
+      "capture": 0.8986444946075755,
+      "spearman": 0.8437958677834935
+     },
+     "compsRaw": {
+      "overlap": 0.058823529411764705,
+      "capture": 0.36475402295930215,
+      "spearman": 0.4676630945374131
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.26011637247864194,
+      "spearman": 0.3092705720927149
+     },
+     "claude": {
+      "overlap": 0,
+      "capture": 0.2524939141701749,
+      "spearman": -0.0017225052751337747
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0656725570971877,
+      "spearman": -0.29300267873306607
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.09243697478991597,
+      "capture": 0.6786151146093715,
+      "spearman": 0.49978863860169925
+     },
+     "compsRaw": {
+      "overlap": 0.9033613445378151,
+      "capture": 0.9960068428796824,
+      "spearman": 0.9880153657481513
+     },
+     "people": {
+      "overlap": 0.7436974789915967,
+      "capture": 0.9782259923061934,
+      "spearman": 0.959030260192078
+     },
+     "claude": {
+      "overlap": 0.6932773109243697,
+      "capture": 0.9545950114343466,
+      "spearman": 0.2598136294769152
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0390053005726037,
+      "spearman": -0.9617261659261654
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "Ralph Lauren",
+   "comps": [
+    "Armani Exchange",
+    "Louis Vuitton",
+    "Versace"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3067226890756303,
+      "capture": 0.5079206262513422,
+      "spearman": -0.07430964534018797
+     },
+     "compsRaw": {
+      "overlap": 0.23949579831932774,
+      "capture": 0.4135529497614984,
+      "spearman": 0.33859647862193826
+     },
+     "people": {
+      "overlap": 0.012605042016806723,
+      "capture": 0.28028278253138433,
+      "spearman": 0.5184355474245663
+     },
+     "claude": {
+      "overlap": 0.08823529411764706,
+      "capture": 0.3576800465012605,
+      "spearman": 0.17484906010885892
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.012595236461749338,
+      "spearman": -0.491093193666952
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.3669558945957859,
+      "spearman": -0.44605730928402787
+     },
+     "compsRaw": {
+      "overlap": 0.13865546218487396,
+      "capture": 0.5707258003481421,
+      "spearman": 0.3565809322025797
+     },
+     "people": {
+      "overlap": 0.7689075630252101,
+      "capture": 0.9829357005800887,
+      "spearman": 0.9590864942246125
+     },
+     "claude": {
+      "overlap": 0.7100840336134454,
+      "capture": 0.9324506613362065,
+      "spearman": 0.23514943795932
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.009482639646337615,
+      "spearman": -0.9559342370729029
+     }
+    }
+   }
+  },
+  {
+   "city": "los-angeles",
+   "target": "The Bear",
+   "comps": [
+    "Succession",
+    "Beef",
+    "The White Lotus"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5084033613445378,
+      "capture": 0.4081088472235273,
+      "spearman": 0.7892092780209203
+     },
+     "compsRaw": {
+      "overlap": 0.5126050420168067,
+      "capture": 0.34916927324577784,
+      "spearman": 0.7906790878029599
+     },
+     "people": {
+      "overlap": 0.5,
+      "capture": 0.20992130588914018,
+      "spearman": 0.694162709765473
+     },
+     "claude": {
+      "overlap": 0.5210084033613446,
+      "capture": 0.29420204800331096,
+      "spearman": 0.3498855110373812
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6757211337715642
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.5462184873949579,
+      "capture": 0.7135428466625674,
+      "spearman": 0.8035484188692487
+     },
+     "compsRaw": {
+      "overlap": 0.5756302521008403,
+      "capture": 0.7371103990678709,
+      "spearman": 0.8062139342135775
+     },
+     "people": {
+      "overlap": 0.6008403361344538,
+      "capture": 0.7737914144846861,
+      "spearman": 0.7002431997652373
+     },
+     "claude": {
+      "overlap": 0.5966386554621849,
+      "capture": 0.7533147770549457,
+      "spearman": 0.3494782053232741
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6830090811260151
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Dua Lipa",
+   "comps": [
+    "Sabrina Carpenter",
+    "Harry Styles",
+    "Ava Max"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.2815533980582524,
+      "capture": 0.46954771011687285,
+      "spearman": 0.6976683275885939
+     },
+     "compsRaw": {
+      "overlap": 0.21359223300970873,
+      "capture": 0.42886854649881234,
+      "spearman": 0.8353637174858037
+     },
+     "people": {
+      "overlap": 0.2815533980582524,
+      "capture": 0.44565176026934494,
+      "spearman": 0.8205612042586599
+     },
+     "claude": {
+      "overlap": 0.24271844660194175,
+      "capture": 0.3772778741923138,
+      "spearman": 0.305257081666661
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8448685194278354
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.05825242718446602,
+      "capture": 0.630408249158249,
+      "spearman": 0.7247302841240926
+     },
+     "compsRaw": {
+      "overlap": 0.5242718446601942,
+      "capture": 0.9211910774410778,
+      "spearman": 0.9396098261209023
+     },
+     "people": {
+      "overlap": 0.8737864077669902,
+      "capture": 0.9907302188552187,
+      "spearman": 0.9397323534761405
+     },
+     "claude": {
+      "overlap": 0.5825242718446602,
+      "capture": 0.8222748316498316,
+      "spearman": 0.3643401627107272
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9584607555458172
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Rosalía",
+   "comps": [
+    "Bad Bunny",
+    "Tokischa",
+    "Karol G"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.4563106796116505,
+      "capture": 0.6183591613515713,
+      "spearman": 0.8147321302890281
+     },
+     "compsRaw": {
+      "overlap": 0.3106796116504854,
+      "capture": 0.4211362955438497,
+      "spearman": 0.8705799965321888
+     },
+     "people": {
+      "overlap": 0.3106796116504854,
+      "capture": 0.385050155772944,
+      "spearman": 0.8213868123985782
+     },
+     "claude": {
+      "overlap": 0.14563106796116504,
+      "capture": 0.24362546202791327,
+      "spearman": 0.06344851387504351
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8244796845899209
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.2621359223300971,
+      "capture": 0.6694553579938368,
+      "spearman": 0.7919478952529564
+     },
+     "compsRaw": {
+      "overlap": 0.8737864077669902,
+      "capture": 0.9880756970845828,
+      "spearman": 0.9509533064167597
+     },
+     "people": {
+      "overlap": 0.9029126213592233,
+      "capture": 0.9909879380275136,
+      "spearman": 0.9308472813225339
+     },
+     "claude": {
+      "overlap": 0.5242718446601942,
+      "capture": 0.7276366370500592,
+      "spearman": 0.07892545519955828
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9384940339892474
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Arctic Monkeys",
+   "comps": [
+    "Kasabian",
+    "The Strokes",
+    "The Last Shadow Puppets"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.7669902912621359,
+      "capture": 0.6516732063674356,
+      "spearman": 0.8969804123581488
+     },
+     "compsRaw": {
+      "overlap": 0.8349514563106796,
+      "capture": 0.6516732063674356,
+      "spearman": 0.9025567694703971
+     },
+     "people": {
+      "overlap": 0.8058252427184466,
+      "capture": 0.35879031486266644,
+      "spearman": 0.645327687570512
+     },
+     "claude": {
+      "overlap": 0.7184466019417476,
+      "capture": 0.35879031486266644,
+      "spearman": 0.3785760955784126
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6451222485987634
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.7669902912621359,
+      "capture": 0.869337271052346,
+      "spearman": 0.8972782794903753
+     },
+     "compsRaw": {
+      "overlap": 0.8543689320388349,
+      "capture": 0.939552400563563,
+      "spearman": 0.9034902251362904
+     },
+     "people": {
+      "overlap": 0.8349514563106796,
+      "capture": 0.9458247534409883,
+      "spearman": 0.646987005369466
+     },
+     "claude": {
+      "overlap": 0.7184466019417476,
+      "capture": 0.7992711607239622,
+      "spearman": 0.37728779382267735
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6469138039890777
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Doja Cat",
+   "comps": [
+    "Megan Thee Stallion",
+    "Saweetie",
+    "Lizzo"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3106796116504854,
+      "capture": 0.47462435319002394,
+      "spearman": 0.46897378451955074
+     },
+     "compsRaw": {
+      "overlap": 0.019417475728155338,
+      "capture": 0.24777937822124596,
+      "spearman": 0.21683071472069237
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.20502807311658994,
+      "spearman": 0.2082723955180465
+     },
+     "claude": {
+      "overlap": 0.08737864077669903,
+      "capture": 0.38760118373151364,
+      "spearman": 0.005937801597723879
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.07528405629801752,
+      "spearman": -0.1634658340523485
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.3135961086539347,
+      "spearman": -0.05980751202227421
+     },
+     "compsRaw": {
+      "overlap": 0.8155339805825242,
+      "capture": 0.9811487270003176,
+      "spearman": 0.8711964626603471
+     },
+     "people": {
+      "overlap": 0.8349514563106796,
+      "capture": 0.9898201073404,
+      "spearman": 0.9543519676984853
+     },
+     "claude": {
+      "overlap": 0.44660194174757284,
+      "capture": 0.7909427688897555,
+      "spearman": 0.31625933561299774
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.033289890915061494,
+      "spearman": -0.9574296519209023
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Zach Bryan",
+   "comps": [
+    "Tyler Childers",
+    "Chris Stapleton",
+    "Luke Combs"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.11650485436893204,
+      "capture": 0.13840549952801723,
+      "spearman": 0.47116473916886975
+     },
+     "compsRaw": {
+      "overlap": 0.8155339805825242,
+      "capture": 1,
+      "spearman": 0.670917837372404
+     },
+     "people": {
+      "overlap": 0.8155339805825242,
+      "capture": 0.9722250369319547,
+      "spearman": 0.6436293346948277
+     },
+     "claude": {
+      "overlap": 0.5048543689320388,
+      "capture": 0.8615945004719827,
+      "spearman": 0.1595171395222342
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6523448916074468
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.07766990291262135,
+      "capture": 0.10576897300485218,
+      "spearman": 0.46953027594356744
+     },
+     "compsRaw": {
+      "overlap": 0.8155339805825242,
+      "capture": 0.9229686620379056,
+      "spearman": 0.6714614558023035
+     },
+     "people": {
+      "overlap": 0.8349514563106796,
+      "capture": 0.9327802053454144,
+      "spearman": 0.6459319225897028
+     },
+     "claude": {
+      "overlap": 0.5145631067961165,
+      "capture": 0.6393721684583011,
+      "spearman": 0.1581835158926721
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.6543675062162126
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Tame Impala",
+   "comps": [
+    "Unknown Mortal Orchestra",
+    "Mac DeMarco",
+    "Melody's Echo Chamber"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5728155339805825,
+      "capture": 0.7709087457887464,
+      "spearman": 0.9659325454974351
+     },
+     "compsRaw": {
+      "overlap": 0.5631067961165048,
+      "capture": 0.4225236453276683,
+      "spearman": 0.9667667883302489
+     },
+     "people": {
+      "overlap": 0.44660194174757284,
+      "capture": 0.2581900447819232,
+      "spearman": 0.7937528259109483
+     },
+     "claude": {
+      "overlap": 0.5533980582524272,
+      "capture": 0.4113395003268622,
+      "spearman": 0.3491084145729705
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8132970390688559
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.3106796116504854,
+      "capture": 0.7337571159560687,
+      "spearman": 0.9400430950448297
+     },
+     "compsRaw": {
+      "overlap": 0.6893203883495146,
+      "capture": 0.9241327513578824,
+      "spearman": 0.9876950855258978
+     },
+     "people": {
+      "overlap": 0.7766990291262136,
+      "capture": 0.964733158450436,
+      "spearman": 0.8591029081035896
+     },
+     "claude": {
+      "overlap": 0.6990291262135923,
+      "capture": 0.876903484233327,
+      "spearman": 0.31800549817153273
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8757976617045292
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "J Balvin",
+   "comps": [
+    "Maluma",
+    "Karol G",
+    "Ozuna"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6601941747572816,
+      "capture": 0.8497685505041039,
+      "spearman": 0.8811224722932076
+     },
+     "compsRaw": {
+      "overlap": 0.1262135922330097,
+      "capture": 0.3350282846714669,
+      "spearman": 0.8056718516315806
+     },
+     "people": {
+      "overlap": 0.05825242718446602,
+      "capture": 0.2670565789196083,
+      "spearman": 0.7203892403942306
+     },
+     "claude": {
+      "overlap": 0.08737864077669903,
+      "capture": 0.2628245529511241,
+      "spearman": 0.09652199109807666
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7016507809753473
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.22330097087378642,
+      "capture": 0.7406352132741137,
+      "spearman": 0.8478569970920953
+     },
+     "compsRaw": {
+      "overlap": 0.9223300970873787,
+      "capture": 0.9970460068717001,
+      "spearman": 0.9614134749923222
+     },
+     "people": {
+      "overlap": 0.8640776699029126,
+      "capture": 0.9920493589206401,
+      "spearman": 0.9385961071580732
+     },
+     "claude": {
+      "overlap": 0.5631067961165048,
+      "capture": 0.7711179083214613,
+      "spearman": 0.0887333711982363
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9377666243439851
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "BLACKPINK",
+   "comps": [
+    "Itzy",
+    "TWICE",
+    "Aespa"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.883495145631068,
+      "capture": 1.0000000000000004,
+      "spearman": 0.6605155264699655
+     },
+     "compsRaw": {
+      "overlap": 0.883495145631068,
+      "capture": 0.9097311320838196,
+      "spearman": 0.6603551812902627
+     },
+     "people": {
+      "overlap": 0.7766990291262136,
+      "capture": 0.4721027194716437,
+      "spearman": 0.7903857593660117
+     },
+     "claude": {
+      "overlap": 0.6019417475728155,
+      "capture": 0.5666966922857757,
+      "spearman": 0.30513262942160996
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7842917172600232
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.8932038834951457,
+      "capture": 0.9846086445230993,
+      "spearman": 0.667086017546058
+     },
+     "compsRaw": {
+      "overlap": 0.912621359223301,
+      "capture": 0.9915030494483332,
+      "spearman": 0.667438762393225
+     },
+     "people": {
+      "overlap": 0.8640776699029126,
+      "capture": 0.9762385141289194,
+      "spearman": 0.8001572637563374
+     },
+     "claude": {
+      "overlap": 0.6407766990291263,
+      "capture": 0.7629385383400398,
+      "spearman": 0.30811415510564555
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7961479159734841
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Vans",
+   "comps": [
+    "Converse",
+    "Levi Strauss & Co.",
+    "Puma"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.4077669902912621,
+      "capture": 0.6707045290327237,
+      "spearman": 0.7463057077684505
+     },
+     "compsRaw": {
+      "overlap": 0.019417475728155338,
+      "capture": 0.2668019223973578,
+      "spearman": 0.5888709976629657
+     },
+     "people": {
+      "overlap": 0.009708737864077669,
+      "capture": 0.22122520052510433,
+      "spearman": 0.4973557860667738
+     },
+     "claude": {
+      "overlap": 0.009708737864077669,
+      "capture": 0.24762933818143337,
+      "spearman": 0.0775414512490972
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0019163301263174475,
+      "spearman": -0.43280918285674636
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.4895172784169539,
+      "spearman": 0.46115669762130546
+     },
+     "compsRaw": {
+      "overlap": 0.8932038834951457,
+      "capture": 0.9954454382087451,
+      "spearman": 0.9511035721641921
+     },
+     "people": {
+      "overlap": 0.8932038834951457,
+      "capture": 0.9917377563877465,
+      "spearman": 0.9664608984960291
+     },
+     "claude": {
+      "overlap": 0.7378640776699029,
+      "capture": 0.9214157354429587,
+      "spearman": 0.35678845743256904
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.001828021399210955,
+      "spearman": -0.9576305704499846
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Sephora",
+   "comps": [
+    "MAC Cosmetics",
+    "NARS Cosmetics",
+    "NYX Professional Makeup"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5631067961165048,
+      "capture": 0.7762222295028716,
+      "spearman": 0.7462203345669998
+     },
+     "compsRaw": {
+      "overlap": 0,
+      "capture": 0.25180040193365655,
+      "spearman": 0.47104634117149474
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.23236939635345782,
+      "spearman": 0.3746028823214447
+     },
+     "claude": {
+      "overlap": 0.009708737864077669,
+      "capture": 0.2374639257450813,
+      "spearman": -0.04119847100676916
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.030648016657120233,
+      "spearman": -0.32772410762043847
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.4651890267745053,
+      "spearman": 0.29403255248348137
+     },
+     "compsRaw": {
+      "overlap": 0.941747572815534,
+      "capture": 0.9982198349488587,
+      "spearman": 0.9687786860995167
+     },
+     "people": {
+      "overlap": 0.8932038834951457,
+      "capture": 0.9953900928155415,
+      "spearman": 0.9606958485503514
+     },
+     "claude": {
+      "overlap": 0.5922330097087378,
+      "capture": 0.8956802700088484,
+      "spearman": 0.3801393932613365
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.01518799777736617,
+      "spearman": -0.9609558563065824
+     }
+    }
+   }
+  },
+  {
+   "city": "atlanta",
+   "target": "Ralph Lauren",
+   "comps": [
+    "Armani Exchange",
+    "Louis Vuitton",
+    "Versace"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.2524271844660194,
+      "capture": 0.6134790721376363,
+      "spearman": 0.21986599478573196
+     },
+     "compsRaw": {
+      "overlap": 0.13592233009708737,
+      "capture": 0.3701796781010049,
+      "spearman": 0.4426322171565541
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.2224076801815251,
+      "spearman": 0.44038241415701007
+     },
+     "claude": {
+      "overlap": 0,
+      "capture": 0.21758048598136334,
+      "spearman": 0.029807840648961848
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.022705102756117493,
+      "spearman": -0.32728851972439904
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.40791102674149887,
+      "spearman": -0.2749350718000155
+     },
+     "compsRaw": {
+      "overlap": 0.20388349514563106,
+      "capture": 0.6752847474413993,
+      "spearman": 0.6325568620401684
+     },
+     "people": {
+      "overlap": 0.912621359223301,
+      "capture": 0.9949240673489594,
+      "spearman": 0.9713923056076147
+     },
+     "claude": {
+      "overlap": 0.5631067961165048,
+      "capture": 0.8445547210300421,
+      "spearman": 0.3475903725780336
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0108946847144272,
+      "spearman": -0.9391025968043092
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Dua Lipa",
+   "comps": [
+    "Sabrina Carpenter",
+    "Harry Styles",
+    "Ava Max"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.0972972972972973,
+      "capture": 0.4248085370509012,
+      "spearman": 0.039693380139421724
+     },
+     "compsRaw": {
+      "overlap": 0.043243243243243246,
+      "capture": 0.34069870389564016,
+      "spearman": 0.01825973456047594
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.2793452119893437,
+      "spearman": 0.06965284064242921
+     },
+     "claude": {
+      "overlap": 0.02702702702702703,
+      "capture": 0.3357420295251603,
+      "spearman": -0.061570593561747315
+     },
+     "control": {
+      "overlap": 0.005405405405405406,
+      "capture": 0.14542932634687572,
+      "spearman": -0.0748589421865268
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.21908817150436338,
+      "spearman": -0.21662424932857696
+     },
+     "compsRaw": {
+      "overlap": 0.7567567567567568,
+      "capture": 0.8673243429404167,
+      "spearman": 0.6151249004026075
+     },
+     "people": {
+      "overlap": 0.8162162162162162,
+      "capture": 0.9909773494469719,
+      "spearman": 0.9658967951437152
+     },
+     "claude": {
+      "overlap": 0.5459459459459459,
+      "capture": 0.9013770215575888,
+      "spearman": 0.32969754783628663
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.053612191109415994,
+      "spearman": -0.9809887196660583
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Rosalía",
+   "comps": [
+    "Bad Bunny",
+    "Tokischa",
+    "Karol G"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.14594594594594595,
+      "capture": 0.41783232472485665,
+      "spearman": 0.511556893536802
+     },
+     "compsRaw": {
+      "overlap": 0.02702702702702703,
+      "capture": 0.27677779235046945,
+      "spearman": 0.48274321151492144
+     },
+     "people": {
+      "overlap": 0.043243243243243246,
+      "capture": 0.2721523781426823,
+      "spearman": 0.4994603899852875
+     },
+     "claude": {
+      "overlap": 0.24864864864864866,
+      "capture": 0.46767955259530697,
+      "spearman": 0.27315264725557536
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.009104786982371974,
+      "spearman": -0.49397386230657836
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.40540540540540543,
+      "capture": 0.8135259431931058,
+      "spearman": 0.8324253573756075
+     },
+     "compsRaw": {
+      "overlap": 0.7891891891891892,
+      "capture": 0.9841935131969533,
+      "spearman": 0.9390896930961237
+     },
+     "people": {
+      "overlap": 0.7945945945945946,
+      "capture": 0.9851351273762842,
+      "spearman": 0.9579166754793396
+     },
+     "claude": {
+      "overlap": 0.6054054054054054,
+      "capture": 0.9116318058896824,
+      "spearman": 0.30008206991656683
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.004650655397918116,
+      "spearman": -0.9668769068626735
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Arctic Monkeys",
+   "comps": [
+    "Kasabian",
+    "The Strokes",
+    "The Last Shadow Puppets"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.5837837837837838,
+      "capture": 0.6996315343388564,
+      "spearman": 0.833518802232681
+     },
+     "compsRaw": {
+      "overlap": 0.4540540540540541,
+      "capture": 0.5342537877256317,
+      "spearman": 0.8580731543596544
+     },
+     "people": {
+      "overlap": 0.3567567567567568,
+      "capture": 0.41360002701702303,
+      "spearman": 0.833601703205792
+     },
+     "claude": {
+      "overlap": 0.34054054054054056,
+      "capture": 0.40064348891028617,
+      "spearman": 0.30200935618377905
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7867359584328535
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.2594594594594595,
+      "capture": 0.5981460199821752,
+      "spearman": 0.8156336585934298
+     },
+     "compsRaw": {
+      "overlap": 0.9243243243243243,
+      "capture": 0.9973439185702897,
+      "spearman": 0.9392641621480454
+     },
+     "people": {
+      "overlap": 0.8918918918918919,
+      "capture": 0.9925594540081619,
+      "spearman": 0.9503984949696828
+     },
+     "claude": {
+      "overlap": 0.5621621621621622,
+      "capture": 0.8452964491767905,
+      "spearman": 0.2935503796979257
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9332011182119423
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Doja Cat",
+   "comps": [
+    "Megan Thee Stallion",
+    "Saweetie",
+    "Lizzo"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.2864864864864865,
+      "capture": 0.4996635435797034,
+      "spearman": 0.4351198385565994
+     },
+     "compsRaw": {
+      "overlap": 0.043243243243243246,
+      "capture": 0.32073555614771765,
+      "spearman": 0.46439245807603025
+     },
+     "people": {
+      "overlap": 0.010810810810810811,
+      "capture": 0.27920284675989593,
+      "spearman": 0.3888204762825747
+     },
+     "claude": {
+      "overlap": 0.0972972972972973,
+      "capture": 0.3945169469390362,
+      "spearman": 0.1758950291690375
+     },
+     "control": {
+      "overlap": 0.010810810810810811,
+      "capture": 0.030645885226644073,
+      "spearman": -0.3867501140118398
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.3395831067194131,
+      "spearman": 0.19598159364848344
+     },
+     "compsRaw": {
+      "overlap": 0.8594594594594595,
+      "capture": 0.9921052480921497,
+      "spearman": 0.9290034510308609
+     },
+     "people": {
+      "overlap": 0.8432432432432433,
+      "capture": 0.9906224774292535,
+      "spearman": 0.9542042046987436
+     },
+     "claude": {
+      "overlap": 0.4540540540540541,
+      "capture": 0.823378541617766,
+      "spearman": 0.24661933818618623
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.01157019115719087,
+      "spearman": -0.9659095494330386
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Tame Impala",
+   "comps": [
+    "Unknown Mortal Orchestra",
+    "Mac DeMarco",
+    "Melody's Echo Chamber"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.22702702702702704,
+      "capture": 0.3292402882982015,
+      "spearman": 0.7390196390625344
+     },
+     "compsRaw": {
+      "overlap": 0.2810810810810811,
+      "capture": 0.3980535193507915,
+      "spearman": 0.7713736923081835
+     },
+     "people": {
+      "overlap": 0.12972972972972974,
+      "capture": 0.2506379606595697,
+      "spearman": 0.7055605874504011
+     },
+     "claude": {
+      "overlap": 0.3675675675675676,
+      "capture": 0.5092940352601856,
+      "spearman": 0.34154844444584104
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0025600813256187577,
+      "spearman": -0.6516329406187632
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.032432432432432434,
+      "capture": 0.44154991752050377,
+      "spearman": 0.6213495024501511
+     },
+     "compsRaw": {
+      "overlap": 0.7351351351351352,
+      "capture": 0.8839478636648782,
+      "spearman": 0.8921124654909526
+     },
+     "people": {
+      "overlap": 0.8216216216216217,
+      "capture": 0.9828709834808677,
+      "spearman": 0.951117141053208
+     },
+     "claude": {
+      "overlap": 0.5621621621621622,
+      "capture": 0.862903975279385,
+      "spearman": 0.3153044341710603
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.000987430589437978,
+      "spearman": -0.933921784292409
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "J Balvin",
+   "comps": [
+    "Maluma",
+    "Karol G",
+    "Ozuna"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6594594594594595,
+      "capture": 0.7890269427723177,
+      "spearman": 0.8602979493026527
+     },
+     "compsRaw": {
+      "overlap": 0.12972972972972974,
+      "capture": 0.378708838067704,
+      "spearman": 0.7751167945468753
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.23657153444714518,
+      "spearman": 0.5880978943704263
+     },
+     "claude": {
+      "overlap": 0.05945945945945946,
+      "capture": 0.24982027507815496,
+      "spearman": 0.124256965274374
+     },
+     "control": {
+      "overlap": 0.005405405405405406,
+      "capture": 0.006431737220484484,
+      "spearman": -0.6479755469806736
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.10270270270270271,
+      "capture": 0.573759798658493,
+      "spearman": 0.7649146984658823
+     },
+     "compsRaw": {
+      "overlap": 0.9513513513513514,
+      "capture": 0.9988282016647619,
+      "spearman": 0.9724826163443083
+     },
+     "people": {
+      "overlap": 0.7837837837837838,
+      "capture": 0.9786132372805049,
+      "spearman": 0.9325007256589639
+     },
+     "claude": {
+      "overlap": 0.6054054054054054,
+      "capture": 0.8612371419665429,
+      "spearman": 0.1830775250409228
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0019568454957919167,
+      "spearman": -0.9620866608363323
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "BLACKPINK",
+   "comps": [
+    "Itzy",
+    "TWICE",
+    "Aespa"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6756756756756757,
+      "capture": 0.6699525254614487,
+      "spearman": 0.734074325324643
+     },
+     "compsRaw": {
+      "overlap": 0.6378378378378379,
+      "capture": 0.48152504035018306,
+      "spearman": 0.7322451455714916
+     },
+     "people": {
+      "overlap": 0.5243243243243243,
+      "capture": 0.3228998146870481,
+      "spearman": 0.8282991795487552
+     },
+     "claude": {
+      "overlap": 0.40540540540540543,
+      "capture": 0.38796888385186157,
+      "spearman": 0.2062985031865844
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.851714287043598
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.827027027027027,
+      "capture": 0.9687748395439602,
+      "spearman": 0.7882888015689444
+     },
+     "compsRaw": {
+      "overlap": 0.8918918918918919,
+      "capture": 0.9908887069793915,
+      "spearman": 0.7922041336653501
+     },
+     "people": {
+      "overlap": 0.827027027027027,
+      "capture": 0.9812969356159013,
+      "spearman": 0.9072498275709969
+     },
+     "claude": {
+      "overlap": 0.4810810810810811,
+      "capture": 0.7141865679609914,
+      "spearman": 0.2155980251506529
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9251229050438636
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Vans",
+   "comps": [
+    "Converse",
+    "Levi Strauss & Co.",
+    "Puma"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3891891891891892,
+      "capture": 0.7241718033871488,
+      "spearman": 0.5986032011840086
+     },
+     "compsRaw": {
+      "overlap": 0.032432432432432434,
+      "capture": 0.32379656984616045,
+      "spearman": 0.35487486669394486
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.28751546810207373,
+      "spearman": 0.30042538704629584
+     },
+     "claude": {
+      "overlap": 0.08108108108108109,
+      "capture": 0.4033737072607684,
+      "spearman": 0.0901804438247115
+     },
+     "control": {
+      "overlap": 0.005405405405405406,
+      "capture": 0.048953179141574335,
+      "spearman": -0.31895311615019206
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.05945945945945946,
+      "capture": 0.5526037770328538,
+      "spearman": 0.5225856376816321
+     },
+     "compsRaw": {
+      "overlap": 0.9027027027027027,
+      "capture": 0.995545682452844,
+      "spearman": 0.9824960739462313
+     },
+     "people": {
+      "overlap": 0.7891891891891892,
+      "capture": 0.9844098885849554,
+      "spearman": 0.9662415100984332
+     },
+     "claude": {
+      "overlap": 0.518918918918919,
+      "capture": 0.8592093015287451,
+      "spearman": 0.2842783017958471
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0185824991005705,
+      "spearman": -0.9826750357515394
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Sephora",
+   "comps": [
+    "MAC Cosmetics",
+    "NARS Cosmetics",
+    "NYX Professional Makeup"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6378378378378379,
+      "capture": 0.8493498160879331,
+      "spearman": 0.7629784206675592
+     },
+     "compsRaw": {
+      "overlap": 0.07027027027027027,
+      "capture": 0.3289539183769811,
+      "spearman": 0.4094162744913045
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.2267158482578245,
+      "spearman": 0.22366152260707933
+     },
+     "claude": {
+      "overlap": 0.016216216216216217,
+      "capture": 0.22980504035609295,
+      "spearman": -0.06869991460733836
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.06139106286532514,
+      "spearman": -0.24609233272063713
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.03783783783783784,
+      "capture": 0.5451960302867649,
+      "spearman": 0.18642543114551122
+     },
+     "compsRaw": {
+      "overlap": 0.9135135135135135,
+      "capture": 0.9939129541016181,
+      "spearman": 0.9814845004233108
+     },
+     "people": {
+      "overlap": 0.772972972972973,
+      "capture": 0.9828009547411573,
+      "spearman": 0.9510251845268198
+     },
+     "claude": {
+      "overlap": 0.42162162162162165,
+      "capture": 0.8022395303952587,
+      "spearman": 0.23959422140516703
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.02708335712572664,
+      "spearman": -0.9678541482250669
+     }
+    }
+   }
+  },
+  {
+   "city": "london",
+   "target": "Ralph Lauren",
+   "comps": [
+    "Armani Exchange",
+    "Louis Vuitton",
+    "Versace"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.2918918918918919,
+      "capture": 0.6368209430370616,
+      "spearman": 0.02014033002834707
+     },
+     "compsRaw": {
+      "overlap": 0.1783783783783784,
+      "capture": 0.4444025445203689,
+      "spearman": 0.28995816923895495
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.2472036023873408,
+      "spearman": 0.22887297985982843
+     },
+     "claude": {
+      "overlap": 0.016216216216216217,
+      "capture": 0.32409595787541234,
+      "spearman": 0.054765226078812984
+     },
+     "control": {
+      "overlap": 0.005405405405405406,
+      "capture": 0.0815788812525845,
+      "spearman": -0.2521947791840325
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.37367354510945583,
+      "spearman": -0.4824927353362442
+     },
+     "compsRaw": {
+      "overlap": 0.41621621621621624,
+      "capture": 0.7039130062505352,
+      "spearman": 0.46378912033029285
+     },
+     "people": {
+      "overlap": 0.7783783783783784,
+      "capture": 0.9811456460313381,
+      "spearman": 0.9598469610725148
+     },
+     "claude": {
+      "overlap": 0.6864864864864865,
+      "capture": 0.9365527870536864,
+      "spearman": 0.32312314295533445
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.029585866369837618,
+      "spearman": -0.9761384861794038
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Dua Lipa",
+   "comps": [
+    "Sabrina Carpenter",
+    "Harry Styles",
+    "Ava Max"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3047619047619048,
+      "capture": 0.5882246870550836,
+      "spearman": 0.3034125488582156
+     },
+     "compsRaw": {
+      "overlap": 0.13333333333333333,
+      "capture": 0.45180113163676733,
+      "spearman": 0.2109209116409972
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.26771961770535607,
+      "spearman": 0.09546365063514844
+     },
+     "claude": {
+      "overlap": 0,
+      "capture": 0.2950730940617309,
+      "spearman": -0.09747066224824863
+     },
+     "control": {
+      "overlap": 0.009523809523809525,
+      "capture": 0.19416604688986158,
+      "spearman": -0.07803690070278378
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.5641883767535065,
+      "spearman": -0.10236811989124202
+     },
+     "compsRaw": {
+      "overlap": 0.26666666666666666,
+      "capture": 0.8305911823647286,
+      "spearman": 0.7283646603060957
+     },
+     "people": {
+      "overlap": 0.9047619047619048,
+      "capture": 0.9960320641282565,
+      "spearman": 0.9818832686861084
+     },
+     "claude": {
+      "overlap": 0.7619047619047619,
+      "capture": 0.9606212424849692,
+      "spearman": 0.37622789964338765
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0618036072144288,
+      "spearman": -0.9855788106348645
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Rosalía",
+   "comps": [
+    "Bad Bunny",
+    "Tokischa",
+    "Karol G"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.4666666666666667,
+      "capture": 0.7524137633226339,
+      "spearman": 0.5524138626543726
+     },
+     "compsRaw": {
+      "overlap": 0.12380952380952381,
+      "capture": 0.3446491835097261,
+      "spearman": 0.22852748905451042
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.1533657148539612,
+      "spearman": -0.02871600421059663
+     },
+     "claude": {
+      "overlap": 0.009523809523809525,
+      "capture": 0.1928080699676995,
+      "spearman": -0.06953701674108367
+     },
+     "control": {
+      "overlap": 0.01904761904761905,
+      "capture": 0.14344426185177306,
+      "spearman": 0.03048664490624714
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.009523809523809525,
+      "capture": 0.572905811623246,
+      "spearman": -0.0053257129289446415
+     },
+     "compsRaw": {
+      "overlap": 0.22857142857142856,
+      "capture": 0.8926653306613221,
+      "spearman": 0.6746993993786095
+     },
+     "people": {
+      "overlap": 0.7904761904761904,
+      "capture": 0.9859519038076145,
+      "spearman": 0.9579791539686355
+     },
+     "claude": {
+      "overlap": 0.7238095238095238,
+      "capture": 0.951863727454909,
+      "spearman": 0.3873362142186303
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0627655310621242,
+      "spearman": -0.9652375366664824
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Arctic Monkeys",
+   "comps": [
+    "Kasabian",
+    "The Strokes",
+    "The Last Shadow Puppets"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.09523809523809523,
+      "capture": 0.17965691493441727,
+      "spearman": 0.4266867263222269
+     },
+     "compsRaw": {
+      "overlap": 0.1523809523809524,
+      "capture": 0.3252659967783995,
+      "spearman": 0.6666444732824702
+     },
+     "people": {
+      "overlap": 0.047619047619047616,
+      "capture": 0.21239622612564213,
+      "spearman": 0.7112576177422906
+     },
+     "claude": {
+      "overlap": 0.047619047619047616,
+      "capture": 0.23055561862391633,
+      "spearman": 0.23588046232919757
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0016089591163611242,
+      "spearman": -0.6765580756786834
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.297856344610383,
+      "spearman": 0.3521535439915768
+     },
+     "compsRaw": {
+      "overlap": 0.9333333333333333,
+      "capture": 0.9973686884080054,
+      "spearman": 0.8338223995397471
+     },
+     "people": {
+      "overlap": 0.8476190476190476,
+      "capture": 0.990206237935588,
+      "spearman": 0.9697965715282807
+     },
+     "claude": {
+      "overlap": 0.7619047619047619,
+      "capture": 0.9553185004571773,
+      "spearman": 0.34540698833626604
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0009143553794574822,
+      "spearman": -0.9611989651561391
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Doja Cat",
+   "comps": [
+    "Megan Thee Stallion",
+    "Saweetie",
+    "Lizzo"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3142857142857143,
+      "capture": 0.5051196667271546,
+      "spearman": 0.5856763555711162
+     },
+     "compsRaw": {
+      "overlap": 0.047619047619047616,
+      "capture": 0.2901811706690312,
+      "spearman": 0.5563971251216668
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.21505008294840514,
+      "spearman": 0.5226749804290319
+     },
+     "claude": {
+      "overlap": 0,
+      "capture": 0.21323061462661166,
+      "spearman": 0.14456734382056854
+     },
+     "control": {
+      "overlap": 0.009523809523809525,
+      "capture": 0.013268842274188127,
+      "spearman": -0.5242320953793074
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.12380952380952381,
+      "capture": 0.6397295166474615,
+      "spearman": 0.7672341156449352
+     },
+     "compsRaw": {
+      "overlap": 0.9047619047619048,
+      "capture": 0.9968969211797762,
+      "spearman": 0.9540457608802254
+     },
+     "people": {
+      "overlap": 0.8666666666666667,
+      "capture": 0.9922675723209412,
+      "spearman": 0.9573393444702112
+     },
+     "claude": {
+      "overlap": 0.7428571428571429,
+      "capture": 0.948157357430205,
+      "spearman": 0.3574001508883235
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.004093638183031109,
+      "spearman": -0.9637073961556838
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Tame Impala",
+   "comps": [
+    "Unknown Mortal Orchestra",
+    "Mac DeMarco",
+    "Melody's Echo Chamber"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.11428571428571428,
+      "capture": 0.3125432061516673,
+      "spearman": 0.2763321591260215
+     },
+     "compsRaw": {
+      "overlap": 0.05714285714285714,
+      "capture": 0.2373763003311558,
+      "spearman": 0.4217530297152764
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.20058208472779396,
+      "spearman": 0.4959372758477026
+     },
+     "claude": {
+      "overlap": 0.02857142857142857,
+      "capture": 0.2548049782174848,
+      "spearman": 0.1890986165762141
+     },
+     "control": {
+      "overlap": 0.01904761904761905,
+      "capture": 0.016549202538591573,
+      "spearman": -0.4704866346933137
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.3661276647286819,
+      "spearman": -0.029123230182807817
+     },
+     "compsRaw": {
+      "overlap": 0.3333333333333333,
+      "capture": 0.6409076227390176,
+      "spearman": 0.5024010465492535
+     },
+     "people": {
+      "overlap": 0.819047619047619,
+      "capture": 0.9890180878552965,
+      "spearman": 0.9664256555115602
+     },
+     "claude": {
+      "overlap": 0.7619047619047619,
+      "capture": 0.9616541505167947,
+      "spearman": 0.35631081566354184
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.00674257105943152,
+      "spearman": -0.9624929506197163
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "J Balvin",
+   "comps": [
+    "Maluma",
+    "Karol G",
+    "Ozuna"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6,
+      "capture": 0.809359576885521,
+      "spearman": 0.8323173530070058
+     },
+     "compsRaw": {
+      "overlap": 0.0761904761904762,
+      "capture": 0.22013859791817747,
+      "spearman": 0.13983549132197715
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.08460749272345372,
+      "spearman": -0.14412269930613392
+     },
+     "claude": {
+      "overlap": 0.11428571428571428,
+      "capture": 0.25537972792202457,
+      "spearman": 0.040372969372349826
+     },
+     "control": {
+      "overlap": 0.02857142857142857,
+      "capture": 0.19092627848537697,
+      "spearman": 0.1480607271168915
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.11428571428571428,
+      "capture": 0.658907815631262,
+      "spearman": 0.19211846699918406
+     },
+     "compsRaw": {
+      "overlap": 0.8476190476190476,
+      "capture": 0.9907114228456908,
+      "spearman": 0.9673409842654821
+     },
+     "people": {
+      "overlap": 0.7238095238095238,
+      "capture": 0.975921843687374,
+      "spearman": 0.9097594142304675
+     },
+     "claude": {
+      "overlap": 0.24761904761904763,
+      "capture": 0.7467835671342682,
+      "spearman": 0.2191338175903784
+     },
+     "control": {
+      "overlap": 0.009523809523809525,
+      "capture": 0.09122244488977946,
+      "spearman": -0.9155603323756879
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "BLACKPINK",
+   "comps": [
+    "Itzy",
+    "TWICE",
+    "Aespa"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.29523809523809524,
+      "capture": 0.4574770209494638,
+      "spearman": 0.693547010716627
+     },
+     "compsRaw": {
+      "overlap": 0.17142857142857143,
+      "capture": 0.33861080027955404,
+      "spearman": 0.6808170705495894
+     },
+     "people": {
+      "overlap": 0.06666666666666667,
+      "capture": 0.20686802992283487,
+      "spearman": 0.7375188441888346
+     },
+     "claude": {
+      "overlap": 0.06666666666666667,
+      "capture": 0.18827948011870546,
+      "spearman": 0.26556904876060805
+     },
+     "control": {
+      "overlap": 0.01904761904761905,
+      "capture": 0.04948301000221841,
+      "spearman": -0.7224597729970704
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.6952380952380952,
+      "capture": 0.9189247267815479,
+      "spearman": 0.8079462172822464
+     },
+     "compsRaw": {
+      "overlap": 0.8476190476190476,
+      "capture": 0.9629875977242026,
+      "spearman": 0.8238368348401595
+     },
+     "people": {
+      "overlap": 0.8285714285714286,
+      "capture": 0.988447054971143,
+      "spearman": 0.9430288650507617
+     },
+     "claude": {
+      "overlap": 0.580952380952381,
+      "capture": 0.8952867258810523,
+      "spearman": 0.38255670135561815
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.006671851336416848,
+      "spearman": -0.9405299641535788
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Vans",
+   "comps": [
+    "Converse",
+    "Levi Strauss & Co.",
+    "Puma"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.41904761904761906,
+      "capture": 0.7381728123325537,
+      "spearman": 0.5819875814948792
+     },
+     "compsRaw": {
+      "overlap": 0,
+      "capture": 0.2108166414564636,
+      "spearman": 0.09385906443181587
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.20001979966860303,
+      "spearman": 0.05664371216039146
+     },
+     "claude": {
+      "overlap": 0.009523809523809525,
+      "capture": 0.2254155971064435,
+      "spearman": -0.07122408923331157
+     },
+     "control": {
+      "overlap": 0.02857142857142857,
+      "capture": 0.15489792239602393,
+      "spearman": -0.033642348532514126
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.01904761904761905,
+      "capture": 0.5756685778437107,
+      "spearman": 0.354757166249335
+     },
+     "compsRaw": {
+      "overlap": 0.8761904761904762,
+      "capture": 0.9952788581051274,
+      "spearman": 0.9802137821451781
+     },
+     "people": {
+      "overlap": 0.8380952380952381,
+      "capture": 0.9924521871617006,
+      "spearman": 0.971519270106831
+     },
+     "claude": {
+      "overlap": 0.6952380952380952,
+      "capture": 0.9519064993384374,
+      "spearman": 0.3853966926421423
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.059159616695401075,
+      "spearman": -0.9719356710854453
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Sephora",
+   "comps": [
+    "MAC Cosmetics",
+    "NARS Cosmetics",
+    "NYX Professional Makeup"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6095238095238096,
+      "capture": 0.7969406743211455,
+      "spearman": 0.7348451951945753
+     },
+     "compsRaw": {
+      "overlap": 0,
+      "capture": 0.29677379274969906,
+      "spearman": 0.4110670063818055
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.2805733240195627,
+      "spearman": 0.3141592040814105
+     },
+     "claude": {
+      "overlap": 0.08571428571428572,
+      "capture": 0.3648605879989671,
+      "spearman": 0.06655370580294905
+     },
+     "control": {
+      "overlap": 0.01904761904761905,
+      "capture": 0.06994087497768643,
+      "spearman": -0.3051767975940703
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.48056057866184404,
+      "spearman": 0.2591536203833324
+     },
+     "compsRaw": {
+      "overlap": 0.9714285714285714,
+      "capture": 0.9995278280088404,
+      "spearman": 0.9879002988972821
+     },
+     "people": {
+      "overlap": 0.9047619047619048,
+      "capture": 0.9968957203134411,
+      "spearman": 0.9797248086126353
+     },
+     "claude": {
+      "overlap": 0.7238095238095238,
+      "capture": 0.932208157524612,
+      "spearman": 0.34637836790291865
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.02741611412497486,
+      "spearman": -0.983632583535512
+     }
+    }
+   }
+  },
+  {
+   "city": "mexico-city",
+   "target": "Ralph Lauren",
+   "comps": [
+    "Armani Exchange",
+    "Louis Vuitton",
+    "Versace"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3333333333333333,
+      "capture": 0.49305552028233024,
+      "spearman": 0.5367247211256513
+     },
+     "compsRaw": {
+      "overlap": 0.01904761904761905,
+      "capture": 0.28003665254947524,
+      "spearman": 0.44590633510481065
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.24752905131052155,
+      "spearman": 0.3739677381078822
+     },
+     "claude": {
+      "overlap": 0.20952380952380953,
+      "capture": 0.4701421911682388,
+      "spearman": 0.1942080710203414
+     },
+     "control": {
+      "overlap": 0.009523809523809525,
+      "capture": 0.05482989783406593,
+      "spearman": -0.36684692451331835
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.3361755183300821,
+      "spearman": 0.1687107800288083
+     },
+     "compsRaw": {
+      "overlap": 0.9523809523809523,
+      "capture": 0.9994771452128619,
+      "spearman": 0.9651009446850041
+     },
+     "people": {
+      "overlap": 0.8952380952380953,
+      "capture": 0.9959177107004236,
+      "spearman": 0.9744877318552949
+     },
+     "claude": {
+      "overlap": 0.6095238095238096,
+      "capture": 0.889365938021597,
+      "spearman": 0.33789859213646584
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.020843807187242325,
+      "spearman": -0.9786954398498401
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Dua Lipa",
+   "comps": [
+    "Sabrina Carpenter",
+    "Harry Styles",
+    "Ava Max"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.4112903225806452,
+      "capture": 0.610373157185996,
+      "spearman": 0.6534977148947794
+     },
+     "compsRaw": {
+      "overlap": 0.008064516129032258,
+      "capture": 0.1609752510382906,
+      "spearman": 0.5892154296332557
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.14367907712900163,
+      "spearman": 0.5271538164651743
+     },
+     "claude": {
+      "overlap": 0.016129032258064516,
+      "capture": 0.1624975375174397,
+      "spearman": 0.08190714530837775
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0031372702470038667,
+      "spearman": -0.5618051439144301
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.016129032258064516,
+      "capture": 0.4671254349398831,
+      "spearman": 0.6455594901188261
+     },
+     "compsRaw": {
+      "overlap": 0.9112903225806451,
+      "capture": 0.9943931512040507,
+      "spearman": 0.9594856453657629
+     },
+     "people": {
+      "overlap": 0.8951612903225806,
+      "capture": 0.9941433837461667,
+      "spearman": 0.9593205801052603
+     },
+     "claude": {
+      "overlap": 0.7258064516129032,
+      "capture": 0.9218830743790257,
+      "spearman": 0.30231209333436976
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0008354290832673023,
+      "spearman": -0.9770115927327757
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Rosalía",
+   "comps": [
+    "Bad Bunny",
+    "Tokischa",
+    "Karol G"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.7580645161290323,
+      "capture": 0.6857653629824269,
+      "spearman": 0.805966795260915
+     },
+     "compsRaw": {
+      "overlap": 0.7580645161290323,
+      "capture": 0.6267443190545756,
+      "spearman": 0.8086019597544347
+     },
+     "people": {
+      "overlap": 0.717741935483871,
+      "capture": 0.43761173152405847,
+      "spearman": 0.8668060288149361
+     },
+     "claude": {
+      "overlap": 0.5725806451612904,
+      "capture": 0.38156213334902045,
+      "spearman": 0.347855356654712
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8841144359152334
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.8629032258064516,
+      "capture": 0.9727568821666002,
+      "spearman": 0.8579168048066078
+     },
+     "compsRaw": {
+      "overlap": 0.9435483870967742,
+      "capture": 0.996278945254986,
+      "spearman": 0.8663621218902801
+     },
+     "people": {
+      "overlap": 0.9112903225806451,
+      "capture": 0.9910230669700623,
+      "spearman": 0.9130881727546032
+     },
+     "claude": {
+      "overlap": 0.6290322580645161,
+      "capture": 0.8738767679471736,
+      "spearman": 0.3635607376210438
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9258228378312171
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Arctic Monkeys",
+   "comps": [
+    "Kasabian",
+    "The Strokes",
+    "The Last Shadow Puppets"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.7903225806451613,
+      "capture": 0.9923118710460095,
+      "spearman": 0.8894151217026971
+     },
+     "compsRaw": {
+      "overlap": 0.9032258064516129,
+      "capture": 1,
+      "spearman": 0.9151741190331821
+     },
+     "people": {
+      "overlap": 0.8548387096774194,
+      "capture": 1,
+      "spearman": 0.8197387171992984
+     },
+     "claude": {
+      "overlap": 0.6048387096774194,
+      "capture": 0.7249423268526657,
+      "spearman": 0.31530374566285685
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8106530233971156
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.782258064516129,
+      "capture": 0.9259297912713474,
+      "spearman": 0.887026596653291
+     },
+     "compsRaw": {
+      "overlap": 0.9274193548387096,
+      "capture": 0.9871062618595827,
+      "spearman": 0.9187059525825421
+     },
+     "people": {
+      "overlap": 0.8951612903225806,
+      "capture": 0.9899335863377613,
+      "spearman": 0.8256016676759261
+     },
+     "claude": {
+      "overlap": 0.5967741935483871,
+      "capture": 0.7617836812144214,
+      "spearman": 0.308673008431879
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8186142653036808
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Doja Cat",
+   "comps": [
+    "Megan Thee Stallion",
+    "Saweetie",
+    "Lizzo"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.6048387096774194,
+      "capture": 0.622282019176343,
+      "spearman": 0.8582726085186115
+     },
+     "compsRaw": {
+      "overlap": 0.49193548387096775,
+      "capture": 0.2637921133428242,
+      "spearman": 0.8582260846473311
+     },
+     "people": {
+      "overlap": 0.4596774193548387,
+      "capture": 0.19202483662372846,
+      "spearman": 0.8289316468860165
+     },
+     "claude": {
+      "overlap": 0.43548387096774194,
+      "capture": 0.17916852198075495,
+      "spearman": 0.3016944159346813
+     },
+     "control": {
+      "overlap": 0.008064516129032258,
+      "capture": 0.006913775063892557,
+      "spearman": -0.8446663827474612
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.717741935483871,
+      "capture": 0.8791792576669283,
+      "spearman": 0.9089647130144285
+     },
+     "compsRaw": {
+      "overlap": 0.9596774193548387,
+      "capture": 0.9987313557754149,
+      "spearman": 0.9562351396032726
+     },
+     "people": {
+      "overlap": 0.9032258064516129,
+      "capture": 0.9929079263833949,
+      "spearman": 0.9328259557286406
+     },
+     "claude": {
+      "overlap": 0.7419354838709677,
+      "capture": 0.915811359651828,
+      "spearman": 0.33203915429665953
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.0004845516135568732,
+      "spearman": -0.9438731246836413
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Tame Impala",
+   "comps": [
+    "Unknown Mortal Orchestra",
+    "Mac DeMarco",
+    "Melody's Echo Chamber"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.7983870967741935,
+      "capture": 0.973648092231677,
+      "spearman": 0.9888683864910909
+     },
+     "compsRaw": {
+      "overlap": 0.7903225806451613,
+      "capture": 0.951620819884751,
+      "spearman": 0.9862495257672019
+     },
+     "people": {
+      "overlap": 0.717741935483871,
+      "capture": 0.8580962420163126,
+      "spearman": 0.8571820530373386
+     },
+     "claude": {
+      "overlap": 0.6048387096774194,
+      "capture": 0.7402881933779399,
+      "spearman": 0.32332972382724245
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8539478516419672
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.6532258064516129,
+      "capture": 0.8774601729631315,
+      "spearman": 0.9734435270167365
+     },
+     "compsRaw": {
+      "overlap": 0.9274193548387096,
+      "capture": 0.9949749658625396,
+      "spearman": 0.997636128448686
+     },
+     "people": {
+      "overlap": 0.8790322580645161,
+      "capture": 0.9892034592626311,
+      "spearman": 0.8844528509496348
+     },
+     "claude": {
+      "overlap": 0.5564516129032258,
+      "capture": 0.7792444242148386,
+      "spearman": 0.28399492782760416
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8829800488558828
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "J Balvin",
+   "comps": [
+    "Maluma",
+    "Karol G",
+    "Ozuna"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.8467741935483871,
+      "capture": 0.80309506086873,
+      "spearman": 0.8776927613375403
+     },
+     "compsRaw": {
+      "overlap": 0.8387096774193549,
+      "capture": 0.594084121991294,
+      "spearman": 0.8807462890814016
+     },
+     "people": {
+      "overlap": 0.7419354838709677,
+      "capture": 0.3809843960635133,
+      "spearman": 0.8561736850742593
+     },
+     "claude": {
+      "overlap": 0.6048387096774194,
+      "capture": 0.34627858634990005,
+      "spearman": 0.34274836062857633
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.8701876208997563
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.8629032258064516,
+      "capture": 0.9630190038728272,
+      "spearman": 0.9094342457222262
+     },
+     "compsRaw": {
+      "overlap": 0.9596774193548387,
+      "capture": 0.9988021255516526,
+      "spearman": 0.9232054824232245
+     },
+     "people": {
+      "overlap": 0.9032258064516129,
+      "capture": 0.9910744843735932,
+      "spearman": 0.8952972514789497
+     },
+     "claude": {
+      "overlap": 0.6370967741935484,
+      "capture": 0.8550571917499774,
+      "spearman": 0.3617494216110519
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.905629738044619
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "BLACKPINK",
+   "comps": [
+    "Itzy",
+    "TWICE",
+    "Aespa"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.47580645161290325,
+      "capture": 0.7110901412463874,
+      "spearman": 0.5169265715881625
+     },
+     "compsRaw": {
+      "overlap": 0.008064516129032258,
+      "capture": 0.15071601303207505,
+      "spearman": 0.29069241530735085
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.11885984727872409,
+      "spearman": 0.25656172680621514
+     },
+     "claude": {
+      "overlap": 0.056451612903225805,
+      "capture": 0.24909161879823347,
+      "spearman": 0.07126939479079455
+     },
+     "control": {
+      "overlap": 0.008064516129032258,
+      "capture": 0.043860005641246855,
+      "spearman": -0.2569576083988364
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0.21774193548387097,
+      "capture": 0.7159490465476379,
+      "spearman": 0.7855153196313064
+     },
+     "compsRaw": {
+      "overlap": 0.8790322580645161,
+      "capture": 0.9942510544011082,
+      "spearman": 0.9435992420420476
+     },
+     "people": {
+      "overlap": 0.9032258064516129,
+      "capture": 0.994730133201016,
+      "spearman": 0.9579552764881486
+     },
+     "claude": {
+      "overlap": 0.5403225806451613,
+      "capture": 0.846994208279507,
+      "spearman": 0.27744389921309276
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.014928437604263793,
+      "spearman": -0.9675888296330912
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Vans",
+   "comps": [
+    "Converse",
+    "Levi Strauss & Co.",
+    "Puma"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3870967741935484,
+      "capture": 0.7873785486349225,
+      "spearman": 0.6885661328530734
+     },
+     "compsRaw": {
+      "overlap": 0,
+      "capture": 0.13721364546385284,
+      "spearman": 0.029744090276906655
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.1205793266007903,
+      "spearman": -0.02293818687138783
+     },
+     "claude": {
+      "overlap": 0.016129032258064516,
+      "capture": 0.23799718541347228,
+      "spearman": -0.10595891735629426
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.07914379577677634,
+      "spearman": -0.0046601260497075815
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.5101656978970747,
+      "spearman": 0.36442208980005547
+     },
+     "compsRaw": {
+      "overlap": 0.9274193548387096,
+      "capture": 0.9984340825340629,
+      "spearman": 0.9799104866551579
+     },
+     "people": {
+      "overlap": 0.8629032258064516,
+      "capture": 0.9924597669846724,
+      "spearman": 0.9611334856066438
+     },
+     "claude": {
+      "overlap": 0.5564516129032258,
+      "capture": 0.886785869296953,
+      "spearman": 0.3123645199402311
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.030535390585772256,
+      "spearman": -0.9797976582240298
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Sephora",
+   "comps": [
+    "MAC Cosmetics",
+    "NARS Cosmetics",
+    "NYX Professional Makeup"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.25,
+      "capture": 0.4569014713701279,
+      "spearman": 0.5171482205965563
+     },
+     "compsRaw": {
+      "overlap": 0.2661290322580645,
+      "capture": 0.22863838493575683,
+      "spearman": 0.8217378521764439
+     },
+     "people": {
+      "overlap": 0.21774193548387097,
+      "capture": 0.1841540838166092,
+      "spearman": 0.7644268301338227
+     },
+     "claude": {
+      "overlap": 0.22580645161290322,
+      "capture": 0.17789871663206813,
+      "spearman": 0.2671553446522993
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.7902798234101283
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.24852293057555522,
+      "spearman": 0.3541977694300848
+     },
+     "compsRaw": {
+      "overlap": 0.967741935483871,
+      "capture": 0.9986909281319544,
+      "spearman": 0.9604375563562356
+     },
+     "people": {
+      "overlap": 0.8870967741935484,
+      "capture": 0.9929571933499146,
+      "spearman": 0.9414145068786305
+     },
+     "claude": {
+      "overlap": 0.7661290322580645,
+      "capture": 0.9298599293101192,
+      "spearman": 0.36044784134217783
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0,
+      "spearman": -0.9565894482527051
+     }
+    }
+   }
+  },
+  {
+   "city": "tokyo",
+   "target": "Ralph Lauren",
+   "comps": [
+    "Armani Exchange",
+    "Louis Vuitton",
+    "Versace"
+   ],
+   "scores": {
+    "index": {
+     "groundswell": {
+      "overlap": 0.3064516129032258,
+      "capture": 0.5839469769622463,
+      "spearman": 0.1902854813103609
+     },
+     "compsRaw": {
+      "overlap": 0,
+      "capture": 0.1461890845059592,
+      "spearman": 0.1430810172390706
+     },
+     "people": {
+      "overlap": 0,
+      "capture": 0.13996695753411492,
+      "spearman": 0.16810849513389045
+     },
+     "claude": {
+      "overlap": 0,
+      "capture": 0.147810449263946,
+      "spearman": -0.15639085348586737
+     },
+     "control": {
+      "overlap": 0.008064516129032258,
+      "capture": 0.025457822400471536,
+      "spearman": -0.1788578572119024
+     }
+    },
+    "volume": {
+     "groundswell": {
+      "overlap": 0,
+      "capture": 0.370529388667907,
+      "spearman": -0.28713633820040607
+     },
+     "compsRaw": {
+      "overlap": 0.9354838709677419,
+      "capture": 0.9983099168615666,
+      "spearman": 0.853938902856519
+     },
+     "people": {
+      "overlap": 0.9193548387096774,
+      "capture": 0.9953565392560214,
+      "spearman": 0.9702708645911865
+     },
+     "claude": {
+      "overlap": 0.8629032258064516,
+      "capture": 0.9899704662239438,
+      "spearman": 0.37160417821767966
+     },
+     "control": {
+      "overlap": 0,
+      "capture": 0.01037950048653908,
+      "spearman": -0.982516701577768
+     }
+    }
+   }
+  }
+ ],
+ "skipped": [
+  {
+   "city": "atlanta",
+   "target": "The Bear",
+   "reason": "Qloo heatmap covers only 7% of cells"
+  },
+  {
+   "city": "london",
+   "target": "Zach Bryan",
+   "reason": "Qloo heatmap covers only 10% of cells"
+  },
+  {
+   "city": "london",
+   "target": "The Bear",
+   "reason": "Qloo heatmap covers only 9% of cells"
+  },
+  {
+   "city": "mexico-city",
+   "target": "Zach Bryan",
+   "reason": "Qloo heatmap covers only 2% of cells"
+  },
+  {
+   "city": "mexico-city",
+   "target": "The Bear",
+   "reason": "Qloo heatmap covers only 5% of cells"
+  },
+  {
+   "city": "tokyo",
+   "target": "Zach Bryan",
+   "reason": "Qloo heatmap covers only 4% of cells"
+  },
+  {
+   "city": "tokyo",
+   "target": "The Bear",
+   "reason": "Qloo heatmap covers only 6% of cells"
+  }
+ ]
+}

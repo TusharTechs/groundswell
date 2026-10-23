@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #07080d;
+  --color-panel: #0e1017;
+  --color-panel-2: #141722;
+  --color-panel-3: #1b1f2d;
+  --color-line: #252a3b;
+  --color-line-2: #333a51;
+  --color-text: #eef0f6;
+  --color-muted: #a3aac0;
+  --color-dim: #727a96;
+  --color-glow: #ffb547;
+  --color-hot: #ff5c8a;
+  --color-cool: #4fd1c5;
+  --color-accent: #9d8bff;
+  --color-good: #3ddc97;
+  --color-warn: #ffcc66;
+  --color-bad: #ff6b6b;
+
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-glow) 40%, transparent);
+}
+
+/* Thin, quiet scrollbars for the agent feed and panels. */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-2) transparent;
+}
+
+.glass {
+  background: color-mix(in oklab, var(--color-panel) 82%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-glow), var(--color-hot) 55%, var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1.5px solid currentColor;
+  animation: pulse-ring 1.6s ease-out infinite;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise-in {
+  animation: rise-in 0.35s ease-out both;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--color-text) 10%, transparent), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* MapLibre attribution on the dark map. */
+.maplibregl-ctrl-attrib {
+  background: color-mix(in oklab, var(--color-ink) 70%, transparent) !important;
+  color: var(--color-dim) !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: var(--color-muted) !important;
+}

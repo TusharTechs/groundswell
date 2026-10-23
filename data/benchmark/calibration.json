@@ -1,0 +1,96 @@
+{
+ "runAt": "2026-10-23T05:28:00.644Z",
+ "params": {
+  "wom": 0.4,
+  "womExponent": 1.5,
+  "buzzHalfLife": 6,
+  "baseRate": 0.0004,
+  "fitExponent": 3,
+  "audienceShare": 0.25
+ },
+ "scenarios": [
+  {
+   "city": "chicago",
+   "comps": [
+    "Omar Apollo",
+    "Kali Uchis"
+   ],
+   "venue": "Thalia Hall"
+  },
+  {
+   "city": "los-angeles",
+   "comps": [
+    "Kendrick Lamar",
+    "SZA"
+   ],
+   "venue": "The Wiltern"
+  },
+  {
+   "city": "new-york",
+   "comps": [
+    "Phoebe Bridgers",
+    "boygenius"
+   ],
+   "venue": "Brooklyn Steel"
+  }
+ ],
+ "rows": [
+  {
+   "city": "chicago",
+   "venue": "Thalia Hall",
+   "zones": [
+    "Lower West Side",
+    "Bridgeport",
+    "Little Village",
+    "West Town",
+    "Near South Side"
+   ],
+   "reach": {
+    "none": 0.028684008814793525,
+    "naive": 0.06261377790552841,
+    "local": 0.13266503784612438,
+    "media": 0.1811703554661301,
+    "mixed": 0.1617682284181278,
+    "optimizer": 0.1533486634090256
+   }
+  },
+  {
+   "city": "los-angeles",
+   "venue": "The Wiltern",
+   "zones": [
+    "Arlington Heights",
+    "Westlake",
+    "Mid-Wilshire",
+    "Koreatown",
+    "University Park"
+   ],
+   "reach": {
+    "none": 0.027573529411764705,
+    "naive": 0.055817610062893076,
+    "local": 0.0684424713281539,
+    "media": 0.1654527376988531,
+    "mixed": 0.12140445800961895,
+    "optimizer": 0.14948668146503885
+   }
+  },
+  {
+   "city": "new-york",
+   "venue": "Brooklyn Steel",
+   "zones": [
+    "Williamsburg",
+    "Bushwick",
+    "Maspeth",
+    "Bedford-Stuyvesant",
+    "Glendale"
+   ],
+   "reach": {
+    "none": 0.027766728542384867,
+    "naive": 0.059212852470609034,
+    "local": 0.1298064173959162,
+    "media": 0.1682135596216742,
+    "mixed": 0.15921948201184477,
+    "optimizer": 0.17977105984265887
+   }
+  }
+ ]
+}

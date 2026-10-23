@@ -1,0 +1,380 @@
+[
+ {
+  "id": "4BBEF799-A0C4-4110-AB01-39216993C312",
+  "name": "Taylor Swift",
+  "label": "Taylor Swift",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "BDA1B73F-10E7-4D09-AC51-B796CCEC5FF3",
+  "name": "Bad Bunny",
+  "label": "Bad Bunny",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "7D9B2B36-0EE8-4211-B745-13FB8F4002EB",
+  "name": "Travi$ Scott",
+  "label": "Travis Scott",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "F6754C46-B3E7-457F-8B7E-06C613597320",
+  "name": "Beyoncé",
+  "label": "Beyoncé",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "C915A918-39C5-47A3-A101-D9FA1DECBD9C",
+  "name": "Kendrick Lamar",
+  "label": "Kendrick Lamar",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "E2E58680-EE3F-4D1D-88B6-B79F87205B2C",
+  "name": "SZA",
+  "label": "SZA",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "F347D506-CB6F-46FA-9A8B-AFBC31C71A1A",
+  "name": "BTS",
+  "label": "BTS",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "D7BCE4CD-5135-4608-8A7D-78E08FFD52F3",
+  "name": "Billie Eilish",
+  "label": "Billie Eilish",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "70CAE5BF-2F4C-445C-A3E5-4EDACFC3591C",
+  "name": "Radiohead",
+  "label": "Radiohead",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "C445C761-CB38-4FEE-B085-D35F444A04DF",
+  "name": "Metallica",
+  "label": "Metallica",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "B6FA456F-B729-4700-B01F-E82AD3AC8ADA",
+  "name": "Coldplay",
+  "label": "Coldplay",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "3CBD78B1-D2F2-4551-A342-4621B6BDB5E2",
+  "name": "Luke Combs",
+  "label": "Luke Combs",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "59DCDFA8-5082-47D9-B3E5-2B49CF2A778F",
+  "name": "Morgan Wallen",
+  "label": "Morgan Wallen",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "012EF80C-B187-4ECB-9C3D-9CA5228B503C",
+  "name": "Daft Punk",
+  "label": "Daft Punk",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "58F3AF6B-EC34-4BFC-B345-F4210EDE4C43",
+  "name": "Shakira",
+  "label": "Shakira",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "658495BB-DF77-472E-A6B2-9E37FF248FB3",
+  "name": "Karol G",
+  "label": "Karol G",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "CC64E9A6-0432-47EA-9877-071FF8F413C4",
+  "name": "Peso Pluma",
+  "label": "Peso Pluma",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "AFBC71A7-9439-4AB0-AB68-D14B11AAF836",
+  "name": "Phoebe Bridgers",
+  "label": "Phoebe Bridgers",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "63BBE4D8-D721-466F-907C-D0007E9B6665",
+  "name": "Lana Del Rey",
+  "label": "Lana Del Rey",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "375758AA-B0FA-4508-8EC1-D7FBFE3A4B3C",
+  "name": "Tyler, the Creator",
+  "label": "Tyler, the Creator",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "4A322BDD-04A3-4369-8234-B38A7FB485D9",
+  "name": "Burna Boy",
+  "label": "Burna Boy",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "B1414851-6A23-4C52-B647-2A0249B664F9",
+  "name": "Fleetwood Mac",
+  "label": "Fleetwood Mac",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "D723CAE9-2A15-4F4B-A8CE-E49F1706D7ED",
+  "name": "Fred again..",
+  "label": "Fred again..",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "087EF30C-3367-49B8-AC58-8B8C01D69DB6",
+  "name": "Olivia Rodrigo",
+  "label": "Olivia Rodrigo",
+  "type": "artist",
+  "domain": "music"
+ },
+ {
+  "id": "4E62202B-3672-4B2E-A21F-C5EA4A0BA01F",
+  "name": "Friends",
+  "label": "Friends",
+  "type": "tv_show",
+  "domain": "screen"
+ },
+ {
+  "id": "07F1170E-BB69-4982-82C6-255F477EBBAD",
+  "name": "Stranger Things",
+  "label": "Stranger Things",
+  "type": "tv_show",
+  "domain": "screen"
+ },
+ {
+  "id": "F484DCB5-3576-49FF-A8F6-8B3F3A9C3056",
+  "name": "RuPaul's Drag Race",
+  "label": "Drag Race",
+  "type": "tv_show",
+  "domain": "screen"
+ },
+ {
+  "id": "98AAE03A-A220-4116-BADE-B3A02D909D3D",
+  "name": "Yellowstone",
+  "label": "Yellowstone",
+  "type": "tv_show",
+  "domain": "screen"
+ },
+ {
+  "id": "E5AE1F26-04CB-4CDD-BBA4-87FB6541F848",
+  "name": "The Office",
+  "label": "The Office",
+  "type": "tv_show",
+  "domain": "screen"
+ },
+ {
+  "id": "C70CE2B8-0AD1-4150-BF18-5A6347F2E860",
+  "name": "Nike",
+  "label": "Nike",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "FCEA7CA1-1D40-4680-B337-E74594D9BCF1",
+  "name": "Adidas",
+  "label": "Adidas",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "DB4CE34E-3A63-4947-946F-9D52502C5762",
+  "name": "Patagonia",
+  "label": "Patagonia",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "B13C02E3-BA3C-4B39-85B4-ACF12FEBC892",
+  "name": "Starbucks",
+  "label": "Starbucks",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "7161ADA0-8DC8-471E-A4A8-61EE15578400",
+  "name": "Supreme",
+  "label": "Supreme",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "D9B9B404-7B35-4E4B-A0CE-4CAB8155FE9E",
+  "name": "Lululemon",
+  "label": "Lululemon",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "84B18312-3C2B-41A9-863B-89651C2F6A2C",
+  "name": "Gucci",
+  "label": "Gucci",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "212146FD-4F22-446B-BCA2-E8597774A940",
+  "name": "Chanel",
+  "label": "Chanel",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "74A44B01-5C99-4754-9585-F487D21C543D",
+  "name": "Zara",
+  "label": "Zara",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "7E9A2E74-1CB5-43E9-8B74-69CA8283BFBD",
+  "name": "IKEA",
+  "label": "IKEA",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "D5B78065-6DBB-4DDB-80DF-6495B9B1006B",
+  "name": "Apple Inc",
+  "label": "Apple",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "29B49E3F-A0EC-42C6-A453-38B1C20D8374",
+  "name": "Tesla",
+  "label": "Tesla",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "8FD09C3A-7362-4749-BDCE-12C3933FDC25",
+  "name": "Harley-Davidson",
+  "label": "Harley-Davidson",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "409FAF5A-BC5F-4DC3-943D-E3B5F20B471D",
+  "name": "Red Bull",
+  "label": "Red Bull",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "46C9F889-EC89-4715-A767-DEABACF52C41",
+  "name": "Uniqlo",
+  "label": "Uniqlo",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "8417D6F9-C8C7-40AD-BE49-0987A4663228",
+  "name": "McDonald's",
+  "label": "McDonald's",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "DB03F250-64F3-47AB-8756-BC1C4E13EBFD",
+  "name": "The North Face",
+  "label": "The North Face",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "2D69DB33-B4DF-4879-B3DC-308E3402A1FD",
+  "name": "Carhartt",
+  "label": "Carhartt",
+  "type": "brand",
+  "domain": "brand"
+ },
+ {
+  "id": "B335BB51-7158-4C34-89D1-4F1DB7CB5C01",
+  "name": "Fortnite",
+  "label": "Fortnite",
+  "type": "videogame",
+  "domain": "games"
+ },
+ {
+  "id": "CDBDE254-71F0-4640-8D04-5373BEAE5278",
+  "name": "Minecraft",
+  "label": "Minecraft",
+  "type": "videogame",
+  "domain": "games"
+ },
+ {
+  "id": "A2BFD7FA-EFB3-4E78-B5FD-744DD6A7A002",
+  "name": "Call of Duty",
+  "label": "Call of Duty",
+  "type": "videogame",
+  "domain": "games"
+ },
+ {
+  "id": "2BBC8913-13CA-47A3-BCD0-B48E70D6B005",
+  "name": "The Joe Rogan Experience",
+  "label": "Joe Rogan",
+  "type": "podcast",
+  "domain": "podcast"
+ },
+ {
+  "id": "056BCF4A-7C1D-4F19-AC0C-B1093EDE153C",
+  "name": "Call Her Daddy",
+  "label": "Call Her Daddy",
+  "type": "podcast",
+  "domain": "podcast"
+ },
+ {
+  "id": "E1E729E0-E8A8-4A23-93C5-3BEECC539120",
+  "name": "Lionel Messi",
+  "label": "Lionel Messi",
+  "type": "person",
+  "domain": "sport"
+ },
+ {
+  "id": "B53135E5-819E-4890-8396-59373C0A949F",
+  "name": "LeBron James",
+  "label": "LeBron James",
+  "type": "person",
+  "domain": "sport"
+ }
+]
