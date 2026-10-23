@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BRIEF_KEY } from "@/components/rehearsal/live-key";
 import { WarRoom } from "@/components/rehearsal/war-room";
 
@@ -9,7 +9,11 @@ type Input = { brief: string; cityId: string; budget?: number; days?: number };
 
 export default function LiveRehearsal() {
   const [input, setInput] = useState<Input | null | undefined>(undefined);
+  // Read the brief once per page: React may run this effect twice in development.
+  const read = useRef(false);
   useEffect(() => {
+    if (read.current) return;
+    read.current = true;
     try {
       const raw = sessionStorage.getItem(BRIEF_KEY);
       // A live run starts once; reloading shouldn't spend the quota again.

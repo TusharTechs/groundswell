@@ -52,14 +52,12 @@ export function WarRoom({ source }: { source: Source }) {
     };
   }, [cityId]);
 
+  // Start the live run once. It isn't aborted on unmount: React may simulate an
+  // unmount in development, and a run that has started is worth finishing.
   useEffect(() => {
     if (source.kind !== "live" || started.current) return;
     started.current = true;
-    const ctl = new AbortController();
-    streamLive(source.input, feed, ctl.signal).catch((e) => {
-      if ((e as Error).name !== "AbortError") feed({ type: "error", message: "The connection to the rehearsal dropped." });
-    });
-    return () => ctl.abort();
+    streamLive(source.input, feed, new AbortController().signal).catch(() => feed({ type: "error", message: "The connection to the rehearsal dropped." }));
   }, [source, feed]);
 
   // Follow the latest results: the plan when it arrives, else the best plan so far.
@@ -169,7 +167,7 @@ export function WarRoom({ source }: { source: Source }) {
         <div className="glass hidden rounded-2xl border border-line p-2 lg:block">
           {view.baseline || view.strategies.length ? (
             <div className="p-1">
-              <TeamStrip agents={view.agents} active={view.active} />
+              <TeamStrip agents={view.agents} active={view.active} finished={Boolean(view.plan || view.done)} />
             </div>
           ) : (
             <TeamRoster agents={view.agents} active={view.active} />

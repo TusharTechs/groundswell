@@ -74,9 +74,9 @@ export function TeamRoster({ agents, active }: { agents: Record<AgentName, Agent
 }
 
 /** One row of agent chips with the active agent's current task: used once results take the space. */
-export function TeamStrip({ agents, active }: { agents: Record<AgentName, AgentState>; active?: AgentName }) {
+export function TeamStrip({ agents, active, finished }: { agents: Record<AgentName, AgentState>; active?: AgentName; finished?: boolean }) {
   const order: AgentName[] = ["director", "analyst", "cartographer", "scout", "strategist", "simulator", "critic", "voices", "producer"];
-  const current = active ?? order.find((a) => agents[a].state === "working");
+  const current = finished ? undefined : (active ?? order.find((a) => agents[a].state === "working"));
   return (
     <div>
       <div className="flex flex-wrap gap-1">
