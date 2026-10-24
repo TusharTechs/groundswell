@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site),
   title: { default: "Groundswell: rehearse your launch in a living model of the city", template: "%s · Groundswell" },
   description:
-    "A team of AI agents rehearses your launch hundreds of times in a taste-accurate model of a real city, built from Qloo's taste graph, and hands you the plan that worked.",
+    "A team of AI agents rehearses your launch hundreds of times in a model of a real city built from Qloo's taste graph, hands you the plan that worked, writes the launch kit and steers the campaign from its scans.",
   openGraph: {
     title: "Groundswell",
     description: "A flight simulator for culture. AI agents rehearse your launch in a living model of the city, built from Qloo's taste graph.",
