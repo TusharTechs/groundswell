@@ -217,7 +217,7 @@ export default async function Home() {
                     <AgentChip agent={a} state="done" />
                     <div>
                       <div className="font-semibold">{AGENTS[a].title}</div>
-                      <div className="text-[13.5px] text-muted">{AGENTS[a].role.replace(/^(Agent|Model|Tool|Engine): /, "")}</div>
+                      <div className="text-[13.5px] text-muted">{AGENTS[a].role.replace(/^(Agent|Model|Tool|Engine): (.)/, (_, _kind, first: string) => first.toUpperCase())}</div>
                     </div>
                   </li>
                 ))}
