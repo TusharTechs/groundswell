@@ -9,10 +9,16 @@ import { plausibleMatch } from "../qloo/names";
 import { rawFitFromHeat, type Zone } from "./fit";
 import type { LaunchSpec } from "./spec";
 
+export const PARTNER_ROLES = ["poster", "ticket_outlet", "popup_host", "street_team_base", "cross_promo"] as const;
+export type PartnerRole = (typeof PARTNER_ROLES)[number];
+
 export interface Partner extends Place {
   zone: number;
   /** Atlas cell the place sits in. */
   cell: number;
+  /** What the Scouts want from this partner, and why it fits (set by the Scout agent). */
+  role?: PartnerRole;
+  why?: string;
 }
 
 export interface MediaOption extends Recommended {

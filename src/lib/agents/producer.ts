@@ -11,7 +11,7 @@ import { describeMetrics, strategyView, type RunState } from "./state";
 const Schema = z.object({
   headline: z.string().describe("At most 14 words: the plan's core bet and its simulated reach of the natural audience. No head-counts."),
   summary: z.string().describe("Three sentences: the bet, why the taste data supports it, what to expect."),
-  weeks: z.array(z.object({ label: z.string().describe("e.g. 'Week 1 (days 0–6)' or 'Launch week'."), items: z.array(z.string()) })),
+  weeks: z.array(z.object({ label: z.string().describe("e.g. '6–5 weeks before launch' or 'Launch week'."), items: z.array(z.string()).describe("Each item says when, in days before launch, and what.") })),
   partners: z.array(z.object({ id: z.string().describe("The partner's menu id."), action: z.string().describe("What to do there, in under 15 words."), why: z.string().describe("Why this place, in under 20 words, from the Qloo evidence.") })),
   media: z.array(z.object({ id: z.string().describe("The podcast or collab's menu id."), action: z.string(), why: z.string() })),
   risks: z.array(z.string()).describe("2–4 risks or assumptions to watch, including model limits."),
@@ -21,6 +21,8 @@ const Schema = z.object({
 const SYSTEM = `You are the Producer on a launch team. You turn the winning plan into a launch plan a small team can run: week by week, place by place.
 
 Use only the actions in the plan and the facts given. Keep it concrete and short. Say plainly that projections come from a simulation built on Qloo taste data, not a guarantee.
+
+Describe timing as days before launch ("21 days before launch"), never as day numbers, and label weeks the same way ("6–4 weeks before launch", "Launch week").
 
 Talk about results as reach of the natural audience (the people in the city whose taste fits the launch), as a multiple of the benchmark, and as cost per point of reach. Never state numbers of people, adopters or tickets: the simulation's population scale is arbitrary.`;
 

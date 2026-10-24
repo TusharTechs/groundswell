@@ -77,7 +77,7 @@ export function WhatIf({
     const podcasts: MediaOption[] = media
       .filter((m) => m.kind === "podcast")
       .map((m) => ({ id: m.id, name: m.name, type: "podcast", tags: [], affinity: m.affinity, popularity: m.popularity, drivers: [], kind: "podcast" }));
-    const ps: Partner[] = partners.map((p) => ({ id: p.id, name: p.name, affinity: p.affinity, lat: p.lat, lon: p.lon, categories: [p.category], tags: [], drivers: [], zone: p.zone, cell: p.cell }));
+    const ps: Partner[] = partners.map((p) => ({ id: p.id, name: p.name, affinity: p.affinity, lat: p.lat, lon: p.lon, categories: [p.category], tags: [], drivers: [], openDays: [], zone: p.zone, cell: p.cell }));
     return { atlas, fit, zones, partners: ps, podcasts, brands, days, names: new Map() };
   }, [atlas, fit, zones, partners, media, brandHeat, days]);
   const byId = useMemo(() => new Map(candidates.map((c) => [c.id, c])), [candidates]);

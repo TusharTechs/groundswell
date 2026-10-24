@@ -40,10 +40,13 @@ export interface RunView {
   candidates?: Candidate[];
   brandHeat?: Record<string, string>;
   strategies: StrategyView[];
+  /** Variations the Strategist tested in the simulator. */
+  probes: { round: number; cost: number; reach: number; actions: number; overBudget: boolean }[];
   sims: Record<string, SimView>;
   baseline?: SimView;
   critiques: Critique[];
   voices?: Voice[];
+  expansion?: Extract<LaunchEvent, { type: "expansion" }>["prospects"];
   plan?: { plan: PlanView; sim: SimView };
   done?: Extract<LaunchEvent, { type: "done" }>["stats"];
   error?: string;
@@ -58,6 +61,7 @@ export const initialView = (): RunView => ({
   feed: [],
   qloo: [],
   strategies: [],
+  probes: [],
   sims: {},
   critiques: [],
   rounds: 0,
@@ -108,6 +112,16 @@ function reduce(s: RunView, action: Action): RunView {
       return { ...s, zones: e.zones ?? s.zones, partners: e.partners, media: e.media, candidates: e.candidates, brandHeat: e.brandHeat };
     case "baseline":
       return { ...s, baseline: e.sim };
+    case "probe": {
+      const probes = [...s.probes, { round: e.round, cost: e.cost, reach: e.reach, actions: e.actions, overBudget: e.overBudget }];
+      // One feed line per round, updated as the Strategist tests more variations.
+      const last = s.feed[s.feed.length - 1];
+      const n = probes.filter((p) => p.round === e.round).length;
+      const best = Math.max(...probes.filter((p) => p.round === e.round && !p.overBudget).map((p) => p.reach), 0);
+      const text = `Tested ${n} variation${n === 1 ? "" : "s"} in the simulator; best so far ${pct(best)}`;
+      if (last && last.kind === "thought" && last.agent === "strategist" && last.round === e.round) return { ...s, probes, feed: [...s.feed.slice(0, -1), { ...last, text }] };
+      return { ...s, probes, feed: push({ agent: "strategist", kind: "thought", text, round: e.round }) };
+    }
     case "strategies":
       return {
         ...s,
@@ -125,6 +139,8 @@ function reduce(s: RunView, action: Action): RunView {
       return { ...s, critiques: [...s.critiques, e.critique], feed: push({ agent: "critic", kind: "critique", text: e.critique.summary, round: e.round }) };
     case "voices":
       return { ...s, voices: e.voices, feed: push({ agent: "voices", kind: "voices", text: `${e.voices.filter((v) => v.stance === "in").length} of ${e.voices.length} residents are in` }) };
+    case "expansion":
+      return { ...s, expansion: e.prospects, feed: push({ agent: "cartographer", kind: "status", text: `Same taste elsewhere: strongest in ${e.prospects.slice(0, 3).map((p) => `${p.city} (${p.presence.toFixed(1)}×)`).join(", ")}` }) };
     case "plan":
       return { ...s, plan: { plan: e.plan, sim: e.sim }, sims: { ...s.sims, [e.sim.strategyId]: e.sim }, feed: push({ agent: "producer", kind: "plan", text: e.plan.headline }) };
     case "done":

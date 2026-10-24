@@ -12,6 +12,16 @@ export function Hero() {
   const [cityId, setCityId] = useState("chicago");
   const [atlas, setAtlas] = useState<CityAtlas | null>(null);
   const [hover, setHover] = useState<number | null>(null);
+  const [initialBrief, setInitialBrief] = useState("");
+
+  // "Rehearse it in <city>" links arrive with ?city= and ?brief=.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search);
+    const c = q.get("city");
+    if (c && CITIES.some((x) => x.id === c)) setCityId(c);
+    const b = q.get("brief");
+    if (b) setInitialBrief(b.slice(0, 1500));
+  }, []);
 
   useEffect(() => {
     let alive = true;
@@ -42,7 +52,7 @@ export function Hero() {
             Groundswell builds a street-level model of a real city from Qloo&apos;s taste graph. A team of AI agents rehearses your launch inside it hundreds of times, then hands you the
             plan that worked, with real places, podcasts and partners.
           </p>
-          <Composer cityId={cityId} onCity={setCityId} />
+          <Composer cityId={cityId} onCity={setCityId} initialBrief={initialBrief} />
         </div>
 
         <div className="glass w-full max-w-sm space-y-3 rounded-2xl border border-line p-4 lg:mb-2">

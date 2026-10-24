@@ -3,6 +3,7 @@
 import type { Action } from "@groundswell/sim";
 import type { CityAtlas } from "../atlas/types";
 import { toAction, type Candidate, type MenuContext, type Selection } from "../launch/actions";
+import type { CityProspect } from "../launch/expansion";
 import type { FitMap } from "../launch/fit";
 import type { BrandOption, MediaOption, Partner } from "../launch/scout";
 import type { PlanMetrics } from "../launch/simulate";
@@ -38,6 +39,7 @@ export interface RunState {
   rounds: number;
   critiques: Critique[];
   voices?: { strategyId: string; voices: Voice[] };
+  expansion?: CityProspect[];
   finalized?: string;
   evidence: Evidence[];
   llmCalls: number;

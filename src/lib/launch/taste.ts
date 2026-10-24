@@ -34,7 +34,11 @@ export async function profileTaste(comps: { name: string; type: EntityType }[]):
   const resolved = await Promise.all(comps.map((c) => resolveEntity(c.name, c.type)));
   const found = resolved.flatMap((r) => (r.entity ? [r.entity] : []));
   const unresolved = comps.filter((_, i) => !resolved[i].entity).map((c) => c.name);
-  const evidence = resolved.map((r) => r.evidence);
+  return profileEntities(found, unresolved, resolved.map((r) => r.evidence));
+}
+
+/** Profile the fans of entities already resolved on Qloo. */
+export async function profileEntities(found: Entity[], unresolved: string[] = [], evidence: Evidence[] = []): Promise<TasteProfile> {
   if (!found.length) {
     return { comps: [], unresolved, age: {}, peakAge: null, gender: null, segments: [], tags: [], evidence };
   }

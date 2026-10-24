@@ -14,6 +14,7 @@ import type { MapMode } from "../city-map";
 import { TeamRoster, TeamStrip } from "./agents";
 import { Feed } from "./feed";
 import { Leaderboard } from "./leaderboard";
+import { SearchSpace } from "./search-space";
 import { PlanSheet } from "./plan-sheet";
 import { Timeline } from "./timeline";
 import { decodeBytes, streamLive, useReplay, useRunView } from "./use-run";
@@ -40,6 +41,7 @@ export function WarRoom({ source }: { source: Source }) {
   const [playing, setPlaying] = useState(false);
   const [whatIf, setWhatIf] = useState<WhatIfResult | null>(null);
   const [elapsed, setElapsed] = useState(0);
+  const [panel, setPanel] = useState<"plans" | "search">("plans");
 
   useEffect(() => {
     let alive = true;
@@ -189,6 +191,7 @@ export function WarRoom({ source }: { source: Source }) {
               qloo={view.qloo}
               cityName={city.name}
               onClose={() => setShowPlan(false)}
+              expansion={view.expansion}
             >
               {atlas && fit && view.zones && view.partners && view.media && view.candidates && spec && view.strategies.find((s) => s.id === view.plan!.plan.strategyId) && (
                 <WhatIf
@@ -249,11 +252,30 @@ export function WarRoom({ source }: { source: Source }) {
         <section className="relative z-10 p-3 lg:absolute lg:bottom-4 lg:left-4 lg:w-[min(640px,calc(100vw-40vw-4rem))] lg:p-0">
           <div className="glass space-y-3 rounded-2xl border border-line p-3">
             <div className="flex items-center justify-between gap-2 px-1">
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">Plans rehearsed · reach of the natural audience by launch day</h2>
-              {view.fit && <span className="hidden font-mono text-[11px] text-dim sm:block">{view.rounds} round{view.rounds === 1 ? "" : "s"}</span>}
+              <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">
+                {panel === "plans" ? "Plans rehearsed · reach of the natural audience by launch day" : "The Strategist's search · cost against reach"}
+              </h2>
+              <div className="flex shrink-0 rounded-full border border-line p-0.5 text-[11px]" role="tablist" aria-label="Results view">
+                {(["plans", "search"] as const).map((k) => (
+                  <button
+                    key={k}
+                    type="button"
+                    role="tab"
+                    aria-selected={panel === k}
+                    onClick={() => setPanel(k)}
+                    className={`rounded-full px-2.5 py-0.5 ${panel === k ? "bg-text text-ink" : "text-muted hover:text-text"}`}
+                  >
+                    {k === "plans" ? `Plans · ${view.rounds} round${view.rounds === 1 ? "" : "s"}` : `Search · ${view.probes.length}`}
+                  </button>
+                ))}
+              </div>
             </div>
             <div className="scroll-thin max-h-[30vh] overflow-y-auto">
-              <Leaderboard strategies={view.strategies} sims={view.sims} baseline={view.baseline} selected={selected} onSelect={setSelected} winner={winner} />
+              {panel === "plans" ? (
+                <Leaderboard strategies={view.strategies} sims={view.sims} baseline={view.baseline} selected={selected} onSelect={setSelected} winner={winner} />
+              ) : (
+                <SearchSpace probes={view.probes} strategies={view.strategies} sims={view.sims} baseline={view.baseline} budget={spec?.budget ?? 0} winner={winner} />
+              )}
             </div>
             {sim && spec && (
               <Timeline

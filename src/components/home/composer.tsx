@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CITIES } from "@/lib/atlas/cities";
 import { BRIEF_KEY } from "../rehearsal/live-key";
 
@@ -15,9 +15,12 @@ const EXAMPLES: Record<string, string> = {
   tokyo: "A Studio Ghibli-inspired café and art exhibition opening in Shimokitazawa in six weeks, for fans of Spirited Away and Hayao Miyazaki. All ages. $20,000.",
 };
 
-export function Composer({ cityId, onCity }: { cityId: string; onCity: (id: string) => void }) {
+export function Composer({ cityId, onCity, initialBrief = "" }: { cityId: string; onCity: (id: string) => void; initialBrief?: string }) {
   const router = useRouter();
-  const [brief, setBrief] = useState("");
+  const [brief, setBrief] = useState(initialBrief);
+  useEffect(() => {
+    if (initialBrief) setBrief(initialBrief);
+  }, [initialBrief]);
   const [budget, setBudget] = useState("");
   const [weeks, setWeeks] = useState("6");
   const [error, setError] = useState<string | null>(null);

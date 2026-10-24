@@ -5,6 +5,7 @@
 
 import Link from "next/link";
 import type { PlanView, SimView, StrategyView, Voice } from "@/lib/agents/events";
+import type { CityProspect } from "@/lib/launch/expansion";
 import type { LaunchSpec } from "@/lib/launch/spec";
 import type { Evidence } from "@/lib/qloo/entities";
 
@@ -32,6 +33,7 @@ export function PlanSheet({
   cityName,
   onClose,
   children,
+  expansion,
 }: {
   plan: PlanView;
   sim: SimView;
@@ -44,6 +46,7 @@ export function PlanSheet({
   onClose?: () => void;
   /** Slot after the headline numbers, for the what-if panel. */
   children?: React.ReactNode;
+  expansion?: CityProspect[];
 }) {
   const m = sim.metrics;
   const b = baseline?.metrics;
@@ -166,6 +169,39 @@ export function PlanSheet({
             ))}
           </ul>
           <p className="mt-1.5 text-[11px] text-dim">Written by Claude from each area&apos;s Qloo taste signature and the real places nearby. Not real people.</p>
+        </section>
+      )}
+
+      {expansion && expansion.length > 0 && (
+        <section>
+          <H>Where next (the same taste in other cities)</H>
+          <ul className="grid gap-2 sm:grid-cols-3">
+            {expansion.slice(0, 3).map((p) => (
+              <li key={p.cityId} className="flex flex-col justify-between gap-2 rounded-xl border border-line bg-panel-2 p-3 text-[12.5px]">
+                <div>
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span className="font-semibold">{p.city}</span>
+                    <span className="font-mono text-[11px] text-cool" title="How much of the city Qloo sees this taste in, against a typical taste there">
+                      {p.presence.toFixed(1)}× presence
+                    </span>
+                  </div>
+                  <div className="mt-1 text-muted">Strongest in {p.places.join(", ") || "—"}</div>
+                  {p.twin && (
+                    <div className="mt-1 text-[11.5px] text-dim">
+                      Twin of your district: {p.twin.name} ({Math.round(Math.max(0, p.twin.similarity) * 100)}%)
+                    </div>
+                  )}
+                </div>
+                <Link
+                  href={`/?city=${p.cityId}&brief=${encodeURIComponent(spec?.pitch ?? "")}`}
+                  className="self-start rounded-full border border-line px-2.5 py-1 text-[11.5px] hover:border-text"
+                >
+                  Rehearse it in {p.city}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1.5 text-[11px] text-dim">Presence compares how much of each city Qloo sees this taste in with a typical taste there. Raw affinities are not compared across cities.</p>
         </section>
       )}
 

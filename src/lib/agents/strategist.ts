@@ -22,7 +22,7 @@ const SYSTEM = `You are the Strategist on a launch team. You design promotion pl
 A simulator scores plans: it models how many of the launch's natural audience (people in the city whose taste fits it) adopt by launch day, through promotion and word of mouth between neighbouring and taste-similar areas.
 
 How to work:
-- Call estimate to test ideas before committing; it is instant. Test several variations at once by calling estimate several times in the same turn (different zones, timing, mixes), then refine once. Keep it to two or three rounds of testing.
+- Call estimate to test ideas before committing; it is instant. Test four to eight variations at once by calling estimate several times in the same turn (different zones, timing, mixes), refine once with a second batch if it helps, then submit.
 - Timing matters: word of mouth needs time to spread, so early seeding in the strongest zones compounds; a pop-up or street team close to launch day converts.
 - Stay within the budget. Respect the brief's constraints.
 - Plans must be things a real team would run: at most one co-branded drop, at most two podcasts, at most two pop-ups, street teams on specific days.
@@ -43,7 +43,7 @@ export async function runStrategist(s: RunState, emit: Emit, opts: { round: numb
         const actions = actionsOf(s, selections);
         const cost = actions.reduce((t, a) => t + a.cost, 0);
         const { metrics } = runPlan(s.atlas, s.fit!.fit, actions, spec.days, { runs: 0 }, s.fit!.travel);
-        emit({ type: "thought", agent: "strategist", text: `Tested a ${actions.length}-action plan: ${(metrics.reach.mean * 100).toFixed(1)}% reach for $${cost.toLocaleString()}.` });
+        emit({ type: "probe", round: opts.round, cost, reach: metrics.reach.mean, actions: actions.length, overBudget: cost > spec.budget });
         return JSON.stringify({
           cost,
           over_budget: cost > spec.budget,

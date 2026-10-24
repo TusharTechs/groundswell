@@ -104,7 +104,7 @@ export function buildMenu(ctx: MenuContext): Candidate[] {
       id: `partner:${p.id}`,
       kind: "partner",
       label: `${p.name} (${cat}), ${zoneName(p.zone)}`,
-      why: `Qloo affinity ${p.affinity.toFixed(2)} with this crowd.${driverText(p.drivers, ctx.names)}`,
+      why: `${p.why ? `${p.why} ` : ""}Qloo affinity ${p.affinity.toFixed(2)} with this crowd.${driverText(p.drivers, ctx.names)}`,
       cost: ASSUMPTIONS.partner.cost,
       timing: "campaign",
       where: [p.lon, p.lat],

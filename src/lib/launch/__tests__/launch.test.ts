@@ -40,7 +40,7 @@ function fakeAtlas(): CityAtlas {
   };
 }
 
-const place = (over: Partial<Place>): Place => ({ id: "x", name: "Somewhere", affinity: 0.9, lat: 41.86, lon: -87.69, categories: ["Coffee shop"], tags: [], drivers: [], ...over });
+const place = (over: Partial<Place>): Place => ({ id: "x", name: "Somewhere", affinity: 0.9, lat: 41.86, lon: -87.69, categories: ["Coffee shop"], tags: [], drivers: [], openDays: [], ...over });
 
 describe("fit", () => {
   const atlas = fakeAtlas();

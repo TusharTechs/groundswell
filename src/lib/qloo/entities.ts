@@ -187,6 +187,10 @@ export interface Place {
   rating?: number;
   /** Qloo's neighbourhood name for the place, when it has one. */
   neighborhood?: string;
+  /** Qloo popularity, 0–1: global chains sit near 1. */
+  popularity?: number;
+  /** Days the place is open, from Qloo's opening hours (empty when unknown). */
+  openDays: string[];
   /** Which signal entities pulled this place in, with their share. */
   drivers: { id: string; share: number }[];
 }
@@ -205,6 +209,7 @@ function placeOf(e: RawEntity): Place | null {
     business_rating?: number;
     price_level?: number;
     neighborhood?: string;
+    hours?: Record<string, { closed?: boolean }[]>;
     website?: string;
     phone?: string;
   };
@@ -227,6 +232,10 @@ function placeOf(e: RawEntity): Place | null {
     phone: p.phone,
     rating: p.business_rating,
     neighborhood: p.neighborhood || p.geocode?.name,
+    popularity: e.popularity,
+    openDays: Object.entries(p.hours ?? {})
+      .filter(([, slots]) => slots.some((x) => !x.closed))
+      .map(([day]) => day),
     drivers: driversOf(e),
   };
 }
@@ -337,6 +346,13 @@ export async function tasteTags(signals: Signals, opts: { take?: number; tagType
     return id && t.name ? [{ id, name: t.name, type: t.type, affinity: t.query?.affinity ?? 0 }] : [];
   });
   return { tags, evidence: evidenceOf(call) };
+}
+
+/** Qloo place-category tag ids for plain words ("record store" → urn:tag:category:place:record_store). */
+export async function placeCategoryTags(words: string[]) {
+  const results = await Promise.all(words.map((w) => searchTags(w, 8)));
+  const ids = results.flatMap((r) => r.tags.filter((t) => t.id.startsWith("urn:tag:category:place:")).slice(0, 1).map((t) => t.id));
+  return { ids: [...new Set(ids)], evidence: results.map((r) => r.evidence) };
 }
 
 /** Search Qloo's tag taxonomy by keyword. */
