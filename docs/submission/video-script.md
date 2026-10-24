@@ -1,19 +1,16 @@
-# Demo video script (about 2:30)
+# Demo video script
 
-Screen recording of the live site at 1440 × 900, voiceover by the author.
+Recorded automatically from the running app (headless Chrome screencast at 1920 × 1080) with captions; narration is an AI voice (OpenAI text-to-speech) reading the lines below. The showcase launch is fictional; the data is real.
 
-| Time | On screen | Voiceover |
+| # | On screen | Narration |
 |---|---|---|
-| 0:00 | Home: the 3D Chicago taste map slowly rotating | "Every week thousands of things launch into cities: a first headline show, a comedy night, a pop-up. Most are planned on instinct." |
-| 0:10 | Hover the district legend; districts light up | "Groundswell is a flight simulator for culture. From Qloo's taste graph we built a street-level model of seven cities: every neighbourhood with a taste fingerprint, grouped into taste districts." |
-| 0:25 | Click the Chicago headline showcase | "Here's a real rehearsal. A Latin R&B singer's first headline show at Thalia Hall in Pilsen, $12,000, six weeks out." |
-| 0:32 | Feed: Director thoughts, Taste Analyst, Qloo receipt expanded | "Nine Claude agents take it from there. The Director runs the team. The Taste Analyst finds the comparables on Qloo. Every Qloo request is right here." |
-| 0:45 | Map turns teal; zones appear around Pilsen, Little Village | "The Cartographer maps where that taste actually lives, corrected for where Qloo just has more data. Pilsen, Little Village, New City." |
-| 0:58 | Partner pins appear | "Scouts find real places this crowd already goes: the National Museum of Mexican Art, Plaza Garibaldi, galleries, a gym, with the podcasts and brands it over-indexes on." |
-| 1:10 | Leaderboard fills: A1–A3 vs benchmark; map glows and spreads | "The Strategist designs three bets and tests them in a simulator of word of mouth. Each one is rehearsed 48 times against the same budget spent where people are." |
-| 1:28 | Critic notes, round B appears | "The Critic sends it back. The Strategist revises. The team runs it again." |
-| 1:40 | Plan sheet: headline, KPIs, week by week, voices | "Then the plan: week by week, place by place, with simulated reach about four times the benchmark, and residents' reactions, labelled as simulated." |
-| 1:55 | Try a change: untick the podcast; reach drops; map replays | "And you can try a change. Drop the podcast, re-run 48 simulations in the browser, and watch the map." |
-| 2:08 | Method page: the evidence bars | "Does it work? From comparables alone, Groundswell finds twice as many of a taste's top neighbourhoods as Claude alone or going where people are, and a control rules out a measurement trick." |
-| 2:20 | Taste Atlas: twins across cities | "Seven cities, three continents, all from Qloo. Rehearse your launch before you spend a dollar." |
-| 2:30 | Logo | "Groundswell." |
+| 01 | Home: the 3D Chicago taste map rotating behind the brief composer | Most launches are planned on instinct: where the posters go, which neighbourhood first, which podcast. Groundswell rehearses a launch before anyone spends money, in a living model of the city built from Qloo's taste graph. |
+| 02 | Taste Atlas: Chicago, then Tokyo, then London | For seven cities, fifty-four Qloo heatmaps give every neighbourhood a taste fingerprint. Neighbourhoods cluster into taste districts, and similar tastes across town are linked. That's how word of mouth travels in the model. |
+| 03 | Recorded rehearsal: Marisol Vega at Thalia Hall; the brief card shows the spec | Here's a brief. Marisol Vega, a Latin R and B singer, plays her first headline show at Thalia Hall in Pilsen. Six weeks, twelve thousand dollars. The launch is fictional. The data is real. |
+| 04 | The team feed with Qloo receipts; the map turns to where the taste lives | A Director agent runs the team. The Taste Analyst picks comparables Qloo covers well in Chicago and profiles their fans. The Cartographer maps where that taste is over-represented. Every Qloo request shows up in the feed. |
+| 05 | Partner pins, the plans leaderboard against the benchmark, word of mouth spreading; round two | Scouts pick real partner places in each hot zone. The Strategist designs plans and tests variations in a simulator of word of mouth. Every plan runs forty-eight times, against a benchmark that spends the same budget where people are. Then the Critic sends them back for a second round. |
+| 06 | The plan: reach, lift over the benchmark, cost per point; one action switched off in Try a change | The winning plan reaches about twenty percent of the natural audience in simulation: three times the benchmark. You can switch any action off, and the simulation re-runs in your browser. |
+| 07 | Launch kit tab: Bridgeport copy with Qloo-checked references, the poster with its QR code, partner emails | Then the Creative Director writes the launch kit, neighbourhood by neighbourhood. Before it tells Bridgeport, if Bad Bunny runs your playlists, it checks Bad Bunny on Qloo for Bridgeport. Strong here. Posters with tracked QR codes, partner emails, podcast scripts, an ad brief and a calendar, in one download. |
+| 08 | Mission control: simulate a week, Bridgeport and Lower West Side against expectation, the Field Analyst's re-plan | Every poster and post has its own tracked link. Mission control compares each neighbourhood's scans with what the rehearsal expected. After a simulated week, one neighbourhood is behind. The Field Analyst searches Qloo for new partners there, and moves the money that's left. |
+| 09 | How it works: the cold-start benchmark bars | Does the core idea work? From comparables alone, Groundswell finds forty-five percent of a taste's strongest neighbourhoods. That's about twice as many as Claude alone, or going where people are. |
+| 10 | End card | Groundswell. Rehearse it, launch it, steer it. Built on Qloo and Claude. |

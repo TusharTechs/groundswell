@@ -75,8 +75,8 @@ function fitColor(f: number): RGBA {
 /** Diverging ramp for scans against expectation: behind (blue) → on track (amber) → ahead (pink). */
 function scanColor(ratio: number): RGBA {
   if (!Number.isFinite(ratio)) return [30, 33, 48, 110];
-  if (ratio < 1) return mix([86, 150, 255, 235], [255, 181, 71, 240], Math.max(0, (ratio - 0.4) / 0.6));
-  return mix([255, 181, 71, 240], [255, 92, 138, 255], Math.min(1, (ratio - 1) / 0.8));
+  if (ratio < 1) return mix([86, 150, 255, 235], [255, 181, 71, 240], Math.max(0, (ratio - 0.6) / 0.4));
+  return mix([255, 181, 71, 240], [255, 92, 138, 255], Math.min(1, (ratio - 1) / 0.5));
 }
 
 /** Warm ramp for adoption: ember → amber → hot pink → white. */

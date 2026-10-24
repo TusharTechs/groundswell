@@ -158,7 +158,10 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
     if (!atlas || !kit.input.zones.length) return null;
     const lon = kit.input.zones.reduce((t, z) => t + z.center[0], 0) / kit.input.zones.length;
     const lat = kit.input.zones.reduce((t, z) => t + z.center[1], 0) / kit.input.zones.length;
-    return [lon, lat, atlas.city.zoom + 1.6];
+    // Closer together, closer in: the farthest pair of neighbourhoods sets the zoom.
+    const km = (a: [number, number], b: [number, number]) => Math.hypot((a[0] - b[0]) * 111 * Math.cos((lat * Math.PI) / 180), (a[1] - b[1]) * 111);
+    const spread = Math.max(0, ...kit.input.zones.flatMap((a) => kit.input.zones.map((b) => km(a.center, b.center))));
+    return [lon, lat, atlas.city.zoom + (spread < 5 ? 2.6 : spread < 10 ? 2 : 1.4)];
   }, [atlas, kit]);
 
   const daysToLaunch = Math.round((new Date(`${kit.input.launchDate}T12:00:00Z`).getTime() - Date.now()) / 86_400_000);

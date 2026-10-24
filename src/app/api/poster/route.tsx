@@ -97,24 +97,27 @@ export async function GET(req: Request) {
           backgroundImage: `radial-gradient(circle, rgba(${r},${g},${b},0.5), rgba(${r},${g},${b},0) 70%)`,
         }}
       />
-      <div style={{ position: "absolute", left: 0, right: 0, top: 690, height: 300, display: "flex", alignItems: "flex-end", gap: 8, padding: "0 56px" }}>
-        {bars.map((h, i) => (
-          <div key={i} style={{ flex: 1, height: h, backgroundImage: `linear-gradient(180deg, rgba(${r},${g},${b},${i % 3 === 0 ? 0.95 : 0.55}), rgba(${r},${g},${b},0.05))`, borderRadius: 4 }} />
-        ))}
-      </div>
       <div style={{ display: "flex", flexDirection: "column", padding: "76px 72px 0", gap: 26, position: "relative" }}>
         <div style={{ fontSize: 28, letterSpacing: 5, textTransform: "uppercase", color: accent, fontWeight: 600 }}>{data.t}</div>
         <div style={{ fontFamily: display, fontSize: headlineSize, lineHeight: 0.98, fontWeight: 800, letterSpacing: -3 }}>{data.h}</div>
         <div style={{ fontSize: 38, lineHeight: 1.25, color: "#c9cee0", maxWidth: 900 }}>{data.s}</div>
         {fans && <div style={{ fontSize: 30, color: accent, fontWeight: 600 }}>{fans}</div>}
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 360, display: "flex", backgroundImage: "linear-gradient(180deg, rgba(7,8,13,0), #07080d 30%)" }} />
-      <div style={{ position: "absolute", left: 72, right: 72, bottom: 64, display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 36 }}>
+      {/* The skyline takes whatever height the text leaves, so long copy never runs into it. */}
+      <div style={{ flex: 1, minHeight: 40, display: "flex", alignItems: "flex-end", gap: 8, padding: "28px 56px 0" }}>
+        {bars.map((h, i) => (
+          <div
+            key={i}
+            style={{ flex: 1, height: `${Math.round((h / 320) * 100)}%`, backgroundImage: `linear-gradient(180deg, rgba(${r},${g},${b},${i % 3 === 0 ? 0.95 : 0.55}), rgba(${r},${g},${b},0.05))`, borderRadius: 4 }}
+          />
+        ))}
+      </div>
+      <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 36, padding: "28px 72px 64px", position: "relative" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: 8, flex: 1, minWidth: 0 }}>
           <div style={{ fontFamily: display, fontSize: 54, fontWeight: 800, letterSpacing: -1 }}>{data.dt}</div>
           {data.v && <div style={{ fontSize: 32, color: "#c9cee0" }}>{data.v}</div>}
           {flyers && <div style={{ fontSize: 24, color: "#a3aac0", marginTop: 10 }}>{flyers}</div>}
-          {data.demo && <div style={{ fontSize: 19, color: "#727a96", marginTop: 12 }}>Demo poster from a recorded Groundswell rehearsal. The launch is fictional.</div>}
+          {data.demo && <div style={{ fontSize: 19, color: "#828aa6", marginTop: 12 }}>Demo poster from a recorded Groundswell rehearsal. The launch is fictional.</div>}
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, flexShrink: 0 }}>
           <div style={{ display: "flex", background: "#ffffff", padding: 12, borderRadius: 18 }}>

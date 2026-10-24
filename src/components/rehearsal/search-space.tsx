@@ -28,7 +28,7 @@ export function SearchSpace({ probes, strategies, sims, baseline, budget, winner
         {ticks.map((t) => (
           <g key={t}>
             <line x1={pad.l} x2={W - pad.r} y1={y(t)} y2={y(t)} stroke="#252a3b" strokeWidth={1} />
-            <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fontSize={9} fill="#727a96">
+            <text x={pad.l - 6} y={y(t) + 3} textAnchor="end" fontSize={9} fill="#828aa6">
               {pct(t)}
             </text>
           </g>
@@ -37,10 +37,10 @@ export function SearchSpace({ probes, strategies, sims, baseline, budget, winner
         <text x={x(budget) - 4} y={pad.t + 9} textAnchor="end" fontSize={9} fill="#ffcc66">
           budget ${budget.toLocaleString()}
         </text>
-        <text x={W - pad.r} y={H - 8} textAnchor="end" fontSize={9} fill="#727a96">
+        <text x={W - pad.r} y={H - 8} textAnchor="end" fontSize={9} fill="#828aa6">
           cost →
         </text>
-        <text x={pad.l} y={H - 8} fontSize={9} fill="#727a96">
+        <text x={pad.l} y={H - 8} fontSize={9} fill="#828aa6">
           $0
         </text>
         {probes.map((p, i) => (
