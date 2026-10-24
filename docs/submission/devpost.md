@@ -103,6 +103,7 @@ Qloo Taste AI API, Anthropic Claude (claude-opus-5-5), Anthropic SDK tool runner
 ## Try it out
 
 - Live demo: `<LIVE_URL>` (no sign-in; recorded rehearsals and their kits open instantly; a live rehearsal takes two to four minutes)
+- The business case, with sources: `<LIVE_URL>/pitch`
 - Repository: https://github.com/TusharTechs/groundswell
 - Video: `<VIDEO_URL>`
 
