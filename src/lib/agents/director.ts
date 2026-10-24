@@ -332,9 +332,10 @@ export async function runDirector(s: RunState, emit: Emit) {
             .catch(() => undefined),
         );
       }
-      const [plan] = await Promise.all([runProducer(s, emit, strategy_id), ...extras]);
+      // The final numbers come from a larger rehearsal (96 runs), and the Producer writes from those same numbers.
       const { result, metrics } = runPlan(s.atlas, s.fit!.fit, actionsOf(s, s.strategies.get(strategy_id)!.selections), spec.days, { runs: 96, seed: 11 }, s.fit!.travel);
       s.results.set(strategy_id, metrics);
+      const [plan] = await Promise.all([runProducer(s, emit, strategy_id), ...extras]);
       emit({ type: "plan", plan, sim: { strategyId: strategy_id, metrics, frames: encodeFrames(result) } });
       s.finalized = strategy_id;
       done("producer", plan.headline);

@@ -2,8 +2,8 @@
 // A live rehearsal costs roughly 15–25 Qloo calls and 20–30 Claude calls.
 
 const WINDOW_MS = 30 * 60 * 1000;
-const PER_IP: Record<Bucket, number> = { rehearse: 4, light: 60 };
-export type Bucket = "rehearse" | "light";
+const PER_IP: Record<Bucket, number> = { rehearse: 4, kit: 6, analyst: 6, light: 60 };
+export type Bucket = "rehearse" | "kit" | "analyst" | "light";
 const MAX_CONCURRENT = 3;
 
 const hits = new Map<string, number[]>();
@@ -21,21 +21,26 @@ export function admit(ip: string, bucket: Bucket = "rehearse"): Admission {
     return {
       ok: false,
       status: 429,
-      message: `Live rehearsals are limited to ${limit} per half hour so the shared quota lasts. Try again in about ${Math.ceil(retryAfter / 60)} min, or watch a recorded one.`,
+      message:
+        bucket === "kit" || bucket === "analyst"
+          ? `${bucket === "kit" ? "Launch kits" : "Field Analyst runs"} are limited to ${limit} per half hour. Try again in about ${Math.ceil(retryAfter / 60)} min.`
+          : bucket === "light"
+            ? `Too many requests. Try again in about ${Math.ceil(retryAfter / 60)} min.`
+            : `Live rehearsals are limited to ${limit} per half hour so the shared quota lasts. Try again in about ${Math.ceil(retryAfter / 60)} min, or watch a recorded one.`,
       retryAfter,
     };
   }
-  if (bucket === "rehearse" && running >= MAX_CONCURRENT) {
+  if (bucket !== "light" && running >= MAX_CONCURRENT) {
     return { ok: false, status: 503, message: "The team is busy with other rehearsals. Try again in a minute, or watch a recorded one.", retryAfter: 30 };
   }
   recent.push(now);
   hits.set(key, recent);
-  if (bucket === "rehearse") running++;
+  if (bucket !== "light") running++;
   let released = false;
   return {
     ok: true,
     release: () => {
-      if (!released && bucket === "rehearse") {
+      if (!released && bucket !== "light") {
         released = true;
         running--;
       }

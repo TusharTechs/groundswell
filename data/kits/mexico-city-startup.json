@@ -1,0 +1,642 @@
+{
+ "campaignId": "mexico-city-startup",
+ "createdAt": "2026-10-24T15:12:04.167Z",
+ "input": {
+  "campaignId": "mexico-city-startup",
+  "cityId": "mexico-city",
+  "title": "Tierra Sneaker Pop-Up Roma Norte",
+  "pitch": "Tierra, a sustainable sneaker start-up, opens its first pop-up store in Roma Norte for fans of eco-conscious footwear like Allbirds and Veja.",
+  "kind": "popup",
+  "language": "Spanish",
+  "venue": "Roma Norte, Mexico City",
+  "launchDate": "2026-12-04",
+  "days": 42,
+  "budget": 15000,
+  "allAges": false,
+  "noAlcohol": false,
+  "ageLimit": null,
+  "launchUrl": null,
+  "comps": [
+   "Patagonia",
+   "Outdoor Voices",
+   "Warby Parker"
+  ],
+  "compIds": [
+   "DB4CE34E-3A63-4947-946F-9D52502C5762",
+   "011DFDA5-F5A7-461A-9D96-E28E4964E7FB",
+   "AB8D769A-CCEB-4C2D-A3D8-21641E0EC664"
+  ],
+  "peakAge": "25_to_29",
+  "tags": [
+   "Mountains",
+   "Affordable",
+   "Team-Up",
+   "Exploration",
+   "Human Spirit",
+   "Underwater",
+   "Self-Awareness",
+   "Surfing",
+   "Snowboarding",
+   "Ethical Fashion"
+  ],
+  "zones": [
+   {
+    "id": 0,
+    "locality": "Miguel Hidalgo",
+    "district": "Daft Punk, Radiohead and Metallica",
+    "signature": [
+     "Daft Punk",
+     "McDonald's",
+     "BTS",
+     "SZA",
+     "Radiohead"
+    ],
+    "share": 0.035,
+    "center": [
+     -99.18548,
+     19.45412
+    ],
+    "cells": [
+     441,
+     442,
+     445,
+     452,
+     463,
+     464,
+     465,
+     466,
+     467,
+     468,
+     469
+    ]
+   },
+   {
+    "id": 2,
+    "locality": "Colonia Doctores",
+    "district": "Stranger Things, K-pop and Latin pop",
+    "signature": [
+     "Stranger Things",
+     "Peso Pluma",
+     "Bad Bunny",
+     "Karol G",
+     "Minecraft"
+    ],
+    "share": 0.031,
+    "center": [
+     -99.14972,
+     19.41171
+    ],
+    "cells": [
+     333,
+     342,
+     343,
+     344,
+     345,
+     346,
+     348,
+     349,
+     761,
+     762,
+     765
+    ]
+   }
+  ],
+  "partners": [
+   {
+    "id": "931A1C86-D950-44FC-B41D-DF3A1B48C945",
+    "name": "El Martigon",
+    "category": "Restaurant or cafe",
+    "address": "Laguna del Carmen 106 Anáhuac I Secc., Anáhuac I Secc, Miguel Hidalgo 11320 Ciudad de México, CDMX Mexico",
+    "phone": null,
+    "website": null,
+    "role": "street_team_base",
+    "why": "Affinity 0.85, low popularity local gem, open 7 days.",
+    "zone": 0,
+    "affinity": 0.8445543847771984,
+    "drivers": [
+     "Warby Parker",
+     "Patagonia",
+     "Outdoor Voices"
+    ],
+    "lon": -99.1748112,
+    "lat": 19.4484984,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "5A748A10-1ADC-47FE-963F-361C441538B7",
+    "name": "Forest Cafe",
+    "category": "Coffee shop",
+    "address": "La Quemada 6 Narvarte Poniente, Benito Juárez 03020 Ciudad de México, CDMX Mexico",
+    "phone": null,
+    "website": null,
+    "role": "popup_host",
+    "why": "Café-gallery with event space, affinity 0.85 via Outdoor Voices, open 7 days.",
+    "zone": 2,
+    "affinity": 0.852117620235604,
+    "drivers": [
+     "Outdoor Voices",
+     "Warby Parker",
+     "Patagonia"
+    ],
+    "lon": -99.1485019,
+    "lat": 19.4000271,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "75360A72-2690-4B31-AAD8-8110B839A04A",
+    "name": "Chomp Chomp",
+    "category": "Coffee shop",
+    "address": "Tonalá 91 Roma Nte., Cuauhtémoc 06700 Ciudad de México, CDMX Mexico",
+    "phone": "+525543984366",
+    "website": "http://www.chompchompmx.com/",
+    "role": "cross_promo",
+    "why": "Affinity 0.87, independent, open every day.",
+    "zone": 2,
+    "affinity": 0.868748874277424,
+    "drivers": [
+     "Warby Parker",
+     "Patagonia",
+     "Outdoor Voices"
+    ],
+    "lon": -99.1625361,
+    "lat": 19.4170984,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "AD753FC0-0E2F-449B-A5BF-EC200A78F21C",
+    "name": "Boicot Café",
+    "category": "Coffee shop",
+    "address": "Jalapa 99 Roma Nte., Cuauhtémoc 06170 Ciudad de México, CDMX Mexico",
+    "phone": null,
+    "website": "http://www.boicotcafe.com/",
+    "role": "poster",
+    "why": "Affinity 0.86, heavy foot traffic, open weekends.",
+    "zone": 2,
+    "affinity": 0.8609114765053992,
+    "drivers": [
+     "Warby Parker",
+     "Patagonia",
+     "Outdoor Voices"
+    ],
+    "lon": -99.161352,
+    "lat": 19.4185181,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "FF7EDCEB-24AE-4216-92CA-A88839D8D2F9",
+    "name": "Brown Caffeine Lab",
+    "category": "Cafe",
+    "address": "Tonalá 313 Roma Sur, Cuauhtémoc 06760 Ciudad de México, CDMX Mexico",
+    "phone": null,
+    "website": "https://www.facebook.com/bcaffeinelab",
+    "role": "street_team_base",
+    "why": "Dog café rated 4.6, open 7 days, Outdoor Voices crowd.",
+    "zone": 2,
+    "affinity": 0.7403639273509083,
+    "drivers": [
+     "Outdoor Voices",
+     "Warby Parker",
+     "Patagonia"
+    ],
+    "lon": -99.1600351,
+    "lat": 19.4067672,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "56C68AD6-AAF3-462F-896A-F16EB1230E73",
+    "name": "Kerbels Pastelerías",
+    "category": "Pastry shop",
+    "address": "Frontera 147 Roma Nte., Cuauhtémoc 06700 Ciudad de México, CDMX Mexico",
+    "phone": "+525552861554",
+    "website": "http://kerbelspastelerias.com/",
+    "role": "poster",
+    "why": "Affinity 0.84, local pastry shop, open weekends.",
+    "zone": 2,
+    "affinity": 0.8368701817631645,
+    "drivers": [
+     "Outdoor Voices",
+     "Warby Parker",
+     "Patagonia"
+    ],
+    "lon": -99.15556099999999,
+    "lat": 19.417472999999998,
+    "popupDaysBefore": null
+   }
+  ],
+  "podcasts": [
+   {
+    "name": "Armchair Expert with Dax Shepard",
+    "daysBefore": 39
+   },
+   {
+    "name": "Absolutely Not",
+    "daysBefore": 33
+   }
+  ],
+  "brands": [
+   {
+    "name": "Fjällräven"
+   }
+  ],
+  "steps": [
+   {
+    "kind": "partner",
+    "label": "Chomp Chomp (Coffee shop), Colonia Doctores",
+    "zone": 2,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Boicot Café (Coffee shop), Colonia Doctores",
+    "zone": 2,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Forest Cafe (Coffee shop), Colonia Doctores",
+    "zone": 2,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Kerbels Pastelerías (Pastry shop), Colonia Doctores",
+    "zone": 2,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Brown Caffeine Lab (Cafe), Colonia Doctores",
+    "zone": 2,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "El Martigon (Restaurant or cafe), Miguel Hidalgo",
+    "zone": 0,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "social",
+    "label": "Targeted social ads across Mexico City",
+    "zone": null,
+    "startDaysBefore": 41,
+    "endDaysBefore": 22,
+    "cost": 3600
+   },
+   {
+    "kind": "collab",
+    "label": "Co-branded drop with Fjällräven",
+    "zone": null,
+    "startDaysBefore": 36,
+    "endDaysBefore": 0,
+    "cost": 2000
+   },
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Armchair Expert with Dax Shepard",
+    "zone": null,
+    "startDaysBefore": 39,
+    "endDaysBefore": 39,
+    "cost": 3500
+   },
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Absolutely Not",
+    "zone": null,
+    "startDaysBefore": 33,
+    "endDaysBefore": 33,
+    "cost": 3450
+   }
+  ]
+ },
+ "tagline": "Tenis sustentables, primer paso en Roma Norte",
+ "blurb": "Tierra, una start-up de tenis sustentables, abre su primera pop-up store en Roma Norte el viernes 4 de diciembre. Ven a conocer calzado pensado para caminar la ciudad y explorar más allá, sin olvidar el planeta.",
+ "english": {
+  "tagline": "Sustainable sneakers, first step in Roma Norte",
+  "blurb": "Tierra, a sustainable sneaker start-up, opens its first pop-up store in Roma Norte on Friday, December 4. Come discover footwear made for walking the city and exploring beyond it, without forgetting the planet."
+ },
+ "hashtags": [
+  "#TierraPopUp",
+  "#RomaNorte",
+  "#TenisSustentables"
+ ],
+ "zones": [
+  {
+   "zoneId": 0,
+   "references": [
+    {
+     "name": "Radiohead",
+     "verdict": "strong here",
+     "score": 0.67
+    },
+    {
+     "name": "Daft Punk",
+     "verdict": "mixed",
+     "score": 0.53
+    }
+   ],
+   "posterHeadline": "Pisa ligero. Pisa Tierra.",
+   "posterSubline": "La primera pop-up de tenis sustentables de Tierra llega a Roma Norte.",
+   "instagram": "Unos tenis que suenan a Radiohead en los audífonos y se sienten como un loop de Daft Punk: ligeros, sin pausa. 👟🌱 Tierra abre su primera pop-up store en Roma Norte el viernes 4 de diciembre. Para quienes aman Patagonia, Outdoor Voices y Warby Parker. Info: {link}",
+   "tiktokHook": "¿Tus tenis pueden caminar toda la ciudad y cuidar el planeta?",
+   "tiktokBeats": [
+    "Play a la playlist: un poco de Radiohead, un poco de Daft Punk.",
+    "Tierra: tenis sustentables, primera pop-up en Roma Norte.",
+    "Viernes 4 de diciembre. Ven a probártelos."
+   ],
+   "xPost": "Tierra abre su primera pop-up de tenis sustentables en Roma Norte el viernes 4 de diciembre. Para quienes aman Patagonia y Outdoor Voices. 👟🌱 {link}",
+   "english": {
+    "posterHeadline": "Step light. Step Tierra.",
+    "posterSubline": "Tierra's first sustainable sneaker pop-up arrives in Roma Norte.",
+    "instagram": "Sneakers that sound like Radiohead in your headphones and feel like a Daft Punk loop: light, nonstop. 👟🌱 Tierra opens its first pop-up store in Roma Norte on Friday, December 4. For people who love Patagonia, Outdoor Voices and Warby Parker. Info: {link}",
+    "xPost": "Tierra opens its first sustainable sneaker pop-up in Roma Norte on Friday, December 4. For people who love Patagonia and Outdoor Voices. 👟🌱 {link}"
+   }
+  },
+  {
+   "zoneId": 2,
+   "references": [
+    {
+     "name": "Stranger Things",
+     "verdict": "mixed",
+     "score": 0.49
+    },
+    {
+     "name": "Bad Bunny",
+     "verdict": "mixed",
+     "score": 0.55
+    }
+   ],
+   "posterHeadline": "Tenis para explorar, hechos con conciencia",
+   "posterSubline": "Tierra abre su primera pop-up store en Roma Norte. Ven a caminarla.",
+   "instagram": "Modo aventura tipo Stranger Things, con el ritmo de Bad Bunny de fondo. 🌱👟 Tierra, start-up de tenis sustentables, abre su primera pop-up en Roma Norte el viernes 4 de diciembre. Para quienes aman Patagonia, Outdoor Voices y Warby Parker. Todos los detalles: {link}",
+   "tiktokHook": "POV: encontraste tenis para explorar que no le cuestan al planeta.",
+   "tiktokBeats": [
+    "Bici, amigos y misterio, vibra Stranger Things.",
+    "Tierra: tenis sustentables en su primera pop-up, Roma Norte.",
+    "Viernes 4 de diciembre. Ahí nos vemos."
+   ],
+   "xPost": "De Doctores a Roma Norte a pie 👟 Tierra abre su primera pop-up de tenis sustentables el viernes 4 de diciembre. Para quienes aman Patagonia y Outdoor Voices. {link}",
+   "english": {
+    "posterHeadline": "Sneakers for exploring, made with care",
+    "posterSubline": "Tierra opens its first pop-up store in Roma Norte. Come walk it.",
+    "instagram": "Stranger Things-style adventure mode, with Bad Bunny's rhythm in the background. 🌱👟 Tierra, a sustainable sneaker start-up, opens its first pop-up in Roma Norte on Friday, December 4. For people who love Patagonia, Outdoor Voices and Warby Parker. All the details: {link}",
+    "xPost": "From Doctores to Roma Norte on foot 👟 Tierra opens its first sustainable sneaker pop-up on Friday, December 4. For people who love Patagonia and Outdoor Voices. {link}"
+   }
+  }
+ ],
+ "podcasts": [
+  {
+   "name": "Armchair Expert with Dax Shepard",
+   "script": "Quick one before we keep going. If you're in Mexico City, or heading there, Tierra, a sustainable sneaker start-up, is opening its very first pop-up store in Roma Norte on Friday, December 4. It's built for people who love Patagonia, Outdoor Voices and Warby Parker: footwear made for exploring, with the planet in mind. Stop by, try a pair, walk the neighbourhood in them. Details at {link}. That's Tierra, Roma Norte, December 4.",
+   "code": "pod1"
+  },
+  {
+   "name": "Absolutely Not",
+   "script": "Okay, real talk: your sneakers should not be wrecking the planet. Tierra is a sustainable sneaker start-up, and it's opening its first pop-up store in Roma Norte, Mexico City, on Friday, December 4. If you love Patagonia, Outdoor Voices or Warby Parker, this is your kind of thing. Go, try some on, explore the city in them. Everything you need is at {link}. Tierra, Roma Norte, Friday, December 4.",
+   "code": "pod2"
+  }
+ ],
+ "partners": [
+  {
+   "id": "931A1C86-D950-44FC-B41D-DF3A1B48C945",
+   "code": "e1",
+   "subject": "Tierra en Roma Norte: ¿base para nuestro equipo?",
+   "body": "Hola, equipo de El Martigon: somos Tierra, una start-up de tenis sustentables, y abrimos nuestra primera pop-up store en Roma Norte el viernes 4 de diciembre. Según datos de gustos, sus visitantes coinciden muy de cerca (afinidad 0.85) con quienes aman Patagonia, Outdoor Voices y Warby Parker. ¿Nos dejarían usar El Martigon como punto de encuentro para nuestro equipo de calle antes y durante el lanzamiento? A cambio podemos ofrecer [su oferta, p. ej. dos pares de tenis para su equipo]. Más info: {link}. ¡Gracias!",
+   "english": {
+    "subject": "Tierra in Roma Norte: a base for our team?",
+    "body": "Hi El Martigon team: we're Tierra, a sustainable sneaker start-up, and we open our first pop-up store in Roma Norte on Friday, December 4. According to taste data, your visitors closely match (affinity 0.85) people who love Patagonia, Outdoor Voices and Warby Parker. Would you let us use El Martigon as a meeting point for our street team before and during the launch? In return we can offer [your offer, e.g. two pairs of sneakers for your team]. More info: {link}. Thanks!"
+   }
+  },
+  {
+   "id": "5A748A10-1ADC-47FE-963F-361C441538B7",
+   "code": "e2",
+   "subject": "¿Una pop-up de Tierra en Forest Cafe?",
+   "body": "Hola, Forest Cafe: somos Tierra, una start-up de tenis sustentables que abre su primera pop-up en Roma Norte el viernes 4 de diciembre. Los datos de gustos muestran que sus visitantes coinciden muy de cerca (afinidad 0.85) con quienes aman Outdoor Voices, y su espacio de café-galería para eventos encaja con lo que buscamos. ¿Les interesaría recibir una pop-up de Tierra en su espacio? Podemos ofrecer [su oferta, p. ej. un porcentaje de las ventas del día]. Detalles: {link}. ¡Saludos!",
+   "english": {
+    "subject": "A Tierra pop-up at Forest Cafe?",
+    "body": "Hi Forest Cafe: we're Tierra, a sustainable sneaker start-up opening its first pop-up in Roma Norte on Friday, December 4. Taste data shows your visitors closely match (affinity 0.85) people who love Outdoor Voices, and your café-gallery event space fits what we're looking for. Would you be interested in hosting a Tierra pop-up in your space? We can offer [your offer, e.g. a share of the day's sales]. Details: {link}. Best!"
+   }
+  },
+  {
+   "id": "75360A72-2690-4B31-AAD8-8110B839A04A",
+   "code": "e3",
+   "subject": "Tierra y Chomp Chomp: ¿promoción cruzada?",
+   "body": "Hola, Chomp Chomp: somos Tierra, una start-up de tenis sustentables, y abrimos nuestra primera pop-up store en Roma Norte el viernes 4 de diciembre. Según datos de gustos, sus visitantes coinciden muy de cerca (afinidad 0.87) con quienes aman Patagonia, Outdoor Voices y Warby Parker. ¿Les gustaría hacer promoción cruzada en redes, compartiendo el lanzamiento mientras nosotros los recomendamos a nuestra comunidad? Podemos ofrecer [su oferta, p. ej. una mención destacada en nuestra pop-up]. Más info: {link}. ¡Gracias!",
+   "english": {
+    "subject": "Tierra and Chomp Chomp: cross-promotion?",
+    "body": "Hi Chomp Chomp: we're Tierra, a sustainable sneaker start-up, and we open our first pop-up store in Roma Norte on Friday, December 4. According to taste data, your visitors closely match (affinity 0.87) people who love Patagonia, Outdoor Voices and Warby Parker. Would you like to cross-promote on social, sharing the launch while we recommend you to our community? We can offer [your offer, e.g. a featured mention at our pop-up]. More info: {link}. Thanks!"
+   }
+  },
+  {
+   "id": "AD753FC0-0E2F-449B-A5BF-EC200A78F21C",
+   "code": "e4",
+   "subject": "¿Un póster de Tierra en Boicot Café?",
+   "body": "Hola, Boicot Café: somos Tierra, una start-up de tenis sustentables que abre su primera pop-up en Roma Norte el viernes 4 de diciembre. Los datos de gustos muestran que sus visitantes coinciden muy de cerca (afinidad 0.86) con quienes aman Patagonia, Outdoor Voices y Warby Parker, y por su café pasa mucha gente. ¿Podríamos colocar un póster del lanzamiento en su local? Podemos ofrecer [su oferta, p. ej. dos pares de tenis para su equipo]. Detalles: {link}. ¡Gracias!",
+   "english": {
+    "subject": "A Tierra poster at Boicot Café?",
+    "body": "Hi Boicot Café: we're Tierra, a sustainable sneaker start-up opening its first pop-up in Roma Norte on Friday, December 4. Taste data shows your visitors closely match (affinity 0.86) people who love Patagonia, Outdoor Voices and Warby Parker, and your café sees lots of foot traffic. Could we put up a launch poster at your place? We can offer [your offer, e.g. two pairs of sneakers for your team]. Details: {link}. Thanks!"
+   }
+  },
+  {
+   "id": "FF7EDCEB-24AE-4216-92CA-A88839D8D2F9",
+   "code": "e5",
+   "subject": "Tierra busca base en Brown Caffeine Lab",
+   "body": "Hola, Brown Caffeine Lab: somos Tierra, una start-up de tenis sustentables, y abrimos nuestra primera pop-up store en Roma Norte el viernes 4 de diciembre. Los datos de gustos indican que sus visitantes coinciden con quienes aman Outdoor Voices. ¿Nos permitirían usar su café como base para nuestro equipo de calle durante el lanzamiento? Podemos ofrecer [su oferta, p. ej. dos lugares en la lista de invitados]. Más info: {link}. ¡Saludos!",
+   "english": {
+    "subject": "Tierra is looking for a base at Brown Caffeine Lab",
+    "body": "Hi Brown Caffeine Lab: we're Tierra, a sustainable sneaker start-up, and we open our first pop-up store in Roma Norte on Friday, December 4. Taste data indicates your visitors match people who love Outdoor Voices. Would you let us use your café as a base for our street team during the launch? We can offer [your offer, e.g. two guest-list spots]. More info: {link}. Best!"
+   }
+  },
+  {
+   "id": "56C68AD6-AAF3-462F-896A-F16EB1230E73",
+   "code": "e6",
+   "subject": "¿Un póster de Tierra en Kerbels Pastelerías?",
+   "body": "Hola, Kerbels Pastelerías: somos Tierra, una start-up de tenis sustentables que abre su primera pop-up en Roma Norte el viernes 4 de diciembre. Según datos de gustos, sus visitantes coinciden muy de cerca (afinidad 0.84) con quienes aman Patagonia, Outdoor Voices y Warby Parker. ¿Podríamos colocar un póster del lanzamiento en su pastelería? Podemos ofrecer [su oferta, p. ej. un par de tenis para su equipo]. Detalles: {link}. ¡Gracias!",
+   "english": {
+    "subject": "A Tierra poster at Kerbels Pastelerías?",
+    "body": "Hi Kerbels Pastelerías: we're Tierra, a sustainable sneaker start-up opening its first pop-up in Roma Norte on Friday, December 4. According to taste data, your visitors closely match (affinity 0.84) people who love Patagonia, Outdoor Voices and Warby Parker. Could we put up a launch poster at your pastry shop? We can offer [your offer, e.g. a pair of sneakers for your team]. Details: {link}. Thanks!"
+   }
+  }
+ ],
+ "links": [
+  {
+   "code": "p1",
+   "label": "Poster at El Martigon",
+   "channel": "poster",
+   "zone": 0,
+   "partnerId": "931A1C86-D950-44FC-B41D-DF3A1B48C945"
+  },
+  {
+   "code": "p2",
+   "label": "Poster at Forest Cafe",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "5A748A10-1ADC-47FE-963F-361C441538B7"
+  },
+  {
+   "code": "p3",
+   "label": "Poster at Chomp Chomp",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "75360A72-2690-4B31-AAD8-8110B839A04A"
+  },
+  {
+   "code": "p4",
+   "label": "Poster at Boicot Café",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "AD753FC0-0E2F-449B-A5BF-EC200A78F21C"
+  },
+  {
+   "code": "p5",
+   "label": "Poster at Brown Caffeine Lab",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "FF7EDCEB-24AE-4216-92CA-A88839D8D2F9"
+  },
+  {
+   "code": "p6",
+   "label": "Poster at Kerbels Pastelerías",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "56C68AD6-AAF3-462F-896A-F16EB1230E73"
+  },
+  {
+   "code": "e1",
+   "label": "Email to El Martigon",
+   "channel": "email",
+   "zone": 0,
+   "partnerId": "931A1C86-D950-44FC-B41D-DF3A1B48C945"
+  },
+  {
+   "code": "e2",
+   "label": "Email to Forest Cafe",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "5A748A10-1ADC-47FE-963F-361C441538B7"
+  },
+  {
+   "code": "e3",
+   "label": "Email to Chomp Chomp",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "75360A72-2690-4B31-AAD8-8110B839A04A"
+  },
+  {
+   "code": "e4",
+   "label": "Email to Boicot Café",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "AD753FC0-0E2F-449B-A5BF-EC200A78F21C"
+  },
+  {
+   "code": "e5",
+   "label": "Email to Brown Caffeine Lab",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "FF7EDCEB-24AE-4216-92CA-A88839D8D2F9"
+  },
+  {
+   "code": "e6",
+   "label": "Email to Kerbels Pastelerías",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "56C68AD6-AAF3-462F-896A-F16EB1230E73"
+  },
+  {
+   "code": "z0ig",
+   "label": "Instagram, Miguel Hidalgo",
+   "channel": "instagram",
+   "zone": 0
+  },
+  {
+   "code": "z0tt",
+   "label": "TikTok or Reels, Miguel Hidalgo",
+   "channel": "tiktok",
+   "zone": 0
+  },
+  {
+   "code": "z0x",
+   "label": "X or Threads, Miguel Hidalgo",
+   "channel": "x",
+   "zone": 0
+  },
+  {
+   "code": "z2ig",
+   "label": "Instagram, Colonia Doctores",
+   "channel": "instagram",
+   "zone": 2
+  },
+  {
+   "code": "z2tt",
+   "label": "TikTok or Reels, Colonia Doctores",
+   "channel": "tiktok",
+   "zone": 2
+  },
+  {
+   "code": "z2x",
+   "label": "X or Threads, Colonia Doctores",
+   "channel": "x",
+   "zone": 2
+  },
+  {
+   "code": "pod1",
+   "label": "Host-read on Armchair Expert with Dax Shepard",
+   "channel": "podcast",
+   "zone": null
+  },
+  {
+   "code": "pod2",
+   "label": "Host-read on Absolutely Not",
+   "channel": "podcast",
+   "zone": null
+  }
+ ],
+ "checks": [
+  {
+   "name": "Daft Punk",
+   "query": "Daft Punk",
+   "type": "artist",
+   "zone": 0,
+   "verdict": "mixed",
+   "score": 0.53
+  },
+  {
+   "name": "Stranger Things",
+   "query": "Stranger Things",
+   "type": "tv_show",
+   "zone": 2,
+   "verdict": "mixed",
+   "score": 0.49
+  },
+  {
+   "name": "Radiohead",
+   "query": "Radiohead",
+   "type": "artist",
+   "zone": 0,
+   "verdict": "strong here",
+   "score": 0.67
+  },
+  {
+   "name": "Bad Bunny",
+   "query": "Bad Bunny",
+   "type": "artist",
+   "zone": 2,
+   "verdict": "mixed",
+   "score": 0.55
+  }
+ ],
+ "qlooCalls": 0
+}

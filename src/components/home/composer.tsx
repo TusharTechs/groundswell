@@ -23,6 +23,7 @@ export function Composer({ cityId, onCity, initialBrief = "" }: { cityId: string
   }, [initialBrief]);
   const [budget, setBudget] = useState("");
   const [weeks, setWeeks] = useState("6");
+  const [link, setLink] = useState("");
   const [error, setError] = useState<string | null>(null);
 
   const submit = (e: React.FormEvent) => {
@@ -30,7 +31,9 @@ export function Composer({ cityId, onCity, initialBrief = "" }: { cityId: string
     if (brief.trim().length < 20) return setError("Describe the launch in a sentence or two: what it is, who it's for, where and when.");
     const b = budget ? Number(budget.replace(/[^0-9.]/g, "")) : undefined;
     if (b !== undefined && (!Number.isFinite(b) || b < 1000 || b > 250000)) return setError("Budget must be between $1,000 and $250,000.");
-    sessionStorage.setItem(BRIEF_KEY, JSON.stringify({ brief: brief.trim(), cityId, budget: b, days: Number(weeks) * 7 }));
+    const launchUrl = link.trim() || undefined;
+    if (launchUrl && !/^https:\/\/[^\s/]+\.[^\s]+$/i.test(launchUrl)) return setError("The ticket link should be a full https:// address, or leave it empty.");
+    sessionStorage.setItem(BRIEF_KEY, JSON.stringify({ brief: brief.trim(), cityId, budget: b, days: Number(weeks) * 7, launchUrl }));
     router.push("/rehearse/live");
   };
 
@@ -91,8 +94,24 @@ export function Composer({ cityId, onCity, initialBrief = "" }: { cityId: string
           </button>
         </div>
       </div>
+      <label className="flex flex-col gap-1 text-[11px] text-dim">
+        Ticket or sign-up link (optional: the launch kit&apos;s QR codes and links forward here)
+        <input
+          value={link}
+          onChange={(e) => {
+            setLink(e.target.value);
+            setError(null);
+          }}
+          type="url"
+          inputMode="url"
+          placeholder="https://"
+          className="rounded-lg border border-line bg-panel-2 px-2 py-1.5 text-[13px] text-text placeholder:text-dim"
+        />
+      </label>
       {error && <p className="text-[13px] text-bad">{error}</p>}
-      <p className="text-[11.5px] leading-snug text-dim">A live rehearsal takes about three minutes: nine agents, around 20 Qloo requests, hundreds of simulated runs.</p>
+      <p className="text-[11.5px] leading-snug text-dim">
+        A live rehearsal takes two to four minutes. Four agents and three model roles work on it, and every Qloo request they make shows in the feed.
+      </p>
     </form>
   );
 }

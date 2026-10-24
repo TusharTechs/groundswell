@@ -1,0 +1,326 @@
+{
+ "campaignId": "london-football",
+ "createdAt": "2026-10-24T15:10:44.051Z",
+ "input": {
+  "campaignId": "london-football",
+  "cityId": "london",
+  "title": "Blue Social Match Nights & Five-a-Side",
+  "pitch": "An independent supporters' group launches free big-screen match nights and a five-a-side tournament for Chelsea and Premier League fans across London.",
+  "kind": "sports",
+  "language": "English",
+  "venue": null,
+  "launchDate": "2026-12-18",
+  "days": 56,
+  "budget": 20000,
+  "allAges": true,
+  "noAlcohol": true,
+  "ageLimit": null,
+  "launchUrl": null,
+  "comps": [
+   "Chelsea F.C.",
+   "Premier League"
+  ],
+  "compIds": [
+   "A21D248A-7379-458E-A3BE-7B8C4B961AF6",
+   "E1B9E6E1-B59A-4836-BFF1-87183CDA59BF"
+  ],
+  "peakAge": "25_to_29",
+  "tags": [
+   "Adidas",
+   "Sport",
+   "Sports Equipment",
+   "athletic gear",
+   "Soccer",
+   "CIVIL WAR",
+   "Innovation",
+   "WWE",
+   "Sportswear",
+   "Performance"
+  ],
+  "zones": [
+   {
+    "id": 2,
+    "locality": "Greenwich",
+    "district": "Video games and sports",
+    "signature": [
+     "Call of Duty",
+     "Fortnite",
+     "Joe Rogan",
+     "Minecraft",
+     "LeBron James"
+    ],
+    "share": 0.023,
+    "center": [
+     0.03892,
+     51.48386
+    ],
+    "cells": [
+     1565,
+     1566,
+     1567,
+     1568,
+     1571,
+     1577,
+     1578,
+     1579,
+     1580,
+     1581,
+     1583,
+     1588,
+     1589,
+     1598,
+     1599,
+     1600,
+     1602
+    ]
+   }
+  ],
+  "partners": [
+   {
+    "id": "951B27AF-78B6-494C-BE8F-F36C07D269E4",
+    "name": "Moca caffee",
+    "category": "Breakfast restaurant",
+    "address": "10 Old Dover Rd London SE3 7BT United Kingdom",
+    "phone": "+442082936077",
+    "website": "https://instagram.com/caffe_moca_blackheath?igshid=1iimnmr5iobe0",
+    "role": "street_team_base",
+    "why": "Top affinity 0.84, open 7 days incl. weekends.",
+    "zone": 2,
+    "affinity": 0.8403997498837293,
+    "drivers": [
+     "Premier League",
+     "Chelsea F.C."
+    ],
+    "lon": 0.0209958,
+    "lat": 51.476732999999996,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "97F3C556-9D2A-46F3-A95D-132D4981D73C",
+    "name": "The Big Plate Cafe",
+    "category": "Cafe",
+    "address": "170 Shooters Hill Rd London SE3 8RP United Kingdom",
+    "phone": "+442088561222",
+    "website": "https://hydee.pw/the-big-plate-cafe-6blnfg",
+    "role": "popup_host",
+    "why": "Affinity 0.83, sit-down café suits a small screening or sign-up pop-up.",
+    "zone": 2,
+    "affinity": 0.8341391192269003,
+    "drivers": [
+     "Premier League",
+     "Chelsea F.C."
+    ],
+    "lon": 0.033883699999999996,
+    "lat": 51.4746594,
+    "popupDaysBefore": null
+   }
+  ],
+  "podcasts": [
+   {
+    "name": "Talk Is Jericho",
+    "daysBefore": 52
+   },
+   {
+    "name": "Monday Morning Podcast",
+    "daysBefore": 43
+   }
+  ],
+  "brands": [
+   {
+    "name": "Burberry"
+   }
+  ],
+  "steps": [
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Talk Is Jericho",
+    "zone": null,
+    "startDaysBefore": 52,
+    "endDaysBefore": 52,
+    "cost": 3450
+   },
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Monday Morning Podcast",
+    "zone": null,
+    "startDaysBefore": 43,
+    "endDaysBefore": 43,
+    "cost": 3500
+   },
+   {
+    "kind": "social",
+    "label": "Targeted social ads across London",
+    "zone": null,
+    "startDaysBefore": 55,
+    "endDaysBefore": 0,
+    "cost": 10080
+   },
+   {
+    "kind": "partner",
+    "label": "Moca caffee (Breakfast restaurant), Greenwich",
+    "zone": 2,
+    "startDaysBefore": 55,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "The Big Plate Cafe (Cafe), Greenwich",
+    "zone": 2,
+    "startDaysBefore": 55,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "collab",
+    "label": "Co-branded drop with Burberry",
+    "zone": null,
+    "startDaysBefore": 50,
+    "endDaysBefore": 11,
+    "cost": 2000
+   }
+  ]
+ },
+ "tagline": "Big screen, five-a-side, all blue",
+ "blurb": "Blue Social is an independent supporters' group launching free big-screen match nights and a five-a-side tournament for Chelsea and Premier League fans across London. It kicks off Friday, December 18. It's all ages and free, so bring your mates and your boots.",
+ "hashtags": [
+  "#BlueSocial",
+  "#CFC",
+  "#FiveASide"
+ ],
+ "zones": [
+  {
+   "zoneId": 2,
+   "references": [
+    {
+     "name": "Fortnite",
+     "verdict": "mixed",
+     "score": 0.44
+    }
+   ],
+   "posterHeadline": "Log off. Kick off. Greenwich.",
+   "posterSubline": "Free big-screen match nights and a five-a-side tournament. All ages, all blue.",
+   "instagram": "Greenwich, this one's for anyone who'd rather drop into a five-a-side than another Fortnite lobby. Blue Social launches on Friday, December 18 with free big-screen match nights and a five-a-side tournament for Chelsea and Premier League fans. It's all ages and free. Get your squad together and sign up: {link}",
+   "tiktokHook": "Your squad's good on the controller. How are they on a real pitch?",
+   "tiktokBeats": [
+    "Free big-screen match nights for Chelsea and Premier League fans",
+    "A five-a-side tournament, so grab your squad",
+    "Starts Friday, December 18. All ages, free. Link in bio"
+   ],
+   "xPost": "Greenwich: free big-screen match nights + a five-a-side tournament for Chelsea and Premier League fans. Launches Friday, December 18. All ages, free. Squad up: {link}"
+  }
+ ],
+ "podcasts": [
+  {
+   "name": "Talk Is Jericho",
+   "script": "Quick one for listeners in London. Blue Social is an independent supporters' group launching free big-screen match nights and a five-a-side tournament for Chelsea and Premier League fans. It kicks off Friday, December 18. It's all ages and costs nothing, so watch the match with a crowd that cares as much as you do, then get out on the pitch yourself. Put a team together and sign up at {link}. That's Blue Social, from Friday, December 18: {link}.",
+   "code": "pod1"
+  },
+  {
+   "name": "Monday Morning Podcast",
+   "script": "London, listen up. If you're a Chelsea or Premier League fan watching the match alone on your sofa, there's a better way. Blue Social is an independent supporters' group running free big-screen match nights, plus a five-a-side tournament so you can find out whether your legs still work. It starts Friday, December 18. It's all ages and it's free. Get your mates together and sign up at {link}. Again, that's {link}.",
+   "code": "pod2"
+  }
+ ],
+ "partners": [
+  {
+   "id": "951B27AF-78B6-494C-BE8F-F36C07D269E4",
+   "code": "e1",
+   "subject": "Blue Social match nights: base the street team at Moca caffee?",
+   "body": "Hi Moca caffee team, we're Blue Social, an independent supporters' group launching free big-screen match nights and a five-a-side tournament for Chelsea and Premier League fans across London, starting Friday, December 18 (all ages). Taste data shows your visitors closely match people who love Chelsea F.C. and the Premier League, and since you're open seven days including weekends, you'd be a great base for our Greenwich street team. Could our small team meet at yours before heading out with flyers? We'd love to offer [your offer, e.g. a shout-out on our match-night screens]. Details are here: {link}. Thanks, and we hope to hear from you!"
+  },
+  {
+   "id": "97F3C556-9D2A-46F3-A95D-132D4981D73C",
+   "code": "e2",
+   "subject": "Host a Blue Social sign-up pop-up at The Big Plate Cafe?",
+   "body": "Hi The Big Plate Cafe team, we're Blue Social, an independent supporters' group launching free big-screen match nights and a five-a-side tournament for Chelsea and Premier League fans across London, starting Friday, December 18 (all ages). Taste data shows your visitors closely match people who love Chelsea F.C. and the Premier League, and a sit-down café like yours suits a small screening or a tournament sign-up pop-up. Would you be open to hosting one? We'd love to offer [your offer, e.g. featuring your cafe in our match-night promotion]. More info here: {link}. Cheers, and we hope to chat soon!"
+  }
+ ],
+ "links": [
+  {
+   "code": "p1",
+   "label": "Poster at Moca caffee",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "951B27AF-78B6-494C-BE8F-F36C07D269E4"
+  },
+  {
+   "code": "p2",
+   "label": "Poster at The Big Plate Cafe",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "97F3C556-9D2A-46F3-A95D-132D4981D73C"
+  },
+  {
+   "code": "e1",
+   "label": "Email to Moca caffee",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "951B27AF-78B6-494C-BE8F-F36C07D269E4"
+  },
+  {
+   "code": "e2",
+   "label": "Email to The Big Plate Cafe",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "97F3C556-9D2A-46F3-A95D-132D4981D73C"
+  },
+  {
+   "code": "z2ig",
+   "label": "Instagram, Greenwich",
+   "channel": "instagram",
+   "zone": 2
+  },
+  {
+   "code": "z2tt",
+   "label": "TikTok or Reels, Greenwich",
+   "channel": "tiktok",
+   "zone": 2
+  },
+  {
+   "code": "z2x",
+   "label": "X or Threads, Greenwich",
+   "channel": "x",
+   "zone": 2
+  },
+  {
+   "code": "pod1",
+   "label": "Host-read on Talk Is Jericho",
+   "channel": "podcast",
+   "zone": null
+  },
+  {
+   "code": "pod2",
+   "label": "Host-read on Monday Morning Podcast",
+   "channel": "podcast",
+   "zone": null
+  }
+ ],
+ "checks": [
+  {
+   "name": "Fortnite",
+   "query": "Fortnite",
+   "type": "videogame",
+   "zone": 2,
+   "verdict": "mixed",
+   "score": 0.44
+  },
+  {
+   "name": "Adidas",
+   "query": "Adidas",
+   "type": "brand",
+   "zone": 2,
+   "verdict": "weak here",
+   "score": 0.4
+  },
+  {
+   "name": "EA Sports FC 25",
+   "query": "EA Sports FC",
+   "type": "videogame",
+   "zone": 2,
+   "verdict": "weak here",
+   "score": 0.04
+  }
+ ],
+ "qlooCalls": 0
+}

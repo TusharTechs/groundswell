@@ -12,6 +12,8 @@ const NAV = [
 
 export function SiteHeader() {
   const path = usePathname();
+  // Launch pages belong to the launch, not to Groundswell.
+  if (path.startsWith("/l/")) return null;
   const onMap = path === "/" || path.startsWith("/rehearse") || path.startsWith("/atlas");
   return (
     <header className={`${onMap ? "absolute inset-x-0 top-0 z-30" : "sticky top-0 z-30 border-b border-line glass"}`}>

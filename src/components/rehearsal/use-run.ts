@@ -49,11 +49,13 @@ export interface RunView {
   expansion?: Extract<LaunchEvent, { type: "expansion" }>["prospects"];
   plan?: { plan: PlanView; sim: SimView };
   done?: Extract<LaunchEvent, { type: "done" }>["stats"];
+  /** Set when a live run was saved: its replay id. */
+  savedId?: string;
   error?: string;
   rounds: number;
 }
 
-const AGENT_IDS: AgentName[] = ["director", "analyst", "cartographer", "scout", "strategist", "simulator", "critic", "voices", "producer"];
+const AGENT_IDS: AgentName[] = ["director", "analyst", "cartographer", "scout", "strategist", "simulator", "critic", "voices", "producer", "creative", "field"];
 
 export const initialView = (): RunView => ({
   started: false,
@@ -145,6 +147,8 @@ function reduce(s: RunView, action: Action): RunView {
       return { ...s, plan: { plan: e.plan, sim: e.sim }, sims: { ...s.sims, [e.sim.strategyId]: e.sim }, feed: push({ agent: "producer", kind: "plan", text: e.plan.headline }) };
     case "done":
       return { ...s, done: e.stats, active: undefined };
+    case "saved":
+      return { ...s, savedId: e.id };
     case "error":
       return { ...s, error: e.message, active: undefined, feed: push({ agent: "director", kind: "error", text: e.message }) };
   }
@@ -159,7 +163,7 @@ export function useRunView() {
 
 /** Start a live rehearsal and stream its events into `feed`. */
 export async function streamLive(
-  input: { brief: string; cityId: string; budget?: number; days?: number },
+  input: { brief: string; cityId: string; budget?: number; days?: number; launchUrl?: string },
   feed: (e: LaunchEvent) => void,
   signal: AbortSignal,
 ) {

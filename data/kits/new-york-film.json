@@ -1,0 +1,597 @@
+{
+ "campaignId": "new-york-film",
+ "createdAt": "2026-10-24T15:11:51.628Z",
+ "input": {
+  "campaignId": "new-york-film",
+  "cityId": "new-york",
+  "title": "Tidewater Preview Screenings",
+  "pitch": "A week of preview screenings of Tidewater, an independent coming-of-age film, at Nitehawk Cinema Williamsburg for fans of Lady Bird and Euphoria.",
+  "kind": "film",
+  "language": "English",
+  "venue": "Nitehawk Cinema, Williamsburg",
+  "launchDate": "2026-11-27",
+  "days": 35,
+  "budget": 10000,
+  "allAges": false,
+  "noAlcohol": false,
+  "ageLimit": null,
+  "launchUrl": null,
+  "comps": [
+   "Euphoria",
+   "A24",
+   "Greta Gerwig"
+  ],
+  "compIds": [
+   "5A82F9BC-10F6-4A45-8097-6B1E147B7824",
+   "7E904879-87BC-4BA6-B4AB-6E380A4C250D",
+   "BA7B906C-76B3-4CFC-B5DB-8F7A51DD65B4"
+  ],
+  "peakAge": "25_to_29",
+  "tags": [
+   "Lies",
+   "Sea Creatures",
+   "Underdog",
+   "Philadelphia",
+   "TV Series",
+   "Amnesia",
+   "Celebrity Guests",
+   "Holiday",
+   "Movies",
+   "Sketches"
+  ],
+  "zones": [
+   {
+    "id": 1,
+    "locality": "East Williamsburg",
+    "district": "Indie rock and Drag Race",
+    "signature": [
+     "Phoebe Bridgers",
+     "Radiohead",
+     "Drag Race",
+     "SZA",
+     "Tyler, the Creator"
+    ],
+    "share": 0.064,
+    "center": [
+     -73.94085,
+     40.72451
+    ],
+    "cells": [
+     730,
+     732,
+     738,
+     741,
+     742,
+     743,
+     744,
+     745,
+     746,
+     747,
+     748,
+     749,
+     750,
+     752,
+     753
+    ]
+   },
+   {
+    "id": 2,
+    "locality": "Clinton Hill",
+    "district": "Indie rock and Drag Race",
+    "signature": [
+     "Phoebe Bridgers",
+     "Radiohead",
+     "Drag Race",
+     "SZA",
+     "Tyler, the Creator"
+    ],
+    "share": 0.058,
+    "center": [
+     -73.95504,
+     40.68658
+    ],
+    "cells": [
+     565,
+     566,
+     569,
+     570,
+     587,
+     588,
+     589,
+     590,
+     591,
+     592,
+     593,
+     594,
+     703,
+     725,
+     727
+    ]
+   },
+   {
+    "id": 4,
+    "locality": "Bushwick South",
+    "district": "Indie rock and Drag Race",
+    "signature": [
+     "Phoebe Bridgers",
+     "Radiohead",
+     "Drag Race",
+     "SZA",
+     "Tyler, the Creator"
+    ],
+    "share": 0.056,
+    "center": [
+     -73.92215,
+     40.69045
+    ],
+    "cells": [
+     596,
+     598,
+     599,
+     600,
+     601,
+     602,
+     647,
+     650,
+     651,
+     733,
+     734,
+     735,
+     736,
+     819,
+     820
+    ]
+   }
+  ],
+  "partners": [
+   {
+    "id": "4C0D7D61-64F0-4EE2-966F-E0A2A06E5E30",
+    "name": "Ringolevio",
+    "category": "Coffee shop",
+    "address": "490 Humboldt St Brooklyn, NY 11222",
+    "phone": "+13473350056",
+    "website": "http://www.ringolevio.nyc/",
+    "role": "poster",
+    "why": "0.893 affinity, pulled in by Greta Gerwig fans; open 7 days.",
+    "zone": 1,
+    "affinity": 0.8932242939322761,
+    "drivers": [
+     "Greta Gerwig",
+     "Euphoria",
+     "A24"
+    ],
+    "lon": -73.94329069999999,
+    "lat": 40.7190981,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "1FB67640-1A7E-410A-9DF8-4B8AC90655B4",
+    "name": "Grass Roots Juicery",
+    "category": "Juice shop",
+    "address": "336a Graham Ave Brooklyn, NY 11211",
+    "phone": "+17184862838",
+    "website": "http://grassrootsjuicery.com/",
+    "role": "cross_promo",
+    "why": "Highest affinity 0.898 via A24; juice combo cross-promo with tickets.",
+    "zone": 1,
+    "affinity": 0.8982869049870247,
+    "drivers": [
+     "A24",
+     "Euphoria",
+     "Greta Gerwig"
+    ],
+    "lon": -73.9440164,
+    "lat": 40.7142908,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "4D9172FC-52F6-4CB4-AC9E-3B1740FE955E",
+    "name": "Nostrand Coffee Roaster",
+    "category": "Cafe",
+    "address": "261 Nostrand Ave Brooklyn, NY 11216",
+    "phone": "+17189758588",
+    "website": "http://www.nostrandcafe.com/",
+    "role": "poster",
+    "why": "0.902 affinity indie roaster, open 7 days.",
+    "zone": 2,
+    "affinity": 0.9024434304694514,
+    "drivers": [
+     "A24",
+     "Euphoria",
+     "Greta Gerwig"
+    ],
+    "lon": -73.9512151,
+    "lat": 40.689776699999996,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "F807DE58-690B-436C-951F-859C31B55ABB",
+    "name": "L'imprimerie",
+    "category": "Cafe",
+    "address": "1524 Myrtle Ave Brooklyn, NY 11237",
+    "phone": "+19292956464",
+    "website": "http://limprimerie.nyc/",
+    "role": "poster",
+    "why": "Top affinity 0.893 via A24; busy café open 7 days.",
+    "zone": 4,
+    "affinity": 0.8930800581388244,
+    "drivers": [
+     "A24",
+     "Euphoria",
+     "Greta Gerwig"
+    ],
+    "lon": -73.91285119999999,
+    "lat": 40.6992312,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "395EFC81-1021-47E2-9C52-AB551B2033A8",
+    "name": "Bushwick Bakery",
+    "category": "Cafeteria",
+    "address": "Storefront 127 Central Ave Brooklyn, NY 11221",
+    "phone": "+17185415739",
+    "website": "http://bushwick-bakery.com/",
+    "role": "ticket_outlet",
+    "why": "0.891 affinity local bakery, open all week.",
+    "zone": 4,
+    "affinity": 0.8910821958645123,
+    "drivers": [
+     "A24",
+     "Euphoria",
+     "Greta Gerwig"
+    ],
+    "lon": -73.9280141,
+    "lat": 40.6999251,
+    "popupDaysBefore": null
+   }
+  ],
+  "podcasts": [],
+  "brands": [
+   {
+    "name": "Polaroid"
+   }
+  ],
+  "steps": [
+   {
+    "kind": "partner",
+    "label": "L'imprimerie (Cafe), Bushwick South",
+    "zone": 4,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Bushwick Bakery (Cafeteria), Bushwick South",
+    "zone": 4,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Nostrand Coffee Roaster (Cafe), Clinton Hill",
+    "zone": 2,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Grass Roots Juicery (Juice shop), East Williamsburg",
+    "zone": 1,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Ringolevio (Coffee shop), East Williamsburg",
+    "zone": 1,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "collab",
+    "label": "Co-branded drop with Polaroid",
+    "zone": null,
+    "startDaysBefore": 34,
+    "endDaysBefore": 1,
+    "cost": 2000
+   },
+   {
+    "kind": "social",
+    "label": "Targeted social ads across New York",
+    "zone": null,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 6300
+   }
+  ]
+ },
+ "tagline": "Growing up hits different on the big screen.",
+ "blurb": "Tidewater, an independent coming-of-age film, gets a week of preview screenings at Nitehawk Cinema Williamsburg starting November 27. For fans of Euphoria, A24 and Greta Gerwig, catch it before everyone else does.",
+ "hashtags": [
+  "#Tidewater",
+  "#TidewaterPreview",
+  "#Nitehawk"
+ ],
+ "zones": [
+  {
+   "zoneId": 1,
+   "references": [
+    {
+     "name": "Phoebe Bridgers",
+     "verdict": "strong here",
+     "score": 0.9
+    }
+   ],
+   "posterHeadline": "Your coming-of-age, but on screen",
+   "posterSubline": "A week of Tidewater previews. Bring the friend who knows the Phoebe Bridgers lyrics.",
+   "instagram": "East Williamsburg, this one's for the Phoebe Bridgers-on-repeat crowd. Tidewater, an independent coming-of-age film, previews all week at Nitehawk Cinema Williamsburg from November 27. For fans of Euphoria, A24 and Greta Gerwig. Grab seats: {link}",
+   "tiktokHook": "POV: you cried to Phoebe Bridgers at sixteen and never really stopped.",
+   "tiktokBeats": [
+    "Tidewater: an independent coming-of-age film.",
+    "A week of previews at Nitehawk Williamsburg from November 27.",
+    "For fans of Euphoria, A24 and Greta Gerwig. Link in bio."
+   ],
+   "xPost": "East Williamsburg: Tidewater, an indie coming-of-age film, previews for a week at Nitehawk Williamsburg from Nov 27. Phoebe Bridgers on the walk over, optional but encouraged. For fans of Euphoria, A24, Greta Gerwig. {link}"
+  },
+  {
+   "zoneId": 2,
+   "references": [
+    {
+     "name": "RuPaul's Drag Race",
+     "verdict": "strong here",
+     "score": 0.76
+    }
+   ],
+   "posterHeadline": "Coming of age, Clinton Hill",
+   "posterSubline": "Preview Tidewater for a week. Group chat energy of a Drag Race watch party, on a cinema screen.",
+   "instagram": "Clinton Hill, rally the Drag Race watch-party crew for something new. Tidewater, an independent coming-of-age film, screens in previews all week at Nitehawk Cinema Williamsburg from November 27. For fans of Euphoria, A24 and Greta Gerwig. Tickets: {link}",
+   "tiktokHook": "Your Drag Race group chat needs a new movie night. Here it is.",
+   "tiktokBeats": [
+    "Tidewater, an independent coming-of-age film.",
+    "Preview screenings all week at Nitehawk Williamsburg from November 27.",
+    "For fans of Euphoria, A24 and Greta Gerwig. Tickets in bio."
+   ],
+   "xPost": "Clinton Hill: swap the Drag Race watch party for a movie night. Tidewater, an indie coming-of-age film, previews a week at Nitehawk Williamsburg from Nov 27. For fans of Euphoria, A24, Greta Gerwig. {link}"
+  },
+  {
+   "zoneId": 4,
+   "references": [
+    {
+     "name": "Phoebe Bridgers",
+     "verdict": "strong here",
+     "score": 0.88
+    },
+    {
+     "name": "RuPaul's Drag Race",
+     "verdict": "strong here",
+     "score": 0.83
+    }
+   ],
+   "posterHeadline": "See Tidewater before Bushwick talks",
+   "posterSubline": "An independent coming-of-age film, previewing for one week only.",
+   "instagram": "Bushwick, between the Phoebe Bridgers playlists and Drag Race nights, make room for Tidewater. An independent coming-of-age film, previewing all week at Nitehawk Cinema Williamsburg from November 27. For fans of Euphoria, A24 and Greta Gerwig. Seats: {link}",
+   "tiktokHook": "Bushwick, your next favorite coming-of-age film is previewing down the road.",
+   "tiktokBeats": [
+    "Tidewater: indie, coming-of-age, Phoebe Bridgers-playlist feelings.",
+    "A week of previews at Nitehawk Williamsburg from November 27.",
+    "For fans of Euphoria, A24 and Greta Gerwig. Link in bio."
+   ],
+   "xPost": "Bushwick: Tidewater, an indie coming-of-age film, previews all week at Nitehawk Williamsburg from Nov 27. For fans of Euphoria, A24 and Greta Gerwig. Tickets also at Bushwick Bakery. {link}"
+  }
+ ],
+ "podcasts": [],
+ "partners": [
+  {
+   "id": "4C0D7D61-64F0-4EE2-966F-E0A2A06E5E30",
+   "code": "e1",
+   "subject": "A Tidewater poster for Ringolevio's wall?",
+   "body": "Hi Ringolevio team! We're running a week of preview screenings of Tidewater, an independent coming-of-age film, at Nitehawk Cinema Williamsburg starting November 27. Taste data shows your visitors closely match people who love Greta Gerwig's films (a 0.893 affinity), so it felt like a natural fit. Would you be up for putting a poster up in the shop during the run-up? In return we'd love to offer [your offer, e.g. two guest-list spots]. Details are here: {link}. Thanks so much!"
+  },
+  {
+   "id": "1FB67640-1A7E-410A-9DF8-4B8AC90655B4",
+   "code": "e2",
+   "subject": "Juice + Tidewater tickets: a cross-promo idea",
+   "body": "Hi Grass Roots Juicery! We're hosting a week of preview screenings of Tidewater, an independent coming-of-age film, at Nitehawk Cinema Williamsburg from November 27. Your visitors closely match people who love A24 films (a 0.898 affinity), so we'd love to team up on a cross-promotion, like a juice combo paired with tickets, shared across both our channels. On our side we can offer [your offer, e.g. a feature in our launch posts]. More about the film: {link}. Let us know what you think!"
+  },
+  {
+   "id": "4D9172FC-52F6-4CB4-AC9E-3B1740FE955E",
+   "code": "e3",
+   "subject": "A poster spot for Tidewater at Nostrand Coffee?",
+   "body": "Hi Nostrand Coffee Roaster! We're putting on a week of preview screenings of Tidewater, an independent coming-of-age film, at Nitehawk Cinema Williamsburg starting November 27. Taste data shows your visitors closely match people who love Euphoria, A24 and Greta Gerwig (a 0.902 affinity). Would you be open to hanging a poster in the cafe? We'd be glad to offer [your offer, e.g. two guest-list spots]. Info here: {link}. Thank you!"
+  },
+  {
+   "id": "F807DE58-690B-436C-951F-859C31B55ABB",
+   "code": "e4",
+   "subject": "Could L'imprimerie host a Tidewater poster?",
+   "body": "Hi L'imprimerie! We're running a week of preview screenings of Tidewater, an independent coming-of-age film, at Nitehawk Cinema Williamsburg from November 27. Your visitors closely match people who love A24 films (a 0.893 affinity), so we'd love to have a poster up in the cafe. As a thank-you we can offer [your offer, e.g. two guest-list spots]. All the details: {link}. Hope to hear from you!"
+  },
+  {
+   "id": "395EFC81-1021-47E2-9C52-AB551B2033A8",
+   "code": "e5",
+   "subject": "Selling Tidewater preview tickets at Bushwick Bakery?",
+   "body": "Hi Bushwick Bakery! We're hosting a week of preview screenings of Tidewater, an independent coming-of-age film, at Nitehawk Cinema Williamsburg starting November 27. Taste data shows your visitors closely match people who love Euphoria, A24 and Greta Gerwig (a 0.891 affinity). Would you be willing to be a local ticket outlet for the previews? We can offer [your offer, e.g. a commission on each ticket sold]. More here: {link}. Thanks for considering it!"
+  }
+ ],
+ "links": [
+  {
+   "code": "p1",
+   "label": "Poster at Ringolevio",
+   "channel": "poster",
+   "zone": 1,
+   "partnerId": "4C0D7D61-64F0-4EE2-966F-E0A2A06E5E30"
+  },
+  {
+   "code": "p2",
+   "label": "Poster at Grass Roots Juicery",
+   "channel": "poster",
+   "zone": 1,
+   "partnerId": "1FB67640-1A7E-410A-9DF8-4B8AC90655B4"
+  },
+  {
+   "code": "p3",
+   "label": "Poster at Nostrand Coffee Roaster",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "4D9172FC-52F6-4CB4-AC9E-3B1740FE955E"
+  },
+  {
+   "code": "p4",
+   "label": "Poster at L'imprimerie",
+   "channel": "poster",
+   "zone": 4,
+   "partnerId": "F807DE58-690B-436C-951F-859C31B55ABB"
+  },
+  {
+   "code": "p5",
+   "label": "Poster at Bushwick Bakery",
+   "channel": "poster",
+   "zone": 4,
+   "partnerId": "395EFC81-1021-47E2-9C52-AB551B2033A8"
+  },
+  {
+   "code": "e1",
+   "label": "Email to Ringolevio",
+   "channel": "email",
+   "zone": 1,
+   "partnerId": "4C0D7D61-64F0-4EE2-966F-E0A2A06E5E30"
+  },
+  {
+   "code": "e2",
+   "label": "Email to Grass Roots Juicery",
+   "channel": "email",
+   "zone": 1,
+   "partnerId": "1FB67640-1A7E-410A-9DF8-4B8AC90655B4"
+  },
+  {
+   "code": "e3",
+   "label": "Email to Nostrand Coffee Roaster",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "4D9172FC-52F6-4CB4-AC9E-3B1740FE955E"
+  },
+  {
+   "code": "e4",
+   "label": "Email to L'imprimerie",
+   "channel": "email",
+   "zone": 4,
+   "partnerId": "F807DE58-690B-436C-951F-859C31B55ABB"
+  },
+  {
+   "code": "e5",
+   "label": "Email to Bushwick Bakery",
+   "channel": "email",
+   "zone": 4,
+   "partnerId": "395EFC81-1021-47E2-9C52-AB551B2033A8"
+  },
+  {
+   "code": "z1ig",
+   "label": "Instagram, East Williamsburg",
+   "channel": "instagram",
+   "zone": 1
+  },
+  {
+   "code": "z1tt",
+   "label": "TikTok or Reels, East Williamsburg",
+   "channel": "tiktok",
+   "zone": 1
+  },
+  {
+   "code": "z1x",
+   "label": "X or Threads, East Williamsburg",
+   "channel": "x",
+   "zone": 1
+  },
+  {
+   "code": "z2ig",
+   "label": "Instagram, Clinton Hill",
+   "channel": "instagram",
+   "zone": 2
+  },
+  {
+   "code": "z2tt",
+   "label": "TikTok or Reels, Clinton Hill",
+   "channel": "tiktok",
+   "zone": 2
+  },
+  {
+   "code": "z2x",
+   "label": "X or Threads, Clinton Hill",
+   "channel": "x",
+   "zone": 2
+  },
+  {
+   "code": "z4ig",
+   "label": "Instagram, Bushwick South",
+   "channel": "instagram",
+   "zone": 4
+  },
+  {
+   "code": "z4tt",
+   "label": "TikTok or Reels, Bushwick South",
+   "channel": "tiktok",
+   "zone": 4
+  },
+  {
+   "code": "z4x",
+   "label": "X or Threads, Bushwick South",
+   "channel": "x",
+   "zone": 4
+  }
+ ],
+ "checks": [
+  {
+   "name": "Phoebe Bridgers",
+   "query": "Phoebe Bridgers",
+   "type": "artist",
+   "zone": 1,
+   "verdict": "strong here",
+   "score": 0.9
+  },
+  {
+   "name": "Phoebe Bridgers",
+   "query": "Phoebe Bridgers",
+   "type": "artist",
+   "zone": 2,
+   "verdict": "strong here",
+   "score": 0.87
+  },
+  {
+   "name": "Phoebe Bridgers",
+   "query": "Phoebe Bridgers",
+   "type": "artist",
+   "zone": 4,
+   "verdict": "strong here",
+   "score": 0.88
+  },
+  {
+   "name": "RuPaul's Drag Race",
+   "query": "RuPaul's Drag Race",
+   "type": "tv_show",
+   "zone": 1,
+   "verdict": "strong here",
+   "score": 0.84
+  },
+  {
+   "name": "RuPaul's Drag Race",
+   "query": "RuPaul's Drag Race",
+   "type": "tv_show",
+   "zone": 2,
+   "verdict": "strong here",
+   "score": 0.76
+  },
+  {
+   "name": "RuPaul's Drag Race",
+   "query": "RuPaul's Drag Race",
+   "type": "tv_show",
+   "zone": 4,
+   "verdict": "strong here",
+   "score": 0.83
+  }
+ ],
+ "qlooCalls": 0
+}

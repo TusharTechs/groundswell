@@ -22,7 +22,7 @@ export default function OpenGraphImage() {
         <div style={{ display: "flex", flexDirection: "column", padding: 72, gap: 20, position: "relative" }}>
           <div style={{ fontSize: 26, color: "#ffb547", letterSpacing: 4, textTransform: "uppercase" }}>A flight simulator for culture</div>
           <div style={{ fontSize: 76, color: "#eef0f6", fontWeight: 700, lineHeight: 1.02, maxWidth: 640 }}>Rehearse your launch in a living model of the city.</div>
-          <div style={{ fontSize: 28, color: "#a3aac0", maxWidth: 600 }}>Nine AI agents. Seven cities built from Qloo&apos;s taste graph. The plan that worked.</div>
+          <div style={{ fontSize: 28, color: "#a3aac0", maxWidth: 600 }}>Claude agents rehearse it in seven cities built from Qloo&apos;s taste graph, then hand you the plan, the launch kit and mission control.</div>
           <div style={{ fontSize: 30, color: "#eef0f6", fontWeight: 700, marginTop: 12 }}>groundswell</div>
         </div>
       </div>

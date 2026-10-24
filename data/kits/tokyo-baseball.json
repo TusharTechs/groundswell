@@ -1,0 +1,714 @@
+{
+ "campaignId": "tokyo-baseball",
+ "createdAt": "2026-10-24T15:11:17.982Z",
+ "input": {
+  "campaignId": "tokyo-baseball",
+  "cityId": "tokyo",
+  "title": "Sixty Feet Six Baseball Café Pop-up",
+  "pitch": "A two-week baseball café and viewing-party pop-up in Tokyo for fans of Shohei Ohtani and Major League Baseball.",
+  "kind": "popup",
+  "language": "Japanese",
+  "venue": null,
+  "launchDate": "2026-12-04",
+  "days": 42,
+  "budget": 25000,
+  "allAges": true,
+  "noAlcohol": true,
+  "ageLimit": null,
+  "launchUrl": null,
+  "comps": [
+   "Shohei Ohtani",
+   "Major League Baseball",
+   "Los Angeles Dodgers",
+   "Yoshinobu Yamamoto"
+  ],
+  "compIds": [
+   "4E12DB40-76F8-4E48-8F89-07F8FC9B490B",
+   "EC558B1F-CC60-447D-B4B4-228449748B9C",
+   "9B8B279C-B777-4293-8121-B8174970B57D",
+   "99F56AF1-ABB8-4CB7-9D5E-CAF46AC7C214"
+  ],
+  "peakAge": "45_to_54",
+  "tags": [
+   "Online Gaming",
+   "Fortune",
+   "Apartment Complex",
+   "Stress",
+   "Trading",
+   "Sports Gear",
+   "Swordsman",
+   "British Design",
+   "Home",
+   "ESPN"
+  ],
+  "zones": [
+   {
+    "id": 0,
+    "locality": "調布市",
+    "district": "Gaming and sports stars",
+    "signature": [
+     "LeBron James",
+     "Minecraft",
+     "Fortnite",
+     "Stranger Things",
+     "Lionel Messi"
+    ],
+    "share": 0.026,
+    "center": [
+     139.54384,
+     35.66109
+    ],
+    "cells": [
+     16,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     26,
+     27,
+     30,
+     31,
+     32,
+     33,
+     37,
+     38
+    ]
+   },
+   {
+    "id": 3,
+    "locality": "武蔵野市",
+    "district": "Drag Race and Lululemon",
+    "signature": [
+     "Drag Race",
+     "Lululemon",
+     "McDonald's",
+     "SZA",
+     "Harley-Davidson"
+    ],
+    "share": 0.013,
+    "center": [
+     139.54311,
+     35.70848
+    ],
+    "cells": [
+     47,
+     48,
+     49,
+     54,
+     57,
+     58,
+     59,
+     60,
+     62,
+     65
+    ]
+   },
+   {
+    "id": 4,
+    "locality": "調布市",
+    "district": "Minecraft and heavy metal",
+    "signature": [
+     "Minecraft",
+     "Harley-Davidson",
+     "Shakira",
+     "McDonald's",
+     "Metallica"
+    ],
+    "share": 0.021,
+    "center": [
+     139.5894,
+     35.65656
+    ],
+    "cells": [
+     284,
+     285,
+     286,
+     287,
+     288,
+     289,
+     290,
+     291,
+     292,
+     295,
+     296,
+     299,
+     303
+    ]
+   }
+  ],
+  "partners": [
+   {
+    "id": "36EAEB9F-28D3-4CAC-A1A6-0AFCD54FA35F",
+    "name": "Cafe Sacai",
+    "category": "Cafe",
+    "address": "4 Chome-1-16 Kyonancho Musashino, Tokyo 180-0023 Japan",
+    "phone": "+81422278536",
+    "website": "http://www.cafe-sacai.com/",
+    "role": "popup_host",
+    "why": "Independent café, affinity 0.801, open six days with weekends.",
+    "zone": 3,
+    "affinity": 0.800797808899192,
+    "drivers": [
+     "Shohei Ohtani",
+     "Yoshinobu Yamamoto",
+     "Major League Baseball",
+     "Los Angeles Dodgers"
+    ],
+    "lon": 139.5383172,
+    "lat": 35.7019064,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "A58D7331-2B7E-400D-A5E5-FAEBF5EDD8FA",
+    "name": "Santama",
+    "category": "Yakiniku restaurant",
+    "address": "2 Chome-1-23 Kyonancho Musashino, Tokyo 180-0023 Japan",
+    "phone": "+81422264638",
+    "website": "http://www.san-tama.jp/store/%E7%84%BC%E8%82%89table%E3%81%95%E3%82%93%E3%81%9F%E3%81%BE%E6%AD%A6%E8%94%B5%E5%A2%83%E5%8D%97%E5%8F%A3%E5%BA%97/",
+    "role": "street_team_base",
+    "why": "Affinity 0.872, open all seven days.",
+    "zone": 3,
+    "affinity": 0.8716510430790622,
+    "drivers": [
+     "Shohei Ohtani",
+     "Yoshinobu Yamamoto",
+     "Los Angeles Dodgers",
+     "Major League Baseball"
+    ],
+    "lon": 139.54214349999998,
+    "lat": 35.7018048,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "AC072D85-036A-4988-9FD6-8921AB6A5DFD",
+    "name": "Trattoria Filo",
+    "category": "Restaurant",
+    "address": "2F 1 Chome-２１-7 Sengawacho Chofu, Tokyo 182-0002 Japan",
+    "phone": "+81368738425",
+    "website": "https://filo.knockdice.com/",
+    "role": "poster",
+    "why": "Highest affinity 0.92, rated 4.6, open weekends.",
+    "zone": 4,
+    "affinity": 0.919509993158594,
+    "drivers": [
+     "Shohei Ohtani",
+     "Yoshinobu Yamamoto",
+     "Major League Baseball",
+     "Los Angeles Dodgers"
+    ],
+    "lon": 139.5872005,
+    "lat": 35.660473599999996,
+    "popupDaysBefore": 2
+   },
+   {
+    "id": "6D058F6D-2076-465C-A830-FA71E43FAEE0",
+    "name": "Kobeya Restaurant",
+    "category": "Sandwich shop",
+    "address": "1 Chome-３４-16 Irimacho Chofu, Tokyo 182-0004 Japan",
+    "phone": "+81334841313",
+    "website": "https://www.kobeyarestaurant.co.jp/restaurant/shop/detail/seijou",
+    "role": "popup_host",
+    "why": "Sandwich café, affinity 0.878, roomy casual setting for viewing events.",
+    "zone": 4,
+    "affinity": 0.8781579544210225,
+    "drivers": [
+     "Shohei Ohtani",
+     "Major League Baseball",
+     "Los Angeles Dodgers",
+     "Yoshinobu Yamamoto"
+    ],
+    "lon": 139.59195019999999,
+    "lat": 35.6509984,
+    "popupDaysBefore": 16
+   },
+   {
+    "id": "5BDDCB25-BF65-4C1C-A77B-D96DD927D8B3",
+    "name": "Yakiniku Horebore",
+    "category": "Yakiniku restaurant",
+    "address": "3 Chome-２５-1 Nishitsutsujigaoka Chofu, Tokyo 182-0006 Japan",
+    "phone": "+81424422989",
+    "website": "https://horebore.jp/",
+    "role": "ticket_outlet",
+    "why": "Rated 4.7, affinity 0.884, independent local favorite.",
+    "zone": 4,
+    "affinity": 0.8838756425173294,
+    "drivers": [
+     "Shohei Ohtani",
+     "Yoshinobu Yamamoto",
+     "Los Angeles Dodgers",
+     "Major League Baseball"
+    ],
+    "lon": 139.573321,
+    "lat": 35.6574187,
+    "popupDaysBefore": null
+   }
+  ],
+  "podcasts": [
+   {
+    "name": "R2C2 is UNINTERRUPTED",
+    "daysBefore": 37
+   },
+   {
+    "name": "Talkin' Baseball (MLB Podcast)",
+    "daysBefore": 29
+   }
+  ],
+  "brands": [],
+  "steps": [
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on R2C2 is UNINTERRUPTED",
+    "zone": null,
+    "startDaysBefore": 37,
+    "endDaysBefore": 37,
+    "cost": 3350
+   },
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Talkin' Baseball (MLB Podcast)",
+    "zone": null,
+    "startDaysBefore": 29,
+    "endDaysBefore": 29,
+    "cost": 3400
+   },
+   {
+    "kind": "partner",
+    "label": "Kobeya Restaurant (Sandwich shop), 調布市",
+    "zone": 4,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Trattoria Filo (Restaurant), 調布市",
+    "zone": 4,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Santama (Yakiniku restaurant), 武蔵野市",
+    "zone": 3,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Cafe Sacai (Cafe), 武蔵野市",
+    "zone": 3,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Yakiniku Horebore (Yakiniku restaurant), 調布市",
+    "zone": 4,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "popup",
+    "label": "Launch party or pop-up at Kobeya Restaurant, 調布市",
+    "zone": 4,
+    "startDaysBefore": 16,
+    "endDaysBefore": 16,
+    "cost": 2500
+   },
+   {
+    "kind": "popup",
+    "label": "Launch party or pop-up at Trattoria Filo, 調布市",
+    "zone": 4,
+    "startDaysBefore": 2,
+    "endDaysBefore": 2,
+    "cost": 2500
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in 調布市",
+    "zone": 0,
+    "startDaysBefore": 36,
+    "endDaysBefore": 36,
+    "cost": 450
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in 調布市",
+    "zone": 0,
+    "startDaysBefore": 21,
+    "endDaysBefore": 21,
+    "cost": 450
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in 調布市",
+    "zone": 0,
+    "startDaysBefore": 6,
+    "endDaysBefore": 6,
+    "cost": 450
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in 調布市",
+    "zone": 4,
+    "startDaysBefore": 36,
+    "endDaysBefore": 36,
+    "cost": 450
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in 調布市",
+    "zone": 4,
+    "startDaysBefore": 21,
+    "endDaysBefore": 21,
+    "cost": 450
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in 調布市",
+    "zone": 4,
+    "startDaysBefore": 6,
+    "endDaysBefore": 6,
+    "cost": 450
+   },
+   {
+    "kind": "social",
+    "label": "Targeted social ads across Tokyo",
+    "zone": null,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 7560
+   }
+  ]
+ },
+ "tagline": "野球を観るなら、このカフェで。",
+ "blurb": "Sixty Feet Six Baseball Caféは、東京に2週間だけ登場する野球カフェ＆観戦パーティーのポップアップです。12月4日（金）オープン、全年齢対象。大谷翔平選手やメジャーリーグが好きな人は、ぜひ一緒に観戦しましょう。",
+ "english": {
+  "tagline": "Watch baseball here, at this café.",
+  "blurb": "Sixty Feet Six Baseball Café is a two-week baseball café and viewing-party pop-up in Tokyo. Opening Friday, December 4, all ages. If you love Shohei Ohtani and Major League Baseball, come watch together."
+ },
+ "hashtags": [
+  "#SixtyFeetSix",
+  "#野球カフェ",
+  "#MLB観戦"
+ ],
+ "zones": [
+  {
+   "zoneId": 0,
+   "references": [
+    {
+     "name": "Lionel Messi",
+     "verdict": "mixed",
+     "score": 0.55
+    }
+   ],
+   "posterHeadline": "スター選手の一球を、みんなで観よう",
+   "posterSubline": "メッシのゴールに沸く人なら、野球の一球にも沸ける。2週間限定の野球カフェ。",
+   "instagram": "調布のスポーツ好きへ⚾ メッシのゴールで声が出るタイプなら、メジャーリーグの一球でもきっと出ます。Sixty Feet Six Baseball Caféは2週間限定の野球カフェ＆観戦パーティー。12月4日（金）オープン、全年齢OK。大谷翔平選手やドジャースが好きな人、集まろう。{link}",
+   "tiktokHook": "サッカー派も、野球の観戦パーティーにハマる準備はいい？",
+   "tiktokBeats": [
+    "東京に2週間だけの野球カフェが登場",
+    "みんなでメジャーリーグを観戦、全年齢OK",
+    "12月4日（金）オープン、詳細はプロフィールから"
+   ],
+   "xPost": "メッシのゴールに叫ぶ人、次は野球で叫ぼう⚾ 2週間限定の野球カフェ＆観戦パーティー「Sixty Feet Six」12月4日（金）オープン。全年齢OK。大谷翔平・MLB好きはこちら {link}",
+   "english": {
+    "posterHeadline": "Watch the stars' every pitch, together",
+    "posterSubline": "If Messi's goals get you cheering, so will a pitch. A two-week baseball café.",
+    "instagram": "To Chofu's sports lovers ⚾ If a Messi goal makes you shout, a Major League pitch will too. Sixty Feet Six Baseball Café is a two-week baseball café and viewing party. Opens Friday, December 4, all ages. People who love Shohei Ohtani and the Dodgers, come together. {link}",
+    "xPost": "Shout at Messi's goals? Next, shout at baseball ⚾ Two-week baseball café & viewing party 'Sixty Feet Six' opens Friday, December 4. All ages. For Shohei Ohtani and MLB lovers {link}"
+   }
+  },
+  {
+   "zoneId": 3,
+   "references": [],
+   "posterHeadline": "武蔵野に、野球カフェがやってくる",
+   "posterSubline": "コーヒー片手に、みんなでメジャーリーグ観戦。2週間だけの特別な場所。",
+   "instagram": "武蔵野のみなさんへ⚾ 2週間限定の野球カフェ＆観戦パーティー、Sixty Feet Six Baseball Caféがオープン。12月4日（金）スタート、全年齢OK。大谷翔平選手や山本由伸選手、メジャーリーグが好きな人と一緒に、カフェでゆったり観戦しませんか。{link}",
+   "tiktokHook": "カフェで野球観戦って、最高の過ごし方じゃない？",
+   "tiktokBeats": [
+    "2週間だけの野球カフェ",
+    "大谷翔平・山本由伸好きが集まる観戦パーティー",
+    "12月4日（金）オープン、全年齢OK"
+   ],
+   "xPost": "カフェでメジャーリーグ観戦⚾ 2週間限定「Sixty Feet Six Baseball Café」12月4日（金）オープン。全年齢OK。大谷翔平・山本由伸・ドジャース好きはぜひ {link}",
+   "english": {
+    "posterHeadline": "A baseball café is coming to Musashino",
+    "posterSubline": "Coffee in hand, watching Major League Baseball together. A special place for just two weeks.",
+    "instagram": "To Musashino ⚾ Sixty Feet Six Baseball Café, a two-week baseball café and viewing party, is opening. Starts Friday, December 4, all ages. Why not relax and watch at a café with people who love Shohei Ohtani, Yoshinobu Yamamoto and Major League Baseball? {link}",
+    "xPost": "Watch Major League Baseball at a café ⚾ Two-week 'Sixty Feet Six Baseball Café' opens Friday, December 4. All ages. Shohei Ohtani, Yoshinobu Yamamoto and Dodgers lovers, come by {link}"
+   }
+  },
+  {
+   "zoneId": 4,
+   "references": [],
+   "posterHeadline": "調布で、メジャーリーグを熱く観る",
+   "posterSubline": "一球ごとに盛り上がる、2週間限定の野球カフェ＆観戦パーティー。",
+   "instagram": "調布の野球好きへ⚾ Sixty Feet Six Baseball Caféは、2週間限定の野球カフェ＆観戦パーティー。12月4日（金）オープン、全年齢OK。大谷翔平選手、ドジャース、メジャーリーグが好きな人と、一球ごとに盛り上がろう。{link}",
+   "tiktokHook": "調布で大谷翔平をみんなで応援できる場所、できます。",
+   "tiktokBeats": [
+    "2週間限定の野球カフェ＆観戦パーティー",
+    "メジャーリーグをみんなで観戦、全年齢OK",
+    "12月4日（金）オープン、リンクはプロフィールに"
+   ],
+   "xPost": "調布の野球好き、集合⚾ 2週間限定の野球カフェ＆観戦パーティー「Sixty Feet Six」12月4日（金）オープン。全年齢OK。大谷翔平・ドジャース好きはこちら {link}",
+   "english": {
+    "posterHeadline": "Watch Major League Baseball loud in Chofu",
+    "posterSubline": "Cheering every pitch: a two-week baseball café and viewing party.",
+    "instagram": "To Chofu's baseball lovers ⚾ Sixty Feet Six Baseball Café is a two-week baseball café and viewing party. Opens Friday, December 4, all ages. Cheer every pitch with people who love Shohei Ohtani, the Dodgers and Major League Baseball. {link}",
+    "xPost": "Chofu baseball lovers, gather ⚾ Two-week baseball café & viewing party 'Sixty Feet Six' opens Friday, December 4. All ages. For Shohei Ohtani and Dodgers lovers {link}"
+   }
+  }
+ ],
+ "podcasts": [
+  {
+   "name": "R2C2 is UNINTERRUPTED",
+   "script": "Quick one for anyone in Tokyo. Sixty Feet Six Baseball Café is a two-week baseball café and viewing-party pop-up, opening Friday, December 4. It's all ages, so bring whoever you watch games with. If you love Shohei Ohtani, Yoshinobu Yamamoto, the Dodgers and Major League Baseball, this is a spot built for watching together. Two weeks only. Get the details at {link}.",
+   "code": "pod1"
+  },
+  {
+   "name": "Talkin' Baseball (MLB Podcast)",
+   "script": "Baseball fans in Tokyo, listen up. Sixty Feet Six Baseball Café is a two-week baseball café and viewing-party pop-up opening Friday, December 4. All ages welcome. It's made for people who love Shohei Ohtani, Yoshinobu Yamamoto, the Los Angeles Dodgers and Major League Baseball: a café to grab a seat and watch with other fans. It's only around for two weeks, so check it out at {link}.",
+   "code": "pod2"
+  }
+ ],
+ "partners": [
+  {
+   "id": "36EAEB9F-28D3-4CAC-A1A6-0AFCD54FA35F",
+   "code": "e1",
+   "subject": "Cafe Sacaiでの野球カフェ・ポップアップ開催のご相談",
+   "body": "Cafe Sacai御中　はじめまして。12月4日（金）から東京で2週間限定の野球カフェ＆観戦パーティー「Sixty Feet Six Baseball Café」（全年齢対象）を開催します。来店データによると、貴店のお客様は大谷翔平選手やメジャーリーグを好む人々の嗜好と近い傾向（類似度0.801）があり、週末も営業されているため、ポップアップ会場としてご協力いただけないかと考えております。[ご提供内容の例：売上の一部還元や告知でのご紹介] 詳細はこちら：{link} ご検討いただけましたら幸いです。",
+   "english": {
+    "subject": "Proposal: hosting a baseball café pop-up at Cafe Sacai",
+    "body": "Dear Cafe Sacai, From Friday, December 4, we're running Sixty Feet Six Baseball Café, a two-week baseball café and viewing-party pop-up in Tokyo (all ages). Visit data shows your guests' tastes closely match people who love Shohei Ohtani and Major League Baseball (affinity 0.801), and since you're open on weekends, we'd love to ask if you'd host the pop-up. [Your offer, e.g. a revenue share or a feature in our promotion] Details: {link} We'd be grateful for your consideration."
+   }
+  },
+  {
+   "id": "A58D7331-2B7E-400D-A5E5-FAEBF5EDD8FA",
+   "code": "e2",
+   "subject": "Santamaさまへ：野球カフェ告知の拠点のご相談",
+   "body": "Santama御中　はじめまして。12月4日（金）から東京で2週間限定の野球カフェ＆観戦パーティー「Sixty Feet Six Baseball Café」（全年齢対象）を開催します。来店データでは、貴店のお客様は大谷翔平選手やメジャーリーグを好む人々と嗜好が近い（類似度0.872）ことがわかりました。毎日営業されている貴店を、告知スタッフの立ち寄り拠点として使わせていただけないでしょうか。[ご提供内容の例：ゲストリスト2名分] 詳細：{link} よろしくお願いいたします。",
+   "english": {
+    "subject": "To Santama: a base for our baseball café street team",
+    "body": "Dear Santama, From Friday, December 4, we're running Sixty Feet Six Baseball Café, a two-week baseball café and viewing-party pop-up in Tokyo (all ages). Visit data shows your guests' tastes closely match people who love Shohei Ohtani and Major League Baseball (affinity 0.872). As you're open every day, could our street team use your restaurant as a base? [Your offer, e.g. two guest-list spots] Details: {link} Thank you."
+   }
+  },
+  {
+   "id": "AC072D85-036A-4988-9FD6-8921AB6A5DFD",
+   "code": "e3",
+   "subject": "Trattoria Filoさまへ：ポスター掲示のお願い",
+   "body": "Trattoria Filo御中　はじめまして。12月4日（金）から東京で2週間限定の野球カフェ＆観戦パーティー「Sixty Feet Six Baseball Café」（全年齢対象）を開催します。来店データでは、貴店のお客様は大谷翔平選手やメジャーリーグを好む人々と嗜好がとても近い（類似度0.92）ことがわかりました。12月2日頃から、店内にポスターを1枚掲示していただけないでしょうか。[ご提供内容の例：ゲストリスト2名分] 詳細：{link} ご検討よろしくお願いいたします。",
+   "english": {
+    "subject": "To Trattoria Filo: request to display a poster",
+    "body": "Dear Trattoria Filo, From Friday, December 4, we're running Sixty Feet Six Baseball Café, a two-week baseball café and viewing-party pop-up in Tokyo (all ages). Visit data shows your guests' tastes match people who love Shohei Ohtani and Major League Baseball very closely (affinity 0.92). Could you put up one poster in your restaurant from around December 2? [Your offer, e.g. two guest-list spots] Details: {link} Thank you for considering it."
+   }
+  },
+  {
+   "id": "6D058F6D-2076-465C-A830-FA71E43FAEE0",
+   "code": "e4",
+   "subject": "Kobeya Restaurantさまへ：観戦ポップアップ開催のご相談",
+   "body": "Kobeya Restaurant御中　はじめまして。12月4日（金）から東京で2週間限定の野球カフェ＆観戦パーティー「Sixty Feet Six Baseball Café」（全年齢対象）を開催します。来店データでは、貴店のお客様は大谷翔平選手やメジャーリーグを好む人々と嗜好が近い（類似度0.878）ことがわかり、気軽に過ごせる貴店の雰囲気は観戦イベントにぴったりだと感じました。11月18日頃に、プレ観戦ポップアップを開催させていただけないでしょうか。[ご提供内容の例：告知でのご紹介] 詳細：{link} よろしくお願いいたします。",
+   "english": {
+    "subject": "To Kobeya Restaurant: hosting a viewing pop-up",
+    "body": "Dear Kobeya Restaurant, From Friday, December 4, we're running Sixty Feet Six Baseball Café, a two-week baseball café and viewing-party pop-up in Tokyo (all ages). Visit data shows your guests' tastes closely match people who love Shohei Ohtani and Major League Baseball (affinity 0.878), and your casual setting feels right for a viewing event. Could we host a preview viewing pop-up with you around November 18? [Your offer, e.g. a feature in our promotion] Details: {link} Thank you."
+   }
+  },
+  {
+   "id": "5BDDCB25-BF65-4C1C-A77B-D96DD927D8B3",
+   "code": "e5",
+   "subject": "Yakiniku Horeboreさまへ：チケット取扱いのご相談",
+   "body": "Yakiniku Horebore御中　はじめまして。12月4日（金）から東京で2週間限定の野球カフェ＆観戦パーティー「Sixty Feet Six Baseball Café」（全年齢対象）を開催します。来店データでは、貴店のお客様は大谷翔平選手やメジャーリーグを好む人々と嗜好が近い（類似度0.884）ことがわかりました。地元で親しまれている貴店で、チケットを取り扱っていただけないでしょうか。[ご提供内容の例：販売1枚ごとの手数料] 詳細：{link} ご検討よろしくお願いいたします。",
+   "english": {
+    "subject": "To Yakiniku Horebore: request to be a ticket outlet",
+    "body": "Dear Yakiniku Horebore, From Friday, December 4, we're running Sixty Feet Six Baseball Café, a two-week baseball café and viewing-party pop-up in Tokyo (all ages). Visit data shows your guests' tastes closely match people who love Shohei Ohtani and Major League Baseball (affinity 0.884). As a local favourite, would you be willing to sell tickets? [Your offer, e.g. a commission per ticket sold] Details: {link} Thank you for considering it."
+   }
+  }
+ ],
+ "links": [
+  {
+   "code": "p1",
+   "label": "Poster at Cafe Sacai",
+   "channel": "poster",
+   "zone": 3,
+   "partnerId": "36EAEB9F-28D3-4CAC-A1A6-0AFCD54FA35F"
+  },
+  {
+   "code": "p2",
+   "label": "Poster at Santama",
+   "channel": "poster",
+   "zone": 3,
+   "partnerId": "A58D7331-2B7E-400D-A5E5-FAEBF5EDD8FA"
+  },
+  {
+   "code": "p3",
+   "label": "Poster at Trattoria Filo",
+   "channel": "poster",
+   "zone": 4,
+   "partnerId": "AC072D85-036A-4988-9FD6-8921AB6A5DFD"
+  },
+  {
+   "code": "p4",
+   "label": "Poster at Kobeya Restaurant",
+   "channel": "poster",
+   "zone": 4,
+   "partnerId": "6D058F6D-2076-465C-A830-FA71E43FAEE0"
+  },
+  {
+   "code": "p5",
+   "label": "Poster at Yakiniku Horebore",
+   "channel": "poster",
+   "zone": 4,
+   "partnerId": "5BDDCB25-BF65-4C1C-A77B-D96DD927D8B3"
+  },
+  {
+   "code": "e1",
+   "label": "Email to Cafe Sacai",
+   "channel": "email",
+   "zone": 3,
+   "partnerId": "36EAEB9F-28D3-4CAC-A1A6-0AFCD54FA35F"
+  },
+  {
+   "code": "e2",
+   "label": "Email to Santama",
+   "channel": "email",
+   "zone": 3,
+   "partnerId": "A58D7331-2B7E-400D-A5E5-FAEBF5EDD8FA"
+  },
+  {
+   "code": "e3",
+   "label": "Email to Trattoria Filo",
+   "channel": "email",
+   "zone": 4,
+   "partnerId": "AC072D85-036A-4988-9FD6-8921AB6A5DFD"
+  },
+  {
+   "code": "e4",
+   "label": "Email to Kobeya Restaurant",
+   "channel": "email",
+   "zone": 4,
+   "partnerId": "6D058F6D-2076-465C-A830-FA71E43FAEE0"
+  },
+  {
+   "code": "e5",
+   "label": "Email to Yakiniku Horebore",
+   "channel": "email",
+   "zone": 4,
+   "partnerId": "5BDDCB25-BF65-4C1C-A77B-D96DD927D8B3"
+  },
+  {
+   "code": "z0ig",
+   "label": "Instagram, 調布市",
+   "channel": "instagram",
+   "zone": 0
+  },
+  {
+   "code": "z0tt",
+   "label": "TikTok or Reels, 調布市",
+   "channel": "tiktok",
+   "zone": 0
+  },
+  {
+   "code": "z0x",
+   "label": "X or Threads, 調布市",
+   "channel": "x",
+   "zone": 0
+  },
+  {
+   "code": "z3ig",
+   "label": "Instagram, 武蔵野市",
+   "channel": "instagram",
+   "zone": 3
+  },
+  {
+   "code": "z3tt",
+   "label": "TikTok or Reels, 武蔵野市",
+   "channel": "tiktok",
+   "zone": 3
+  },
+  {
+   "code": "z3x",
+   "label": "X or Threads, 武蔵野市",
+   "channel": "x",
+   "zone": 3
+  },
+  {
+   "code": "z4ig",
+   "label": "Instagram, 調布市",
+   "channel": "instagram",
+   "zone": 4
+  },
+  {
+   "code": "z4tt",
+   "label": "TikTok or Reels, 調布市",
+   "channel": "tiktok",
+   "zone": 4
+  },
+  {
+   "code": "z4x",
+   "label": "X or Threads, 調布市",
+   "channel": "x",
+   "zone": 4
+  },
+  {
+   "code": "pod1",
+   "label": "Host-read on R2C2 is UNINTERRUPTED",
+   "channel": "podcast",
+   "zone": null
+  },
+  {
+   "code": "pod2",
+   "label": "Host-read on Talkin' Baseball (MLB Podcast)",
+   "channel": "podcast",
+   "zone": null
+  }
+ ],
+ "checks": [
+  {
+   "name": "Lululemon",
+   "query": "Lululemon",
+   "type": "brand",
+   "zone": 3,
+   "verdict": "weak here",
+   "score": 0.1
+  },
+  {
+   "name": "Minecraft",
+   "query": "Minecraft",
+   "type": "videogame",
+   "zone": 0,
+   "verdict": "weak here",
+   "score": 0.36
+  },
+  {
+   "name": "Minecraft",
+   "query": "Minecraft",
+   "type": "videogame",
+   "zone": 4,
+   "verdict": "weak here",
+   "score": 0.26
+  },
+  {
+   "name": "Metallica",
+   "query": "Metallica",
+   "type": "artist",
+   "zone": 4,
+   "verdict": "weak here",
+   "score": 0.28
+  },
+  {
+   "name": "Lionel Messi",
+   "query": "Lionel Messi",
+   "type": "person",
+   "zone": 0,
+   "verdict": "mixed",
+   "score": 0.55
+  }
+ ],
+ "qlooCalls": 0
+}

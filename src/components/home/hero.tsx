@@ -49,8 +49,8 @@ export function Hero() {
             Rehearse your launch in a <span className="text-gradient">living model</span> of the city.
           </h1>
           <p className="max-w-lg text-[16px] leading-relaxed text-muted">
-            Groundswell builds a street-level model of a real city from Qloo&apos;s taste graph. A team of AI agents rehearses your launch inside it hundreds of times, then hands you the
-            plan that worked, with real places, podcasts and partners.
+            Groundswell builds a street-level model of a real city from Qloo&apos;s taste graph. A team of AI agents rehearses your launch inside it hundreds of times, hands you the plan
+            that worked with real places, podcasts and partners, then writes the launch kit and steers the campaign from its scans.
           </p>
           <Composer cityId={cityId} onCity={setCityId} initialBrief={initialBrief} />
         </div>

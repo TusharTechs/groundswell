@@ -17,7 +17,7 @@ import type { PartnerView, Voice } from "@/lib/agents/events";
 import type { CityAtlas } from "@/lib/atlas/types";
 import type { Zone } from "@/lib/launch/fit";
 
-export type MapMode = "districts" | "fit" | "sim";
+export type MapMode = "districts" | "fit" | "sim" | "scans";
 
 export interface CityMapProps {
   atlas: CityAtlas;
@@ -26,6 +26,12 @@ export interface CityMapProps {
   fit?: ArrayLike<number> | null;
   /** 0–255 per cell: adoption share of the natural audience in the current frame. */
   adoption?: ArrayLike<number> | null;
+  /** Scans mode: 0–1 per cell, how many tracked-link scans the cell's neighbourhood brought (cells outside the plan's neighbourhoods are 0). */
+  scanShare?: ArrayLike<number> | null;
+  /** Scans mode: observed ÷ expected per cell; NaN outside the plan's neighbourhoods. */
+  scanRatio?: ArrayLike<number> | null;
+  /** Scans mode: extra tooltip lines for a cell. */
+  cellNote?: (index: number) => string | null;
   zones?: Zone[] | null;
   partners?: PartnerView[] | null;
   venue?: { name: string; lon: number; lat: number } | null;
@@ -66,6 +72,13 @@ function fitColor(f: number): RGBA {
   return mix([79, 209, 197, 245], [214, 255, 247, 255], (f - 0.85) / 0.15);
 }
 
+/** Diverging ramp for scans against expectation: behind (blue) → on track (amber) → ahead (pink). */
+function scanColor(ratio: number): RGBA {
+  if (!Number.isFinite(ratio)) return [30, 33, 48, 110];
+  if (ratio < 1) return mix([86, 150, 255, 235], [255, 181, 71, 240], Math.max(0, (ratio - 0.4) / 0.6));
+  return mix([255, 181, 71, 240], [255, 92, 138, 255], Math.min(1, (ratio - 1) / 0.8));
+}
+
 /** Warm ramp for adoption: ember → amber → hot pink → white. */
 function adoptionColor(share: number, fit: number): RGBA {
   if (share < 0.004) return fit > 0.5 ? [44, 52, 78, 150] : [30, 33, 48, 110];
@@ -75,7 +88,7 @@ function adoptionColor(share: number, fit: number): RGBA {
 }
 
 export default function CityMap(props: CityMapProps) {
-  const { atlas, mode, fit, adoption, zones, partners, venue, voices, highlightDistrict, showArcs, autoRotate, focus, shift, onCellClick, className, interactive = true } = props;
+  const { atlas, mode, fit, adoption, scanShare, scanRatio, cellNote, zones, partners, venue, voices, highlightDistrict, showArcs, autoRotate, focus, shift, onCellClick, className, interactive = true } = props;
   const initial = useMemo<MapViewState>(
     () => ({ longitude: atlas.city.center[0] + (shift?.[0] ?? 0), latitude: atlas.city.center[1] + (shift?.[1] ?? 0), zoom: atlas.city.zoom - 0.15, pitch: 52, bearing: -18 }),
     // Only when the city changes.
@@ -125,6 +138,10 @@ export default function CityMap(props: CityMapProps) {
     getPosition: (c) => [c.lon, c.lat],
     getElevation: (c) => {
       if (mode === "districts") return 120 + Math.pow(c.activity, 0.8) * 1100;
+      if (mode === "scans") {
+        const v = scanShare?.[c.i] ?? 0;
+        return v > 0 ? 80 + Math.pow(v, 0.7) * 1500 : 30;
+      }
       const f = fit?.[c.i] ?? 0;
       if (mode === "fit") return f > 0 ? 80 + Math.pow(f, 2.6) * 2600 : 30;
       const a = (adoption?.[c.i] ?? 0) / 255;
@@ -138,12 +155,13 @@ export default function CityMap(props: CityMapProps) {
         return [base[0], base[1], base[2], dim ? 40 : Math.round(110 + c.activity * 140)] as RGBA;
       }
       if (mode === "fit") return fitColor(fit?.[c.i] ?? 0);
+      if (mode === "scans") return scanColor(scanRatio?.[c.i] ?? NaN);
       return adoptionColor((adoption?.[c.i] ?? 0) / 255, fit?.[c.i] ?? 0);
     },
     material: { ambient: 0.55, diffuse: 0.6, shininess: 40, specularColor: [255, 230, 210] },
     updateTriggers: {
-      getElevation: [mode, fit, adoption],
-      getFillColor: [mode, fit, adoption, highlightDistrict],
+      getElevation: [mode, fit, adoption, scanShare],
+      getFillColor: [mode, fit, adoption, highlightDistrict, scanRatio],
     },
     transitions: { getElevation: mode === "sim" ? 220 : 900, getFillColor: mode === "sim" ? 220 : 700 },
     onClick: (info: PickingInfo<Cell>) => {
@@ -275,7 +293,8 @@ export default function CityMap(props: CityMapProps) {
       const lines = [
         `<div style="font-weight:700">${c.locality ?? "Unnamed area"}</div>`,
         `<div style="color:#a3aac0">${d?.name ?? ""}</div>`,
-        mode !== "districts" && f !== undefined ? `<div>Taste fit <b>${Math.round(f * 100)}</b>/100</div>` : "",
+        mode !== "districts" && mode !== "scans" && f !== undefined ? `<div>Taste fit <b>${Math.round(f * 100)}</b>/100</div>` : "",
+        mode === "scans" ? (cellNote?.(c.i) ?? "") : "",
         mode === "sim" && a !== undefined ? `<div>Reached <b>${((a / 255) * 100).toFixed(0)}%</b> of the natural audience</div>` : "",
       ];
       return { html: lines.join(""), style: tooltipStyle };

@@ -19,6 +19,7 @@ import { ENTITY_TYPES } from "@/lib/qloo/params";
 import { admit, clientIp, type Bucket } from "@/lib/rate-limit";
 import { loadShowcase, SHOWCASES } from "@/lib/showcase";
 import { publicMessage } from "@/lib/sse";
+import { saveRun } from "@/lib/store";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -32,7 +33,7 @@ const Comps = z
   .describe("Well-known comparables whose fans are the launch's audience, e.g. [{name: 'Kali Uchis', type: 'artist'}].");
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
-function buildServer(ip: string) {
+function buildServer(ip: string, origin: string) {
   const server = new McpServer({ name: "groundswell", version: "0.1.0" });
   const guarded = async <T,>(bucket: Bucket, fn: () => Promise<T>) => {
     const admission = admit(ip, bucket);
@@ -151,7 +152,7 @@ function buildServer(ip: string) {
     {
       title: "Rehearse a launch with the full agent team",
       description:
-        "Runs Groundswell's nine-agent team on a brief: profiles the taste on Qloo, maps the city, scouts partners, designs and simulates plans over two or more rounds, and returns the winning week-by-week plan with simulated reach against a no-taste-data benchmark. Takes about three minutes; limited per caller.",
+        "Runs Groundswell's rehearsal team on a brief (four Claude agents, three model roles, the Qloo mapping tool and the simulator): profiles the taste on Qloo, maps the city, scouts partners, designs and simulates plans over two or more rounds, and returns the winning week-by-week plan with simulated reach against a no-taste-data benchmark. Takes two to four minutes; limited per caller.",
       inputSchema: {
         brief: z.string().min(12).max(1500).describe("What is launching, for whom, where and when, with any constraints."),
         city: CityId,
@@ -162,7 +163,18 @@ function buildServer(ip: string) {
     async ({ brief, city, budget, days }) =>
       guarded("rehearse", async () => {
         const events: LaunchEvent[] = [];
-        await runLaunch({ brief, cityId: city, budget, days }, (e) => events.push(e));
+        const timed: { t: number; e: LaunchEvent }[] = [];
+        const t0 = Date.now();
+        const s = await runLaunch({ brief, cityId: city, budget, days }, (e) => {
+          events.push(e);
+          timed.push({ t: Date.now() - t0, e });
+        });
+        // Saved like a web run, so the caller can watch the rehearsal it just got.
+        const id = `run-${s.runId}`;
+        const watch = await saveRun({ id, cityId: city, brief, recordedAt: new Date(t0).toISOString(), events: timed }).then(
+          () => `${origin}/rehearse/${id}`,
+          () => null,
+        );
         const plan = events.find((e): e is Extract<LaunchEvent, { type: "plan" }> => e.type === "plan");
         const base = events.find((e): e is Extract<LaunchEvent, { type: "baseline" }> => e.type === "baseline");
         if (!plan) throw new Error("The team did not produce a plan.");
@@ -173,8 +185,14 @@ function buildServer(ip: string) {
           `Simulated reach ${pct(m.reach.mean)} (${pct(m.reach.p10)}–${pct(m.reach.p90)})${base ? ` vs ${pct(base.sim.metrics.reach.mean)} for the same budget spent where people are` : ""}.`,
           ...plan.plan.weeks.map((w) => `${w.label}: ${w.items.join("; ")}`),
           `Partners: ${plan.plan.partners.map((p) => `${p.name}${p.address ? ` (${p.address})` : ""}: ${p.action}`).join(" | ")}`,
-        ].join("\n");
-        return { content: [{ type: "text" as const, text }], structuredContent: { plan: plan.plan, reach: m.reach, benchmarkReach: base?.sim.metrics.reach ?? null, costPerPoint: m.costPerPoint } };
+          watch ? `Watch the rehearsal and produce its launch kit: ${watch}` : "",
+        ]
+          .filter(Boolean)
+          .join("\n");
+        return {
+          content: [{ type: "text" as const, text }],
+          structuredContent: { plan: plan.plan, reach: m.reach, benchmarkReach: base?.sim.metrics.reach ?? null, costPerPoint: m.costPerPoint, watch },
+        };
       }),
   );
 
@@ -199,7 +217,7 @@ function buildServer(ip: string) {
 }
 
 async function handle(req: Request) {
-  const server = buildServer(clientIp(req));
+  const server = buildServer(clientIp(req), new URL(req.url).origin);
   const transport = new WebStandardStreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });
   await server.connect(transport);
   return transport.handleRequest(req);

@@ -1,0 +1,511 @@
+{
+ "campaignId": "chicago-headline",
+ "createdAt": "2026-10-24T15:10:25.116Z",
+ "input": {
+  "campaignId": "chicago-headline",
+  "cityId": "chicago",
+  "title": "Marisol Vega Headline Show at Thalia Hall",
+  "pitch": "Latin R&B singer Marisol Vega plays her first headline show at Thalia Hall in Pilsen for fans of Omar Apollo and Kali Uchis.",
+  "kind": "concert",
+  "language": "English",
+  "venue": "Thalia Hall, Pilsen",
+  "launchDate": "2026-12-04",
+  "days": 42,
+  "budget": 12000,
+  "allAges": false,
+  "noAlcohol": false,
+  "ageLimit": "21+",
+  "launchUrl": null,
+  "comps": [
+   "Kali Uchis",
+   "Omar Apollo",
+   "Cuco"
+  ],
+  "compIds": [
+   "3FE8EB01-2C37-4E00-B0C1-E35927ADB5E8",
+   "40E072EE-DAEE-435B-83A4-0B7085066E94",
+   "BD11D1C6-32E9-4716-B598-226D5A8310B0"
+  ],
+  "peakAge": "25_to_29",
+  "tags": [
+   "Teenage Drama",
+   "Addiction",
+   "Teenage Life",
+   "Internet Fame",
+   "Telekinesis",
+   "Life Stories",
+   "Social Media",
+   "Boston",
+   "Government Conspiracy",
+   "bold design"
+  ],
+  "zones": [
+   {
+    "id": 0,
+    "locality": "Lower West Side",
+    "district": "Stadium rock and country",
+    "signature": [
+     "Coldplay",
+     "Harley-Davidson",
+     "IKEA",
+     "Metallica",
+     "Morgan Wallen"
+    ],
+    "share": 0.106,
+    "center": [
+     -87.66526,
+     41.85472
+    ],
+    "cells": [
+     1101,
+     1104,
+     1105,
+     1116,
+     1117,
+     1123,
+     1125,
+     1126,
+     1127,
+     1128,
+     1129,
+     1138,
+     1139,
+     1140,
+     1141
+    ]
+   },
+   {
+    "id": 1,
+    "locality": "Bridgeport",
+    "district": "Latin pop and shooter games",
+    "signature": [
+     "Bad Bunny",
+     "Joe Rogan",
+     "Call of Duty",
+     "Fortnite",
+     "Shakira"
+    ],
+    "share": 0.058,
+    "center": [
+     -87.6643,
+     41.83113
+    ],
+    "cells": [
+     573,
+     576,
+     577,
+     592,
+     593,
+     594,
+     595,
+     596,
+     597,
+     1100,
+     1122,
+     1124
+    ]
+   }
+  ],
+  "partners": [
+   {
+    "id": "7876FF5D-78BC-415F-9B35-E47384D82760",
+    "name": "The Giant Penny Whistle",
+    "category": "Bar",
+    "address": "1854 S Blue Island Ave Chicago, IL 60608",
+    "phone": "+13125263677",
+    "website": "http://www.giantpennywhistle.com/",
+    "role": "popup_host",
+    "why": "Top affinity 0.833 bar, open 7 days; fits a 21+ pre-show pop-up.",
+    "zone": 0,
+    "affinity": 0.8329293700812547,
+    "drivers": [
+     "Kali Uchis",
+     "Cuco",
+     "Omar Apollo"
+    ],
+    "lon": -87.6625995,
+    "lat": 41.8565687,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "BC1F16CE-DFC0-44DE-B825-C9F361DD8F62",
+    "name": "El Trebol Liquors & Bar",
+    "category": "Liquor store",
+    "address": "1135 W 18th St Chicago, IL 60608",
+    "phone": "+13124216876",
+    "website": "https://www.facebook.com/El-Trebol-Liquors-and-Bar-1215683875149207/",
+    "role": "ticket_outlet",
+    "why": "Neighborhood bar, affinity 0.82, hidden gem with popularity 0.13.",
+    "zone": 0,
+    "affinity": 0.8203756098667062,
+    "drivers": [
+     "Kali Uchis",
+     "Cuco",
+     "Omar Apollo"
+    ],
+    "lon": -87.654612,
+    "lat": 41.857839,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "566A9559-F47F-402A-B0B2-AE481558B6FA",
+    "name": "The Green Room Tap",
+    "category": "Bar",
+    "address": "1802 S Allport St Chicago, IL 60608",
+    "phone": null,
+    "website": "http://greenroomtap.com/",
+    "role": "cross_promo",
+    "why": "Affinity 0.828 bar rated 4.5, open seven days.",
+    "zone": 0,
+    "affinity": 0.8283732926461912,
+    "drivers": [
+     "Kali Uchis",
+     "Omar Apollo",
+     "Cuco"
+    ],
+    "lon": -87.65789079999999,
+    "lat": 41.8577303,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "819AC016-8ADB-4350-BE4F-70DAEEE70F12",
+    "name": "One City Tap",
+    "category": "Bar",
+    "address": "3115 S Archer Ave Chicago, IL 60608",
+    "phone": "+17735654777",
+    "website": "https://onecitytap.weebly.com/",
+    "role": "popup_host",
+    "why": "Highest affinity 0.823, independent tap open 7 days, 21+ crowd.",
+    "zone": 1,
+    "affinity": 0.8227296968293453,
+    "drivers": [
+     "Kali Uchis",
+     "Cuco",
+     "Omar Apollo"
+    ],
+    "lon": -87.6659621,
+    "lat": 41.8372719,
+    "popupDaysBefore": null
+   }
+  ],
+  "podcasts": [
+   {
+    "name": "Very Really Good",
+    "daysBefore": 38
+   },
+   {
+    "name": "Jenna & Julien Podcast",
+    "daysBefore": 29
+   }
+  ],
+  "brands": [
+   {
+    "name": "Nasty Gal"
+   }
+  ],
+  "steps": [
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Very Really Good",
+    "zone": null,
+    "startDaysBefore": 38,
+    "endDaysBefore": 38,
+    "cost": 3400
+   },
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Jenna & Julien Podcast",
+    "zone": null,
+    "startDaysBefore": 29,
+    "endDaysBefore": 29,
+    "cost": 3450
+   },
+   {
+    "kind": "collab",
+    "label": "Co-branded drop with Nasty Gal",
+    "zone": null,
+    "startDaysBefore": 36,
+    "endDaysBefore": 12,
+    "cost": 2000
+   },
+   {
+    "kind": "partner",
+    "label": "The Giant Penny Whistle (Bar), Lower West Side",
+    "zone": 0,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "The Green Room Tap (Bar), Lower West Side",
+    "zone": 0,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "El Trebol Liquors & Bar (Liquor store), Lower West Side",
+    "zone": 0,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "One City Tap (Bar), Bridgeport",
+    "zone": 1,
+    "startDaysBefore": 41,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "social",
+    "label": "Targeted social ads across Chicago",
+    "zone": null,
+    "startDaysBefore": 10,
+    "endDaysBefore": 1,
+    "cost": 1800
+   }
+  ]
+ },
+ "tagline": "Marisol Vega's first headline night in Pilsen",
+ "blurb": "Latin R&B singer Marisol Vega plays her first headline show at Thalia Hall in Pilsen on Friday, December 4. For anyone who loves Kali Uchis, Omar Apollo and Cuco, this is a night to be in the room. 21+.",
+ "hashtags": [
+  "#MarisolVega",
+  "#ThaliaHall",
+  "#PilsenNights"
+ ],
+ "zones": [
+  {
+   "zoneId": 0,
+   "references": [
+    {
+     "name": "Euphoria",
+     "verdict": "strong here",
+     "score": 0.67
+    },
+    {
+     "name": "Coldplay",
+     "verdict": "mixed",
+     "score": 0.59
+    }
+   ],
+   "posterHeadline": "Your Euphoria soundtrack, live in Pilsen",
+   "posterSubline": "Latin R&B singer Marisol Vega steps up for her first headline show. 21+.",
+   "instagram": "Lower West Side, this one's close to home. Latin R&B singer Marisol Vega plays her first headline show at Thalia Hall on Friday, December 4. If your late nights sound like a Euphoria episode and you love Kali Uchis and Omar Apollo, come through. 21+. Tickets: {link}",
+   "tiktokHook": "If you'd put Kali Uchis on a Euphoria playlist, listen up.",
+   "tiktokBeats": [
+    "Marisol Vega: Latin R&B, first headline show.",
+    "Thalia Hall, Pilsen, Friday, December 4. 21+.",
+    "For fans of Kali Uchis, Omar Apollo and Cuco. Link in bio."
+   ],
+   "xPost": "Coldplay sing-alongs one night, slow-burn Latin R&B the next. Marisol Vega plays her first headline show at Thalia Hall, Pilsen, Friday, December 4. 21+. For fans of Kali Uchis & Omar Apollo. {link}"
+  },
+  {
+   "zoneId": 1,
+   "references": [
+    {
+     "name": "Bad Bunny",
+     "verdict": "strong here",
+     "score": 0.7
+    },
+    {
+     "name": "Shakira",
+     "verdict": "mixed",
+     "score": 0.56
+    }
+   ],
+   "posterHeadline": "Bridgeport, your next favourite Latin voice",
+   "posterSubline": "From your Bad Bunny rotation to a Latin R&B first headline night. 21+.",
+   "instagram": "Bridgeport, if Bad Bunny and Shakira run your playlists, make room for Latin R&B singer Marisol Vega. She plays her first headline show at Thalia Hall in Pilsen on Friday, December 4. For people who love Kali Uchis, Omar Apollo and Cuco. 21+. Tickets: {link}",
+   "tiktokHook": "Bad Bunny on repeat? Here's who to add next.",
+   "tiktokBeats": [
+    "Marisol Vega, Latin R&B, first headline show.",
+    "Thalia Hall in Pilsen, Friday, December 4. 21+.",
+    "For fans of Kali Uchis, Omar Apollo and Cuco. Tickets in bio."
+   ],
+   "xPost": "Bridgeport: between the Bad Bunny and the Shakira, add some Latin R&B. Marisol Vega's first headline show, Thalia Hall, Pilsen, Friday, December 4. 21+. For fans of Omar Apollo & Kali Uchis. {link}"
+  }
+ ],
+ "podcasts": [
+  {
+   "name": "Very Really Good",
+   "script": "Quick one for the music lovers. Latin R&B singer Marisol Vega is playing her first headline show at Thalia Hall in Pilsen, Chicago, on Friday, December 4. If you love Kali Uchis, Omar Apollo or Cuco, this is very much your kind of night: a first headline show is the one you'll want to say you were at. It's 21+. Grab tickets at {link}. Marisol Vega, Thalia Hall, December 4.",
+   "code": "pod1"
+  },
+  {
+   "name": "Jenna & Julien Podcast",
+   "script": "Chicago listeners, this one's for you. Marisol Vega, a Latin R&B singer, plays her first headline show at Thalia Hall in Pilsen on Friday, December 4. If Kali Uchis, Omar Apollo or Cuco are on your playlists, put this on your calendar. It's a 21+ show. Tickets are at {link}. That's Marisol Vega, Thalia Hall, Friday, December 4.",
+   "code": "pod2"
+  }
+ ],
+ "partners": [
+  {
+   "id": "7876FF5D-78BC-415F-9B35-E47384D82760",
+   "code": "e1",
+   "subject": "Pre-show pop-up for Marisol Vega at Thalia Hall?",
+   "body": "Hi The Giant Penny Whistle team, Latin R&B singer Marisol Vega plays her first headline show at Thalia Hall in Pilsen on Friday, December 4 (21+). Our taste data shows your visitors closely match people who love Kali Uchis, Omar Apollo and Cuco (affinity 0.833), and since you're open seven days, we'd love you to host a pre-show pop-up that evening. In return we can offer [your offer, e.g. two guest-list spots]. Details here: {link}. Would that work for you?"
+  },
+  {
+   "id": "BC1F16CE-DFC0-44DE-B825-C9F361DD8F62",
+   "code": "e2",
+   "subject": "Sell tickets for Marisol Vega's Thalia Hall show?",
+   "body": "Hi El Trebol Liquors & Bar, Latin R&B singer Marisol Vega plays her first headline show at Thalia Hall in Pilsen on Friday, December 4 (21+). Our taste data shows the people who visit you closely match people who love Kali Uchis, Omar Apollo and Cuco (affinity 0.82), so we'd love you to be a local ticket outlet for the show. We can offer [your offer, e.g. a commission per ticket sold]. More info: {link}. Interested?"
+  },
+  {
+   "id": "566A9559-F47F-402A-B0B2-AE481558B6FA",
+   "code": "e3",
+   "subject": "Cross-promo: Marisol Vega at Thalia Hall, December 4",
+   "body": "Hi The Green Room Tap team, Latin R&B singer Marisol Vega plays her first headline show at Thalia Hall in Pilsen on Friday, December 4 (21+). Our taste data shows your visitors closely match people who love Kali Uchis, Omar Apollo and Cuco (affinity 0.828), so we'd love to cross-promote: you share the show with your crowd, we shout you out to ours. We can offer [your offer, e.g. a feature in our launch posts]. Details: {link}. Up for it?"
+  },
+  {
+   "id": "819AC016-8ADB-4350-BE4F-70DAEEE70F12",
+   "code": "e4",
+   "subject": "Host a Marisol Vega pre-show pop-up?",
+   "body": "Hi One City Tap team, Latin R&B singer Marisol Vega plays her first headline show at Thalia Hall in Pilsen on Friday, December 4 (21+). Our taste data shows your visitors closely match people who love Kali Uchis, Omar Apollo and Cuco (affinity 0.823), and with a 21+ crowd and seven-day hours, you'd be a great host for a pre-show pop-up that evening. We can offer [your offer, e.g. two guest-list spots]. More here: {link}. Let us know!"
+  }
+ ],
+ "links": [
+  {
+   "code": "p1",
+   "label": "Poster at The Giant Penny Whistle",
+   "channel": "poster",
+   "zone": 0,
+   "partnerId": "7876FF5D-78BC-415F-9B35-E47384D82760"
+  },
+  {
+   "code": "p2",
+   "label": "Poster at El Trebol Liquors & Bar",
+   "channel": "poster",
+   "zone": 0,
+   "partnerId": "BC1F16CE-DFC0-44DE-B825-C9F361DD8F62"
+  },
+  {
+   "code": "p3",
+   "label": "Poster at The Green Room Tap",
+   "channel": "poster",
+   "zone": 0,
+   "partnerId": "566A9559-F47F-402A-B0B2-AE481558B6FA"
+  },
+  {
+   "code": "p4",
+   "label": "Poster at One City Tap",
+   "channel": "poster",
+   "zone": 1,
+   "partnerId": "819AC016-8ADB-4350-BE4F-70DAEEE70F12"
+  },
+  {
+   "code": "e1",
+   "label": "Email to The Giant Penny Whistle",
+   "channel": "email",
+   "zone": 0,
+   "partnerId": "7876FF5D-78BC-415F-9B35-E47384D82760"
+  },
+  {
+   "code": "e2",
+   "label": "Email to El Trebol Liquors & Bar",
+   "channel": "email",
+   "zone": 0,
+   "partnerId": "BC1F16CE-DFC0-44DE-B825-C9F361DD8F62"
+  },
+  {
+   "code": "e3",
+   "label": "Email to The Green Room Tap",
+   "channel": "email",
+   "zone": 0,
+   "partnerId": "566A9559-F47F-402A-B0B2-AE481558B6FA"
+  },
+  {
+   "code": "e4",
+   "label": "Email to One City Tap",
+   "channel": "email",
+   "zone": 1,
+   "partnerId": "819AC016-8ADB-4350-BE4F-70DAEEE70F12"
+  },
+  {
+   "code": "z0ig",
+   "label": "Instagram, Lower West Side",
+   "channel": "instagram",
+   "zone": 0
+  },
+  {
+   "code": "z0tt",
+   "label": "TikTok or Reels, Lower West Side",
+   "channel": "tiktok",
+   "zone": 0
+  },
+  {
+   "code": "z0x",
+   "label": "X or Threads, Lower West Side",
+   "channel": "x",
+   "zone": 0
+  },
+  {
+   "code": "z1ig",
+   "label": "Instagram, Bridgeport",
+   "channel": "instagram",
+   "zone": 1
+  },
+  {
+   "code": "z1tt",
+   "label": "TikTok or Reels, Bridgeport",
+   "channel": "tiktok",
+   "zone": 1
+  },
+  {
+   "code": "z1x",
+   "label": "X or Threads, Bridgeport",
+   "channel": "x",
+   "zone": 1
+  },
+  {
+   "code": "pod1",
+   "label": "Host-read on Very Really Good",
+   "channel": "podcast",
+   "zone": null
+  },
+  {
+   "code": "pod2",
+   "label": "Host-read on Jenna & Julien Podcast",
+   "channel": "podcast",
+   "zone": null
+  }
+ ],
+ "checks": [
+  {
+   "name": "Coldplay",
+   "query": "Coldplay",
+   "type": "artist",
+   "zone": 0,
+   "verdict": "mixed",
+   "score": 0.59
+  },
+  {
+   "name": "Bad Bunny",
+   "query": "Bad Bunny",
+   "type": "artist",
+   "zone": 1,
+   "verdict": "strong here",
+   "score": 0.7
+  },
+  {
+   "name": "Shakira",
+   "query": "Shakira",
+   "type": "artist",
+   "zone": 1,
+   "verdict": "mixed",
+   "score": 0.56
+  },
+  {
+   "name": "Euphoria",
+   "query": "Euphoria",
+   "type": "tv_show",
+   "zone": 0,
+   "verdict": "strong here",
+   "score": 0.67
+  }
+ ],
+ "qlooCalls": 0
+}

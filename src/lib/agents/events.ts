@@ -9,7 +9,7 @@ import type { LaunchSpec } from "../launch/spec";
 import type { AgeBand } from "../qloo/params";
 import type { Evidence } from "../qloo/entities";
 
-export type AgentName = "director" | "analyst" | "cartographer" | "scout" | "strategist" | "simulator" | "critic" | "voices" | "producer";
+export type AgentName = "director" | "analyst" | "cartographer" | "scout" | "strategist" | "simulator" | "critic" | "voices" | "producer" | "creative" | "field";
 
 export const AGENTS: Record<AgentName, { title: string; role: string }> = {
   director: { title: "Director", role: "Agent: runs the rehearsal and decides what to do next." },
@@ -21,7 +21,12 @@ export const AGENTS: Record<AgentName, { title: string; role: string }> = {
   critic: { title: "Critic", role: "Model: reads the results and says what to change." },
   voices: { title: "Street Voices", role: "Model: simulated residents react to the plan." },
   producer: { title: "Producer", role: "Model: turns the winning plan into a week-by-week plan." },
+  creative: { title: "Creative Director", role: "Agent: writes the launch kit, checking each cultural reference on Qloo for its neighbourhood." },
+  field: { title: "Field Analyst", role: "Agent: reads tracked scans against the rehearsal and re-plans the unspent budget." },
 };
+
+/** The rehearsal team, in the order the war room shows it. */
+export const REHEARSAL_TEAM: AgentName[] = ["director", "analyst", "cartographer", "scout", "strategist", "simulator", "critic", "voices", "producer"];
 
 export interface PartnerView {
   id: string;
@@ -142,6 +147,8 @@ export type LaunchEvent =
   | { type: "expansion"; prospects: CityProspect[] }
   | { type: "plan"; plan: PlanView; sim: SimView }
   | { type: "done"; stats: { qlooCalls: number; llmCalls: number; ms: number; rounds: number } }
+  /** The finished run was saved and can be replayed at /rehearse/{id}. */
+  | { type: "saved"; id: string }
   | { type: "error"; message: string };
 
 export type Emit = (e: LaunchEvent) => void;

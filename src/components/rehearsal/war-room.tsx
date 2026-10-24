@@ -10,9 +10,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { LaunchEvent } from "@/lib/agents/events";
 import { CITIES } from "@/lib/atlas/cities";
 import type { CityAtlas } from "@/lib/atlas/types";
+import { kitInputFrom, launchDateFrom } from "@/lib/kit/input";
 import type { MapMode } from "../city-map";
 import { TeamRoster, TeamStrip } from "./agents";
 import { Feed } from "./feed";
+import { LaunchKit } from "./launch-kit";
 import { Leaderboard } from "./leaderboard";
 import { SearchSpace } from "./search-space";
 import { PlanSheet } from "./plan-sheet";
@@ -23,8 +25,17 @@ import { WhatIf, type WhatIfResult } from "./what-if";
 const CityMap = dynamic(() => import("../city-map"), { ssr: false, loading: () => <div className="absolute inset-0 animate-pulse bg-panel" /> });
 
 export type Source =
-  | { kind: "replay"; id: string; cityId: string; events: { t: number; e: LaunchEvent }[]; recordedAt: string }
-  | { kind: "live"; input: { brief: string; cityId: string; budget?: number; days?: number } };
+  | {
+      kind: "replay";
+      id: string;
+      cityId: string;
+      events: { t: number; e: LaunchEvent }[];
+      recordedAt: string;
+      /** A recorded showcase (a fictional launch) rather than a saved live run. */
+      showcase: boolean;
+      launchUrl?: string | null;
+    }
+  | { kind: "live"; input: { brief: string; cityId: string; budget?: number; days?: number; launchUrl?: string } };
 
 const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 
@@ -42,6 +53,8 @@ export function WarRoom({ source }: { source: Source }) {
   const [whatIf, setWhatIf] = useState<WhatIfResult | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [panel, setPanel] = useState<"plans" | "search">("plans");
+  // A live launch is dated from when the rehearsal started.
+  const [startedAt] = useState(() => Date.now());
 
   useEffect(() => {
     let alive = true;
@@ -108,11 +121,41 @@ export function WarRoom({ source }: { source: Source }) {
     return () => clearInterval(id);
   }, [source.kind, view.done, view.error]);
 
+  // Once a live run is saved, its address becomes the replay's, so a reload or a shared link opens it.
+  useEffect(() => {
+    if (source.kind === "live" && view.savedId) window.history.replaceState(null, "", `/rehearse/${view.savedId}`);
+  }, [source.kind, view.savedId]);
+
   const mode: MapMode = sim ? "sim" : view.fit ? "fit" : "districts";
   const fit = useMemo(() => (view.fit ? Array.from(view.fit.fit, (b) => b / 255) : null), [view.fit]);
   const spec = view.spec;
   const live = source.kind === "live" ? !view.done && !view.error : replay.playing;
   const strategy = view.strategies.find((s) => s.id === selected);
+  const showcase = source.kind === "replay" && source.showcase;
+  const winning = view.plan ? view.strategies.find((s) => s.id === view.plan!.plan.strategyId) : undefined;
+
+  // Everything the Launch Kit needs from the finished rehearsal.
+  const kitInput = useMemo(() => {
+    if (!atlas || !spec || !winning || !view.zones || !view.partners || !view.media || !view.candidates) return null;
+    const campaignId = source.kind === "replay" ? source.id : view.runId ? `run-${view.runId}` : null;
+    if (!campaignId) return null;
+    return kitInputFrom({
+      campaignId,
+      atlas,
+      spec,
+      comps: (view.taste?.comps ?? spec.comps).map((c) => displayName(c.name)),
+      compIds: (view.taste?.comps ?? []).map((c) => c.id),
+      peakAge: view.taste?.peakAge ?? null,
+      tags: (view.taste?.tags ?? []).map((t) => t.name),
+      zones: view.zones,
+      partners: view.partners,
+      media: view.media,
+      candidates: view.candidates,
+      strategy: winning,
+      launchDate: launchDateFrom(source.kind === "replay" ? new Date(source.recordedAt) : new Date(startedAt), spec.days),
+      launchUrl: (source.kind === "live" ? source.input.launchUrl : source.launchUrl) ?? null,
+    });
+  }, [atlas, spec, winning, view.zones, view.partners, view.media, view.candidates, view.taste, view.runId, source, startedAt]);
 
   return (
     <div className="relative min-h-dvh lg:h-dvh lg:overflow-hidden">
@@ -142,16 +185,21 @@ export function WarRoom({ source }: { source: Source }) {
         <div className="glass rounded-2xl border border-line p-4">
           <div className="mb-1 flex items-center justify-between gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">
             <span className="truncate">
-              {source.kind === "replay" ? "Recorded" : "Live"} · {city.name}
+              {showcase ? "Recorded" : source.kind === "replay" ? "Saved run" : "Live"} · {city.name}
             </span>
             {source.kind === "replay" && !replay.finished && (
-              <button type="button" onClick={replay.skip} className="shrink-0 rounded-full border border-line px-2.5 py-0.5 text-[11px] font-medium tracking-normal whitespace-nowrap text-muted normal-case hover:border-text hover:text-text">
+              <button
+                type="button"
+                onClick={replay.skip}
+                className="shrink-0 rounded-full border border-line px-2.5 py-0.5 text-[11px] font-medium tracking-normal whitespace-nowrap text-muted normal-case hover:border-text hover:text-text"
+              >
                 Skip to the plan
               </button>
             )}
           </div>
           <h1 className="font-display text-xl leading-tight font-semibold">{spec?.title ?? "Reading the brief…"}</h1>
           <p className="mt-1 text-[13px] leading-snug text-muted">{spec?.pitch ?? view.brief ?? (source.kind === "live" ? source.input.brief : "")}</p>
+          {showcase && <p className="mt-1 text-[11.5px] text-dim">A fictional launch, rehearsed on real Qloo data.</p>}
           {spec && (
             <div className="mt-3 flex flex-wrap gap-1.5 text-[11px]">
               <Chip>${spec.budget.toLocaleString()}</Chip>
@@ -185,13 +233,14 @@ export function WarRoom({ source }: { source: Source }) {
               plan={view.plan.plan}
               sim={view.plan.sim}
               baseline={view.baseline}
-              strategy={view.strategies.find((s) => s.id === view.plan!.plan.strategyId)}
+              strategy={winning}
               spec={spec}
               voices={view.voices}
               qloo={view.qloo}
               cityName={city.name}
               onClose={() => setShowPlan(false)}
               expansion={view.expansion}
+              kit={atlas && kitInput ? <LaunchKit input={kitInput} atlas={atlas} demo={showcase} canProduce={!showcase} /> : undefined}
             >
               {atlas && fit && view.zones && view.partners && view.media && view.candidates && spec && view.strategies.find((s) => s.id === view.plan!.plan.strategyId) && (
                 <WhatIf
@@ -232,7 +281,7 @@ export function WarRoom({ source }: { source: Source }) {
             )}
             {source.kind === "replay" && replay.finished && (
               <Link href="/" className="mt-2 text-center text-[13px] text-cool underline-offset-2 hover:underline">
-                This was a recorded rehearsal. Rehearse your own launch →
+                {showcase ? "This was a recorded rehearsal. Rehearse your own launch →" : "This was a saved rehearsal. Rehearse another launch →"}
               </Link>
             )}
             {view.error && (

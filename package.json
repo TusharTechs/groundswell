@@ -18,7 +18,8 @@
     "benchmark": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/benchmark.ts",
     "calibrate": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/calibrate.ts",
     "record": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/record-showcases.ts",
-    "mcp:smoke": "tsx scripts/mcp-smoke.ts"
+    "mcp:smoke": "tsx scripts/mcp-smoke.ts",
+    "record:kits": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local scripts/record-kits.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.135.0",

@@ -1,6 +1,6 @@
 // The team: each agent's colour, glyph and live status.
 
-import { AGENTS, type AgentName } from "@/lib/agents/events";
+import { AGENTS, REHEARSAL_TEAM, type AgentName } from "@/lib/agents/events";
 import type { AgentState } from "./use-run";
 
 export const AGENT_COLOR: Record<AgentName, string> = {
@@ -13,6 +13,8 @@ export const AGENT_COLOR: Record<AgentName, string> = {
   critic: "#ff7a7a",
   voices: "#3ddc97",
   producer: "#ffe08a",
+  creative: "#f5a3ff",
+  field: "#56b4ff",
 };
 
 const PATHS: Record<AgentName, string> = {
@@ -25,6 +27,8 @@ const PATHS: Record<AgentName, string> = {
   critic: "M9 11l2 2 4-4M5 4h14v12l-4 4H5V4z",
   voices: "M4 5h16v10H9l-5 4V5zM8 9h8M8 12h5",
   producer: "M7 3h7l5 5v13H7V3zM14 3v5h5M10 13h6M10 17h6",
+  creative: "M12 19l7-7 3 3-7 7-3-3zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5zM2 2l7.6 7.6M11 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z",
+  field: "M3 3v18h18M7 15l4-4 3 3 6-6M17 8h3v3",
 };
 
 export function AgentIcon({ agent, size = 16 }: { agent: AgentName; size?: number }) {
@@ -48,7 +52,7 @@ export function AgentChip({ agent, state }: { agent: AgentName; state?: AgentSta
 }
 
 export function TeamRoster({ agents, active }: { agents: Record<AgentName, AgentState>; active?: AgentName }) {
-  const order: AgentName[] = ["director", "analyst", "cartographer", "scout", "strategist", "simulator", "critic", "voices", "producer"];
+  const order = REHEARSAL_TEAM;
   return (
     <ul className="grid grid-cols-1 gap-1.5">
       {order.map((a) => {
@@ -60,7 +64,11 @@ export function TeamRoster({ agents, active }: { agents: Record<AgentName, Agent
               <div className="flex items-center gap-2 text-[13px] font-semibold">
                 {AGENTS[a].title}
                 {st.state === "done" && <span className="text-[10px] font-medium uppercase tracking-wider text-good">done</span>}
-                {st.state === "working" && <span className="text-[10px] font-medium uppercase tracking-wider" style={{ color: AGENT_COLOR[a] }}>working</span>}
+                {st.state === "working" && (
+                  <span className="text-[10px] font-medium uppercase tracking-wider" style={{ color: AGENT_COLOR[a] }}>
+                    working
+                  </span>
+                )}
               </div>
               <div className="truncate text-[12px] text-muted" title={st.note || AGENTS[a].role}>
                 {st.note || AGENTS[a].role}
@@ -75,7 +83,7 @@ export function TeamRoster({ agents, active }: { agents: Record<AgentName, Agent
 
 /** One row of agent chips with the active agent's current task: used once results take the space. */
 export function TeamStrip({ agents, active, finished }: { agents: Record<AgentName, AgentState>; active?: AgentName; finished?: boolean }) {
-  const order: AgentName[] = ["director", "analyst", "cartographer", "scout", "strategist", "simulator", "critic", "voices", "producer"];
+  const order = REHEARSAL_TEAM;
   const current = finished ? undefined : (active ?? order.find((a) => agents[a].state === "working"));
   return (
     <div>

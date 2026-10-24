@@ -28,3 +28,4 @@ next-env.d.ts
 # percentiles) and recorded runs in data/ are; rebuild them with npm run atlas.
 .cache/
 /public/maplibre-gl-worker.mjs
+.data/

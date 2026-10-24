@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { BRIEF_KEY } from "@/components/rehearsal/live-key";
 import { WarRoom } from "@/components/rehearsal/war-room";
 
-type Input = { brief: string; cityId: string; budget?: number; days?: number };
+type Input = { brief: string; cityId: string; budget?: number; days?: number; launchUrl?: string };
 
 export default function LiveRehearsal() {
   const [input, setInput] = useState<Input | null | undefined>(undefined);

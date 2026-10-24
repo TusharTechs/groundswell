@@ -1,0 +1,388 @@
+{
+ "campaignId": "atlanta-comedy",
+ "createdAt": "2026-10-24T15:10:21.392Z",
+ "input": {
+  "campaignId": "atlanta-comedy",
+  "cityId": "atlanta",
+  "title": "Clean Slate Family Comedy Night",
+  "pitch": "A family-friendly, all-ages stand-up comedy night at the Tabernacle in Atlanta for fans of clean, warm humor like Cedric the Entertainer and Steve Harvey.",
+  "kind": "comedy",
+  "language": "English",
+  "venue": "The Tabernacle, Atlanta",
+  "launchDate": "2026-11-27",
+  "days": 35,
+  "budget": 8000,
+  "allAges": true,
+  "noAlcohol": true,
+  "ageLimit": null,
+  "launchUrl": null,
+  "comps": [
+   "Cedric the Entertainer",
+   "Steve Harvey",
+   "Tyler Perry"
+  ],
+  "compIds": [
+   "3B124908-B8E6-4CF2-8D3E-2E024CD78BBE",
+   "82D2F255-59E7-47A2-9AC2-212746161239",
+   "19DB9F78-6505-4552-BF01-501977E9B6F1"
+  ],
+  "peakAge": "55_and_older",
+  "tags": [
+   "Ice Age",
+   "Minions",
+   "Young Adult Fiction",
+   "Animals",
+   "Dinosaur",
+   "Animated Film",
+   "ZOO",
+   "Madea",
+   "Prehistoric",
+   "Kung Fu"
+  ],
+  "zones": [
+   {
+    "id": 0,
+    "locality": "Fort McPherson",
+    "district": "Hip-hop and designer sneakers",
+    "signature": [
+     "Travis Scott",
+     "Supreme",
+     "Kendrick Lamar",
+     "Nike",
+     "Gucci"
+    ],
+    "share": 0.035,
+    "center": [
+     -84.36951,
+     33.72156
+    ],
+    "cells": [
+     234,
+     235,
+     238,
+     239,
+     250,
+     318,
+     319,
+     320,
+     321,
+     322,
+     323,
+     324,
+     329,
+     331
+    ]
+   },
+   {
+    "id": 2,
+    "locality": "Fort McPherson",
+    "district": "Pop divas and binge TV",
+    "signature": [
+     "Taylor Swift",
+     "Stranger Things",
+     "Beyoncé",
+     "Billie Eilish",
+     "The Office"
+    ],
+    "share": 0.024,
+    "center": [
+     -84.43865,
+     33.78805
+    ],
+    "cells": [
+     528,
+     529,
+     532,
+     533,
+     534,
+     535,
+     536,
+     537,
+     538,
+     539,
+     540,
+     573,
+     576,
+     578
+    ]
+   }
+  ],
+  "partners": [
+   {
+    "id": "CA48D9B0-317B-4022-90AA-7CC07AA43A7B",
+    "name": "Community Grounds Cafe",
+    "category": "Coffee shop",
+    "address": "1297 McDonough Blvd SE Atlanta, GA 30315",
+    "phone": "+14045860692",
+    "website": "http://communitygrounds.com/",
+    "role": "popup_host",
+    "why": "Independent café, 0.84 affinity via Tyler Perry fans, open weekends six days.",
+    "zone": 0,
+    "affinity": 0.8403615467725706,
+    "drivers": [
+     "Tyler Perry",
+     "Cedric the Entertainer",
+     "Steve Harvey"
+    ],
+    "lon": -84.3852816,
+    "lat": 33.7191877,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "D76FB0CA-F23B-468D-B1D7-8ED06EF2264A",
+    "name": "House of Fresh",
+    "category": "Boutique",
+    "address": "1650 Marietta Blvd NW A15 Atlanta, GA 30318",
+    "phone": "+14042544926",
+    "website": "https://houseoffresh.online/",
+    "role": "ticket_outlet",
+    "why": "Boutique with 0.921 affinity from Cedric fans, open seven days.",
+    "zone": 2,
+    "affinity": 0.9210505828132998,
+    "drivers": [
+     "Cedric the Entertainer",
+     "Tyler Perry",
+     "Steve Harvey"
+    ],
+    "lon": -84.43572879999999,
+    "lat": 33.7998748,
+    "popupDaysBefore": null
+   }
+  ],
+  "podcasts": [
+   {
+    "name": "Joel Osteen Podcast",
+    "daysBefore": 31
+   },
+   {
+    "name": "Good Words with Kirk Franklin",
+    "daysBefore": 30
+   }
+  ],
+  "brands": [],
+  "steps": [
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Joel Osteen Podcast",
+    "zone": null,
+    "startDaysBefore": 31,
+    "endDaysBefore": 31,
+    "cost": 3450
+   },
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Good Words with Kirk Franklin",
+    "zone": null,
+    "startDaysBefore": 30,
+    "endDaysBefore": 30,
+    "cost": 3000
+   },
+   {
+    "kind": "partner",
+    "label": "House of Fresh (Boutique), Fort McPherson",
+    "zone": 2,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Community Grounds Cafe (Coffee shop), Fort McPherson",
+    "zone": 0,
+    "startDaysBefore": 34,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "social",
+    "label": "Targeted social ads across Atlanta",
+    "zone": null,
+    "startDaysBefore": 34,
+    "endDaysBefore": 30,
+    "cost": 900
+   }
+  ]
+ },
+ "tagline": "Clean jokes. Big laughs. Bring everybody.",
+ "blurb": "Clean Slate Family Comedy Night is an all-ages stand-up night at The Tabernacle on Friday, November 27. Bring the whole family for warm, clean humor everyone can laugh at together.",
+ "hashtags": [
+  "#CleanSlateComedy",
+  "#FamilyComedyNight",
+  "#ATLComedy"
+ ],
+ "zones": [
+  {
+   "zoneId": 0,
+   "references": [
+    {
+     "name": "Nike",
+     "verdict": "mixed",
+     "score": 0.53
+    }
+   ],
+   "posterHeadline": "Fresh Laces, Clean Jokes",
+   "posterSubline": "An all-ages stand-up night the whole crew can laugh at together.",
+   "instagram": "Lace up your cleanest Nike pair and bring the whole family. Clean Slate Family Comedy Night hits The Tabernacle on Friday, November 27: all-ages stand-up, warm and clean. For people who love Cedric the Entertainer, Steve Harvey and Tyler Perry. Tickets: {link}",
+   "tiktokHook": "Comedy night you can bring your grandma AND your little cousin to?",
+   "tiktokBeats": [
+    "Clean Slate Family Comedy Night, The Tabernacle, Friday, November 27.",
+    "All ages, all clean, all laughs.",
+    "For people who love Cedric the Entertainer and Steve Harvey. Link in bio."
+   ],
+   "xPost": "Clean kicks, clean jokes. Clean Slate Family Comedy Night, all ages, at The Tabernacle on Friday, November 27. For people who love Cedric the Entertainer and Steve Harvey. {link}"
+  },
+  {
+   "zoneId": 2,
+   "references": [],
+   "posterHeadline": "Family Night, Comedy Edition",
+   "posterSubline": "Warm, clean stand-up for every age, from the kids to the grandparents.",
+   "instagram": "Skip the binge for one night. Clean Slate Family Comedy Night brings warm, clean, all-ages stand-up to The Tabernacle on Friday, November 27. For people who love Cedric the Entertainer, Steve Harvey and Tyler Perry. Bring everybody. Tickets: {link}",
+   "tiktokHook": "Pause the series. Family comedy night is coming to The Tabernacle.",
+   "tiktokBeats": [
+    "Friday, November 27, at The Tabernacle.",
+    "All-ages stand-up, clean from start to finish.",
+    "For people who love Steve Harvey and Tyler Perry. Tickets in bio."
+   ],
+   "xPost": "Family night, upgraded: Clean Slate Family Comedy Night, all-ages clean stand-up at The Tabernacle, Friday, November 27. For people who love Cedric the Entertainer and Tyler Perry. {link}"
+  }
+ ],
+ "podcasts": [
+  {
+   "name": "Joel Osteen Podcast",
+   "script": "Looking for a night out the whole family can share? Clean Slate Family Comedy Night is an all-ages stand-up show at The Tabernacle in Atlanta on Friday, November 27. It's warm, clean humor, the kind you can laugh at with your kids and your parents in the same row. If you love Cedric the Entertainer, Steve Harvey or Tyler Perry, this one's for you. Get your tickets at {link}.",
+   "code": "pod1"
+  },
+  {
+   "name": "Good Words with Kirk Franklin",
+   "script": "Atlanta, here's some good news for family night. Clean Slate Family Comedy Night brings all-ages stand-up to The Tabernacle on Friday, November 27. Clean jokes, warm laughs, and nothing you'll have to cover little ears for. If Cedric the Entertainer, Steve Harvey and Tyler Perry make you smile, bring the whole crew. Tickets are at {link}.",
+   "code": "pod2"
+  }
+ ],
+ "partners": [
+  {
+   "id": "CA48D9B0-317B-4022-90AA-7CC07AA43A7B",
+   "code": "e1",
+   "subject": "Host a family comedy pop-up at Community Grounds?",
+   "body": "Hi Community Grounds Cafe team! We're putting on Clean Slate Family Comedy Night, an all-ages, clean stand-up show at The Tabernacle on Friday, November 27. Our taste data shows your visitors closely match people who love Tyler Perry (0.84 affinity), so your crowd feels like a natural fit. Would you be open to hosting a small pop-up at the cafe in the weeks before the show to share flyers and tell people about it? In return we can offer [your offer, e.g. two family tickets to the show]. Details are here: {link}. Thanks for considering it!"
+  },
+  {
+   "id": "D76FB0CA-F23B-468D-B1D7-8ED06EF2264A",
+   "code": "e2",
+   "subject": "Sell tickets to Clean Slate Family Comedy Night?",
+   "body": "Hi House of Fresh team! We're launching Clean Slate Family Comedy Night, an all-ages, clean stand-up show at The Tabernacle on Friday, November 27. Our taste data shows your visitors closely match people who love Cedric the Entertainer (0.921 affinity), which makes your boutique a great fit. Would you be willing to act as a ticket outlet for the show? We'd be glad to offer [your offer, e.g. a commission on each ticket sold]. More info here: {link}. Thanks so much!"
+  }
+ ],
+ "links": [
+  {
+   "code": "p1",
+   "label": "Poster at Community Grounds Cafe",
+   "channel": "poster",
+   "zone": 0,
+   "partnerId": "CA48D9B0-317B-4022-90AA-7CC07AA43A7B"
+  },
+  {
+   "code": "p2",
+   "label": "Poster at House of Fresh",
+   "channel": "poster",
+   "zone": 2,
+   "partnerId": "D76FB0CA-F23B-468D-B1D7-8ED06EF2264A"
+  },
+  {
+   "code": "e1",
+   "label": "Email to Community Grounds Cafe",
+   "channel": "email",
+   "zone": 0,
+   "partnerId": "CA48D9B0-317B-4022-90AA-7CC07AA43A7B"
+  },
+  {
+   "code": "e2",
+   "label": "Email to House of Fresh",
+   "channel": "email",
+   "zone": 2,
+   "partnerId": "D76FB0CA-F23B-468D-B1D7-8ED06EF2264A"
+  },
+  {
+   "code": "z0ig",
+   "label": "Instagram, Fort McPherson",
+   "channel": "instagram",
+   "zone": 0
+  },
+  {
+   "code": "z0tt",
+   "label": "TikTok or Reels, Fort McPherson",
+   "channel": "tiktok",
+   "zone": 0
+  },
+  {
+   "code": "z0x",
+   "label": "X or Threads, Fort McPherson",
+   "channel": "x",
+   "zone": 0
+  },
+  {
+   "code": "z2ig",
+   "label": "Instagram, Fort McPherson",
+   "channel": "instagram",
+   "zone": 2
+  },
+  {
+   "code": "z2tt",
+   "label": "TikTok or Reels, Fort McPherson",
+   "channel": "tiktok",
+   "zone": 2
+  },
+  {
+   "code": "z2x",
+   "label": "X or Threads, Fort McPherson",
+   "channel": "x",
+   "zone": 2
+  },
+  {
+   "code": "pod1",
+   "label": "Host-read on Joel Osteen Podcast",
+   "channel": "podcast",
+   "zone": null
+  },
+  {
+   "code": "pod2",
+   "label": "Host-read on Good Words with Kirk Franklin",
+   "channel": "podcast",
+   "zone": null
+  }
+ ],
+ "checks": [
+  {
+   "name": "The Office",
+   "query": "The Office",
+   "type": "tv_show",
+   "zone": 2,
+   "verdict": "weak here",
+   "score": 0.19
+  },
+  {
+   "name": "Stranger Things",
+   "query": "Stranger Things",
+   "type": "tv_show",
+   "zone": 2,
+   "verdict": "weak here",
+   "score": 0.25
+  },
+  {
+   "name": "Nike",
+   "query": "Nike",
+   "type": "brand",
+   "zone": 0,
+   "verdict": "mixed",
+   "score": 0.53
+  },
+  {
+   "name": "Minions",
+   "query": "Minions",
+   "type": "movie",
+   "zone": 0,
+   "verdict": "weak here",
+   "score": 0.02
+  }
+ ],
+ "qlooCalls": 0
+}

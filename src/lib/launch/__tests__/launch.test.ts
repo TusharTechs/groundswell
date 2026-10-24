@@ -24,7 +24,7 @@ function fakeAtlas(): CityAtlas {
   cells.forEach((_, i) => vectors.set([i % size === 0 ? 250 : 120, 128], i * m));
   return {
     version: 1,
-    city: { id: "test", name: "Testville", country: "Nowhere", center: [-87.67, 41.87], radiusKm: 10, zoom: 11, locationQuery: "Testville" },
+    city: { id: "test", name: "Testville", country: "Nowhere", center: [-87.67, 41.87], radiusKm: 10, zoom: 11, locationQuery: "Testville", language: "English" },
     builtAt: "",
     probes: [
       { id: "p0", name: "P0", label: "P0", type: "artist", domain: "music" },
@@ -84,6 +84,11 @@ describe("partners", () => {
   it("drops bars for no-alcohol briefs, and never lists the launch's own venue", () => {
     expect(allowedPartner(place({ categories: ["Cocktail bar"] }), { ...spec, constraints: { ...spec.constraints, noAlcohol: true } })).toBe(false);
     expect(allowedPartner(place({ name: "Thalia Hall", categories: ["Live music venue"] }), spec)).toBe(false);
+  });
+  it("keeps children's places for all-ages launches only", () => {
+    const kids = place({ categories: ["Childrens cafe"] });
+    expect(allowedPartner(kids, spec)).toBe(false);
+    expect(allowedPartner(kids, { ...spec, constraints: { ...spec.constraints, allAges: true, noAlcohol: true } })).toBe(true);
   });
 });
 

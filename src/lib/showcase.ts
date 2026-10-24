@@ -22,9 +22,9 @@ export const SHOWCASES: Showcase[] = [
     cityId: "chicago",
     title: "A first headline show",
     kind: "Live music",
-    blurb: "1,200 tickets at Thalia Hall in Pilsen, six weeks out.",
+    blurb: "Marisol Vega, a new Latin R&B singer, aims to sell out Thalia Hall (about 800 standing).",
     brief:
-      "A Latin R&B singer in the vein of Omar Apollo and Kali Uchis plays their first headline show at Thalia Hall in Pilsen, six weeks from now. 21+ show, 1,200 tickets to sell, $12,000 to promote it.",
+      "Marisol Vega, a Latin R&B singer in the vein of Omar Apollo and Kali Uchis, plays her first headline show at Thalia Hall in Pilsen, six weeks from now. 21+ show, 800 tickets to sell, $12,000 to promote it.",
     budget: 12000,
     days: 42,
   },
@@ -33,31 +33,31 @@ export const SHOWCASES: Showcase[] = [
     cityId: "atlanta",
     title: "A clean comedy night",
     kind: "Comedy",
-    blurb: "A family-friendly stand-up night at the Tabernacle.",
+    blurb: "Clean Slate, a family-friendly stand-up night at the Tabernacle.",
     brief:
-      "A clean, family-friendly stand-up comedy night in the spirit of Cedric the Entertainer and Steve Harvey at the Tabernacle in Atlanta, five weeks out. All ages, no alcohol-led partners. $8,000 for promotion.",
+      "Clean Slate, a family-friendly stand-up comedy night in the spirit of Cedric the Entertainer and Steve Harvey, at the Tabernacle in Atlanta, five weeks out. All ages, no alcohol-led partners. $8,000 for promotion.",
     budget: 8000,
     days: 35,
   },
   {
     id: "london-football",
     cityId: "london",
-    title: "A football fan zone",
+    title: "A supporters' match night",
     kind: "Sports",
-    blurb: "Chelsea F.C. match nights and a kit drop, eight weeks out.",
+    blurb: "Big-screen match nights for Chelsea fans, run by an independent supporters' group.",
     brief:
-      "Chelsea F.C. is opening a free supporters' fan zone with big-screen match nights and a limited kit drop in London, eight weeks from now. All ages. The goal is to win new young fans across London. $20,000 budget.",
+      "Blue Social, an independent supporters' group (not affiliated with any club), launches free big-screen match nights and a five-a-side tournament for fans of Chelsea and the Premier League in London, eight weeks from now. All ages. The goal is to win new young members across London. $20,000 budget.",
     budget: 20000,
     days: 56,
   },
   {
-    id: "tokyo-dodgers",
+    id: "tokyo-baseball",
     cityId: "tokyo",
-    title: "A Dodgers pop-up in Tokyo",
-    kind: "Sports retail",
-    blurb: "An Ohtani-season pop-up store and viewing party.",
+    title: "A baseball café in Tokyo",
+    kind: "Food and sport",
+    blurb: "Sixty Feet Six, a two-week baseball café and viewing-party pop-up.",
     brief:
-      "The Los Angeles Dodgers open a two-week pop-up store and viewing party in Tokyo for Shohei Ohtani fans, six weeks from now. All ages. $25,000 to make it a destination.",
+      "Sixty Feet Six, a two-week baseball café and viewing-party pop-up in Tokyo for fans of Shohei Ohtani and Major League Baseball, opening six weeks from now. Independent, not affiliated with any team or league. All ages. $25,000 to make it a destination.",
     budget: 25000,
     days: 42,
   },
@@ -66,9 +66,9 @@ export const SHOWCASES: Showcase[] = [
     cityId: "new-york",
     title: "Indie film previews",
     kind: "Film",
-    blurb: "An A24 coming-of-age film's preview week in Williamsburg.",
+    blurb: "Tidewater, an independent coming-of-age film, previews at Nitehawk Williamsburg.",
     brief:
-      "An A24 coming-of-age film in the vein of Euphoria and Lady Bird opens with a week of preview screenings at Nitehawk Cinema in Williamsburg, five weeks from now. $10,000 to fill the screenings.",
+      "Tidewater, an independent coming-of-age film in the vein of Lady Bird and Euphoria, opens with a week of preview screenings at Nitehawk Cinema in Williamsburg, five weeks from now. $10,000 to fill the screenings.",
     budget: 10000,
     days: 35,
   },
@@ -77,30 +77,35 @@ export const SHOWCASES: Showcase[] = [
     cityId: "mexico-city",
     title: "A startup's first store",
     kind: "Retail launch",
-    blurb: "A sustainable sneaker brand's pop-up in Roma Norte.",
+    blurb: "Tierra, a sustainable sneaker start-up, opens a pop-up in Roma Norte.",
     brief:
-      "A sustainable sneaker startup (think Allbirds meets Veja) opens its first pop-up store in Roma Norte, Mexico City, in six weeks. $15,000 to make the opening weekend a destination.",
+      "Tierra, a sustainable sneaker start-up for people who like Allbirds and Veja, opens its first pop-up store in Roma Norte, Mexico City, in six weeks. $15,000 to make the opening weekend a destination.",
     budget: 15000,
     days: 42,
   },
   {
     id: "los-angeles-release",
     cityId: "los-angeles",
-    title: "An album release party",
+    title: "An album release show",
     kind: "Live music",
-    blurb: "A rap album release show at the Wiltern in Koreatown.",
+    blurb: "K. Rivers, a West Coast rapper, throws a release show at the Wiltern.",
     brief:
-      "A West Coast rapper in the vein of Kendrick Lamar and SZA's R&B side throws an album release show at the Wiltern in Koreatown, four weeks out. $15,000 to promote it.",
+      "K. Rivers, a West Coast rapper in the vein of Kendrick Lamar and SZA, throws an album release show at the Wiltern in Koreatown, four weeks out. $15,000 to promote it.",
     budget: 15000,
     days: 28,
   },
 ];
+
+/** Every showcase launch is fictional (its artist, film, brand or group is invented); the city, venues, comparables and Qloo data are real. */
+export const SHOWCASE_NOTE = "Fictional launches; real cities, venues, comparables and Qloo data.";
 
 export interface RecordedRun {
   id: string;
   cityId: string;
   brief: string;
   recordedAt: string;
+  /** Where tickets live, when the organiser gave a link (saved live runs only). */
+  launchUrl?: string | null;
   events: { t: number; e: LaunchEvent }[];
 }
 

@@ -88,7 +88,7 @@ export async function runScouts(s: RunState, emit: Emit, zones: Zone[], signals:
             rating: p.rating ?? null,
             open_days: p.openDays.length ? p.openDays.length : "unknown",
             open_weekends: p.openDays.includes("saturday") || p.openDays.includes("sunday"),
-            pulled_in_by: p.drivers[0] ? names.get(p.drivers[0].id) ?? null : null,
+            pulled_in_by: p.drivers[0] ? (names.get(p.drivers[0].id) ?? null) : null,
           })),
           removed_by_rules: r.places.length - ok.length,
         });
@@ -138,6 +138,8 @@ export async function runScouts(s: RunState, emit: Emit, zones: Zone[], signals:
         if (missing.length && picked.size < Math.min(2, zones.length)) throw new Error(`Pick partners for zones ${missing.join(", ")} first.`);
         say(n);
         finished = true;
+        // Done; stop before the agent composes a closing message.
+        stop.abort();
         return JSON.stringify({ ok: true });
       }),
   });
@@ -149,17 +151,21 @@ export async function runScouts(s: RunState, emit: Emit, zones: Zone[], signals:
     `Zones:\n${zones.map((z) => `- zone ${z.id}: ${z.locality ?? "unnamed"} (${s.atlas.districts[z.district]?.name}), ${(z.audienceShare * 100).toFixed(1)}% of the natural audience`).join("\n")}`,
   ].join("\n");
 
+  const stop = new AbortController();
   try {
-    const runner = claude().beta.messages.toolRunner({
-      model: MODEL,
-      max_tokens: 12000,
-      ...FALLBACK,
-      output_config: { effort: "low" },
-      max_iterations: 8,
-      system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
-      tools: [places, pick, finish],
-      messages: [{ role: "user", content: brief }],
-    });
+    const runner = claude().beta.messages.toolRunner(
+      {
+        model: MODEL,
+        max_tokens: 12000,
+        ...FALLBACK,
+        output_config: { effort: "low" },
+        max_iterations: 8,
+        system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
+        tools: [places, pick, finish],
+        messages: [{ role: "user", content: brief }],
+      },
+      { signal: stop.signal },
+    );
     for await (const message of runner) {
       s.llmCalls++;
       if (message.stop_reason === "refusal") throw new RefusalError(message.stop_details?.category);

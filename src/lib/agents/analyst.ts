@@ -53,7 +53,10 @@ export async function runAnalyst(s: RunState, emit: Emit, hint?: string): Promis
         receipts([r.evidence]);
         const list = (r.entity ? [r.entity, ...r.candidates.filter((c) => c.id !== r.entity!.id)] : r.candidates).slice(0, 5);
         for (const e of list) found.set(e.id, e);
-        return JSON.stringify({ match: r.entity ? r.entity.id : null, candidates: list.map((e) => ({ id: e.id, name: e.name, type: e.type, popularity: e.popularity && Number(e.popularity.toFixed(2)), note: e.disambiguation })) });
+        return JSON.stringify({
+          match: r.entity ? r.entity.id : null,
+          candidates: list.map((e) => ({ id: e.id, name: e.name, type: e.type, popularity: e.popularity && Number(e.popularity.toFixed(2)), note: e.disambiguation })),
+        });
       }),
   });
 
@@ -88,7 +91,10 @@ export async function runAnalyst(s: RunState, emit: Emit, hint?: string): Promis
               id,
               name: found.get(id)!.name,
               coverage: `${Math.round(cov * 100)}%`,
-              most_over_represented_in: [...places.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([p]) => p),
+              most_over_represented_in: [...places.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 3)
+                .map(([p]) => p),
             };
           }),
         );
@@ -125,6 +131,8 @@ export async function runAnalyst(s: RunState, emit: Emit, hint?: string): Promis
         if (sparse.length === ids.length) throw new Error("Every comparable is too sparse in this city (under 15% coverage). Replace some.");
         say(n);
         chosen = ids.map((id) => found.get(id)!);
+        // Done; stop before the agent composes a closing message.
+        stop.abort();
         return JSON.stringify({ ok: true });
       }),
   });
@@ -139,20 +147,29 @@ export async function runAnalyst(s: RunState, emit: Emit, hint?: string): Promis
     .filter(Boolean)
     .join("\n");
 
-  const runner = claude().beta.messages.toolRunner({
-    model: MODEL,
-    max_tokens: 8000,
-    ...FALLBACK,
-    output_config: { effort: "low" },
-    max_iterations: 7,
-    system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
-    tools: [search, checkCity, similar, submit],
-    messages: [{ role: "user", content: brief }],
-  });
-  for await (const message of runner) {
-    s.llmCalls++;
-    if (message.stop_reason === "refusal") throw new RefusalError(message.stop_details?.category);
-    if (chosen) break;
+  const stop = new AbortController();
+  const runner = claude().beta.messages.toolRunner(
+    {
+      model: MODEL,
+      max_tokens: 8000,
+      ...FALLBACK,
+      output_config: { effort: "low" },
+      max_iterations: 7,
+      system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
+      tools: [search, checkCity, similar, submit],
+      messages: [{ role: "user", content: brief }],
+    },
+    { signal: stop.signal },
+  );
+  try {
+    for await (const message of runner) {
+      s.llmCalls++;
+      if (message.stop_reason === "refusal") throw new RefusalError(message.stop_details?.category);
+      if (chosen) break;
+    }
+  } catch (e) {
+    // Aborting after the submit is expected; anything else is a real failure.
+    if (!chosen) throw e;
   }
 
   // Profile exactly the entities chosen; if the agent ran out of turns, resolve the brief's comparables.

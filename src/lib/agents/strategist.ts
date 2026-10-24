@@ -86,6 +86,8 @@ export async function runStrategist(s: RunState, emit: Emit, opts: { round: numb
       });
       if (problems.length) return JSON.stringify({ ok: false, problems, note: "Fix these and call submit_plans again with all plans." });
       submitted.splice(0, submitted.length, ...accepted);
+      // Done; stop before the agent composes a closing message.
+      stop.abort();
       return JSON.stringify({ ok: true, ids: accepted.map((a) => a.id) });
     },
   });
@@ -99,7 +101,10 @@ export async function runStrategist(s: RunState, emit: Emit, opts: { round: numb
     `Launch: ${spec.title}. ${spec.pitch}`,
     `City: ${s.atlas.city.name}. Budget: $${spec.budget}. Goal: ${spec.goal}.${spec.capacity ? ` Capacity: ${spec.capacity}.` : ""}`,
     `Constraints: ${[spec.constraints.allAges ? "all ages" : "", spec.constraints.noAlcohol ? "no alcohol-led partners" : "", ...spec.constraints.notes].filter(Boolean).join("; ") || "none"}`,
-    `Comparables on Qloo: ${s.taste?.comps.map((c) => c.name).join(", ")}. Fans skew ${s.taste?.peakAge?.replaceAll("_", " ") ?? "across ages"}; segments: ${s.taste?.segments.slice(0, 5).map((x) => x.name).join(", ")}.`,
+    `Comparables on Qloo: ${s.taste?.comps.map((c) => c.name).join(", ")}. Fans skew ${s.taste?.peakAge?.replaceAll("_", " ") ?? "across ages"}; segments: ${s.taste?.segments
+      .slice(0, 5)
+      .map((x) => x.name)
+      .join(", ")}.`,
     `Hot zones (where the natural audience lives):\n${describeZones(s)}`,
     s.baseline ? `Benchmark, the same budget spent where people are (no taste data): ${describeMetrics(s.baseline)}` : "",
     history.length ? `Plans so far:\n${history.join("\n")}` : "",
@@ -111,20 +116,29 @@ export async function runStrategist(s: RunState, emit: Emit, opts: { round: numb
     .filter(Boolean)
     .join("\n\n");
 
-  const runner = claude().beta.messages.toolRunner({
-    model: MODEL,
-    max_tokens: 16000,
-    ...FALLBACK,
-    output_config: { effort: "low" },
-    max_iterations: 8,
-    system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
-    tools: [estimate, submit],
-    messages: [{ role: "user", content: prompt }],
-  });
-  for await (const message of runner) {
-    s.llmCalls++;
-    if (message.stop_reason === "refusal") throw new RefusalError(message.stop_details?.category);
-    if (submitted.length) break;
+  const stop = new AbortController();
+  const runner = claude().beta.messages.toolRunner(
+    {
+      model: MODEL,
+      max_tokens: 16000,
+      ...FALLBACK,
+      output_config: { effort: "low" },
+      max_iterations: 8,
+      system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
+      tools: [estimate, submit],
+      messages: [{ role: "user", content: prompt }],
+    },
+    { signal: stop.signal },
+  );
+  try {
+    for await (const message of runner) {
+      s.llmCalls++;
+      if (message.stop_reason === "refusal") throw new RefusalError(message.stop_details?.category);
+      if (submitted.length) break;
+    }
+  } catch (e) {
+    // Aborting after the submit is expected; anything else is a real failure.
+    if (!submitted.length) throw e;
   }
   if (!submitted.length) throw new Error("The Strategist did not submit a plan.");
   for (const st of submitted) s.strategies.set(st.id, st);

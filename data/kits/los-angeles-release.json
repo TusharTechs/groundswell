@@ -1,0 +1,670 @@
+{
+ "campaignId": "los-angeles-release",
+ "createdAt": "2026-10-24T15:13:00.871Z",
+ "input": {
+  "campaignId": "los-angeles-release",
+  "cityId": "los-angeles",
+  "title": "K. Rivers Album Release Show",
+  "pitch": "West Coast rapper K. Rivers celebrates a new album with a release show at the Wiltern for fans of Kendrick Lamar and SZA-style hip-hop and R&B.",
+  "kind": "concert",
+  "language": "English",
+  "venue": "The Wiltern, Koreatown",
+  "launchDate": "2026-11-20",
+  "days": 28,
+  "budget": 15000,
+  "allAges": false,
+  "noAlcohol": false,
+  "ageLimit": null,
+  "launchUrl": null,
+  "comps": [
+   "Kendrick Lamar",
+   "SZA",
+   "ScHoolboy Q"
+  ],
+  "compIds": [
+   "C915A918-39C5-47A3-A101-D9FA1DECBD9C",
+   "E2E58680-EE3F-4D1D-88B6-B79F87205B2C",
+   "870C2FE9-88A2-49D7-B263-F8F99D364CD6"
+  ],
+  "peakAge": "25_to_29",
+  "tags": [
+   "Musical Performances",
+   "Comeback",
+   "Talent Show",
+   "Rap",
+   "Music Competition",
+   "Werewolves",
+   "Sport",
+   "Texas",
+   "Hip Hop",
+   "Coming of Age"
+  ],
+  "zones": [
+   {
+    "id": 0,
+    "locality": "West Hollywood",
+    "district": "Hip-hop and console gaming",
+    "signature": [
+     "Call of Duty",
+     "Fortnite",
+     "Kendrick Lamar",
+     "LeBron James",
+     "Travis Scott"
+    ],
+    "share": 0.058,
+    "center": [
+     -118.31811,
+     34.04283
+    ],
+    "cells": [
+     847,
+     853,
+     855,
+     858,
+     859,
+     862,
+     863,
+     864,
+     865,
+     866,
+     867,
+     868,
+     869,
+     870,
+     871
+    ]
+   },
+   {
+    "id": 1,
+    "locality": "West Hollywood",
+    "district": "Hip-hop and console gaming",
+    "signature": [
+     "Call of Duty",
+     "Fortnite",
+     "Kendrick Lamar",
+     "LeBron James",
+     "Travis Scott"
+    ],
+    "share": 0.042,
+    "center": [
+     -118.28676,
+     34.04827
+    ],
+    "cells": [
+     1193,
+     1194,
+     1195,
+     1196,
+     1197,
+     1198,
+     1199,
+     1200,
+     1201,
+     1202,
+     1205,
+     1206,
+     1241,
+     1243,
+     1249
+    ]
+   },
+   {
+    "id": 2,
+    "locality": "Culver City",
+    "district": "Hip-hop and console gaming",
+    "signature": [
+     "Call of Duty",
+     "Fortnite",
+     "Kendrick Lamar",
+     "LeBron James",
+     "Travis Scott"
+    ],
+    "share": 0.047,
+    "center": [
+     -118.34978,
+     34.02707
+    ],
+    "cells": [
+     816,
+     817,
+     818,
+     819,
+     820,
+     821,
+     822,
+     823,
+     832,
+     834,
+     840,
+     841,
+     844,
+     845,
+     856
+    ]
+   },
+   {
+    "id": 4,
+    "locality": "Inglewood",
+    "district": "Hip-hop and console gaming",
+    "signature": [
+     "Call of Duty",
+     "Fortnite",
+     "Kendrick Lamar",
+     "LeBron James",
+     "Travis Scott"
+    ],
+    "share": 0.034,
+    "center": [
+     -118.32681,
+     34.00533
+    ],
+    "cells": [
+     670,
+     671,
+     672,
+     673,
+     674,
+     675,
+     676,
+     677,
+     678,
+     679,
+     682,
+     683,
+     842,
+     848
+    ]
+   }
+  ],
+  "partners": [
+   {
+    "id": "86AEB8A6-7529-410B-85C8-351A3CD1A5AF",
+    "name": "Catch One",
+    "category": "Bar",
+    "address": "4067 W Pico Blvd Los Angeles, CA 90019",
+    "phone": "+13237371159",
+    "website": "http://catch.one/",
+    "role": "popup_host",
+    "why": "Nightclub with room for a listening party; Kendrick affinity 0.775, open weekends.",
+    "zone": 0,
+    "affinity": 0.7748953486553489,
+    "drivers": [
+     "Kendrick Lamar",
+     "SZA",
+     "ScHoolboy Q"
+    ],
+    "lon": -118.3241408,
+    "lat": 34.047821299999995,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "30A71A97-3F0C-4B35-87EB-B4819F36F341",
+    "name": "Alibi Coffee Co.",
+    "category": "Coffee store",
+    "address": "1798 W Washington Blvd Los Angeles, CA 90007",
+    "phone": "+13109519929",
+    "website": "http://www.alibicoffee.com/",
+    "role": "ticket_outlet",
+    "why": "Top affinity 0.801 via Kendrick; independent coffee, open 7 days.",
+    "zone": 1,
+    "affinity": 0.8007603699675593,
+    "drivers": [
+     "Kendrick Lamar",
+     "SZA",
+     "ScHoolboy Q"
+    ],
+    "lon": -118.29729139999999,
+    "lat": 34.0397999,
+    "popupDaysBefore": null
+   },
+   {
+    "id": "FB61708D-1D00-4610-BA93-2C68124B7942",
+    "name": "Harun Coffee",
+    "category": "Coffee shop",
+    "address": "4336 Degnan Blvd Los Angeles, CA 90008",
+    "phone": "+13236153083",
+    "website": "https://www.haruncoffee.com/",
+    "role": "ticket_outlet",
+    "why": "Top affinity 0.822 via SZA; coffee shop open 7 days.",
+    "zone": 4,
+    "affinity": 0.8222951017251603,
+    "drivers": [
+     "SZA",
+     "ScHoolboy Q",
+     "Kendrick Lamar"
+    ],
+    "lon": -118.3312672,
+    "lat": 34.004854,
+    "popupDaysBefore": null
+   }
+  ],
+  "podcasts": [
+   {
+    "name": "Bodega Boys",
+    "daysBefore": 24
+   },
+   {
+    "name": "The Brilliant Idiots",
+    "daysBefore": 22
+   }
+  ],
+  "brands": [
+   {
+    "name": "Stüssy"
+   }
+  ],
+  "steps": [
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on Bodega Boys",
+    "zone": null,
+    "startDaysBefore": 24,
+    "endDaysBefore": 24,
+    "cost": 3450
+   },
+   {
+    "kind": "podcast",
+    "label": "Host-read ad on The Brilliant Idiots",
+    "zone": null,
+    "startDaysBefore": 22,
+    "endDaysBefore": 22,
+    "cost": 3450
+   },
+   {
+    "kind": "collab",
+    "label": "Co-branded drop with Stüssy",
+    "zone": null,
+    "startDaysBefore": 27,
+    "endDaysBefore": 1,
+    "cost": 2000
+   },
+   {
+    "kind": "social",
+    "label": "Targeted social ads across Los Angeles",
+    "zone": null,
+    "startDaysBefore": 27,
+    "endDaysBefore": 8,
+    "cost": 3600
+   },
+   {
+    "kind": "partner",
+    "label": "Catch One (Bar), West Hollywood",
+    "zone": 0,
+    "startDaysBefore": 27,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Alibi Coffee Co. (Coffee store), West Hollywood",
+    "zone": 1,
+    "startDaysBefore": 27,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "partner",
+    "label": "Harun Coffee (Coffee shop), Inglewood",
+    "zone": 4,
+    "startDaysBefore": 27,
+    "endDaysBefore": 0,
+    "cost": 300
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in Culver City",
+    "zone": 2,
+    "startDaysBefore": 26,
+    "endDaysBefore": 26,
+    "cost": 450
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in Inglewood",
+    "zone": 4,
+    "startDaysBefore": 25,
+    "endDaysBefore": 25,
+    "cost": 450
+   },
+   {
+    "kind": "street",
+    "label": "Street team day in Culver City",
+    "zone": 2,
+    "startDaysBefore": 24,
+    "endDaysBefore": 24,
+    "cost": 450
+   }
+  ]
+ },
+ "tagline": "K. Rivers brings the new album home.",
+ "blurb": "West Coast rapper K. Rivers celebrates a new album with a release show at The Wiltern in Koreatown on Friday, November 20. For people who love Kendrick Lamar, SZA and ScHoolboy Q, this is a night of hip-hop and R&B live.",
+ "hashtags": [
+  "#KRivers",
+  "#KRiversLive",
+  "#TheWiltern"
+ ],
+ "zones": [
+  {
+   "zoneId": 0,
+   "references": [
+    {
+     "name": "Travis Scott",
+     "verdict": "strong here",
+     "score": 0.68
+    },
+    {
+     "name": "LeBron James",
+     "verdict": "mixed",
+     "score": 0.49
+    }
+   ],
+   "posterHeadline": "West Hollywood, the album goes live",
+   "posterSubline": "K. Rivers plays the new record start to finish, West Coast rap and R&B on one stage.",
+   "instagram": "WeHo, if Travis Scott is on your rotation, this one's for you. K. Rivers celebrates a new album with a release show at The Wiltern on Friday, November 20. For people who love Kendrick Lamar, SZA and ScHoolboy Q. Tickets: {link}",
+   "tiktokHook": "If you play Travis Scott on loop, keep watching.",
+   "tiktokBeats": [
+    "K. Rivers, West Coast rapper, new album.",
+    "Release show at The Wiltern, Friday, November 20.",
+    "For people who love Kendrick, SZA and ScHoolboy Q. Link in bio."
+   ],
+   "xPost": "WeHo: K. Rivers celebrates the new album live at The Wiltern, Friday, November 20. West Coast hip-hop and R&B for people who love Kendrick Lamar and SZA. {link}"
+  },
+  {
+   "zoneId": 1,
+   "references": [
+    {
+     "name": "Travis Scott",
+     "verdict": "strong here",
+     "score": 0.63
+    }
+   ],
+   "posterHeadline": "New K. Rivers. Hear it live.",
+   "posterSubline": "A West Coast album release night built for hip-hop and R&B heads.",
+   "instagram": "Travis Scott in your headphones? Make room for K. Rivers. The West Coast rapper celebrates a new album at The Wiltern, Koreatown, on Friday, November 20. For people who love Kendrick Lamar, SZA and ScHoolboy Q. Grab tickets: {link}",
+   "tiktokHook": "New West Coast album, one night only at The Wiltern.",
+   "tiktokBeats": [
+    "K. Rivers drops a new album.",
+    "Release show Friday, November 20 at The Wiltern.",
+    "Kendrick and SZA on your playlist? Pull up."
+   ],
+   "xPost": "K. Rivers album release show. The Wiltern. Friday, November 20. For people who love Kendrick Lamar, SZA and ScHoolboy Q. {link}"
+  },
+  {
+   "zoneId": 2,
+   "references": [
+    {
+     "name": "Travis Scott",
+     "verdict": "strong here",
+     "score": 0.79
+    },
+    {
+     "name": "Call of Duty",
+     "verdict": "mixed",
+     "score": 0.52
+    }
+   ],
+   "posterHeadline": "Culver City, log off. Show's on.",
+   "posterSubline": "K. Rivers celebrates a new album with West Coast rap and R&B, live.",
+   "instagram": "Pause the Call of Duty lobby for one night. K. Rivers celebrates a new album at The Wiltern on Friday, November 20, a release show for anyone who runs Travis Scott, Kendrick Lamar, SZA and ScHoolboy Q. Tickets: {link}",
+   "tiktokHook": "Put the controller down for one night, Culver City.",
+   "tiktokBeats": [
+    "West Coast rapper K. Rivers has a new album.",
+    "He's celebrating it live at The Wiltern on Friday, November 20.",
+    "For people who love Kendrick, SZA and ScHoolboy Q."
+   ],
+   "xPost": "Culver City: the Call of Duty squad can wait. K. Rivers album release show, The Wiltern, Friday, November 20. For people who love Kendrick Lamar and SZA. {link}"
+  },
+  {
+   "zoneId": 4,
+   "references": [
+    {
+     "name": "LeBron James",
+     "verdict": "strong here",
+     "score": 0.78
+    },
+    {
+     "name": "Travis Scott",
+     "verdict": "strong here",
+     "score": 0.74
+    }
+   ],
+   "posterHeadline": "Inglewood, the West Coast has a new album",
+   "posterSubline": "K. Rivers takes the new record to the stage for one release night.",
+   "instagram": "Inglewood, LeBron-level energy only. K. Rivers celebrates a new album with a release show at The Wiltern on Friday, November 20. Travis Scott and Kendrick Lamar on your playlist? SZA and ScHoolboy Q too? You belong here. Tickets: {link}",
+   "tiktokHook": "Inglewood, this West Coast album release is for you.",
+   "tiktokBeats": [
+    "K. Rivers, new album, live.",
+    "The Wiltern, Friday, November 20.",
+    "For people who love Kendrick, SZA and ScHoolboy Q."
+   ],
+   "xPost": "Inglewood: K. Rivers celebrates a new album at The Wiltern, Friday, November 20. West Coast rap and R&B for people who love Kendrick Lamar, SZA and ScHoolboy Q. {link}"
+  }
+ ],
+ "podcasts": [
+  {
+   "name": "Bodega Boys",
+   "script": "Quick one before we keep going. West Coast rapper K. Rivers has a new album, and he's celebrating it with a release show at The Wiltern in Koreatown, Los Angeles, on Friday, November 20. If Kendrick Lamar, SZA and ScHoolboy Q are in your rotation, this is your kind of night: hip-hop and R&B, live, celebrating a brand-new record. In LA or close by? Get tickets at {link}. That's K. Rivers, The Wiltern, Friday, November 20.",
+   "code": "pod1"
+  },
+  {
+   "name": "The Brilliant Idiots",
+   "script": "Alright, LA, listen up. K. Rivers, a West Coast rapper, is celebrating his new album with a release show at The Wiltern in Koreatown on Friday, November 20. If you love Kendrick Lamar, SZA or ScHoolboy Q, you'll want to be in the room for this one: West Coast hip-hop and R&B, live, on album night. Tickets are at {link}. Again, K. Rivers at The Wiltern, Friday, November 20. Go.",
+   "code": "pod2"
+  }
+ ],
+ "partners": [
+  {
+   "id": "86AEB8A6-7529-410B-85C8-351A3CD1A5AF",
+   "code": "e1",
+   "subject": "Host a K. Rivers listening party at Catch One?",
+   "body": "Hi Catch One team! West Coast rapper K. Rivers is celebrating a new album with a release show at The Wiltern on Friday, November 20, and we'd love you to host a pop-up listening party ahead of it. Our taste data shows your visitors closely match people who love Kendrick Lamar (affinity 0.775), which makes your crowd a natural fit for a first listen. In return we can offer [your offer, e.g. two guest-list spots for your team]. Details are here: {link}. Want to talk dates?"
+  },
+  {
+   "id": "30A71A97-3F0C-4B35-87EB-B4819F36F341",
+   "code": "e2",
+   "subject": "Be a ticket outlet for K. Rivers at The Wiltern",
+   "body": "Hi Alibi Coffee Co.! West Coast rapper K. Rivers is celebrating a new album with a release show at The Wiltern on Friday, November 20, and we'd love Alibi to be a ticket outlet. Our taste data shows your visitors closely match people who love Kendrick Lamar (affinity 0.801), and being open seven days gives people plenty of chances to grab tickets. In return we can offer [your offer, e.g. a commission on each ticket sold]. Event info: {link}. Would you be up for it?"
+  },
+  {
+   "id": "FB61708D-1D00-4610-BA93-2C68124B7942",
+   "code": "e3",
+   "subject": "Sell K. Rivers release show tickets at Harun Coffee?",
+   "body": "Hi Harun Coffee! West Coast rapper K. Rivers is celebrating a new album with a release show at The Wiltern on Friday, November 20, and we'd love you to be a ticket outlet. Our taste data shows your visitors closely match people who love SZA (affinity 0.822), so the show suits your crowd well, and you're open seven days a week. In return we can offer [your offer, e.g. two tickets for your staff]. Event details: {link}. Let us know if you're interested!"
+  }
+ ],
+ "links": [
+  {
+   "code": "p1",
+   "label": "Poster at Catch One",
+   "channel": "poster",
+   "zone": 0,
+   "partnerId": "86AEB8A6-7529-410B-85C8-351A3CD1A5AF"
+  },
+  {
+   "code": "p2",
+   "label": "Poster at Alibi Coffee Co.",
+   "channel": "poster",
+   "zone": 1,
+   "partnerId": "30A71A97-3F0C-4B35-87EB-B4819F36F341"
+  },
+  {
+   "code": "p3",
+   "label": "Poster at Harun Coffee",
+   "channel": "poster",
+   "zone": 4,
+   "partnerId": "FB61708D-1D00-4610-BA93-2C68124B7942"
+  },
+  {
+   "code": "e1",
+   "label": "Email to Catch One",
+   "channel": "email",
+   "zone": 0,
+   "partnerId": "86AEB8A6-7529-410B-85C8-351A3CD1A5AF"
+  },
+  {
+   "code": "e2",
+   "label": "Email to Alibi Coffee Co.",
+   "channel": "email",
+   "zone": 1,
+   "partnerId": "30A71A97-3F0C-4B35-87EB-B4819F36F341"
+  },
+  {
+   "code": "e3",
+   "label": "Email to Harun Coffee",
+   "channel": "email",
+   "zone": 4,
+   "partnerId": "FB61708D-1D00-4610-BA93-2C68124B7942"
+  },
+  {
+   "code": "z0ig",
+   "label": "Instagram, West Hollywood",
+   "channel": "instagram",
+   "zone": 0
+  },
+  {
+   "code": "z0tt",
+   "label": "TikTok or Reels, West Hollywood",
+   "channel": "tiktok",
+   "zone": 0
+  },
+  {
+   "code": "z0x",
+   "label": "X or Threads, West Hollywood",
+   "channel": "x",
+   "zone": 0
+  },
+  {
+   "code": "z1ig",
+   "label": "Instagram, West Hollywood",
+   "channel": "instagram",
+   "zone": 1
+  },
+  {
+   "code": "z1tt",
+   "label": "TikTok or Reels, West Hollywood",
+   "channel": "tiktok",
+   "zone": 1
+  },
+  {
+   "code": "z1x",
+   "label": "X or Threads, West Hollywood",
+   "channel": "x",
+   "zone": 1
+  },
+  {
+   "code": "z2ig",
+   "label": "Instagram, Culver City",
+   "channel": "instagram",
+   "zone": 2
+  },
+  {
+   "code": "z2tt",
+   "label": "TikTok or Reels, Culver City",
+   "channel": "tiktok",
+   "zone": 2
+  },
+  {
+   "code": "z2x",
+   "label": "X or Threads, Culver City",
+   "channel": "x",
+   "zone": 2
+  },
+  {
+   "code": "z4ig",
+   "label": "Instagram, Inglewood",
+   "channel": "instagram",
+   "zone": 4
+  },
+  {
+   "code": "z4tt",
+   "label": "TikTok or Reels, Inglewood",
+   "channel": "tiktok",
+   "zone": 4
+  },
+  {
+   "code": "z4x",
+   "label": "X or Threads, Inglewood",
+   "channel": "x",
+   "zone": 4
+  },
+  {
+   "code": "pod1",
+   "label": "Host-read on Bodega Boys",
+   "channel": "podcast",
+   "zone": null
+  },
+  {
+   "code": "pod2",
+   "label": "Host-read on The Brilliant Idiots",
+   "channel": "podcast",
+   "zone": null
+  }
+ ],
+ "checks": [
+  {
+   "name": "Fortnite",
+   "query": "Fortnite",
+   "type": "videogame",
+   "zone": 1,
+   "verdict": "weak here",
+   "score": 0.23
+  },
+  {
+   "name": "Call of Duty",
+   "query": "Call of Duty",
+   "type": "videogame",
+   "zone": 2,
+   "verdict": "mixed",
+   "score": 0.52
+  },
+  {
+   "name": "LeBron James",
+   "query": "LeBron James",
+   "type": "person",
+   "zone": 0,
+   "verdict": "mixed",
+   "score": 0.49
+  },
+  {
+   "name": "LeBron James",
+   "query": "LeBron James",
+   "type": "person",
+   "zone": 4,
+   "verdict": "strong here",
+   "score": 0.78
+  },
+  {
+   "name": "Travi$ Scott",
+   "query": "Travis Scott",
+   "type": "artist",
+   "zone": 0,
+   "verdict": "strong here",
+   "score": 0.68
+  },
+  {
+   "name": "Travi$ Scott",
+   "query": "Travis Scott",
+   "type": "artist",
+   "zone": 1,
+   "verdict": "strong here",
+   "score": 0.63
+  },
+  {
+   "name": "Travi$ Scott",
+   "query": "Travis Scott",
+   "type": "artist",
+   "zone": 2,
+   "verdict": "strong here",
+   "score": 0.79
+  },
+  {
+   "name": "Travi$ Scott",
+   "query": "Travis Scott",
+   "type": "artist",
+   "zone": 4,
+   "verdict": "strong here",
+   "score": 0.74
+  }
+ ],
+ "qlooCalls": 0
+}

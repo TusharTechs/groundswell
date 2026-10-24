@@ -35,6 +35,8 @@ export interface BrandOption extends Recommended {
 const PARTNER = /\b(caf[eé]|coffee|tea|bakery|restaurant|taqueria|diner|food|eatery|pizza|burger|bar|pub|brewery|record|music|instrument|book|clothing|boutique|vintage|thrift|consignment|shoe|sneaker|fashion|barber|salon|tattoo|gallery|museum|venue|concert|theat(er|re)|comedy|night ?club|club|cinema|movie|gym|yoga|fitness|climbing|skate|game|comic|market|dessert|ice cream|donut|juice|studio|cowork|community cent|arcade|bowling|lounge|dance|art cent|cultural cent|sports bar)\b/i;
 // Never partners: places where promotion would be inappropriate or that aren't open to the public.
 const NEVER = /\b(school|academy|college|university|church|mosque|synagogue|temple|place of worship|hospital|clinic|medical|dentist|doctor|pharmacy|government|police|fire station|courthouse|post office|embassy|cemetery|funeral|parking|bus stop|train station|subway|airport|atm|bank|daycare|child care|kindergarten|nursing home|rehab|rental|agency|apartment|hotel|hostel|shelter|ticket office|real estate|storage|car dealer|gas station|arena|stadium|rink|convention|gun|firearm|shooting|weapon|ammunition|casino|strip club|adult|cannabis|dispensary|smoke shop|vape|tobacco|hookah|pawn|bail|check cashing|conference|banquet|wedding|yacht|country club|golf|recording studio|photography studio|office|warehouse|factory|mall|shopping center)\b/i;
+// Places for young children: partners only when the launch is all ages.
+const KIDS = /\b(child(ren)?'?s?|kids?|bab(y|ies)|toddlers?|playgrounds?|nursery)\b/i;
 const ALCOHOL = /\b(bar|pub|tavern|brewery|brewpub|beer|wine|cocktail|liquor|night ?club|lounge|distillery|taproom|speakeasy)\b/i;
 
 export function allowedPartner(p: Place, spec: Pick<LaunchSpec, "constraints" | "venue">): boolean {
@@ -44,6 +46,7 @@ export function allowedPartner(p: Place, spec: Pick<LaunchSpec, "constraints" | 
   if (NEVER.test(cats)) return false;
   if (!PARTNER.test(p.categories.join(" | "))) return false;
   if (spec.constraints.noAlcohol && ALCOHOL.test(p.categories.join(" | "))) return false;
+  if (!spec.constraints.allAges && KIDS.test(cats)) return false;
   return true;
 }
 
