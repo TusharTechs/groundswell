@@ -53,6 +53,17 @@ export function WarRoom({ source }: { source: Source }) {
   const [whatIf, setWhatIf] = useState<WhatIfResult | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const [panel, setPanel] = useState<"plans" | "search">("plans");
+  // "Map only" hides the panels so the whole city shows (desktop; M toggles it).
+  const [mapOnly, setMapOnly] = useState(false);
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+      if (e.key === "m" || e.key === "M") setMapOnly((v) => !v);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
   // A live launch is dated from when the rehearsal started.
   const [startedAt] = useState(() => Date.now());
 
@@ -126,6 +137,23 @@ export function WarRoom({ source }: { source: Source }) {
     if (source.kind === "live" && view.savedId) window.history.replaceState(null, "", `/rehearse/${view.savedId}`);
   }, [source.kind, view.savedId]);
 
+  // Once the hot zones are known, frame them (between the side panels on a wide screen).
+  const zoneFocus = useMemo<[number, number, number] | null>(() => {
+    if (!atlas || !view.zones?.length) return null;
+    const top = [...view.zones].sort((a, b) => b.audienceShare - a.audienceShare).slice(0, 4);
+    const lon = top.reduce((t, z) => t + z.center[0], 0) / top.length;
+    const lat = top.reduce((t, z) => t + z.center[1], 0) / top.length;
+    return [lon, lat, atlas.city.zoom + 0.9];
+  }, [atlas, view.zones]);
+  const [wide, setWide] = useState(false);
+  useEffect(() => {
+    const m = window.matchMedia("(min-width: 1024px)");
+    const on = () => setWide(m.matches);
+    on();
+    m.addEventListener("change", on);
+    return () => m.removeEventListener("change", on);
+  }, []);
+
   const mode: MapMode = sim ? "sim" : view.fit ? "fit" : "districts";
   const fit = useMemo(() => (view.fit ? Array.from(view.fit.fit, (b) => b / 255) : null), [view.fit]);
   const spec = view.spec;
@@ -172,16 +200,27 @@ export function WarRoom({ source }: { source: Source }) {
             voices={view.voices}
             showArcs
             autoRotate={!view.fit}
+            focus={zoneFocus}
+            focusOffsetPx={wide && !mapOnly ? [-110, -40] : [0, 0]}
             className="absolute inset-0"
           />
         )}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-ink to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink/90 to-transparent lg:hidden" />
-        <MapLegend mode={mode} />
+        <MapLegend mode={mode} mapOnly={mapOnly} />
+        <button
+          type="button"
+          onClick={() => setMapOnly((v) => !v)}
+          aria-pressed={mapOnly}
+          title="Toggle with M"
+          className={`glass absolute bottom-4 z-20 hidden rounded-full border border-line px-3.5 py-1.5 text-[12.5px] text-text hover:border-text lg:block ${mapOnly ? "left-1/2 -translate-x-1/2" : "left-[calc(min(640px,calc(100vw-40vw-4rem))+2rem)]"}`}
+        >
+          {mapOnly ? "Show the panels" : "Map only"}
+        </button>
       </div>
 
       {/* Left: brief and team */}
-      <aside className="relative z-10 space-y-3 p-3 lg:absolute lg:top-16 lg:left-4 lg:w-[330px] lg:p-0">
+      <aside className={`relative z-10 space-y-3 p-3 lg:absolute lg:top-16 lg:left-4 lg:w-[330px] lg:p-0 ${mapOnly ? "lg:hidden" : ""}`}>
         <div className="glass rounded-2xl border border-line p-4">
           <div className="mb-1 flex items-center justify-between gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">
             <span className="truncate">
@@ -226,7 +265,7 @@ export function WarRoom({ source }: { source: Source }) {
       </aside>
 
       {/* Right: reasoning feed, or the plan */}
-      <section className="relative z-10 p-3 lg:absolute lg:top-16 lg:right-4 lg:bottom-4 lg:flex lg:w-[min(560px,40vw)] lg:flex-col lg:p-0">
+      <section className={`relative z-10 p-3 lg:absolute lg:top-16 lg:right-4 lg:bottom-4 lg:flex lg:w-[min(560px,40vw)] lg:flex-col lg:p-0 ${mapOnly ? "lg:hidden" : ""}`}>
         {showPlan && view.plan ? (
           <div className="glass scroll-thin rounded-2xl border border-line p-5 lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
             <PlanSheet
@@ -298,7 +337,7 @@ export function WarRoom({ source }: { source: Source }) {
 
       {/* Bottom: plans and the campaign timeline */}
       {(view.baseline || view.strategies.length > 0) && (
-        <section className="relative z-10 p-3 lg:absolute lg:bottom-4 lg:left-4 lg:w-[min(640px,calc(100vw-40vw-4rem))] lg:p-0">
+        <section className={`relative z-10 p-3 lg:absolute lg:bottom-4 lg:left-4 lg:w-[min(640px,calc(100vw-40vw-4rem))] lg:p-0 ${mapOnly ? "lg:hidden" : ""}`}>
           <div className="glass space-y-3 rounded-2xl border border-line p-3">
             <div className="flex items-center justify-between gap-2 px-1">
               <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">
@@ -363,21 +402,28 @@ function Chip({ children, tone }: { children: React.ReactNode; tone?: "cool" }) 
   return <span className={`rounded-full border px-2 py-0.5 ${tone === "cool" ? "border-cool/40 text-cool" : "border-line text-muted"}`}>{children}</span>;
 }
 
-function MapLegend({ mode }: { mode: MapMode }) {
+function MapLegend({ mode, mapOnly }: { mode: MapMode; mapOnly?: boolean }) {
   const items =
     mode === "districts"
       ? { title: "Taste districts", stops: ["#ff7a59", "#ffca58", "#48d6a6", "#56b4ff", "#b28cff"], left: "Colour: district", right: "Height: activity" }
       : mode === "fit"
         ? { title: "Where the taste lives", stops: ["#283048", "#26808c", "#4fd1c5", "#d6fff7"], left: "Weak fit", right: "Strong fit" }
         : { title: "Word of mouth spreading", stops: ["#6e3428", "#ffa040", "#ff5c8a", "#ffecf4"], left: "Not yet", right: "Most reached" };
+  const note =
+    mode === "districts"
+      ? null
+      : mode === "fit"
+        ? "Height: how well the launch fits. Click a zone or a partner to fly in."
+        : "Colour: share of the area's audience reached. Height: people reached. Sparks: word of mouth along taste ties.";
   return (
-    <div className="glass pointer-events-none absolute right-4 bottom-4 hidden rounded-xl border border-line px-3 py-2 text-[11px] text-muted lg:right-[calc(min(560px,40vw)+2rem)] lg:block">
+    <div className={`glass pointer-events-none absolute right-4 bottom-4 hidden max-w-[17rem] rounded-xl border border-line px-3 py-2 text-[11px] text-muted lg:block ${mapOnly ? "" : "lg:right-[calc(min(560px,40vw)+2rem)]"}`}>
       <div className="mb-1 font-semibold text-text">{items.title}</div>
       <div className="h-1.5 w-40 rounded-full" style={{ background: `linear-gradient(90deg, ${items.stops.join(",")})` }} />
       <div className="mt-1 flex justify-between gap-6">
         <span>{items.left}</span>
         <span>{items.right}</span>
       </div>
+      {note && <div className="mt-1.5 leading-snug text-dim">{note}</div>}
     </div>
   );
 }

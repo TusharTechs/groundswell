@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Hero } from "@/components/home/hero";
 import { AgentChip } from "@/components/rehearsal/agents";
-import { AGENTS, REHEARSAL_TEAM, type AgentName } from "@/lib/agents/events";
+import { AGENTS, type AgentName } from "@/lib/agents/events";
 import { CITIES } from "@/lib/atlas/cities";
 import { CampaignLoop } from "@/components/home/loop";
 import { Showcases } from "@/components/home/showcases";
@@ -26,6 +26,13 @@ async function coldstart() {
 }
 
 const pct = (x: number) => `${(x * 100).toFixed(0)}%`;
+
+/** The team by kind, so the count in the heading is the count on screen. */
+const TEAM_GROUPS: { title: string; note: string; members: AgentName[] }[] = [
+  { title: "6 agents", note: "choose their own tools", members: ["director", "analyst", "scout", "strategist", "creative", "field"] },
+  { title: "3 single Claude calls", note: "structured outputs", members: ["critic", "voices", "producer"] },
+  { title: "Not models", note: "a Qloo mapping tool and the simulator", members: ["cartographer", "simulator"] },
+];
 
 /** Neighbourhood cells across every city's atlas. */
 async function atlasCells() {
@@ -83,7 +90,6 @@ export default async function Home() {
         { label: "Chance", v: 0.1 },
       ]
     : [];
-  const team: AgentName[] = [...REHEARSAL_TEAM, "creative", "field"];
   return (
     <main>
       <Hero />
@@ -192,24 +198,33 @@ export default async function Home() {
       <section className="mx-auto max-w-[1600px] px-4 py-16 sm:px-6" aria-labelledby="team">
         <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">Agents, but with taste</p>
         <h2 id="team" className="mt-1 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-          Six agents, from rehearsal to running campaign
+          Six agents, and the team around them
         </h2>
         <p className="mt-2 max-w-3xl text-[15px] text-muted">
-          Six Claude agents, each working with its own tools: the Director runs the rehearsal and calls its teammates as tools; the Taste Analyst, Scouts and Strategist work with Qloo and the
-          simulator; the Creative Director writes the launch kit; the Field Analyst re-plans from tracked scans. Three single-call model roles, a Qloo mapping tool and the simulator complete the team.
-          Rules live in the tools: plans must use only what the scouts found, stay within budget and be rehearsed twice before they ship.
+          An agent here means Claude chooses which tools to call, in what order, and when it is done. Six roles work that way, from the rehearsal to the running campaign. Three more are single
+          Claude calls, and two are not models at all. Rules live in the tools: plans must use only what the scouts found, stay within budget and be rehearsed twice before they ship.
         </p>
-        <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {team.map((a) => (
-            <li key={a} className="flex items-start gap-3 rounded-2xl border border-line bg-panel p-4">
-              <AgentChip agent={a} state="done" />
-              <div>
-                <div className="font-semibold">{AGENTS[a].title}</div>
-                <div className="text-[13.5px] text-muted">{AGENTS[a].role}</div>
-              </div>
-            </li>
+        <div className="mt-8 space-y-6">
+          {TEAM_GROUPS.map((g) => (
+            <div key={g.title}>
+              <h3 className="mb-2 flex items-baseline gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">
+                <span className="text-text">{g.title}</span>
+                <span>{g.note}</span>
+              </h3>
+              <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {g.members.map((a) => (
+                  <li key={a} className="flex items-start gap-3 rounded-2xl border border-line bg-panel p-4">
+                    <AgentChip agent={a} state="done" />
+                    <div>
+                      <div className="font-semibold">{AGENTS[a].title}</div>
+                      <div className="text-[13.5px] text-muted">{AGENTS[a].role.replace(/^(Agent|Model|Tool|Engine): /, "")}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section className="border-t border-line bg-panel/50" aria-labelledby="who">

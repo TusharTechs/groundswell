@@ -111,7 +111,7 @@ export function AtlasExplorer() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-glow">Taste Atlas</p>
           <h1 className="mt-1 font-display text-2xl leading-tight font-semibold">Every city, mapped by what it loves</h1>
           <p className="mt-1.5 text-[13px] leading-snug text-muted">
-            Each column is a ~1 km neighbourhood cell with a fingerprint from {atlas?.probes.length ?? 54} Qloo heatmaps. Colours are taste districts; click any cell.
+            Each block is a neighbourhood cell, about a kilometre across, with a fingerprint from {atlas?.probes.length ?? 54} Qloo heatmaps. Colours are taste districts; click any cell.
           </p>
           <div className="mt-3 flex flex-wrap gap-1.5">
             {CITIES.map((c) => (
