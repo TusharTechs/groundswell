@@ -59,6 +59,9 @@ const lighting = new LightingEffect({
 
 type RGBA = [number, number, number, number];
 
+/** Labels and markers draw over the 3D columns instead of being cut by them. */
+const ON_TOP = { depthCompare: "always", depthWriteEnabled: false } as const;
+
 function mix(a: number[], b: number[], t: number): RGBA {
   const u = Math.max(0, Math.min(1, t));
   return [a[0] + (b[0] - a[0]) * u, a[1] + (b[1] - a[1]) * u, a[2] + (b[2] - a[2]) * u, (a[3] ?? 255) + ((b[3] ?? 255) - (a[3] ?? 255)) * u] as RGBA;
@@ -209,6 +212,7 @@ export default function CityMap(props: CityMapProps) {
     }),
     new TextLayer<Zone>({
       id: "zone-labels",
+      parameters: ON_TOP,
       data: zones ?? [],
       getPosition: (z) => [z.center[0], z.center[1] + 0.0165],
       getText: (z) => (z.locality ?? `Zone ${z.id + 1}`).toUpperCase(),
@@ -224,6 +228,7 @@ export default function CityMap(props: CityMapProps) {
     }),
     new ScatterplotLayer<PartnerView>({
       id: "partners",
+      parameters: ON_TOP,
       data: partners ?? [],
       getPosition: (p) => [p.lon, p.lat],
       getRadius: 6,
@@ -255,6 +260,7 @@ export default function CityMap(props: CityMapProps) {
     }),
     new TextLayer({
       id: "venue-label",
+      parameters: ON_TOP,
       data: venue ? [venue] : [],
       getPosition: (v: { lon: number; lat: number }) => [v.lon, v.lat],
       getText: (v: { name: string }) => v.name,
@@ -270,6 +276,7 @@ export default function CityMap(props: CityMapProps) {
     }),
     new ScatterplotLayer<Voice>({
       id: "voices",
+      parameters: ON_TOP,
       data: voices ?? [],
       getPosition: (v) => [v.lon, v.lat],
       getRadius: 9,

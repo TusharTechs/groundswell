@@ -12,6 +12,7 @@ Rehearse a launch in a living model of a real city, built from Qloo's taste grap
   <a href="#evidence">Evidence</a> ·
   <a href="#how-it-works">How it works</a> ·
   <a href="docs/CLAIMS.md">Every claim, with its evidence</a> ·
+  <a href="src/app/pitch/page.tsx">The business case</a> ·
   <a href="#use-it-from-an-agent-mcp">MCP</a>
 </p>
 
@@ -85,7 +86,7 @@ Across the seven, the final plans reach 2.3–4.6× more of the natural audience
 
 **Calibration.** Word-of-mouth parameters were chosen by sweeping them over three launch scenarios with real comparables and venues (Thalia Hall in Chicago, the Wiltern in Los Angeles, Brooklyn Steel in New York), keeping a regime where an unpromoted launch reaches about 3%, the benchmark roughly doubles it, and results are not knife-edge (`npm run calibrate`, results in [`data/benchmark/calibration.json`](data/benchmark/calibration.json)). Geography changes what works: seeding the hot neighbourhoods reaches about 13% in Chicago and New York but 7% in sprawling Los Angeles.
 
-**Tests.** 70 unit tests: the simulator, the atlas build, the benchmark metrics, fit, zones, partner filters, action costs, tracked links, the scan report's statistical rule, the budget clock, the scan simulator, and the kit's CSV and calendar files (`npm test`). CI runs lint, typecheck, tests and a production build.
+**Tests.** 81 unit tests: the simulator, the atlas build, the benchmark metrics, fit, zones, partner filters, action costs, tracked links, the scan report's statistical rule, the budget clock, the scan simulator, the kit's CSV and calendar files, and the guardrails in the Creative Director's and Field Analyst's submit tools ([`kit/check.ts`](src/lib/kit/check.ts), [`campaign/check.ts`](src/lib/campaign/check.ts)) (`npm test`). An accessibility check (axe-core) finds no WCAG A or AA issues on the main pages. CI runs lint, typecheck, tests and a production build.
 
 ## How it works
 

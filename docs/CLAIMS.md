@@ -78,10 +78,14 @@ Each number or claim Groundswell makes in its README, site and submission, and w
 | Rate limits per IP per half hour: 4 rehearsals, 6 kits, 6 Field Analyst runs | [`src/lib/rate-limit.ts:5`](../src/lib/rate-limit.ts#L5) |
 | IP addresses are kept in memory for up to 30 minutes | `hits` and `WINDOW_MS` in the same file |
 | Live runs are saved so their link works | `saveRun` in [`src/app/api/rehearse/route.ts`](../src/app/api/rehearse/route.ts) and [`src/lib/store.ts`](../src/lib/store.ts) |
-| 70 unit tests | `npm test` |
+| 81 unit tests, including the agents' submit-tool guardrails | `npm test`; [`src/lib/kit/__tests__/check.test.ts`](../src/lib/kit/__tests__/check.test.ts), [`src/lib/campaign/__tests__/check.test.ts`](../src/lib/campaign/__tests__/check.test.ts) |
 
 ## The problem space
 
 | Claim | Evidence |
 |---|---|
 | Only 36% of US independent venues were profitable in 2024 | National Independent Venue Association, 2025 State of Live report, as reported by [Axios, 16 October 2025](https://www.axios.com/local/cleveland/2025/10/16/indie-music-venues-profitability-niva-2025) |
+| 64% of US independent stages reported a loss in 2024 | [NIVA statement on the 2025 State of Live state reports](https://www.nivassoc.org/statements/2025/national-independent-venue-association-releases-50-state-studies-that-show-the-outsized-economic-power-of-independent-live-entertainment) |
+| Eventbrite hosted 4.7 million events in 2024 | [Eventbrite fourth-quarter and full-year 2024 results, 27 February 2025](https://www.businesswire.com/news/home/20250227607042/en) |
+| Live Nation: over 50,000 events and 151 million fans in 2024 | [Live Nation full-year and fourth-quarter 2024 results](https://newsroom.livenation.com/news/live-nation-entertainment-reports-full-year-and-fourth-quarter-2024-results/) |
+| Prices on the pitch page are untested hypotheses; nothing about revenue or customers is claimed | [`src/app/pitch/page.tsx`](../src/app/pitch/page.tsx) |

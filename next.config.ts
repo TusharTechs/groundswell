@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
     "/l/**/*": ["./data/**/*"],
     "/go/**/*": ["./data/**/*"],
   },
+  // Posters come from our own route; let next/image size them for cards.
+  images: { localPatterns: [{ pathname: "/api/poster" }] },
   // The simulation engine ships as TypeScript source from the workspace.
   transpilePackages: ["@groundswell/sim"],
   // No floating dev-tools badge (it shows up in screenshots and demos).

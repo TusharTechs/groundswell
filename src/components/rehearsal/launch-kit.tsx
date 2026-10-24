@@ -8,18 +8,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { CityAtlas } from "@/lib/atlas/types";
 import { calendar, linkUrl, targetingSheet, toCsv, withLink } from "@/lib/kit/build";
-import { langOf, localDate } from "@/lib/kit/i18n";
+import { posterPath } from "@/lib/kit/poster";
 import type { Kit, KitInput } from "@/lib/kit/types";
 import { AgentIcon } from "./agents";
 
 type Progress = { kind: "step" | "check"; text: string; verdict?: string };
 
-const enc = (o: unknown) => {
-  const bytes = new TextEncoder().encode(JSON.stringify(o));
-  let bin = "";
-  bytes.forEach((b) => (bin += String.fromCharCode(b)));
-  return btoa(bin).replaceAll("+", "-").replaceAll("/", "_").replace(/=+$/, "");
-};
 
 function download(name: string, data: BlobPart, type: string) {
   const url = URL.createObjectURL(new Blob([data], { type }));
@@ -154,30 +148,14 @@ export function LaunchKit({
     return d?.color;
   };
   const url = (code: string) => linkUrl(origin, input.campaignId, code);
-  const lang = langOf(input.language);
   // Two hot zones can share a neighbourhood name; tell them apart by their taste district.
   const zoneLabel = (id: number) => {
     const z = zoneMeta(id);
     if (!z) return "";
     return input.zones.filter((x) => x.locality === z.locality).length > 1 ? `${z.locality} · ${z.district}` : z.locality;
   };
-  const posterSrc = (k: Kit, zoneId: number, partner?: KitInput["partners"][number], code?: string) => {
-    const copy = k.zones.find((z) => z.zoneId === zoneId);
-    if (!copy) return "";
-    return `/api/poster?d=${enc({
-      t: input.title,
-      h: copy.posterHeadline,
-      s: copy.posterSubline,
-      v: input.venue ?? undefined,
-      dt: localDate(input.launchDate, lang),
-      f: input.comps.length ? input.comps.slice(0, 3).join(", ") : undefined,
-      l: lang,
-      p: partner?.name,
-      q: url(code ?? `z${zoneId}ig`),
-      c: color(zoneId),
-      demo,
-    })}`;
-  };
+  const posterSrc = (k: Kit, zoneId: number, partner?: KitInput["partners"][number], code?: string) =>
+    posterPath(k, input, zoneId, { origin, partner, code, color: color(zoneId), demo });
 
   const downloadAll = async () => {
     if (!kit) return;

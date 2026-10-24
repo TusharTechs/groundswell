@@ -222,23 +222,7 @@ export default async function Method() {
           Word-of-mouth parameters were chosen by sweeping them over three launch scenarios with real comparables and venues (a show at Thalia Hall in Chicago, the Wiltern in Los Angeles and Brooklyn Steel in New York) and keeping a regime where an unpromoted launch stays
           near 3%, the benchmark roughly doubles it, and results are not knife-edge. At the chosen values:
         </p>
-        {cal ? (
-          <Table
-            head={["Launch", "No promotion", "Benchmark", "Local seeding", "Media", "Mixed", "Optimiser"]}
-            rows={cal.rows.map((r) => {
-              const sc = cal.scenarios.find((s) => s.city === r.city);
-              return [
-                `${sc?.comps.join(" + ")} at ${r.venue ?? sc?.venue}`,
-                pct(r.reach.none, 1),
-                pct(r.reach.naive, 1),
-                pct(r.reach.local, 1),
-                pct(r.reach.media, 1),
-                pct(r.reach.mixed, 1),
-                pct(r.reach.optimizer, 1),
-              ];
-            })}
-          />
-        ) : null}
+        {cal ? <CalibrationChart cal={cal} /> : null}
         <p>
           Geography changes what works. Seeding the hot neighbourhoods reaches about 13% in Chicago and New York, where those audiences are concentrated, but 7% in sprawling Los
           Angeles. Of the fixed strategies, media led in all three scenarios; a fixed mix trailed it by one to five points, and the optimiser came within three points everywhere and beat it in New York. The agents
@@ -381,5 +365,53 @@ function Table({ head, rows }: { head: string[]; rows: (string | number)[][] }) 
         </tbody>
       </table>
     </div>
+  );
+}
+
+const STRATEGIES: { key: string; label: string; color: string }[] = [
+  { key: "none", label: "No promotion", color: "#3a405a" },
+  { key: "naive", label: "Benchmark (where people are)", color: "#5b6280" },
+  { key: "local", label: "Seeding the hot neighbourhoods", color: "#4fd1c5" },
+  { key: "media", label: "Media", color: "#9d8bff" },
+  { key: "mixed", label: "A fixed mix", color: "#ffb547" },
+  { key: "optimizer", label: "The optimiser", color: "#ff5c8a" },
+];
+
+/** Each calibration launch as a row of bars, one per strategy, with the exact value on each. */
+function CalibrationChart({ cal }: { cal: Calibration }) {
+  const max = Math.max(...cal.rows.flatMap((r) => Object.values(r.reach))) * 1.08;
+  return (
+    <figure className="my-4 rounded-2xl border border-line bg-panel p-4">
+      <div className="grid gap-5 md:grid-cols-3">
+        {cal.rows.map((r) => {
+          const sc = cal.scenarios.find((x) => x.city === r.city);
+          return (
+            <div key={r.city}>
+              <div className="text-[13px] font-semibold text-text">{r.venue ?? sc?.venue}</div>
+              <div className="mb-2 text-[11.5px] text-dim">{sc?.comps.join(" + ")}</div>
+              <ul className="space-y-1.5">
+                {STRATEGIES.map((st) => (
+                  <li key={st.key} className="grid grid-cols-[1fr_2.8rem] items-center gap-2" title={st.label}>
+                    <div className="h-3 rounded-full bg-panel-3">
+                      <div className="h-3 rounded-full" style={{ width: `${((r.reach[st.key] ?? 0) / max) * 100}%`, background: st.color }} />
+                    </div>
+                    <span className="text-right font-mono text-[11px] text-muted">{pct(r.reach[st.key], 1)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+      <figcaption className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-[11.5px] text-muted">
+        {STRATEGIES.map((st) => (
+          <span key={st.key} className="inline-flex items-center gap-1.5">
+            <span className="size-2.5 rounded-full" style={{ background: st.color }} />
+            {st.label}
+          </span>
+        ))}
+        <span className="text-dim">Simulated reach of the natural audience by launch day; each scenario has a $12,000 budget and 42 days.</span>
+      </figcaption>
+    </figure>
   );
 }

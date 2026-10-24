@@ -49,11 +49,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.28",
+    "postcss": "8.5.31",
     "tailwindcss": "4.3.3",
     "tsx": "4.23.15",
     "typescript": "^5",
-    "vitest": "5.0.5",
-    "postcss": "8.5.31"
+    "vitest": "5.0.5"
   },
   "license": "MIT",
   "engines": {

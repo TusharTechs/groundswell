@@ -3,7 +3,9 @@ import { Hero } from "@/components/home/hero";
 import { AgentChip } from "@/components/rehearsal/agents";
 import { AGENTS, REHEARSAL_TEAM, type AgentName } from "@/lib/agents/events";
 import { CITIES } from "@/lib/atlas/cities";
-import { showcaseSummaries } from "@/lib/showcase";
+import { CampaignLoop } from "@/components/home/loop";
+import { Showcases } from "@/components/home/showcases";
+import { campaignLoop, showcaseCards } from "@/lib/home";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -11,13 +13,31 @@ type Band = { mean: number; lo: number; hi: number };
 async function coldstart() {
   try {
     const d = JSON.parse(await readFile(join(process.cwd(), "data", "benchmark", "coldstart.json"), "utf8"));
-    return { n: d.n as number, cities: d.cities.length as number, wins: d.versusClaude.wins as number, index: d.summary.index as Record<string, { overlap: Band }> };
+    return {
+      n: d.n as number,
+      cities: d.cities.length as number,
+      targets: d.targets.length as number,
+      wins: d.versusClaude.wins as number,
+      index: d.summary.index as Record<string, { overlap: Band }>,
+    };
   } catch {
     return null;
   }
 }
 
 const pct = (x: number) => `${(x * 100).toFixed(0)}%`;
+
+/** Neighbourhood cells across every city's atlas. */
+async function atlasCells() {
+  const sizes = await Promise.all(
+    CITIES.map((c) =>
+      readFile(join(process.cwd(), "data", "atlas", `${c.id}.json`), "utf8")
+        .then((t) => (JSON.parse(t).cells as unknown[]).length)
+        .catch(() => 0),
+    ),
+  );
+  return sizes.reduce((a, b) => a + b, 0);
+}
 
 const STEPS = [
   {
@@ -53,7 +73,8 @@ const STEPS = [
 ];
 
 export default async function Home() {
-  const [showcases, proof] = await Promise.all([showcaseSummaries(), coldstart()]);
+  const [showcases, proof, loop, cells] = await Promise.all([showcaseCards(), coldstart(), campaignLoop("chicago-headline"), atlasCells()]);
+  const lifts = showcases.flatMap((s) => (s.reach && s.benchmark ? [s.reach / s.benchmark] : []));
   const proofRows = proof
     ? [
         { label: "Groundswell, from comparables", v: proof.index.groundswell.overlap.mean, hi: true },
@@ -67,6 +88,24 @@ export default async function Home() {
     <main>
       <Hero />
 
+      <section aria-label="Groundswell in numbers" className="border-y border-line bg-panel/60">
+        <dl className="mx-auto grid max-w-[1600px] grid-cols-2 gap-px px-4 sm:grid-cols-3 sm:px-6 lg:grid-cols-5">
+          {[
+            { v: String(CITIES.length), k: "cities modelled from Qloo" },
+            { v: cells.toLocaleString("en-US"), k: "neighbourhood cells with a taste fingerprint" },
+            { v: "6", k: "Claude agents, from rehearsal to running campaign" },
+            ...(proof ? [{ v: `${(proof.index.groundswell.overlap.mean * 100).toFixed(0)}% vs ${(proof.index.claude.overlap.mean * 100).toFixed(0)}%`, k: "of a taste's top neighbourhoods found, against Claude alone" }] : []),
+            ...(lifts.length ? [{ v: `${Math.min(...lifts).toFixed(1)}–${Math.max(...lifts).toFixed(1)}×`, k: "the benchmark's reach, across seven recorded rehearsals" }] : []),
+          ].map((x) => (
+            <div key={x.k} className="px-2 py-5 sm:px-4">
+              <dt className="sr-only">{x.k}</dt>
+              <dd className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">{x.v}</dd>
+              <dd className="mt-1 text-[12.5px] leading-snug text-muted">{x.k}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
       <section className="mx-auto max-w-[1600px] px-4 py-16 sm:px-6" aria-labelledby="watch">
         <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -79,41 +118,23 @@ export default async function Home() {
             Real runs of the full agent team, recorded with every step and Qloo request, so they open instantly. The launches are fictional; the cities, venues, comparables and Qloo data are real.
           </p>
         </div>
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {showcases.map((s) => {
-            const city = CITIES.find((c) => c.id === s.cityId)!;
-            const lift = s.reach && s.benchmark ? s.reach / s.benchmark : null;
-            return (
-              <li key={s.id}>
-                <Link
-                  href={s.recorded ? `/rehearse/${s.id}` : "#"}
-                  className={`group flex h-full flex-col justify-between gap-4 rounded-2xl border border-line bg-panel p-4 transition-colors hover:border-glow/50 hover:bg-panel-2 ${s.recorded ? "" : "pointer-events-none opacity-50"}`}
-                >
-                  <div>
-                    <div className="flex items-center justify-between gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-dim">
-                      <span>{s.kind}</span>
-                      <span>{city.name}</span>
-                    </div>
-                    <h3 className="mt-2 font-display text-xl leading-tight font-semibold">{s.title}</h3>
-                    <p className="mt-1 text-[13.5px] text-muted">{s.blurb}</p>
-                  </div>
-                  <div className="flex items-end justify-between gap-2">
-                    {s.reach !== undefined ? (
-                      <div>
-                        <div className="font-display text-2xl font-semibold text-gradient">{pct(s.reach)}</div>
-                        <div className="text-[11px] text-dim">reached{lift ? ` · ${lift.toFixed(1)}× the benchmark` : ""}</div>
-                      </div>
-                    ) : (
-                      <span className="text-[12px] text-dim">{s.recorded ? "Recorded" : "Not recorded yet"}</span>
-                    )}
-                    <span className="rounded-full border border-line px-3 py-1 text-[12px] text-muted transition-colors group-hover:border-text group-hover:text-text">Watch</span>
-                  </div>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <Showcases cards={showcases} featured="chicago-headline" />
       </section>
+
+      {loop && (
+        <section className="mx-auto max-w-[1600px] px-4 pb-16 sm:px-6" aria-labelledby="loop">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-cool">One launch, end to end</p>
+              <h2 id="loop" className="mt-1 font-display text-3xl font-semibold tracking-tight sm:text-4xl">
+                Rehearse it. Launch it. Steer it.
+              </h2>
+            </div>
+            <p className="max-w-md text-[14px] text-muted">The Chicago showcase from the recorded run: what the team rehearsed, what the Creative Director wrote, and what mission control shows after a simulated week.</p>
+          </div>
+          <CampaignLoop loop={loop} />
+        </section>
+      )}
 
       {proof && (
         <section className="mx-auto max-w-[1600px] px-4 pb-16 sm:px-6" aria-labelledby="proof">
@@ -124,8 +145,8 @@ export default async function Home() {
                 A launch has no data yet. Comparables find its audience anyway.
               </h2>
               <p className="mt-3 text-[15px] leading-relaxed text-muted">
-                We hid the Qloo heatmaps of {proof.n} established artists, brands and shows across {proof.cities} cities and asked each method to find the neighbourhoods where each one is most
-                over-represented. Groundswell, working from three comparables, finds about twice as many as Claude alone or going where people are, and beats Claude in {proof.wins} of {proof.n} tests.
+                We hid the Qloo heatmaps of {proof.targets} established artists, brands and shows in {proof.cities} cities ({proof.n} tests) and asked each method to find the neighbourhoods where each one
+                is most over-represented. Groundswell, working from three comparables, finds about twice as many as Claude alone or going where people are, and beats Claude in {proof.wins} of {proof.n} tests.
               </p>
               <Link href="/method#evidence" className="mt-4 inline-block text-[14px] text-cool underline-offset-4 hover:underline">
                 Method, controls and the case where it loses →

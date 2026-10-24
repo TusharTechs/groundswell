@@ -11,6 +11,7 @@ import { allowedPartner } from "../launch/scout";
 import { claude, FALLBACK, MODEL, RefusalError } from "../llm";
 import { placesNear, type Evidence, type Place } from "../qloo/entities";
 import type { Scan } from "../store";
+import { ReplanDraft, replanProblems } from "./check";
 import { remainingBudget, scanReport, type Report } from "./report";
 
 export interface Replan {
@@ -76,41 +77,10 @@ export async function runFieldAnalyst(kit: Kit, scans: Scan[], emit: (e: Analyst
   const submit = betaZodTool({
     name: "submit_replan",
     description: "Submit the re-plan in one call.",
-    inputSchema: z.object({
-      summary: z.string().describe("Two or three sentences: what the data say and what changes."),
-      moves: z
-        .array(
-          z.object({
-            from_step: z.number().int().describe("Index of a plan action with budget left."),
-            to: z.string().describe("Where the money goes: an existing action or a new one, e.g. 'Instagram ads in Pilsen'."),
-            to_zone_id: z.number().int().nullable(),
-            amount: z.number().positive(),
-            why: z.string(),
-          }),
-        )
-        .max(6),
-      new_partners: z.array(z.object({ place_id: z.string(), role: z.string(), why: z.string() })).max(6),
-      watch: z.array(z.string()).max(4).describe("What to check next week."),
-    }),
+    inputSchema: ReplanDraft,
     run: (k) =>
       safe(async () => {
-        const problems: string[] = [];
-        const fromTotals = new Map<number, number>();
-        for (const m of k.moves) {
-          const step = budget.byStep[m.from_step];
-          if (!step) problems.push(`No action ${m.from_step}.`);
-          else fromTotals.set(m.from_step, (fromTotals.get(m.from_step) ?? 0) + m.amount);
-          if (m.to_zone_id !== null && !kit.input.zones.some((x) => x.id === m.to_zone_id)) problems.push(`Unknown zone ${m.to_zone_id}.`);
-        }
-        for (const [i, total] of fromTotals) {
-          const step = budget.byStep[i];
-          if (step && total > step.remaining + 1) problems.push(`Action ${i} ("${step.label}") has $${step.remaining} left, not $${Math.round(total)}.`);
-        }
-        const moved = k.moves.reduce((t, m) => t + m.amount, 0);
-        const callable = report.zones.some((x) => x.verdict !== "too early");
-        if (!callable && moved > budget.remaining * 0.1 + 1)
-          problems.push(`Every neighbourhood is "too early" to call; keep moves to $${Math.floor(budget.remaining * 0.1)} or less in total and call them tests.`);
-        for (const p of k.new_partners) if (!found.has(p.place_id)) problems.push(`Place ${p.place_id} didn't come from find_places.`);
+        const problems = replanProblems(k, { budget, report, zoneIds: kit.input.zones.map((z) => z.id), found: new Set(found.keys()) });
         if (problems.length) return JSON.stringify({ ok: false, problems });
         const zoneName = (id: number | null) => (id === null ? null : (kit.input.zones.find((x) => x.id === id)?.locality ?? null));
         result = {
