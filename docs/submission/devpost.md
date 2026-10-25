@@ -127,6 +127,4 @@ Qloo Taste AI API, Anthropic Claude (claude-opus-5-5), Anthropic SDK tool runner
 - Repository: https://github.com/TusharTechs/groundswell
 - Video: https://youtu.be/EOpbPU6WxKA
 
-## AI disclosure
-
-Groundswell was built with Claude Code (Claude Opus 5.5), which researched the Qloo API, wrote the code, tests and documentation, and ran the calibration and benchmark experiments under the author's direction. Inside the product, Claude runs the agents, parses briefs, names taste districts, writes the launch kit's copy and the simulated street voices; every taste number comes from Qloo.
+The AI disclosure lives at the bottom of the repository's README, not in the Devpost story.
