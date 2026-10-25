@@ -169,6 +169,7 @@ Guardrails live in the tools. Plans use only scouted menu items, stay within bud
 | `/v2/insights` `urn:entity:podcast`, `urn:entity:brand` (+ `signal.location.query`) | Podcasts and local brands the audience over-indexes on |
 | `/v2/insights` `urn:demographics`, `urn:audience`, `urn:tag` | Who the comparables' fans are: age skew (also the ad brief's age band), audience segments, tags |
 | `/search` (+ `filter.location` for venues) | Resolving comparables, venues, probes and the kit's references, with a name check |
+| `/v2/tags` (`filter.query`) | The Scouts turn the place categories they want (record stores, cafés) into Qloo tag ids to filter places by |
 
 The Qloo client ([`src/lib/qloo/client.ts`](src/lib/qloo/client.ts)) whitelists parameters (Qloo silently ignores unknown ones), paces requests under the key's rate limit, retries with `Retry-After`, shares identical in-flight requests and caches responses. Every request a run makes is listed in its feed.
 
@@ -219,7 +220,7 @@ groundswell/
 | `GET /api/showcase/:id`, `GET /api/atlas/:city`, `GET /api/twins` | Recorded rehearsals, city atlases, taste twins |
 | `/api/mcp` | MCP server |
 
-Rate limits per IP per half hour: 4 live rehearsals, 6 launch kits, 6 Field Analyst runs.
+Rate limits per visitor per half hour: 4 live rehearsals, 6 launch kits, 6 Field Analyst runs; across everyone per day: 120 live rehearsals (`DAILY_REHEARSALS`), 300 kits, 400 re-plans. With a database the counts are shared by every server instance.
 
 ## Use it from an agent (MCP)
 
@@ -257,8 +258,9 @@ Scripts cache raw Qloo responses under `.cache/` (git-ignored), so reruns cost n
 ## Data and privacy
 
 - No personal data is sent to Qloo: only entity names, tags and the locations of cities, neighbourhoods and venues.
-- No accounts. Briefs go to Anthropic (Claude). A finished live rehearsal is saved (its brief and events) so its link works; a launch kit is saved so its links work.
-- The server keeps visitors' IP addresses in memory for up to 30 minutes for rate limiting. A tracked-link scan stores its link code, time, a coarse country from the hosting platform and whether it was simulated; nothing else about the person.
+- No accounts, cookies, analytics or ads. Briefs go to Anthropic (Claude). A finished live rehearsal is saved (its brief and events) so its link works; a launch kit is saved so its links work.
+- Rate limiting keeps a one-way hash of the visitor's IP address and the time of each request for 24 hours, never the address itself. A tracked-link scan stores its link code, time, a coarse country from the hosting platform and whether it was simulated; nothing else about the person.
+- Retention, enforced by the app: saved rehearsals, launch kits and scans for 180 days; showcase demo weeks for 24 hours. The full policy is on `/privacy`.
 - `data/` holds derived results (quantized within-city percentiles, district summaries, recorded runs and kits); raw Qloo responses are never committed.
 - Qloo results describe aggregate taste. District names and copy are written with rules against describing people by ethnicity, religion, income, health or politics. Street voices are simulated and labelled.
 

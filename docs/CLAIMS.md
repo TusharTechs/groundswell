@@ -75,8 +75,10 @@ Each number or claim Groundswell makes in its README, site and submission, and w
 
 | Claim | Evidence |
 |---|---|
-| Rate limits per IP per half hour: 4 rehearsals, 6 kits, 6 Field Analyst runs | [`src/lib/rate-limit.ts:5`](../src/lib/rate-limit.ts#L5) |
-| IP addresses are kept in memory for up to 30 minutes | `hits` and `WINDOW_MS` in the same file |
+| Rate limits per visitor per half hour (4 rehearsals, 6 kits, 6 re-plans) and daily caps for everyone (120, 300, 400) | `PER_VISITOR` and `PER_DAY` in [`src/lib/rate-limit.ts`](../src/lib/rate-limit.ts) |
+| Rate limiting stores a hash of the IP, never the address, for 24 hours | `visitorKey` in the same file; `prune` and `RETENTION` in [`src/lib/store.ts`](../src/lib/store.ts) |
+| Retention: rehearsals, kits and scans 180 days; showcase demo weeks 24 hours | `RETENTION` and `prune` in [`src/lib/store.ts`](../src/lib/store.ts); [`/privacy`](../src/app/privacy/page.tsx) |
+| Showcase demo weeks and re-plans are visible only to the browser that made them | [`src/lib/campaign/scope.ts`](../src/lib/campaign/scope.ts) |
 | Live runs are saved so their link works | `saveRun` in [`src/app/api/rehearse/route.ts`](../src/app/api/rehearse/route.ts) and [`src/lib/store.ts`](../src/lib/store.ts) |
 | 81 unit tests, including the agents' submit-tool guardrails | `npm test`; [`src/lib/kit/__tests__/check.test.ts`](../src/lib/kit/__tests__/check.test.ts), [`src/lib/campaign/__tests__/check.test.ts`](../src/lib/campaign/__tests__/check.test.ts) |
 

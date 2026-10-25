@@ -284,6 +284,12 @@ export default async function Home() {
             <Link href="/method" className="hover:text-text">
               How it works
             </Link>
+            <Link href="/pitch" className="hover:text-text">
+              The case
+            </Link>
+            <Link href="/privacy" className="hover:text-text">
+              Privacy
+            </Link>
           </span>
         </div>
       </footer>

@@ -36,6 +36,8 @@ async function db() {
       await q`create index if not exists gs_scans_campaign on gs_scans (campaign)`;
       await q`create table if not exists gs_replans (campaign text primary key, replan jsonb not null, created_at timestamptz not null default now())`;
       await q`create table if not exists gs_runs (id text primary key, run jsonb not null, created_at timestamptz not null default now())`;
+      await q`create table if not exists gs_hits (id bigserial primary key, key text not null, at timestamptz not null default now())`;
+      await q`create index if not exists gs_hits_key_at on gs_hits (key, at)`;
     })();
     ready.catch(() => (ready = null));
   }
@@ -184,4 +186,44 @@ export async function loadRun(id: string): Promise<RecordedRun | null> {
   }
   await memoryLoad();
   return memory.runs[id] ?? null;
+}
+
+/**
+ * Rate-limit hits shared by every server instance (Postgres only; null without
+ * a database, and callers fall back to memory). Keys hold a one-way hash of
+ * the visitor's IP address, never the address itself.
+ */
+export async function countHits(key: string, sinceMs: number): Promise<number | null> {
+  const q = await db();
+  if (!q) return null;
+  const rows = (await q`select count(*)::int as n from gs_hits where key = ${key} and at > ${new Date(Date.now() - sinceMs).toISOString()}`) as { n: number }[];
+  return rows[0]?.n ?? 0;
+}
+
+export async function addHit(key: string): Promise<void> {
+  const q = await db();
+  if (!q) return;
+  await q`insert into gs_hits (key) values (${key})`;
+  await prune();
+}
+
+/** The retention policy on /privacy, applied at most once an hour per instance. */
+export const RETENTION = { hitsHours: 24, demoHours: 24, days: 180 } as const;
+let lastPrune = 0;
+export async function prune(force = false) {
+  if (!force && Date.now() - lastPrune < 3_600_000) return;
+  lastPrune = Date.now();
+  const q = await db();
+  if (!q) return;
+  const hits = new Date(Date.now() - RETENTION.hitsHours * 3_600_000).toISOString();
+  const demo = new Date(Date.now() - RETENTION.demoHours * 3_600_000).toISOString();
+  const old = new Date(Date.now() - RETENTION.days * 86_400_000).toISOString();
+  await q`delete from gs_hits where at < ${hits}`;
+  // Showcase demo sessions are keyed "campaign~session"; their simulated scans and re-plans go after a day.
+  await q`delete from gs_scans where position('~' in campaign) > 0 and at < ${demo}`;
+  await q`delete from gs_replans where position('~' in campaign) > 0 and created_at < ${demo}`;
+  await q`delete from gs_scans where at < ${old}`;
+  await q`delete from gs_replans where created_at < ${old}`;
+  await q`delete from gs_campaigns where created_at < ${old}`;
+  await q`delete from gs_runs where created_at < ${old}`;
 }

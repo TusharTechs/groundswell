@@ -20,7 +20,7 @@ const Body = z.object({
 export async function POST(req: Request) {
   const parsed = Body.safeParse(await req.json().catch(() => undefined));
   if (!parsed.success) return Response.json({ error: parsed.error.issues[0]?.message ?? "Invalid request." }, { status: 400 });
-  const admission = admit(clientIp(req), "rehearse");
+  const admission = await admit(clientIp(req), "rehearse");
   if (!admission.ok) return Response.json({ error: admission.message }, { status: admission.status, headers: { "Retry-After": String(admission.retryAfter) } });
   const { launchUrl, ...input } = parsed.data;
   return eventStream<LaunchEvent>(async (send) => {

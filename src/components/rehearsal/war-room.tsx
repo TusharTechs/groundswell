@@ -7,7 +7,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { LaunchEvent } from "@/lib/agents/events";
+import type { AgentName, LaunchEvent } from "@/lib/agents/events";
 import { CITIES } from "@/lib/atlas/cities";
 import type { CityAtlas } from "@/lib/atlas/types";
 import { kitInputFrom, launchDateFrom } from "@/lib/kit/input";
@@ -160,6 +160,11 @@ export function WarRoom({ source }: { source: Source }) {
   const live = source.kind === "live" ? !view.done && !view.error : replay.playing;
   const strategy = view.strategies.find((s) => s.id === selected);
   const showcase = source.kind === "replay" && source.showcase;
+  const qlooByAgent = useMemo(() => {
+    const m = new Map<AgentName, number>();
+    for (const f of view.feed) if (f.kind === "qloo") m.set(f.agent, (m.get(f.agent) ?? 0) + (f.calls?.length ?? 0));
+    return [...m.entries()].map(([agent, n]) => ({ agent, n })).sort((a, b) => b.n - a.n);
+  }, [view.feed]);
   const winning = view.plan ? view.strategies.find((s) => s.id === view.plan!.plan.strategyId) : undefined;
 
   // Everything the Launch Kit needs from the finished rehearsal.
@@ -279,6 +284,7 @@ export function WarRoom({ source }: { source: Source }) {
               cityName={city.name}
               onClose={() => setShowPlan(false)}
               expansion={view.expansion}
+              qlooByAgent={qlooByAgent}
               kit={atlas && kitInput ? <LaunchKit input={kitInput} atlas={atlas} demo={showcase} canProduce={!showcase} /> : undefined}
             >
               {atlas && fit && view.zones && view.partners && view.media && view.candidates && spec && view.strategies.find((s) => s.id === view.plan!.plan.strategyId) && (

@@ -13,6 +13,7 @@ import type { AnalystEvent, Replan } from "@/lib/campaign/analyst";
 import { remainingBudget, scanReport, type Verdict } from "@/lib/campaign/report";
 import { linkUrl, prettyDate } from "@/lib/kit/build";
 import type { Kit } from "@/lib/kit/types";
+import { DEMO_HEADER } from "@/lib/campaign/demo";
 import type { Scan } from "@/lib/store";
 import { AgentIcon } from "../rehearsal/agents";
 
@@ -21,7 +22,21 @@ const CityMap = dynamic(() => import("../city-map"), { ssr: false, loading: () =
 const CHANNEL: Record<string, string> = { poster: "Posters", instagram: "Instagram", tiktok: "TikTok or Reels", x: "X or Threads", podcast: "Podcast reads", email: "Partner emails" };
 const VERDICT: Record<Verdict, string> = { ahead: "bg-hot/15 text-hot", behind: "bg-[#5696ff]/15 text-[#8fb6ff]", "on track": "bg-glow/15 text-glow", "too early": "bg-panel-3 text-dim" };
 
-type Data = { scans: Scan[]; replan: Replan | null; store: "postgres" | "memory" };
+type Data = { scans: Scan[]; replan: Replan | null; store: "postgres" | "memory"; personal?: boolean };
+
+/** A random id for this browser's demo state on showcase campaigns; not linked to the person. */
+function demoSession(): string {
+  const fresh = () => Array.from(crypto.getRandomValues(new Uint8Array(12)), (b) => b.toString(36).padStart(2, "0")).join("").slice(0, 24);
+  try {
+    const saved = localStorage.getItem("gs-demo-session");
+    if (saved && /^[a-z0-9]{16,40}$/.test(saved)) return saved;
+    const id = fresh();
+    localStorage.setItem("gs-demo-session", id);
+    return id;
+  } catch {
+    return fresh();
+  }
+}
 
 export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolean; cityName: string }) {
   const id = kit.campaignId;
@@ -32,6 +47,8 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
   const [analyst, setAnalyst] = useState<{ running: boolean; steps: string[]; error?: string }>({ running: false, steps: [] });
   const [qr, setQr] = useState<string | null>(null);
   const [origin, setOrigin] = useState("");
+  const [session] = useState(() => (typeof window === "undefined" ? "" : demoSession()));
+  const headers = useMemo(() => ({ [DEMO_HEADER]: session }), [session]);
 
   useEffect(() => setOrigin(window.location.origin), []);
 
@@ -43,9 +60,9 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
   }, [kit.input.cityId]);
 
   const refresh = useCallback(async () => {
-    const r = await fetch(`/api/campaign/${id}`, { cache: "no-store" });
+    const r = await fetch(`/api/campaign/${id}`, { cache: "no-store", headers });
     if (r.ok) setData(await r.json());
-  }, [id]);
+  }, [id, headers]);
 
   // Poll while the page is visible, so a scan from a phone shows up within seconds.
   useEffect(() => {
@@ -112,7 +129,7 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
     setBusy(kind);
     setError(null);
     try {
-      const r = await fetch(`/api/campaign/${id}/simulate`, { method: kind === "simulate" ? "POST" : "DELETE" });
+      const r = await fetch(`/api/campaign/${id}/simulate`, { method: kind === "simulate" ? "POST" : "DELETE", headers });
       if (!r.ok) setError((await r.json().catch(() => ({})))?.error ?? "That didn't work.");
       await refresh();
     } finally {
@@ -123,7 +140,7 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
   const runAnalyst = async () => {
     setAnalyst({ running: true, steps: [] });
     try {
-      const res = await fetch(`/api/campaign/${id}/analyst`, { method: "POST" });
+      const res = await fetch(`/api/campaign/${id}/analyst`, { method: "POST", headers });
       if (!res.ok || !res.body) throw new Error((await res.json().catch(() => ({})))?.error ?? "The Field Analyst couldn't start.");
       const reader = res.body.getReader();
       const dec = new TextDecoder();
@@ -199,7 +216,7 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
 
       {(demo || report.simulated > 0) && (
         <div className="rounded-xl border border-warn/40 bg-warn/10 p-3 text-[13px] text-warn">
-          {demo ? "A demo campaign from a recorded rehearsal: the launch is fictional. " : ""}
+          {demo ? "A demo campaign from a recorded rehearsal: the launch is fictional. Simulated weeks and re-plans you make here are visible only to you. " : ""}
           {report.simulated > 0
             ? `${report.simulated} of the ${report.total} scans are simulated: drawn around the rehearsal's expectation with one neighbourhood set to fall short and one to beat it, to show how mission control and the Field Analyst respond. They are not real data.`
             : "Scans here are real visits to the campaign's tracked links. Simulate a week to see how mission control and the Field Analyst respond."}

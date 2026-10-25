@@ -114,6 +114,10 @@ export default async function LaunchPage({ params, searchParams }: { params: Pro
               </Link>
             </>
           )}
+          {" · "}
+          <Link href="/privacy" className="text-muted underline-offset-2 hover:underline">
+            Privacy
+          </Link>
         </span>
       </footer>
     </main>

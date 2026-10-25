@@ -5,7 +5,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { PlanView, SimView, StrategyView, Voice } from "@/lib/agents/events";
+import { AGENTS, type AgentName, type PlanView, type SimView, type StrategyView, type Voice } from "@/lib/agents/events";
 import type { CityProspect } from "@/lib/launch/expansion";
 import type { LaunchSpec } from "@/lib/launch/spec";
 import type { Evidence } from "@/lib/qloo/entities";
@@ -36,6 +36,7 @@ export function PlanSheet({
   children,
   expansion,
   kit,
+  qlooByAgent,
 }: {
   plan: PlanView;
   sim: SimView;
@@ -51,6 +52,8 @@ export function PlanSheet({
   expansion?: CityProspect[];
   /** The Launch Kit tab. */
   kit?: React.ReactNode;
+  /** Qloo requests per teammate in this run. */
+  qlooByAgent?: { agent: AgentName; n: number }[];
 }) {
   const [tab, setTab] = useState<"plan" | "kit">("plan");
   const m = sim.metrics;
@@ -266,6 +269,8 @@ export function PlanSheet({
           </div>
         </section>
 
+        <QlooReceipt qloo={qloo} byAgent={qlooByAgent ?? []} />
+
         <section className="rounded-xl border border-line bg-panel-2 p-3 text-[12px] text-muted">
           Projections come from a simulation, not a forecast: a model of the city built from Qloo taste data ({qloo.length} Qloo requests in this run), with word of mouth between neighbouring and
           taste-similar areas. Assumptions and method are on{" "}
@@ -316,5 +321,66 @@ function Kpi({ label, value, note, accent }: { label: string; value: string; not
       <div className={`mt-1 font-display text-2xl font-semibold ${accent ? "text-gradient" : ""}`}>{value}</div>
       {note && <div className="mt-0.5 text-[11px] text-dim">{note}</div>}
     </div>
+  );
+}
+
+/** What a Qloo request was for, from its endpoint and filter type. */
+function kindOf(e: Evidence): string {
+  if (e.path === "/search") return "Search: resolving names";
+  if (e.path === "/v2/tags") return "Tag search: place categories";
+  const t = e.params["filter.type"] ?? "";
+  if (t === "urn:heatmap") return e.params["output.heatmap.boundary"] ? "Heatmap by neighbourhood" : "Heatmaps";
+  if (t === "urn:entity:place") return "Places near a hot zone";
+  if (t === "urn:entity:podcast") return "Podcasts";
+  if (t === "urn:entity:brand") return "Brands";
+  if (t === "urn:demographics") return "Fans' demographics";
+  if (t === "urn:audience") return "Audience segments";
+  if (t === "urn:tag") return "Taste tags";
+  if (t.startsWith("urn:entity:")) return "Similar entities";
+  return "Other insights";
+}
+
+/** Every Qloo request behind this run, by teammate and by what it was for. */
+function QlooReceipt({ qloo, byAgent }: { qloo: Evidence[]; byAgent: { agent: AgentName; n: number }[] }) {
+  if (!qloo.length) return null;
+  const kinds = new Map<string, number>();
+  for (const e of qloo) kinds.set(kindOf(e), (kinds.get(kindOf(e)) ?? 0) + 1);
+  const rows = [...kinds.entries()].sort((a, b) => b[1] - a[1]);
+  const max = Math.max(1, ...rows.map((r) => r[1]));
+  const cached = qloo.filter((e) => e.cached).length;
+  const ms = qloo.filter((e) => !e.cached).reduce((t, e) => t + e.ms, 0);
+  return (
+    <section className="rounded-xl border border-cool/25 bg-panel-2 p-3">
+      <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
+        <H>Qloo in this run</H>
+        <span className="font-mono text-[11px] text-cool">
+          {qloo.length} requests · {cached} answered from cache · {(ms / 1000).toFixed(1)} s on the network
+        </span>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-[1.4fr_1fr]">
+        <ul className="space-y-1">
+          {rows.map(([k, n]) => (
+            <li key={k} className="grid grid-cols-[minmax(0,11rem)_1fr_1.8rem] items-center gap-2 text-[11.5px]">
+              <span className="truncate text-muted">{k}</span>
+              <div className="h-1.5 rounded-full bg-panel-3">
+                <div className="h-1.5 rounded-full bg-cool/80" style={{ width: `${(n / max) * 100}%` }} />
+              </div>
+              <span className="text-right font-mono text-text">{n}</span>
+            </li>
+          ))}
+        </ul>
+        {byAgent.length > 0 && (
+          <ul className="space-y-1 text-[11.5px]">
+            {byAgent.map((a) => (
+              <li key={a.agent} className="flex justify-between gap-2">
+                <span className="text-muted">{AGENTS[a.agent].title}</span>
+                <span className="font-mono text-text">{a.n}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <p className="mt-2 text-[11px] text-dim">Each request is listed, with its parameters, in the team&apos;s feed.</p>
+    </section>
   );
 }

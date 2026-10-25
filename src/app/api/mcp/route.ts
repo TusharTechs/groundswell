@@ -36,7 +36,7 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 function buildServer(ip: string, origin: string) {
   const server = new McpServer({ name: "groundswell", version: "0.1.0" });
   const guarded = async <T,>(bucket: Bucket, fn: () => Promise<T>) => {
-    const admission = admit(ip, bucket);
+    const admission = await admit(ip, bucket);
     if (!admission.ok) throw new Error(admission.message);
     try {
       return await fn();

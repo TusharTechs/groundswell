@@ -292,6 +292,7 @@ export default async function Method() {
             ["/v2/insights · urn:heatmap for one reference, averaged over a neighbourhood's cells", "The Creative Director's check before a cultural reference goes into that neighbourhood's copy"],
             ["/v2/insights · urn:entity:place near a neighbourhood, signals from the comparables", "The Field Analyst's search for new partner places where scans are behind"],
             ["/search", "Resolving comparables, venues, probes and the kit's references, with a name check"],
+            ["/v2/tags · filter.query", "The Scouts turn the place categories they want into Qloo tag ids to filter places by"],
           ]}
         />
       </Section>
@@ -302,8 +303,13 @@ export default async function Method() {
           <li>Action effects and costs are stated assumptions, not measurements from campaigns. They are on this page and in one file of the code.</li>
           <li>Population is approximated from Qloo activity with a floor; census data would be better where it exists.</li>
           <li>
-            Qloo results describe aggregate taste, not individuals, and Groundswell sends no personal data to Qloo. The server keeps visitors&apos; IP addresses in memory for up to 30 minutes for rate
-            limiting. A tracked-link scan stores its link code, time, a coarse country and whether it was simulated; nothing else about the person.
+            Qloo results describe aggregate taste, not individuals, and Groundswell sends no personal data to Qloo. Rate limiting keeps a one-way hash of
+            the visitor&apos;s IP address for a day, never the address. A tracked-link scan stores its link code, time, a coarse country and whether it was simulated; nothing else about the person.
+            What is stored and for how long is on the{" "}
+            <Link href="/privacy" className="text-cool underline underline-offset-2">
+              privacy page
+            </Link>
+            .
           </li>
           <li>Mission control&apos;s expectation is the rehearsal&apos;s model, not ground truth, and its simulated scans are a demonstration, not data.</li>
           <li>Street voices are written by Claude from each area&apos;s Qloo signature and nearby places. They are labelled as simulated and are not real people.</li>
