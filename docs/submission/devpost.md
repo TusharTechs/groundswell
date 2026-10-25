@@ -1,6 +1,6 @@
 # Groundswell: Devpost submission draft
 
-> Paste each section into the matching Devpost field. Replace `<LIVE_URL>` and `<VIDEO_URL>` once deployed. Every number here is backed in [`docs/CLAIMS.md`](../CLAIMS.md).
+> Paste each section into the matching Devpost field. Replace `<VIDEO_URL>` once the video is uploaded. The repository must be public before submitting. Every number here is backed in [`docs/CLAIMS.md`](../CLAIMS.md).
 
 ## Project name
 
@@ -102,8 +102,8 @@ Qloo Taste AI API, Anthropic Claude (claude-opus-5-5), Anthropic SDK tool runner
 
 ## Try it out
 
-- Live demo: `<LIVE_URL>` (no sign-in; recorded rehearsals and their kits open instantly; a live rehearsal takes two to four minutes)
-- The business case, with sources: `<LIVE_URL>/pitch`
+- Live demo: https://groundswell-city.vercel.app (no sign-in; recorded rehearsals and their kits open instantly; a live rehearsal takes two to four minutes)
+- The business case, with sources: https://groundswell-city.vercel.app/pitch
 - Repository: https://github.com/TusharTechs/groundswell
 - Video: `<VIDEO_URL>`
 

@@ -1,6 +1,6 @@
 # Demo video script
 
-Recorded automatically from the running app (headless Chrome screencast at 1920 × 1080) with captions; narration is an AI voice (OpenAI text-to-speech) reading the lines below. The showcase launch is fictional; the data is real.
+Recorded automatically from the live site, groundswell-city.vercel.app (headless Chrome screencast at 1920 × 1080) with captions; narration is an AI voice (OpenAI text-to-speech) reading the lines below. The showcase launch is fictional; the data is real.
 
 | # | On screen | Narration |
 |---|---|---|
