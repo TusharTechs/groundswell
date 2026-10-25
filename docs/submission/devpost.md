@@ -1,6 +1,6 @@
 # Groundswell: Devpost submission draft
 
-> Paste each section into the matching Devpost field. Replace `<VIDEO_URL>` once the video is uploaded. The repository must be public before submitting. Every number here is backed in [`docs/CLAIMS.md`](../CLAIMS.md).
+> Paste each section into the matching Devpost field. The repository must be public before the deadline. Every number here is backed in [`docs/CLAIMS.md`](../CLAIMS.md).
 
 ## Devpost form answers (from the hackathon's submission requirements)
 
@@ -10,7 +10,7 @@
 | The public URL to your project | https://groundswell-city.vercel.app |
 | Link to your PUBLIC code repo | https://github.com/TusharTechs/groundswell (make it public first) |
 | If this was an existing project, how did you upgrade it for Qloo? | Not applicable: Groundswell was built from scratch for this hackathon. |
-| Demo video | Optional for this hackathon (YouTube or Vimeo, publicly playable). |
+| Demo video | https://youtu.be/EOpbPU6WxKA |
 
 Built with (tags): `qloo`, `claude`, `anthropic`, `model-context-protocol`, `next.js`, `react`, `typescript`, `deck.gl`, `maplibre`, `openfreemap`, `tailwindcss`, `zod`, `neon`, `postgresql`, `vercel`, `vitest`.
 
@@ -20,7 +20,7 @@ Checklist on the day: make the repo public (`gh repo edit TusharTechs/groundswel
 
 Submitted to the Qloo Agentic Hackathon on 25 October 2026 (submission 1261932): https://devpost.com/software/groundswell-a-flight-simulator-for-culture, with the full description, eight gallery images, the thumbnail and the four form answers above. The entry can still be edited until the deadline.
 
-Still to do before Thursday 30 October, 11:45 pm Eastern: make the GitHub repo public with the MIT licence visible in its About panel (the submission links to it, and Stage 1 requires it). Optional: a demo video (YouTube or Vimeo) and `SITE_PUBLIC=1` in Vercel.
+Still to do before Thursday 30 October, 11:45 pm Eastern: make the GitHub repo public with the MIT licence visible in its About panel (the submission links to it, and Stage 1 requires it). Optional: `SITE_PUBLIC=1` in Vercel. The demo video (https://youtu.be/EOpbPU6WxKA) is on the entry.
 
 ## Project name
 
@@ -125,7 +125,7 @@ Qloo Taste AI API, Anthropic Claude (claude-opus-5-5), Anthropic SDK tool runner
 - Live demo: https://groundswell-city.vercel.app (no sign-in; recorded rehearsals and their kits open instantly; a live rehearsal takes two to four minutes)
 - The business case, with sources: https://groundswell-city.vercel.app/pitch
 - Repository: https://github.com/TusharTechs/groundswell
-- Video: `<VIDEO_URL>`
+- Video: https://youtu.be/EOpbPU6WxKA
 
 ## AI disclosure
 

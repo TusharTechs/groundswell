@@ -56,6 +56,6 @@ groundswell, qloo, qloo api, taste graph, cultural intelligence, claude, anthrop
 - Chapters appear automatically from the timestamps in the description.
 - Altered or synthetic content: YouTube asks for this when realistic media could be mistaken for real people or events. The narrator is a synthetic voice that impersonates no one, and the description says so; answering "Yes" is the cautious choice.
 
-## After uploading
+## Published
 
-Send the link, and it goes into the README (thumbnail linking to the video, under the hero image) and the Devpost entry's video field.
+https://youtu.be/EOpbPU6WxKA, linked from the README and the Devpost entry.

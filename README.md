@@ -9,6 +9,7 @@ Rehearse a launch in a living model of a real city, built from Qloo's taste grap
 
 <p align="center">
   <a href="https://groundswell-city.vercel.app"><b>Live demo</b></a> ·
+  <a href="https://youtu.be/EOpbPU6WxKA"><b>3-minute video</b></a> ·
   <a href="#run-it-locally">Run it locally</a> ·
   <a href="#evidence">Evidence</a> ·
   <a href="#architecture">Architecture</a> ·
@@ -23,7 +24,8 @@ Rehearse a launch in a living model of a real city, built from Qloo's taste grap
   <img alt="Agents on Claude" src="https://img.shields.io/badge/agents-Claude-9d8bff" />
 </p>
 
-<p align="center"><img src="docs/images/hero.jpg" alt="Groundswell's home page: a 3D model of Chicago coloured by taste district, beside the launch brief" width="100%" /></p>
+<p align="center"><a href="https://youtu.be/EOpbPU6WxKA"><img src="docs/images/video-thumbnail.jpg" alt="Watch the 3-minute demo on YouTube: Groundswell rehearses a launch in a living model of Chicago" width="100%" /></a></p>
+<p align="center"><a href="https://youtu.be/EOpbPU6WxKA"><b>▶ Watch the 3-minute demo</b></a> (narrated by an AI voice; the launch shown is fictional, the data is real)</p>
 
 ---
 
@@ -32,6 +34,7 @@ Rehearse a launch in a living model of a real city, built from Qloo's taste grap
 | What | Where |
 |---|---|
 | The live app (no sign-in) | https://groundswell-city.vercel.app |
+| The 3-minute demo video | https://youtu.be/EOpbPU6WxKA |
 | A recorded rehearsal, end to end (Chicago) | https://groundswell-city.vercel.app/rehearse/chicago-headline |
 | Its launch kit (open the plan, then "Launch kit") | https://groundswell-city.vercel.app/rehearse/chicago-headline |
 | Its mission control (try "Simulate a week", then "Re-plan the budget") | https://groundswell-city.vercel.app/campaign/chicago-headline |
