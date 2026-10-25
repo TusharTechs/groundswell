@@ -16,6 +16,23 @@ Built with (tags): `qloo`, `claude`, `anthropic`, `model-context-protocol`, `nex
 
 Checklist on the day: make the repo public (`gh repo edit TusharTechs/groundswell --visibility public --accept-visibility-change-consequences`), add the description and the MIT licence to the repo's About panel, set `SITE_PUBLIC=1` in Vercel if you want search engines to index the site, then create and submit the Devpost project. Deadline: Thursday 30 October 2026, 11:45 pm Eastern (31 October, 03:45 UTC). The top three finalists appear live on 5 November.
 
+## On Devpost now (25 October 2026)
+
+A draft entry exists in the Qloo hackathon: project id 1507459, slug `groundswell-a-flight-simulator-for-culture`, with the thumbnail uploaded. Devpost publishes a project page as soon as its full details are saved, so the page currently shows only the name "Groundswell", a placeholder tagline and description, and the thumbnail. On submission day, in this order:
+
+1. Make the repo public; check the live site.
+2. Update the project: name "Groundswell: a flight simulator for culture", the tagline below, the description (the sections from Inspiration to AI disclosure, plus a "Try it" list of links), the built-with tags above, and the links (live site, repo, /pitch).
+3. Upload the gallery from `docs/images/`, in this order and with these captions:
+   1. `rehearsal-map.jpg`: A rehearsal in Chicago: the hot neighbourhoods around Thalia Hall rise as word of mouth spreads, against the benchmark.
+   2. `war-room.jpg`: The team at work: Claude agents map where the taste lives on Qloo, with every Qloo request shown in the feed.
+   3. `launch-kit.jpg`: The launch kit: copy for Bridgeport, with each cultural reference checked on Qloo for that neighbourhood first.
+   4. `poster.jpg`: A generated poster with its own tracked QR code, one per partner place (demo launch, fictional).
+   5. `mission-control.jpg`: Mission control: scans per neighbourhood against expectation, and the Field Analyst's re-plan with new partners from Qloo.
+   6. `launch-page-tokyo.jpg`: A launch page in Japanese for the Tokyo showcase, as a poster's QR code opens it.
+   7. `evidence.jpg`: Evidence: from comparables alone, 44.8% of a taste's top neighbourhoods found, vs 23.7% for Claude alone (77 tests).
+   8. `atlas.jpg`: The Taste Atlas: Chicago's neighbourhoods coloured by taste district, from 54 Qloo heatmaps per city.
+4. Submit with the four form answers above, after agreeing to the rules.
+
 ## Project name
 
 Groundswell
