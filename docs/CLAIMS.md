@@ -80,7 +80,7 @@ Each number or claim Groundswell makes in its README, site and submission, and w
 | Retention: rehearsals, kits and scans 180 days; showcase demo weeks 24 hours | `RETENTION` and `prune` in [`src/lib/store.ts`](../src/lib/store.ts); [`/privacy`](../src/app/privacy/page.tsx) |
 | Showcase demo weeks and re-plans are visible only to the browser that made them | [`src/lib/campaign/scope.ts`](../src/lib/campaign/scope.ts) |
 | Live runs are saved so their link works | `saveRun` in [`src/app/api/rehearse/route.ts`](../src/app/api/rehearse/route.ts) and [`src/lib/store.ts`](../src/lib/store.ts) |
-| 81 unit tests, including the agents' submit-tool guardrails | `npm test`; [`src/lib/kit/__tests__/check.test.ts`](../src/lib/kit/__tests__/check.test.ts), [`src/lib/campaign/__tests__/check.test.ts`](../src/lib/campaign/__tests__/check.test.ts) |
+| 83 unit tests, including the agents' submit-tool guardrails | `npm test`; [`src/lib/kit/__tests__/check.test.ts`](../src/lib/kit/__tests__/check.test.ts), [`src/lib/campaign/__tests__/check.test.ts`](../src/lib/campaign/__tests__/check.test.ts) |
 
 ## The problem space
 
@@ -91,3 +91,11 @@ Each number or claim Groundswell makes in its README, site and submission, and w
 | Eventbrite hosted 4.7 million events in 2024 | [Eventbrite fourth-quarter and full-year 2024 results, 27 February 2025](https://www.businesswire.com/news/home/20250227607042/en) |
 | Live Nation: over 50,000 events and 151 million fans in 2024 | [Live Nation full-year and fourth-quarter 2024 results](https://newsroom.livenation.com/news/live-nation-entertainment-reports-full-year-and-fourth-quarter-2024-results/) |
 | Prices on the pitch page are untested hypotheses; nothing about revenue or customers is claimed | [`src/app/pitch/page.tsx`](../src/app/pitch/page.tsx) |
+
+## Production
+
+| Claim | Evidence |
+|---|---|
+| Two live rehearsals run at once on production finished in 123 s and 157 s | The `done` events of the saved runs [`/rehearse/run-56c2ac03`](https://groundswell-city.vercel.app/rehearse/run-56c2ac03) and [`/rehearse/run-e14329e0`](https://groundswell-city.vercel.app/rehearse/run-e14329e0), started within a minute of each other on 25 October 2026 |
+| A plan of only city-wide actions still gets neighbourhood copy | `kitInputFrom` in [`src/lib/kit/input.ts`](../src/lib/kit/input.ts), tested in [`src/lib/kit/__tests__/check.test.ts`](../src/lib/kit/__tests__/check.test.ts) |
+| No WCAG A or AA issues on the main pages | axe-core 4.10 run against the production build of each page listed in the README |
