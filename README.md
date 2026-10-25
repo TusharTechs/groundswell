@@ -156,36 +156,41 @@ Across the seven, the final plans reach 2.3–4.6× more of the natural audience
 ### The system
 
 ```mermaid
-flowchart LR
+flowchart TB
   subgraph Browser
+    direction LR
     UI["Pages: home, war room, kit,<br/>mission control, atlas, method"]
     MAP["deck.gl + MapLibre<br/>3D city, street-level buildings"]
     WHATIF["@groundswell/sim<br/>what-if, in the browser"]
   end
   subgraph Vercel["Next.js 15 on Vercel"]
+    direction LR
     SSE["/api/rehearse · /api/kit · /api/campaign/:id/analyst<br/>server-sent events"]
-    AG["Agents<br/>Director, Taste Analyst, Scouts, Strategist,<br/>Creative Director, Field Analyst"]
+    MCP["/api/mcp<br/>MCP server"]
+    AG["Six agents<br/>Director, Taste Analyst, Scouts, Strategist,<br/>Creative Director, Field Analyst"]
     SIM["@groundswell/sim<br/>Monte Carlo, 48–96 runs a plan"]
+    ATLAS[("data/<br/>atlases, recorded runs,<br/>kits, benchmark")]
     POSTER["/api/poster<br/>next/og + QR codes"]
     GO["/go/:campaign/:code<br/>tracked links"]
-    MCP["/api/mcp<br/>MCP server"]
-    ATLAS[("data/<br/>atlases, recorded runs,<br/>kits, benchmark")]
   end
-  QLOO[("Qloo Taste AI<br/>insights, heatmaps,<br/>search, tags")]
-  CLAUDE[("Anthropic Claude<br/>claude-opus-5-5")]
-  NEON[("Neon Postgres<br/>saved runs, kits, scans,<br/>re-plans, rate limits")]
-  TILES[("OpenFreeMap<br/>vector tiles")]
+  subgraph Services
+    direction LR
+    QLOO[("Qloo Taste AI<br/>insights, heatmaps,<br/>search, tags")]
+    CLAUDE[("Anthropic Claude<br/>claude-opus-5-5")]
+    NEON[("Neon Postgres<br/>runs, kits, scans,<br/>re-plans, rate limits")]
+    TILES[("OpenFreeMap<br/>vector tiles")]
+  end
   UI <--> SSE
   UI --> POSTER
-  MAP --> TILES
   SSE --> AG
-  AG --> QLOO
-  AG --> CLAUDE
+  MCP --> AG
   AG --> SIM
   AG --> ATLAS
+  AG --> QLOO
+  AG --> CLAUDE
   SSE --> NEON
   GO --> NEON
-  MCP --> AG
+  MAP --> TILES
 ```
 
 ### One rehearsal, step by step
