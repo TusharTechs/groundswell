@@ -38,7 +38,7 @@ What's real and what isn't
 - The Chicago launch is fictional (Marisol Vega is invented); the city, venue, comparables and Qloo data are real.
 - Reach figures are simulated, not forecasts. The mission-control week shown is simulated and labelled so in the app.
 - From comparables alone, Groundswell found 44.8% of a taste's strongest neighbourhoods, against 23.7% for Claude alone (77 tests across 7 cities); method and controls are on the How it works page.
-- The narration is an AI voice. The screen recording is the live app, unedited apart from captions.
+- The narration is an AI voice. The screen recording is the live app; captions, chapter labels and the end card were added, and the recorded rehearsal's replay runs slightly slower than normal to match the narration.
 
 Built for the Qloo Agentic Hackathon with the Qloo Taste AI API, Anthropic Claude, Next.js, deck.gl and MapLibre.
 ```
