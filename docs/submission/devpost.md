@@ -2,6 +2,20 @@
 
 > Paste each section into the matching Devpost field. Replace `<VIDEO_URL>` once the video is uploaded. The repository must be public before submitting. Every number here is backed in [`docs/CLAIMS.md`](../CLAIMS.md).
 
+## Devpost form answers (from the hackathon's submission requirements)
+
+| Field | Answer |
+|---|---|
+| When did you begin your project? | October 23, 2026 (first commit). It is a new codebase built for this hackathon. |
+| The public URL to your project | https://groundswell-city.vercel.app |
+| Link to your PUBLIC code repo | https://github.com/TusharTechs/groundswell (make it public first) |
+| If this was an existing project, how did you upgrade it for Qloo? | Not applicable: Groundswell was built from scratch for this hackathon. |
+| Demo video | Optional for this hackathon (YouTube or Vimeo, publicly playable). |
+
+Built with (tags): `qloo`, `claude`, `anthropic`, `model-context-protocol`, `next.js`, `react`, `typescript`, `deck.gl`, `maplibre`, `openfreemap`, `tailwindcss`, `zod`, `neon`, `postgresql`, `vercel`, `vitest`.
+
+Checklist on the day: make the repo public (`gh repo edit TusharTechs/groundswell --visibility public --accept-visibility-change-consequences`), add the description and the MIT licence to the repo's About panel, set `SITE_PUBLIC=1` in Vercel if you want search engines to index the site, then create and submit the Devpost project. Deadline: Thursday 30 October 2026, 11:45 pm Eastern (31 October, 03:45 UTC). The top three finalists appear live on 5 November.
+
 ## Project name
 
 Groundswell
