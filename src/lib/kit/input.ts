@@ -53,7 +53,10 @@ export function kitInputFrom(args: {
   const popupDay = new Map(strategy.selections.filter((s) => s.id.startsWith("popup:")).map((s) => [refOf(s.id), before(s.day, 0)]));
   const partners = args.partners.filter((p) => partnerIds.has(p.id));
   const usedZones = new Set([...partners.map((p) => p.zone), ...steps.flatMap((s) => (s.zone !== null ? [s.zone] : []))]);
-  const zones = args.zones.filter((z) => usedZones.has(z.id)).slice(0, 5);
+  // The zones the plan acts in, then the strongest hot zones: a plan of city-wide ads and podcasts
+  // still needs copy for where its audience lives, since that is where the ads are aimed.
+  const byShare = [...args.zones].sort((a, b) => b.audienceShare - a.audienceShare);
+  const zones = usedZones.size ? byShare.filter((z) => usedZones.has(z.id)).slice(0, 5) : byShare.slice(0, 3);
   const podcastNames = strategy.selections
     .filter((s) => s.id.startsWith("podcast:"))
     .map((s) => ({ name: args.media.find((m) => m.id === refOf(s.id))?.name ?? "", daysBefore: before(s.day, 0) }))

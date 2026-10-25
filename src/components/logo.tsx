@@ -19,11 +19,12 @@ export function Mark({ size = 28, className = "" }: { size?: number; className?:
   );
 }
 
-export function Logo({ className = "" }: { className?: string }) {
+export function Logo({ className = "", compact = false }: { className?: string; compact?: boolean }) {
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       <Mark />
-      <span className="font-display text-[1.35rem] font-semibold tracking-tight">groundswell</span>
+      {/* Compact: the wordmark appears from small-tablet width up, so the nav fits on a phone. */}
+      <span className={`font-display text-[1.35rem] font-semibold tracking-tight ${compact ? "hidden min-[480px]:inline" : ""}`}>groundswell</span>
     </span>
   );
 }

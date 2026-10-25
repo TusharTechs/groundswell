@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
+import type { CityAtlas } from "../../atlas/types";
+import type { Zone } from "../../launch/fit";
+import type { LaunchSpec } from "../../launch/spec";
 import { kitProblems, type KitDraft } from "../check";
+import { kitInputFrom } from "../input";
 import type { KitInput } from "../types";
 
 const input = (over: Partial<KitInput> = {}): KitInput => ({
@@ -91,5 +95,23 @@ describe("Creative Director checks", () => {
     const problems = kitProblems(input(), k, checked).join(" ");
     expect(problems).toMatch(/Write copy for: Pilsen/);
     expect(problems).toMatch(/Write emails to: Cafe A/);
+  });
+});
+
+describe("kit input", () => {
+  const zone = (id: number, audienceShare: number): Zone => ({ id, locality: `Zone ${id}`, center: [0, 0], cells: [id], audienceShare, district: 0, fit: 0.9 }) as unknown as Zone;
+  const atlas = { city: { id: "chicago" }, districts: [{ name: "D0", signature: [] }], probes: [] } as unknown as CityAtlas;
+  const spec = { title: "T", pitch: "P", kind: "concert", venue: null, days: 28, budget: 5000, constraints: { allAges: false, noAlcohol: false, notes: [] } } as unknown as LaunchSpec;
+  const base = { campaignId: "run-abcdef12", atlas, spec, comps: [], compIds: [], peakAge: null, tags: [], partners: [], media: [], launchDate: "2026-12-04", launchUrl: null };
+  const zones = [zone(0, 0.05), zone(1, 0.2), zone(2, 0.1), zone(3, 0.02)];
+
+  it("writes for the strongest hot zones when the plan is all city-wide", () => {
+    const input = kitInputFrom({ ...base, zones, candidates: [{ id: "social:city", kind: "social", label: "City ads", timing: "window", cost: 3000 }] as never, strategy: { selections: [{ id: "social:city", start: 0, days: 20 }], steps: [] } as never });
+    expect(input.zones.map((z) => z.id)).toEqual([1, 2, 0]);
+  });
+
+  it("writes only for the zones the plan acts in when it has any", () => {
+    const input = kitInputFrom({ ...base, zones, candidates: [{ id: "street:3", kind: "street", label: "Street team", zone: 3, timing: "day", cost: 400 }] as never, strategy: { selections: [{ id: "street:3", day: 5 }], steps: [] } as never });
+    expect(input.zones.map((z) => z.id)).toEqual([3]);
   });
 });

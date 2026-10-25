@@ -60,8 +60,13 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
   }, [kit.input.cityId]);
 
   const refresh = useCallback(async () => {
-    const r = await fetch(`/api/campaign/${id}`, { cache: "no-store", headers });
-    if (r.ok) setData(await r.json());
+    // Polling can be cut off by navigation or a dropped connection; the next tick tries again.
+    try {
+      const r = await fetch(`/api/campaign/${id}`, { cache: "no-store", headers });
+      if (r.ok) setData(await r.json());
+    } catch {
+      /* next tick */
+    }
   }, [id, headers]);
 
   // Poll while the page is visible, so a scan from a phone shows up within seconds.
@@ -75,7 +80,10 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
   const posterLink = kit.links.find((l) => l.channel === "poster") ?? kit.links[0];
   useEffect(() => {
     if (!origin || !posterLink) return;
-    import("qrcode").then((QR) => QR.toString(linkUrl(origin, id, posterLink.code), { type: "svg", margin: 1, color: { dark: "#07080d", light: "#ffffff" } }).then(setQr));
+    import("qrcode")
+      .then((QR) => QR.toString(linkUrl(origin, id, posterLink.code), { type: "svg", margin: 1, color: { dark: "#07080d", light: "#ffffff" } }))
+      .then(setQr)
+      .catch(() => undefined);
   }, [origin, id, posterLink]);
 
   const scans = useMemo(() => data?.scans ?? [], [data]);
@@ -132,6 +140,8 @@ export function MissionControl({ kit, demo, cityName }: { kit: Kit; demo: boolea
       const r = await fetch(`/api/campaign/${id}/simulate`, { method: kind === "simulate" ? "POST" : "DELETE", headers });
       if (!r.ok) setError((await r.json().catch(() => ({})))?.error ?? "That didn't work.");
       await refresh();
+    } catch {
+      setError("The connection dropped. Try again.");
     } finally {
       setBusy(null);
     }

@@ -266,7 +266,14 @@ export function LaunchKit({
       </section>
     );
 
-  if (!kit || !activeZone) return null;
+  if (!kit) return null;
+  if (!activeZone)
+    return (
+      <section className="space-y-3">
+        <p className="font-display text-2xl font-semibold leading-tight">{kit.tagline}</p>
+        <p className="text-[13px] text-muted">This kit has no neighbourhood copy. Produce it again from the rehearsal to include the plan&apos;s strongest neighbourhoods.</p>
+      </section>
+    );
   const m = zoneMeta(activeZone.zoneId);
   const translated = english && activeZone.english;
   const ig = withLink(translated ? activeZone.english!.instagram : activeZone.instagram, url(`z${activeZone.zoneId}ig`));
